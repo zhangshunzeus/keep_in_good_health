@@ -105,7 +105,8 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:padding="5dp" >
 
                 <TextView
                     android:layout_width="120dp"
@@ -143,7 +144,10 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    
-    
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_page_bottom_menu" />
 
 </LinearLayout>
