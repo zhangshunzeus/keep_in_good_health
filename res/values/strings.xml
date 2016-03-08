@@ -20,26 +20,15 @@
     <string name="food_name_taboo">食材禁忌</string>
     <string name="home_page_recommended">推荐</string>
     <string name="home_page_dietary">膳食</string>
-<<<<<<< HEAD
-
-	<string name="eattitle">今天吃什么</string>
-=======
     <string name="eattitle">今天吃什么</string>
->>>>>>> df03c00fee0dee21d2d1cb55b4b1a5bc03f24434
     <string name="breakfast">营养早餐</string>
     <string name="lunch">丰富午餐</string>
     <string name="dinner">可口晚餐</string>
     <string name="breakfastcontext">死定了风景卅fgdsfg份认购</string>
     <string name="lunchcontext">死定了风景卅按时发广东省多</string>
     <string name="dinnercontext">死定了风景卅儿童如果对方和</string>
-<<<<<<< HEAD
-
-
-</resources>
-=======
-    <string name="home_page_btn" >首页</string>
+    <string name="home_page_btn">首页</string>
     <string name="classification_btn">分类</string>
     <string name="my_btn">我的</string>
->>>>>>> df03c00fee0dee21d2d1cb55b4b1a5bc03f24434
 
 </resources>
