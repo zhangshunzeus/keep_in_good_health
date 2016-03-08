@@ -25,15 +25,19 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
+        public static final int action_settings=0x7f08000c;
+        public static final int circle=0x7f080005;
+        public static final int classify=0x7f080004;
         public static final int dietary=0x7f080001;
-        public static final int intent_breakfast=0x7f080004;
-        public static final int intent_dinner=0x7f080007;
-        public static final int intent_lunch=0x7f080005;
-        public static final int intent_lunch_two=0x7f080006;
+        public static final int home_page=0x7f080003;
+        public static final int intent_breakfast=0x7f080008;
+        public static final int intent_dinner=0x7f08000b;
+        public static final int intent_lunch=0x7f080009;
+        public static final int intent_lunch_two=0x7f08000a;
+        public static final int radio_group=0x7f080002;
         public static final int recommended=0x7f080000;
-        public static final int scroll_list=0x7f080003;
-        public static final int today_eat_return=0x7f080002;
+        public static final int scroll_list=0x7f080007;
+        public static final int today_eat_return=0x7f080006;
     }
     public static final class layout {
         public static final int food_name=0x7f030000;
@@ -49,6 +53,7 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int breakfast=0x7f050014;
         public static final int breakfastcontext=0x7f050017;
+        public static final int classification_btn=0x7f05001b;
         public static final int dinner=0x7f050016;
         public static final int dinnercontext=0x7f050019;
         public static final int eattitle=0x7f050013;
@@ -60,6 +65,7 @@ public final class R {
         public static final int food_name_taboo=0x7f050010;
         public static final int food_name_text=0x7f05000d;
         public static final int hello_world=0x7f050002;
+        public static final int home_page_btn=0x7f05001a;
         public static final int home_page_carefully=0x7f050007;
         public static final int home_page_carefully_content=0x7f050009;
         public static final int home_page_carefully_signature=0x7f05000a;
@@ -71,6 +77,7 @@ public final class R {
         public static final int home_page_search=0x7f050004;
         public static final int lunch=0x7f050015;
         public static final int lunchcontext=0x7f050018;
+        public static final int my_btn=0x7f05001c;
     }
     public static final class style {
         /** 
