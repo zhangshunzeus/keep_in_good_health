@@ -4,7 +4,9 @@
     <string name="app_name">keep_in_good_health</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="food_name">食名</string>
     <string name="home_page_recommended">推荐</string>
     <string name="home_page_dietary">膳食</string>
+
 
 </resources>
