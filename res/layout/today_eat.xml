@@ -21,7 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/eattitle" />
+            android:text="@string/eattitle"
+            android:textColor="@color/title"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <ImageView
@@ -43,17 +45,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/breakfast" />
+                android:text="@string/breakfast"
+                android:textColor="@color/title"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:id="@+id/intent_breakfast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
@@ -61,12 +66,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="@string/breakfastcontext" />
+                    android:text="@string/breakfastcontext"
+                    android:textColor="@color/title"
+                    android:textSize="15sp" 
+                    android:layout_marginLeft="5dp"/>
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
+                    android:layout_gravity="center"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
@@ -75,17 +85,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lunch" />
+                android:text="@string/lunch"
+                android:textColor="@color/title"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:id="@+id/intent_lunch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
@@ -93,12 +106,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="@string/lunchcontext" />
+                    android:text="@string/lunchcontext"
+                    android:textColor="@color/title"
+                    android:textSize="15sp" 
+                    android:layout_marginLeft="5dp"/>
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
+                    android:layout_gravity="center"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
@@ -108,11 +126,12 @@
                 android:id="@+id/intent_lunch_two"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
@@ -120,12 +139,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="@string/lunchcontext" />
+                    android:text="@string/lunchcontext"
+                    android:textColor="@color/title"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp" />
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
+                    android:layout_gravity="center"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
@@ -134,17 +158,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dinner" />
+                android:text="@string/dinner"
+                android:textColor="@color/title"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:id="@+id/intent_dinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
@@ -152,12 +179,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="@string/dinnercontext" />
+                    android:text="@string/dinnercontext"
+                    android:textColor="@color/title"
+                    android:textSize="15sp" 
+                    android:layout_marginLeft="5dp"/>
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
+                    android:layout_gravity="center"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="#000000" />
