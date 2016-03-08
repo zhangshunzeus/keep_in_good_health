@@ -28,6 +28,7 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int action_settings=0x7f090008;
         public static final int dietary=0x7f090001;
         public static final int intent_breakfast=0x7f090004;
@@ -37,6 +38,21 @@ public final class R {
         public static final int recommended=0x7f090000;
         public static final int scroll_list=0x7f090003;
         public static final int today_eat_return=0x7f090002;
+=======
+        public static final int action_settings=0x7f08000c;
+        public static final int circle=0x7f080005;
+        public static final int classify=0x7f080004;
+        public static final int dietary=0x7f080001;
+        public static final int home_page=0x7f080003;
+        public static final int intent_breakfast=0x7f080008;
+        public static final int intent_dinner=0x7f08000b;
+        public static final int intent_lunch=0x7f080009;
+        public static final int intent_lunch_two=0x7f08000a;
+        public static final int radio_group=0x7f080002;
+        public static final int recommended=0x7f080000;
+        public static final int scroll_list=0x7f080007;
+        public static final int today_eat_return=0x7f080006;
+>>>>>>> df03c00fee0dee21d2d1cb55b4b1a5bc03f24434
     }
     public static final class layout {
         public static final int food_name=0x7f030000;
@@ -48,6 +64,7 @@ public final class R {
         public static final int main=0x7f080000;
     }
     public static final class string {
+<<<<<<< HEAD
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int breakfast=0x7f060014;
@@ -74,6 +91,37 @@ public final class R {
         public static final int home_page_search=0x7f060004;
         public static final int lunch=0x7f060015;
         public static final int lunchcontext=0x7f060018;
+=======
+        public static final int action_settings=0x7f050001;
+        public static final int app_name=0x7f050000;
+        public static final int breakfast=0x7f050014;
+        public static final int breakfastcontext=0x7f050017;
+        public static final int classification_btn=0x7f05001b;
+        public static final int dinner=0x7f050016;
+        public static final int dinnercontext=0x7f050019;
+        public static final int eattitle=0x7f050013;
+        public static final int food_name=0x7f050003;
+        public static final int food_name_checkall=0x7f05000c;
+        public static final int food_name_details=0x7f05000e;
+        public static final int food_name_effect=0x7f05000f;
+        public static final int food_name_recom=0x7f05000b;
+        public static final int food_name_taboo=0x7f050010;
+        public static final int food_name_text=0x7f05000d;
+        public static final int hello_world=0x7f050002;
+        public static final int home_page_btn=0x7f05001a;
+        public static final int home_page_carefully=0x7f050007;
+        public static final int home_page_carefully_content=0x7f050009;
+        public static final int home_page_carefully_signature=0x7f05000a;
+        public static final int home_page_carefully_title=0x7f050008;
+        public static final int home_page_dietary=0x7f050012;
+        public static final int home_page_oneday_content=0x7f050006;
+        public static final int home_page_oneday_title=0x7f050005;
+        public static final int home_page_recommended=0x7f050011;
+        public static final int home_page_search=0x7f050004;
+        public static final int lunch=0x7f050015;
+        public static final int lunchcontext=0x7f050018;
+        public static final int my_btn=0x7f05001c;
+>>>>>>> df03c00fee0dee21d2d1cb55b4b1a5bc03f24434
     }
     public static final class style {
         /** 
