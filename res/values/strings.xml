@@ -22,26 +22,47 @@
     <string name="home_page_dietary">膳食</string>
     <string name="function_contxt1">对于大多数人来说，提起大枣这种食物，
     ，相的，信很多人首先会想到的就是其所具有的养颜补血的功效，在生活中，许多女性也是经常选这吃大枣来进行补血
-        因此，对于大枣的功效与作用，显然应当被大家所认知。</string>
+        因此，对于大枣的功效与作用，显然应当被大家所认知。</string>
     <string name="function_context2">1.抗郭明 大枣乙醇提起物对特意反应性疾病，能抑制抗体的产生，对小老鼠fjadslkfjkasldfjasfjslfkj</string>
     <string name="jjzz">如果你无法简洁的表达你的想法，那只说明你还不够了解它，\n阿尔伯特jbst</string>
-    <string name="eattitle">今天吃什么</string>
-    <string name="breakfast">营养早餐</string>
-    <string name="lunch">丰富午餐</string>
-    <string name="dinner">可口晚餐</string>
-    <string name="breakfastcontext">死定了风景卅fgdsfg份认购</string>
-    <string name="lunchcontext">死定了风景卅按时发广东省多</string>
-    <string name="dinnercontext">死定了风景卅儿童如果对方和</string>
-    <string name="home_page_btn">首页</string>
-    <string name="classification_btn">分类</string>
-    <string name="my_btn">我的</string>
-    <string name="in_the_picture_at_the_top_of_the_back_button">位于图片左上方有返回按钮</string>
-    <string name="reasons_for_the_formation">形成原因</string>
-    <string name="rapid_interrogation">快速问诊</string>
-    <string name="life_advice">生活建议</string>
-    <string name="you_may_need_to">可能需要</string>
-    <string name="reasons_for_the_formation_activity_content_title">1、感染</string>
-    <string name="alerts">消息通知</string>
-    <string name="set_up_the_text">设置</string>
+    <string name="eattitle">今天吃什么</string>
+    <string name="breakfast">营养早餐</string>
+    <string name="lunch">丰富午餐</string>
+    <string name="dinner">可口晚餐</string>
+    <string name="breakfastcontext">死定了风景卅fgdsfg份认购</string>
+    <string name="lunchcontext">死定了风景卅按时发广东省多</string>
+    <string name="dinnercontext">死定了风景卅儿童如果对方和</string>
+    <string name="home_page_btn">首页</string>
+    <string name="classification_btn">分类</string>
+    <string name="my_btn">我的</string>
+    <string name="in_the_picture_at_the_top_of_the_back_button">位于图片左上方有返回按钮</string>
+    <string name="reasons_for_the_formation">形成原因</string>
+    <string name="rapid_interrogation">快速问诊</string>
+    <string name="life_advice">生活建议</string>
+    <string name="you_may_need_to">可能需要</string>
+    <string name="reasons_for_the_formation_activity_content_title">1、感染</string>
+    <string name="alerts">消息通知</string>
+    <string name="set_up_the_text">设置</string>
+    <string name="personal_information_title">个人信息</string>
+    <string name="the_editor">编辑</string>
+    <string name="username">昵称</string>
+    <string name="sex">性别</string>
+    <string name="age">年龄</string>
+    <string name="the_constellation">星座</string>
+    <string name="professional">职业</string>
+    <string name="the_company">公司</string>
+    <string name="home">所在地</string>
+    <string name="email">邮箱</string>
+    <string name="personal_elucidation">个人说明</string>
+    <string name="interests_and_hobbies">兴趣爱好展示设置</string>
+    <string name="username_text">个人的昵称</string>
+    <string name="sex_text">女</string>
+    <string name="age_text">20</string>
+    <string name="the_constellation_text">狮子座</string>
+    <string name="professional_text">自己的职业</string>
+    <string name="the_company_text">填写公司</string>
+    <string name="home_text">重庆</string>
+    <string name="email_text">12345678@qq.com</string>
+    <string name="personal_elucidation_text">介绍以下自己吧</string>
 
 </resources>
