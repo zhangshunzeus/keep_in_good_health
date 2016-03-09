@@ -16,9 +16,12 @@ import com.zhangshun.keep_in_good_health.R;
  *
  */
 public class Recomend extends Activity{
+    private ExpandableListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recomend_indext_2);
+        listView=new ExpandableListView(this);
+
     }
 }
