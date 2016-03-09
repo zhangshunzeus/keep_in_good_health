@@ -10,6 +10,9 @@ package com.zhangshun.keep_in_good_health;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int title=0x7f040000;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -17,41 +20,41 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int home_page_auto_bg=0x7f020000;
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001a;
-        public static final int circle=0x7f080005;
-        public static final int classify=0x7f080004;
-        public static final int dietary=0x7f080001;
-        public static final int home_page=0x7f080003;
-        public static final int intent_breakfast=0x7f080016;
-        public static final int intent_dinner=0x7f080019;
-        public static final int intent_lunch=0x7f080017;
-        public static final int intent_lunch_two=0x7f080018;
-        public static final int radio_group=0x7f080002;
-        public static final int recomend_bttom_1_tx=0x7f080011;
-        public static final int recomend_bttom_2_tx=0x7f080012;
-        public static final int recomend_bttom_3_tx=0x7f080013;
-        public static final int recomend_children_img=0x7f080006;
-        public static final int recomend_flish=0x7f08000b;
-        public static final int recomend_flish_gl=0x7f08000c;
-        public static final int recomend_food_tx=0x7f080008;
-        public static final int recomend_fruit=0x7f080009;
-        public static final int recomend_fruit_gl=0x7f08000a;
-        public static final int recomend_recomend_tx=0x7f080007;
-        public static final int recomend_tea_gl=0x7f080010;
-        public static final int recomend_tea_tx=0x7f08000f;
-        public static final int recomend_vegable_gl=0x7f08000e;
-        public static final int recomend_vegtable_tx=0x7f08000d;
-        public static final int recommended=0x7f080000;
-        public static final int scroll_list=0x7f080015;
-        public static final int today_eat_return=0x7f080014;
+        public static final int action_settings=0x7f09001a;
+        public static final int circle=0x7f090005;
+        public static final int classify=0x7f090004;
+        public static final int dietary=0x7f090001;
+        public static final int home_page=0x7f090003;
+        public static final int intent_breakfast=0x7f090016;
+        public static final int intent_dinner=0x7f090019;
+        public static final int intent_lunch=0x7f090017;
+        public static final int intent_lunch_two=0x7f090018;
+        public static final int radio_group=0x7f090002;
+        public static final int recomend_bttom_1_tx=0x7f090011;
+        public static final int recomend_bttom_2_tx=0x7f090012;
+        public static final int recomend_bttom_3_tx=0x7f090013;
+        public static final int recomend_children_img=0x7f090006;
+        public static final int recomend_flish=0x7f09000b;
+        public static final int recomend_flish_gl=0x7f09000c;
+        public static final int recomend_food_tx=0x7f090008;
+        public static final int recomend_fruit=0x7f090009;
+        public static final int recomend_fruit_gl=0x7f09000a;
+        public static final int recomend_recomend_tx=0x7f090007;
+        public static final int recomend_tea_gl=0x7f090010;
+        public static final int recomend_tea_tx=0x7f09000f;
+        public static final int recomend_vegable_gl=0x7f09000e;
+        public static final int recomend_vegtable_tx=0x7f09000d;
+        public static final int recommended=0x7f090000;
+        public static final int scroll_list=0x7f090015;
+        public static final int today_eat_return=0x7f090014;
     }
     public static final class layout {
         public static final int food_name=0x7f030000;
@@ -62,38 +65,38 @@ public final class R {
         public static final int today_eat=0x7f030005;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int breakfast=0x7f050014;
-        public static final int breakfastcontext=0x7f050017;
-        public static final int classification_btn=0x7f05001b;
-        public static final int dinner=0x7f050016;
-        public static final int dinnercontext=0x7f050019;
-        public static final int eattitle=0x7f050013;
-        public static final int food_name=0x7f050003;
-        public static final int food_name_checkall=0x7f05000c;
-        public static final int food_name_details=0x7f05000e;
-        public static final int food_name_effect=0x7f05000f;
-        public static final int food_name_recom=0x7f05000b;
-        public static final int food_name_taboo=0x7f050010;
-        public static final int food_name_text=0x7f05000d;
-        public static final int hello_world=0x7f050002;
-        public static final int home_page_btn=0x7f05001a;
-        public static final int home_page_carefully=0x7f050007;
-        public static final int home_page_carefully_content=0x7f050009;
-        public static final int home_page_carefully_signature=0x7f05000a;
-        public static final int home_page_carefully_title=0x7f050008;
-        public static final int home_page_dietary=0x7f050012;
-        public static final int home_page_oneday_content=0x7f050006;
-        public static final int home_page_oneday_title=0x7f050005;
-        public static final int home_page_recommended=0x7f050011;
-        public static final int home_page_search=0x7f050004;
-        public static final int lunch=0x7f050015;
-        public static final int lunchcontext=0x7f050018;
-        public static final int my_btn=0x7f05001c;
+        public static final int action_settings=0x7f060001;
+        public static final int app_name=0x7f060000;
+        public static final int breakfast=0x7f060014;
+        public static final int breakfastcontext=0x7f060017;
+        public static final int classification_btn=0x7f06001b;
+        public static final int dinner=0x7f060016;
+        public static final int dinnercontext=0x7f060019;
+        public static final int eattitle=0x7f060013;
+        public static final int food_name=0x7f060003;
+        public static final int food_name_checkall=0x7f06000c;
+        public static final int food_name_details=0x7f06000e;
+        public static final int food_name_effect=0x7f06000f;
+        public static final int food_name_recom=0x7f06000b;
+        public static final int food_name_taboo=0x7f060010;
+        public static final int food_name_text=0x7f06000d;
+        public static final int hello_world=0x7f060002;
+        public static final int home_page_btn=0x7f06001a;
+        public static final int home_page_carefully=0x7f060007;
+        public static final int home_page_carefully_content=0x7f060009;
+        public static final int home_page_carefully_signature=0x7f06000a;
+        public static final int home_page_carefully_title=0x7f060008;
+        public static final int home_page_dietary=0x7f060012;
+        public static final int home_page_oneday_content=0x7f060006;
+        public static final int home_page_oneday_title=0x7f060005;
+        public static final int home_page_recommended=0x7f060011;
+        public static final int home_page_search=0x7f060004;
+        public static final int lunch=0x7f060015;
+        public static final int lunchcontext=0x7f060018;
+        public static final int my_btn=0x7f06001c;
     }
     public static final class style {
         /** 
@@ -117,10 +120,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

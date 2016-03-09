@@ -26,6 +26,7 @@
         </activity>
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
+        <activity android:name="com.zhangshun.activity.HomePageActivity"></activity>
     </application>
 
 </manifest>
