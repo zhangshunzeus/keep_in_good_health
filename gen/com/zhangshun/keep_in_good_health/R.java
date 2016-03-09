@@ -23,27 +23,39 @@ public final class R {
     public static final class drawable {
         public static final int home_page_auto_bg=0x7f020000;
         public static final int ic_launcher=0x7f020001;
+        public static final int line=0x7f020002;
+        public static final int login_edittext_bj=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000c;
-        public static final int circle=0x7f080005;
-        public static final int classify=0x7f080004;
-        public static final int dietary=0x7f080001;
-        public static final int home_page=0x7f080003;
-        public static final int intent_breakfast=0x7f080008;
-        public static final int intent_dinner=0x7f08000b;
-        public static final int intent_lunch=0x7f080009;
-        public static final int intent_lunch_two=0x7f08000a;
-        public static final int radio_group=0x7f080002;
-        public static final int recommended=0x7f080000;
-        public static final int scroll_list=0x7f080007;
-        public static final int today_eat_return=0x7f080006;
+        public static final int action_settings=0x7f080011;
+        public static final int circle=0x7f080008;
+        public static final int classify=0x7f080007;
+        public static final int dietary=0x7f080004;
+        public static final int food_name_all_listview=0x7f080000;
+        public static final int food_name_all_listview_image=0x7f080001;
+        public static final int food_name_all_listview_text=0x7f080002;
+        public static final int home_page=0x7f080006;
+        public static final int intent_breakfast=0x7f08000d;
+        public static final int intent_dinner=0x7f080010;
+        public static final int intent_lunch=0x7f08000e;
+        public static final int intent_lunch_two=0x7f08000f;
+        public static final int radio_group=0x7f080005;
+        public static final int recommended=0x7f080003;
+        public static final int regiser_inputpassword=0x7f080009;
+        public static final int regiser_password=0x7f08000a;
+        public static final int scroll_list=0x7f08000c;
+        public static final int today_eat_return=0x7f08000b;
     }
     public static final class layout {
         public static final int food_name=0x7f030000;
-        public static final int home_page=0x7f030001;
-        public static final int home_page_bottom_menu=0x7f030002;
-        public static final int today_eat=0x7f030003;
+        public static final int food_name_all=0x7f030001;
+        public static final int food_name_all_listview=0x7f030002;
+        public static final int home_page=0x7f030003;
+        public static final int home_page_bottom_menu=0x7f030004;
+        public static final int login=0x7f030005;
+        public static final int register=0x7f030006;
+        public static final int register_password=0x7f030007;
+        public static final int today_eat=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -64,6 +76,7 @@ public final class R {
         public static final int food_name_recom=0x7f05000b;
         public static final int food_name_taboo=0x7f050010;
         public static final int food_name_text=0x7f05000d;
+        public static final int forget_password=0x7f050023;
         public static final int hello_world=0x7f050002;
         public static final int home_page_btn=0x7f05001a;
         public static final int home_page_carefully=0x7f050007;
@@ -75,9 +88,23 @@ public final class R {
         public static final int home_page_oneday_title=0x7f050005;
         public static final int home_page_recommended=0x7f050011;
         public static final int home_page_search=0x7f050004;
+        public static final int login=0x7f05001e;
         public static final int lunch=0x7f050015;
         public static final int lunchcontext=0x7f050018;
         public static final int my_btn=0x7f05001c;
+        public static final int password=0x7f050021;
+        public static final int phone=0x7f050020;
+        public static final int register=0x7f05001f;
+        public static final int register_OK=0x7f05002b;
+        public static final int register_agreement=0x7f050027;
+        public static final int register_code=0x7f050024;
+        public static final int register_getcode=0x7f050025;
+        public static final int register_inpassword=0x7f05002a;
+        public static final int register_next=0x7f050028;
+        public static final int register_password=0x7f050029;
+        public static final int register_reed=0x7f050026;
+        public static final int relate=0x7f05001d;
+        public static final int rember_passwrod=0x7f050022;
     }
     public static final class style {
         /** 
