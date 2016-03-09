@@ -34,6 +34,7 @@
         <!-- 登录 -->
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
         </activity>
+
         <!-- 注册 -->
         <activity android:name="com.ruanjiawei.activity.RegisterActivity" >
         </activity>
@@ -62,6 +63,14 @@
         </activity>
         <!-- 功能 -->
         <activity android:name="com.jiangkaiquan.activity.Founction" >
+        </activity>
+
+        <!-- 个人信息页面 -->
+        <activity android:name="com.zhangshun.activity.PersonalInformationActivity" >
+        </activity>
+
+        <!-- 我的收藏页面 -->
+        <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
         </activity>
     </application>
 
