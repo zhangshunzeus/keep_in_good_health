@@ -1,12 +1,13 @@
 package com.jiangkaiquan.activity;
 
+import com.zhangshun.keep_in_good_health.R;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.zhangshun.keep_in_good_health.R;
 
 /**
  * Created by jkqme on 2016/3/9.
