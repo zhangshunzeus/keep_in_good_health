@@ -24,53 +24,88 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int doctor_edittext_frame=0x7f020000;
-        public static final int home_page_auto_bg=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int black_stork=0x7f020000;
+        public static final int doctor_edittext_frame=0x7f020001;
+        public static final int home_page_auto_bg=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000f;
+        public static final int action_settings=0x7f09002d;
         public static final int circle=0x7f090005;
         public static final int classify=0x7f090004;
         public static final int dietary=0x7f090001;
         public static final int doctor_return=0x7f090007;
         public static final int edittext_doctor=0x7f090008;
+        public static final int funcion_context1_tx=0x7f09000c;
+        public static final int funcion_context2_tx=0x7f09000e;
+        public static final int funcion_title2_tx=0x7f09000d;
+        public static final int funcion_title_tx=0x7f09000b;
+        public static final int function_back_img=0x7f090009;
+        public static final int function_client_img=0x7f09000f;
+        public static final int function_comment_tex=0x7f090010;
+        public static final int function_tile_img=0x7f09000a;
         public static final int home_page=0x7f090003;
         public static final int image_title_doctor=0x7f090006;
-        public static final int intent_breakfast=0x7f09000b;
-        public static final int intent_dinner=0x7f09000e;
-        public static final int intent_lunch=0x7f09000c;
-        public static final int intent_lunch_two=0x7f09000d;
+        public static final int intent_breakfast=0x7f090029;
+        public static final int intent_dinner=0x7f09002c;
+        public static final int intent_lunch=0x7f09002a;
+        public static final int intent_lunch_two=0x7f09002b;
+        public static final int produce_detail_back_img=0x7f090011;
+        public static final int produce_detail_bycar_img=0x7f090016;
+        public static final int produce_detail_discont_2_tx=0x7f090017;
+        public static final int produce_detail_discont_tx=0x7f090015;
+        public static final int produce_detail_function_tx=0x7f090014;
+        public static final int produce_detail_img=0x7f090013;
+        public static final int produce_detail_promiss_tx=0x7f090018;
+        public static final int produce_detail_title_tx=0x7f090012;
         public static final int radio_group=0x7f090002;
+        public static final int recomend_bttom_1_tx=0x7f090024;
+        public static final int recomend_bttom_2_tx=0x7f090025;
+        public static final int recomend_bttom_3_tx=0x7f090026;
+        public static final int recomend_children_img=0x7f090019;
+        public static final int recomend_flish=0x7f09001e;
+        public static final int recomend_flish_gl=0x7f09001f;
+        public static final int recomend_food_tx=0x7f09001b;
+        public static final int recomend_fruit=0x7f09001c;
+        public static final int recomend_fruit_gl=0x7f09001d;
+        public static final int recomend_recomend_tx=0x7f09001a;
+        public static final int recomend_tea_gl=0x7f090023;
+        public static final int recomend_tea_tx=0x7f090022;
+        public static final int recomend_vegable_gl=0x7f090021;
+        public static final int recomend_vegtable_tx=0x7f090020;
         public static final int recommended=0x7f090000;
-        public static final int scroll_list=0x7f09000a;
-        public static final int today_eat_return=0x7f090009;
+        public static final int scroll_list=0x7f090028;
+        public static final int today_eat_return=0x7f090027;
     }
     public static final class layout {
         public static final int food_name=0x7f030000;
         public static final int home_page=0x7f030001;
         public static final int home_page_bottom_menu=0x7f030002;
         public static final int inquiry_doctor=0x7f030003;
-        public static final int today_eat=0x7f030004;
+        public static final int jiang_function=0x7f030004;
+        public static final int jiang_produce_detail=0x7f030005;
+        public static final int recomend_children=0x7f030006;
+        public static final int recomend_indext_2=0x7f030007;
+        public static final int today_eat=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int Pediatrics_doctor=0x7f06001c;
+        public static final int Pediatrics_doctor=0x7f06001f;
         public static final int action_settings=0x7f060001;
-        public static final int all_doctor=0x7f060020;
+        public static final int all_doctor=0x7f060023;
         public static final int app_name=0x7f060000;
-        public static final int breakfast=0x7f060014;
-        public static final int breakfastcontext=0x7f060017;
-        public static final int classification_btn=0x7f060023;
-        public static final int dinner=0x7f060016;
-        public static final int dinnercontext=0x7f060019;
-        public static final int doctor_inform=0x7f06001b;
-        public static final int doctor_name=0x7f060021;
-        public static final int dots=0x7f06001e;
-        public static final int eattitle=0x7f060013;
-        public static final int edit_doctor=0x7f06001a;
+        public static final int breakfast=0x7f060017;
+        public static final int breakfastcontext=0x7f06001a;
+        public static final int classification_btn=0x7f060026;
+        public static final int dinner=0x7f060019;
+        public static final int dinnercontext=0x7f06001c;
+        public static final int doctor_inform=0x7f06001e;
+        public static final int doctor_name=0x7f060024;
+        public static final int dots=0x7f060021;
+        public static final int eattitle=0x7f060016;
+        public static final int edit_doctor=0x7f06001d;
         public static final int food_name=0x7f060003;
         public static final int food_name_checkall=0x7f06000c;
         public static final int food_name_details=0x7f06000e;
@@ -78,8 +113,10 @@ public final class R {
         public static final int food_name_recom=0x7f06000b;
         public static final int food_name_taboo=0x7f060010;
         public static final int food_name_text=0x7f06000d;
+        public static final int function_context2=0x7f060014;
+        public static final int function_contxt1=0x7f060013;
         public static final int hello_world=0x7f060002;
-        public static final int home_page_btn=0x7f060022;
+        public static final int home_page_btn=0x7f060025;
         public static final int home_page_carefully=0x7f060007;
         public static final int home_page_carefully_content=0x7f060009;
         public static final int home_page_carefully_signature=0x7f06000a;
@@ -89,11 +126,12 @@ public final class R {
         public static final int home_page_oneday_title=0x7f060005;
         public static final int home_page_recommended=0x7f060011;
         public static final int home_page_search=0x7f060004;
-        public static final int lunch=0x7f060015;
-        public static final int lunchcontext=0x7f060018;
-        public static final int my_btn=0x7f060024;
-        public static final int order_doctor=0x7f06001f;
-        public static final int text_doctor=0x7f06001d;
+        public static final int jjzz=0x7f060015;
+        public static final int lunch=0x7f060018;
+        public static final int lunchcontext=0x7f06001b;
+        public static final int my_btn=0x7f060027;
+        public static final int order_doctor=0x7f060022;
+        public static final int text_doctor=0x7f060020;
     }
     public static final class style {
         /** 

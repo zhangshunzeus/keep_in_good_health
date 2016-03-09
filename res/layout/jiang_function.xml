@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/function_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/function_tile_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher"
+
+            />
+
+        <TextView
+            android:id="@+id/funcion_title_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/function_tile_img"
+            android:layout_marginLeft="8dp"
+            android:padding="8dp"
+            android:text="大枣的功效与作用 吃大枣要注意五大禁忌"/>
+        <TextView
+            android:id="@+id/funcion_context1_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/funcion_title_tx"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            android:text="@string/function_contxt1"/>
+        <TextView
+            android:id="@+id/funcion_title2_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/funcion_context1_tx"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            android:text="大枣的功效与作用， 红枣的作用"/>
+        <TextView
+            android:id="@+id/funcion_context2_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/funcion_title2_tx"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            android:text="@string/function_context2"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/function_client_img"
+            android:src="@drawable/ic_launcher"
+            android:layout_below="@id/funcion_title2_tx"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/function_comment_tex"
+            android:layout_toRightOf="@id/function_client_img"
+            android:layout_alignTop="@id/function_client_img"
+            android:text="@string/jjzz"
+            />
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

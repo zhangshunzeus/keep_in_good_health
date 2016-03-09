@@ -22,9 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
-        </activity>
-        <activity android:name="com.zhangshun.activity.HomePageActivity"></activity>
+
+        <!--推荐-->
+        <activity android:name="com.jiangkaiquan.activity.Recomend"></activity>
+        <!--产品详情-->
+        <activity android:name="com.jiangkaiquan.activity.Produce_detail"></activity>
+        <!--功能-->
+        <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
+
     </application>
 
 </manifest>
