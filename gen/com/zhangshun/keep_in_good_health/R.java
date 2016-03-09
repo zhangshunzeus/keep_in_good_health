@@ -34,7 +34,7 @@ public final class R {
         public static final int switch_bg=0x7f020007;
     }
     public static final class id {
-        public static final int action_settings=0x7f09004f;
+        public static final int action_settings=0x7f090051;
         public static final int age=0x7f090026;
         public static final int circle=0x7f090009;
         public static final int classify=0x7f090008;
@@ -46,6 +46,7 @@ public final class R {
         public static final int content_title_one=0x7f09002e;
         public static final int content_title_three=0x7f090047;
         public static final int content_title_two=0x7f090030;
+        public static final int delete_btn=0x7f090049;
         public static final int dietary=0x7f090005;
         public static final int doctor_return=0x7f09000b;
         public static final int edittext_doctor=0x7f09000c;
@@ -65,10 +66,10 @@ public final class R {
         public static final int home_page=0x7f090007;
         public static final int image_title_doctor=0x7f09000a;
         public static final int img=0x7f09001f;
-        public static final int intent_breakfast=0x7f09004b;
-        public static final int intent_dinner=0x7f09004e;
-        public static final int intent_lunch=0x7f09004c;
-        public static final int intent_lunch_two=0x7f09004d;
+        public static final int intent_breakfast=0x7f09004d;
+        public static final int intent_dinner=0x7f090050;
+        public static final int intent_lunch=0x7f09004e;
+        public static final int intent_lunch_two=0x7f09004f;
         public static final int my_collection_content=0x7f090020;
         public static final int my_collection_list=0x7f09001e;
         public static final int personal_background=0x7f090022;
@@ -101,7 +102,7 @@ public final class R {
         public static final int regiser_inputpassword=0x7f090040;
         public static final int regiser_password=0x7f090041;
         public static final int return_btn=0x7f09001d;
-        public static final int scroll_list=0x7f09004a;
+        public static final int scroll_list=0x7f09004c;
         public static final int sex=0x7f090025;
         public static final int switch1=0x7f090042;
         public static final int switch2=0x7f090043;
@@ -111,8 +112,9 @@ public final class R {
         public static final int the_company=0x7f090029;
         public static final int the_constellation=0x7f090027;
         public static final int the_editor=0x7f090023;
+        public static final int the_shopping_cart_list=0x7f09004a;
         public static final int title=0x7f09002d;
-        public static final int today_eat_return=0x7f090049;
+        public static final int today_eat_return=0x7f09004b;
         public static final int username=0x7f090024;
     }
     public static final class layout {
@@ -138,7 +140,9 @@ public final class R {
         public static final int register_password=0x7f030013;
         public static final int set_up_the_activity=0x7f030014;
         public static final int suggestions_for_details_activity=0x7f030015;
-        public static final int today_eat=0x7f030016;
+        public static final int the_shopping_cart_activity=0x7f030016;
+        public static final int the_shopping_cart_list=0x7f030017;
+        public static final int today_eat=0x7f030018;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -237,6 +241,7 @@ public final class R {
         public static final int the_constellation=0x7f060054;
         public static final int the_constellation_text=0x7f06005e;
         public static final int the_editor=0x7f060050;
+        public static final int the_shopping_cart_title=0x7f060067;
         public static final int todayeat_breakfast=0x7f060017;
         public static final int todayeat_breakfastcontext=0x7f06001a;
         public static final int todayeat_dinner=0x7f060019;
