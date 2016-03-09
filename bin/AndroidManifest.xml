@@ -71,13 +71,11 @@
         </activity>
         <!-- 我的收藏页面 -->
         <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
