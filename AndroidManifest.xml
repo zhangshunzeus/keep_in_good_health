@@ -22,8 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.jiangkaiquan.activity.Recomend" >
+        </activity>
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
+        <activity android:name="com.zhangshun.activity.HomePageActivity"></activity>
     </application>
 
 </manifest>
