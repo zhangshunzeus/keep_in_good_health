@@ -51,6 +51,12 @@
     <string name="Inquiry_doctor_order_doctor">预约医师</string>
     <string name="Inquiry_doctor_all_doctor">全部</string>
     <string name="Inquiry_doctor_doctor_name">名字</string>
+    <string name="shop_collection_title_name">店铺收藏</string>
+    <string name="shop_collection_all_shop">全部商品</string>
+    <string name="shop_collection_new_shop">新品上线</string>
+    <string name="shop_collection_my_orderform">我的订单</string>
+    <string name="shop_collection_shopname">产品名</string>
+    <string name="shop_collection_shop_money">35</string>
     <string name="home_page_btn">首页</string>
     <string name="classification_btn">分类</string>
     <string name="my_btn">我的</string>
