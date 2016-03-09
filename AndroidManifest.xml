@@ -55,6 +55,10 @@
         <activity android:name="com.zhangshun.activity.SetUpTheActivity" >
         </activity>
 
+        <!-- 个人信息页面 -->
+        <activity android:name="com.zhangshun.activity.PersonalInformationActivity" >
+        </activity>
+
         <!-- 推荐 -->
         <activity android:name="com.jiangkaiquan.activity.Recomend" >
         </activity>
@@ -63,6 +67,9 @@
         </activity>
         <!-- 功能 -->
         <activity android:name="com.jiangkaiquan.activity.Founction" >
+        </activity>
+        <!-- 我的收藏页面 -->
+        <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
         </activity>
     </application>
 
