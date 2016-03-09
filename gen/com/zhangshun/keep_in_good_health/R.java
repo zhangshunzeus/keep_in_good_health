@@ -27,24 +27,25 @@ public final class R {
         public static final int home_page_auto_bg=0x7f020000;
         public static final int ic_launcher=0x7f020001;
         public static final int rub_course_go_to_next_right=0x7f020002;
+        public static final int switch_bg=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f090022;
+        public static final int action_settings=0x7f090027;
         public static final int circle=0x7f090006;
         public static final int classify=0x7f090005;
         public static final int content_content_one=0x7f090009;
-        public static final int content_content_three=0x7f09001b;
+        public static final int content_content_three=0x7f090020;
         public static final int content_content_two=0x7f09000b;
         public static final int content_title=0x7f090000;
         public static final int content_title_one=0x7f090008;
-        public static final int content_title_three=0x7f09001a;
+        public static final int content_title_three=0x7f09001f;
         public static final int content_title_two=0x7f09000a;
         public static final int dietary=0x7f090002;
         public static final int home_page=0x7f090004;
-        public static final int intent_breakfast=0x7f09001e;
-        public static final int intent_dinner=0x7f090021;
-        public static final int intent_lunch=0x7f09001f;
-        public static final int intent_lunch_two=0x7f090020;
+        public static final int intent_breakfast=0x7f090023;
+        public static final int intent_dinner=0x7f090026;
+        public static final int intent_lunch=0x7f090024;
+        public static final int intent_lunch_two=0x7f090025;
         public static final int radio_group=0x7f090003;
         public static final int recomend_bttom_1_tx=0x7f090017;
         public static final int recomend_bttom_2_tx=0x7f090018;
@@ -61,9 +62,14 @@ public final class R {
         public static final int recomend_vegable_gl=0x7f090014;
         public static final int recomend_vegtable_tx=0x7f090013;
         public static final int recommended=0x7f090001;
-        public static final int scroll_list=0x7f09001d;
+        public static final int scroll_list=0x7f090022;
+        public static final int switch1=0x7f09001a;
+        public static final int switch2=0x7f09001b;
+        public static final int switch3=0x7f09001c;
+        public static final int switch4=0x7f09001d;
+        public static final int switch5=0x7f09001e;
         public static final int title=0x7f090007;
-        public static final int today_eat_return=0x7f09001c;
+        public static final int today_eat_return=0x7f090021;
     }
     public static final class layout {
         public static final int common_diseases_list_for_details=0x7f030000;
@@ -73,14 +79,16 @@ public final class R {
         public static final int reasons_for_the_formation_activity=0x7f030004;
         public static final int recomend_children=0x7f030005;
         public static final int recomend_indext_2=0x7f030006;
-        public static final int suggestions_for_details_activity=0x7f030007;
-        public static final int today_eat=0x7f030008;
+        public static final int set_up_the_activity=0x7f030007;
+        public static final int suggestions_for_details_activity=0x7f030008;
+        public static final int today_eat=0x7f030009;
     }
     public static final class menu {
         public static final int main=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
+        public static final int alerts=0x7f060023;
         public static final int app_name=0x7f060000;
         public static final int breakfast=0x7f060014;
         public static final int breakfastcontext=0x7f060017;
@@ -114,6 +122,7 @@ public final class R {
         public static final int rapid_interrogation=0x7f06001f;
         public static final int reasons_for_the_formation=0x7f06001e;
         public static final int reasons_for_the_formation_activity_content_title=0x7f060022;
+        public static final int set_up_the_text=0x7f060024;
         public static final int you_may_need_to=0x7f060021;
     }
     public static final class style {
