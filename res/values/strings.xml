@@ -30,5 +30,11 @@
     <string name="home_page_btn">首页</string>
     <string name="classification_btn">分类</string>
     <string name="my_btn">我的</string>
-
+    <string name="in_the_picture_at_the_top_of_the_back_button">位于图片左上方有返回按钮</string>
+    <string name="reasons_for_the_formation">形成原因</string>
+    <string name="rapid_interrogation">快速问诊</string>
+    <string name="life_advice">生活建议</string>
+    <string name="you_may_need_to">可能需要</string>
+    <string name="reasons_for_the_formation_activity_content_title">1、感染</string>
+    
 </resources>

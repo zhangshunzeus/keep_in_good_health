@@ -13,6 +13,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <!-- 首页 -->
         <activity
             android:name="com.zhangshun.activity.HomePageActivity"
             android:label="@string/app_name" >
@@ -26,7 +28,15 @@
         </activity>
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
-        <activity android:name="com.zhangshun.activity.HomePageActivity"></activity>
+        <!-- 常见疾病详情列表页面 -->
+        <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty" >
+        </activity>
+        <!-- 形成的原因页面 -->
+        <activity android:name="com.zhangshun.activity.ReasonsForTheFormationActivity" >
+        </activity>
+        <!-- 建议的细节页面 -->
+        <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity" >
+        </activity>
     </application>
 
 </manifest>
