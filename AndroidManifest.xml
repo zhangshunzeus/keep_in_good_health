@@ -77,6 +77,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 我的购物车 页面 -->
+        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity"></activity>
     </application>
 
 </manifest>
