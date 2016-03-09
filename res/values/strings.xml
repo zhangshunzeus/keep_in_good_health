@@ -64,5 +64,8 @@
     <string name="home_text">重庆</string>
     <string name="email_text">12345678@qq.com</string>
     <string name="personal_elucidation_text">介绍以下自己吧</string>
+    <string name="my_collection_title">我的收藏</string>
+    <string name="my_collection_content_title">标题</string>
+    <string name="my_collection_content">如果你无法简洁的表达你的想法，那只说明你还不够了解它</string>
 
 </resources>
