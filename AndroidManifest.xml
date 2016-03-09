@@ -19,14 +19,26 @@
             android:name="com.zhangshun.activity.HomePageActivity"
             android:label="@string/app_name" >
         </activity>
+        <!-- 食名 -->
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
+        <!-- 某某食物详情 -->
         <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <!-- 登录 -->
+        <activity android:name="com.ruanjiawei.activity.LoginActivity" >
+        </activity>
+        <!-- 注册 -->
+        <activity android:name="com.ruanjiawei.activity.RegisterActivity" >
+        </activity>
+        <!-- 注册输入密码 -->
+        <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
         </activity>
 
         <!-- 常见疾病详情列表页面 -->
