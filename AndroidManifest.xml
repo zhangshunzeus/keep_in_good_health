@@ -46,6 +46,16 @@
         <activity android:name="com.jiangkaiquan.activity.Produce_detail"></activity>
         <!--功能-->
         <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
+        
+        
+        <!-- 今天吃什么页面 -->
+        <activity android:name="com.zhangwenbin.activity.TodayEat"></activity>
+        <!-- 选择医师页面 -->
+        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor"></activity>
+        <!-- 个人中心未登录页面 -->
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin"></activity>
+        <!-- 个人中心登录名页面 -->
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName"></activity>
 
 
     </application>

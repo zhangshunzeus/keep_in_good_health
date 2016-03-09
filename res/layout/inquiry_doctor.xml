@@ -48,7 +48,7 @@
                 android:background="@drawable/doctor_edittext_frame"
                 android:drawableLeft="@drawable/ic_launcher"
                 android:drawableStart="@drawable/ic_launcher"
-                android:hint="@string/edit_doctor" />
+                android:hint="@string/Inquiry_doctor_edit_doctor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/doctor_inform" />
+                    android:text="@string/Inquiry_doctor_doctor_inform" />
             </LinearLayout>
 
             <LinearLayout
@@ -86,7 +86,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/Pediatrics_doctor" />
+                    android:text="@string/Inquiry_doctor_Pediatrics_doctor" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -98,7 +98,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/text_doctor" />
+                    android:text="@string/Inquiry_doctor_text_doctor" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -110,7 +110,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/text_doctor" />
+                    android:text="@string/Inquiry_doctor_text_doctor" />
             </LinearLayout>
 
             <LinearLayout
@@ -128,7 +128,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/Pediatrics_doctor" />
+                    android:text="@string/Inquiry_doctor_Pediatrics_doctor" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -140,7 +140,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/text_doctor" />
+                    android:text="@string/Inquiry_doctor_text_doctor" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -152,7 +152,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/text_doctor" />
+                    android:text="@string/Inquiry_doctor_text_doctor" />
             </LinearLayout>
 
             <LinearLayout
@@ -170,7 +170,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/Pediatrics_doctor" />
+                    android:text="@string/Inquiry_doctor_Pediatrics_doctor" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -182,7 +182,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/text_doctor" />
+                    android:text="@string/Inquiry_doctor_text_doctor" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -194,7 +194,7 @@
                     android:background="#ffffff"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="@string/dots" />
+                    android:text="@string/Inquiry_doctor_dots" />
             </LinearLayout>
 
             <LinearLayout
@@ -229,7 +229,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/text_doctor" />
+                            android:text="@string/Inquiry_doctor_text_doctor" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -251,7 +251,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="@string/text_doctor" />
+                            android:text="@string/Inquiry_doctor_text_doctor" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -274,14 +274,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/order_doctor" />
+                    android:text="@string/Inquiry_doctor_order_doctor" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:text="@string/all_doctor" />
+                    android:text="@string/Inquiry_doctor_all_doctor" />
             </RelativeLayout>
 
             <LinearLayout
@@ -304,7 +304,7 @@
                         android:button="@null"
                         android:drawableTop="@drawable/ic_launcher"
                         android:gravity="center"
-                        android:text="@string/doctor_name" />
+                        android:text="@string/Inquiry_doctor_doctor_name" />
 
                     <RadioButton
                         android:layout_width="0dp"
@@ -313,7 +313,7 @@
                         android:button="@null"
                         android:drawableTop="@drawable/ic_launcher"
                         android:gravity="center"
-                        android:text="@string/doctor_name" />
+                        android:text="@string/Inquiry_doctor_doctor_name" />
 
                     <RadioButton
                         android:layout_width="0dp"
@@ -322,7 +322,7 @@
                         android:button="@null"
                         android:drawableTop="@drawable/ic_launcher"
                         android:gravity="center"
-                        android:text="@string/doctor_name" />
+                        android:text="@string/Inquiry_doctor_doctor_name" />
 
                     <RadioButton
                         android:layout_width="0dp"
@@ -331,7 +331,7 @@
                         android:button="@null"
                         android:drawableTop="@drawable/ic_launcher"
                         android:gravity="center"
-                        android:text="@string/doctor_name" />
+                        android:text="@string/Inquiry_doctor_doctor_name" />
                 </RadioGroup>
             </LinearLayout>
         </LinearLayout>
