@@ -9,7 +9,5 @@
         android:id="@+id/recomend_children_img"
         android:src="@drawable/ic_launcher"
         />
-    <TextView
-        android:layout_width=""
-        android:layout_height="" />
+   
 </LinearLayout>
