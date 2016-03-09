@@ -37,6 +37,8 @@
         <!-- 建议的细节页面 -->
         <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity" >
         </activity>
+        <!-- 设置页面 -->
+        <activity android:name="com.zhangshun.activity.SetUpTheActivity"></activity>
     </application>
 
 </manifest>

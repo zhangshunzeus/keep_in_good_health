@@ -36,5 +36,7 @@
     <string name="life_advice">生活建议</string>
     <string name="you_may_need_to">可能需要</string>
     <string name="reasons_for_the_formation_activity_content_title">1、感染</string>
+    <string name="alerts">消息通知</string>
+    <string name="set_up_the_text">设置</string>
     
 </resources>
