@@ -25,11 +25,6 @@
 
         <!-- 某某食物详情 -->
         <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 登录 -->
@@ -72,14 +67,16 @@
 
         <!-- 我的收藏页面 -->
         <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
+            
+        </activity>
+        <!-- 我的购物车 页面 -->
+        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- 我的购物车 页面 -->
-        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity"></activity>
     </application>
 
 </manifest>
