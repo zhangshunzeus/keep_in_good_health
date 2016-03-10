@@ -3,7 +3,7 @@ package com.ruanjiawei.activity;
 import java.util.ArrayList;
 
 import com.ruajiawei.baseadapter.FoodNameAllBaseAdapter;
-import com.ruajiawei.baseadapter.FoodNameAllInfo;
+import com.ruanjiawei.demo.FoodNameAllInfo;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;

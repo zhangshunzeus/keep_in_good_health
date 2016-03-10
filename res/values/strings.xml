@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <string name="app_name">keep_in_good_health</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
@@ -23,8 +22,7 @@
     <string name="home_page_dietary">膳食</string>
     <string name="function_contxt1">对于大多数人来说，提起大枣这种食物，
     ，相的，信很多人首先会想到的就是其所具有的养颜补血的功效，在生活中，许多女性也是经常选这吃大枣来进行补血
-        因此，对于大枣的功效与作用，显然应当被大家所认知。
-    </string>
+        因此，对于大枣的功效与作用，显然应当被大家所认知。</string>
     <string name="function_context2">1.抗郭明 大枣乙醇提起物对特意反应性疾病，能抑制抗体的产生，对小老鼠fjadslkfjkasldfjasfjslfkj</string>
     <string name="jjzz">如果你无法简洁的表达你的想法，那只说明你还不够了解它，\n阿尔伯特jbst</string>
     <string name="todayeat_eattitle">今天吃什么</string>
@@ -109,4 +107,9 @@
     <string name="my_collection_content_title">标题</string>
     <string name="my_collection_content">如果你无法简洁的表达你的想法，那只说明你还不够了解它</string>
     <string name="the_shopping_cart_title">我的购物车</string>
+    <string name="product_name">产品名</string>
+    <string name="product_name_title">产品名字</string>
+    <string name="product_name_price">价格</string>
+    <string name="product_name_btn">立即购买</string>
+
 </resources>
