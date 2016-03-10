@@ -22,18 +22,20 @@
         </activity>
 
         <!--推荐-->
-        <activity android:name="com.jiangkaiquan.activity.Recomend"></activity>
+        <activity android:name="com.jiangkaiquan.activity.Recomend">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!--产品详情-->
         <activity android:name="com.jiangkaiquan.activity.Produce_detail"></activity>
         <!--功能-->
         <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
         <!--我的朋友-->
         <activity android:name="com.jiangkaiquan.activity.MyFriend">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
 
