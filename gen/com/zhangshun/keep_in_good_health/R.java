@@ -133,16 +133,17 @@ public final class R {
         public static final int personal_center_login_name=0x7f03000c;
         public static final int personal_center_not_login=0x7f03000d;
         public static final int personal_information=0x7f03000e;
-        public static final int reasons_for_the_formation_activity=0x7f03000f;
-        public static final int recomend_children=0x7f030010;
-        public static final int recomend_indext_2=0x7f030011;
-        public static final int register=0x7f030012;
-        public static final int register_password=0x7f030013;
-        public static final int set_up_the_activity=0x7f030014;
-        public static final int suggestions_for_details_activity=0x7f030015;
-        public static final int the_shopping_cart_activity=0x7f030016;
-        public static final int the_shopping_cart_list=0x7f030017;
-        public static final int today_eat=0x7f030018;
+        public static final int product_name=0x7f03000f;
+        public static final int reasons_for_the_formation_activity=0x7f030010;
+        public static final int recomend_children=0x7f030011;
+        public static final int recomend_indext_2=0x7f030012;
+        public static final int register=0x7f030013;
+        public static final int register_password=0x7f030014;
+        public static final int set_up_the_activity=0x7f030015;
+        public static final int suggestions_for_details_activity=0x7f030016;
+        public static final int the_shopping_cart_activity=0x7f030017;
+        public static final int the_shopping_cart_list=0x7f030018;
+        public static final int today_eat=0x7f030019;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -217,6 +218,10 @@ public final class R {
         public static final int personal_information_title=0x7f06004f;
         public static final int personal_login_name=0x7f06002a;
         public static final int phone=0x7f06003b;
+        public static final int product_name=0x7f060068;
+        public static final int product_name_btn=0x7f06006b;
+        public static final int product_name_price=0x7f06006a;
+        public static final int product_name_title=0x7f060069;
         public static final int professional=0x7f060055;
         public static final int professional_text=0x7f06005f;
         public static final int rapid_interrogation=0x7f060049;

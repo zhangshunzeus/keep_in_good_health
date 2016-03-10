@@ -1,4 +1,4 @@
-package com.ruajiawei.baseadapter;
+package com.ruanjiawei.demo;
 
 public class FoodNameAllInfo {
 	int food_name_all_listview_image;

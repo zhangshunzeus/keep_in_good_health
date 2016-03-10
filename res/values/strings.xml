@@ -108,5 +108,14 @@
     <string name="my_collection_title">我的收藏</string>
     <string name="my_collection_content_title">标题</string>
     <string name="my_collection_content">如果你无法简洁的表达你的想法，那只说明你还不够了解它</string>
+
     <string name="the_shopping_cart_title">我的购物车</string>
+
+
+    <string name="product_name">产品名</string>
+    <string name="product_name_title">产品名字</string>
+    <string name="product_name_price">价格</string>
+    <string name="product_name_btn">立即购买</string>
+
 </resources>
+
