@@ -57,6 +57,7 @@
                 android:text="@string/person_not_login" />
 
             <ImageView
+                android:id="@+id/notlogin_intent_loginname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -95,6 +96,7 @@
                     android:text="@string/person_my_record" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_myrecords"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -123,6 +125,7 @@
                     android:text="@string/person_my_friend" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_myfriend"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -151,6 +154,7 @@
                     android:text="@string/person_my_collect" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_mycollection"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -179,6 +183,7 @@
                     android:text="@string/person_shopping_cart" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_shoppingcart"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -207,6 +212,7 @@
                     android:text="@string/person_my_share" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_myshare"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -235,6 +241,7 @@
                     android:text="@string/person_vip" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_vip"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -251,6 +258,7 @@
         android:orientation="horizontal" >
 
         <RadioButton
+            android:id="@+id/notlogin_intent_homepage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -260,6 +268,7 @@
             android:text="@string/home_page_btn" />
 
         <RadioButton
+            android:id="@+id/notlogin_intent_Classify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

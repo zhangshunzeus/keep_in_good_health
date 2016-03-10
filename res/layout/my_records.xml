@@ -10,6 +10,7 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/myrecords_intent_loginname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@drawable/ic_launcher"
@@ -79,7 +80,7 @@
             android:button="@null"
             android:text="@string/my_records_finish"
             android:padding="10dp"
-            android:textSize="14sp" />
+            android:textSize="14sp"/>
     </RadioGroup>
     
     <ListView 
@@ -97,6 +98,7 @@
         android:layout_weight="1">
 
         <RadioButton
+            android:id="@+id/myrecords_intent_homepage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -106,6 +108,7 @@
             android:text="@string/home_page_btn" />
 
         <RadioButton
+            android:id="@+id/myrecords_intent_classify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
