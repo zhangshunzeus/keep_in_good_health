@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.ruanjiawei.activity.Food_name_Activity;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
 
@@ -50,7 +51,7 @@ public class TodayEat extends Activity {
 				startActivity(intent_breakfast);
 				break;
 			case R.id.intent_lunch:
-				Intent intent_lunch = new Intent();
+				Intent intent_lunch = new Intent(TodayEat.this,Food_name_Activity.class);
 				startActivity(intent_lunch);
 				break;
 			case R.id.intent_lunch_two:

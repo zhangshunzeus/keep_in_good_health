@@ -10,8 +10,10 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 
 import com.ruanjiawei.activity.LoginActivity;
+import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.activity.MyCollectionActivity;
+import com.zhangshun.activity.SetUpTheActivity;
 import com.zhangshun.activity.TheShoppingCartActivity;
 import com.zhangshun.keep_in_good_health.R;
 
@@ -25,6 +27,7 @@ public class PersonalCenterNotLogin extends Activity {
 	RadioButton intentHomePage;
 	RadioButton intentClassify;
 	ImageView intentLoginName;
+	ImageView intentSetUp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +51,11 @@ public class PersonalCenterNotLogin extends Activity {
 		intentShopCart.setOnClickListener(onClickListener);
 		intentVIP = (ImageView) findViewById(R.id.notlogin_intent_vip);
 		intentVIP.setOnClickListener(onClickListener);
-		intentLoginName=(ImageView)findViewById(R.id.notlogin_intent_loginname);
+		intentLoginName = (ImageView) findViewById(R.id.notlogin_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
+		intentSetUp = (ImageView) findViewById(R.id.notlogin_intent_setup);
+		intentSetUp.setOnClickListener(onClickListener);
+
 	}
 
 	OnClickListener onClickListener = new OnClickListener() {
@@ -59,22 +65,27 @@ public class PersonalCenterNotLogin extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.notlogin_intent_Classify:
-				Intent intent_classify = new Intent();
+				Intent intent_classify = new Intent(
+						PersonalCenterNotLogin.this,
+						CommonDiseasesListForDetailsAcitivty.class);
 				startActivity(intent_classify);
 				break;
 
 			case R.id.notlogin_intent_homepage:
-				Intent intent_homepage = new Intent(PersonalCenterNotLogin.this,HomePageActivity.class);
+				Intent intent_homepage = new Intent(
+						PersonalCenterNotLogin.this, HomePageActivity.class);
 				startActivity(intent_homepage);
 				break;
 
 			case R.id.notlogin_intent_loginname:
-				Intent intent_loginname = new Intent(PersonalCenterNotLogin.this,LoginActivity.class);
+				Intent intent_loginname = new Intent(
+						PersonalCenterNotLogin.this, LoginActivity.class);
 				startActivity(intent_loginname);
 				break;
 
 			case R.id.notlogin_intent_mycollection:
-				Intent intent_mycollection = new Intent(PersonalCenterNotLogin.this,MyCollectionActivity.class);
+				Intent intent_mycollection = new Intent(
+						PersonalCenterNotLogin.this, MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
 
@@ -84,22 +95,32 @@ public class PersonalCenterNotLogin extends Activity {
 				break;
 
 			case R.id.notlogin_intent_myrecords:
-				Intent intent_myrecords = new Intent(PersonalCenterNotLogin.this,MyRecords.class);
+				Intent intent_myrecords = new Intent(
+						PersonalCenterNotLogin.this, MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
 
 			case R.id.notlogin_intent_myshare:
-				Intent intent_myshare = new Intent();
+				Intent intent_myshare = new Intent(PersonalCenterNotLogin.this,
+						LoginActivity.class);
 				startActivity(intent_myshare);
 				break;
 
 			case R.id.notlogin_intent_shoppingcart:
-				Intent intent_shopingcart = new Intent(PersonalCenterNotLogin.this,TheShoppingCartActivity.class);
+				Intent intent_shopingcart = new Intent(
+						PersonalCenterNotLogin.this,
+						TheShoppingCartActivity.class);
 				startActivity(intent_shopingcart);
 				break;
+			case R.id.notlogin_intent_setup:
+				Intent intent_setup = new Intent(PersonalCenterNotLogin.this,
+						SetUpTheActivity.class);
+				startActivity(intent_setup);
+				break;
 			case R.id.notlogin_intent_vip:
-				Intent intent_vippage = new Intent();
-				startActivity(intent_vippage);
+				Intent intent_vip = new Intent(PersonalCenterNotLogin.this,
+						LoginActivity.class);
+				startActivity(intent_vip);
 				break;
 
 			default:
