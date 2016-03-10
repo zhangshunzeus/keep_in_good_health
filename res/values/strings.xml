@@ -57,6 +57,13 @@
     <string name="shop_collection_my_orderform">我的订单</string>
     <string name="shop_collection_shopname">产品名</string>
     <string name="shop_collection_shop_money">35</string>
+    <string name="my_records_title">我的记录</string>
+    <string name="my_records_pay_money">待付款</string>
+    <string name="my_records_send_shop">待发货</string>
+    <string name="my_records_delivered">已发货</string>
+    <string name="my_records_finish">已完成</string>
+    <string name="my_records_list_title">标题</string>
+    <string name="my_records_list_text">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
     <string name="home_page_btn">首页</string>
     <string name="classification_btn">分类</string>
     <string name="my_btn">我的</string>
