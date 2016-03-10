@@ -2,25 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhangshun.keep_in_good_health"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="15"
         android:targetSdkVersion="18" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+
+        <!-- 首页 -->
         <activity
             android:name="com.zhangshun.activity.HomePageActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:label="@string/app_name">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!--推荐-->
@@ -29,6 +27,25 @@
         <activity android:name="com.jiangkaiquan.activity.Produce_detail"></activity>
         <!--功能-->
         <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
+        <!--我的朋友-->
+        <activity android:name="com.jiangkaiquan.activity.MyFriend">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.ruanjiawei.activity.Food_name_Activity"></activity>
+        <!-- 常见疾病详情列表页面 -->
+        <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty"></activity>
+        <!-- 形成的原因页面 -->
+        <activity android:name="com.zhangshun.activity.ReasonsForTheFormationActivity"></activity>
+        <!-- 建议的细节页面 -->
+        <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity"></activity>
+        <!-- 设置页面 -->
+        <activity android:name="com.zhangshun.activity.SetUpTheActivity"></activity>
 
     </application>
 
