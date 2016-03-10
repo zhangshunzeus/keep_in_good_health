@@ -1,4 +1,4 @@
-package com.zhangwenbin.android_health;
+package com.zhangwenbin.activity;
 
 import android.app.Activity;
 import android.content.Intent;

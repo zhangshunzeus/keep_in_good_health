@@ -66,6 +66,7 @@
                 android:orientation="vertical" >
 
                 <TextView
+                    android:id="@+id/intent_food"
                     android:layout_width="fill_parent"
                     android:layout_height="80dp"
                     android:layout_margin="5dp"
@@ -148,6 +149,6 @@
     <include
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/home_page_bottom_menu" />
+        layout="@layout/jiang_button" />
 
 </LinearLayout>
