@@ -16,12 +16,27 @@
 
         <!-- 首页 -->
         <activity
+
             android:name="com.zhangshun.activity.HomePageActivity" >
+
+
+        </activity>
+
+        <!--推荐-->
+        <activity android:name="com.jiangkaiquan.activity.Recomend">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!--产品详情-->
+        <activity android:name="com.jiangkaiquan.activity.Produce_detail"></activity>
+        <!--功能-->
+        <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
+        <!--我的朋友-->
+        <activity android:name="com.jiangkaiquan.activity.MyFriend">
+
         </activity>
         <!-- 食名 -->
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
@@ -30,21 +45,6 @@
         <!-- 某某食物详情 -->
         <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity" >
         </activity>
-
-        <!-- 推荐 -->
-        <activity android:name="com.jiangkaiquan.activity.Recomend" >
-        </activity>
-        <!-- 产品详情 -->
-        <activity android:name="com.jiangkaiquan.activity.Produce_detail" >
-        </activity>
-        <!-- 功能 -->
-        <activity android:name="com.jiangkaiquan.activity.Founction" >
-        </activity>
-
-        <!-- 我的朋友 -->
-        <activity android:name="com.jiangkaiquan.activity.MyFriend" >
-        </activity>
-
         <!-- 登录 -->
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
         </activity>
