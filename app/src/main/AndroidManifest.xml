@@ -72,18 +72,20 @@
         <activity android:name="com.zhangwenbin.activity.TodayEat"></activity>
         <!--餐名 页面-->
         <activity android:name="com.zhangrong.activity.MealNameActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!--支付界面-->
         <activity android:name="com.zhangrong.activity.PaymentInterfaceActivity">
 
         </activity>
         <!--分类主界面-->
-        <activity android:name="com.zhangrong.activity.MainActivity"></activity>
+        <activity android:name="com.zhangrong.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
     </application>
