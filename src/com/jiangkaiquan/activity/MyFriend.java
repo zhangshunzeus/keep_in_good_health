@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ExpandableListView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class MyFriend extends Activity {
     private ExpandableListView eview;
     private PopupWindow pwind;
     private MyFriendsAdapter eadpter = new MyFriendsAdapter();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +119,7 @@ public class MyFriend extends Activity {
                 text = (TextView) view.findViewById(id[i]);
                 text.setOnClickListener(listener);
             }
-
+            //显示popuwind
             pwind = new PopupWindow(view);
 
             //加pupowind页面
