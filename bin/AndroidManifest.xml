@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="15"
         android:targetSdkVersion="18" />
 
     <application
@@ -16,8 +16,12 @@
 
         <!-- 首页 -->
         <activity
-            android:name="com.zhangshun.activity.HomePageActivity"
-            android:label="@string/app_name" >
+            android:name="com.zhangshun.activity.HomePageActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!-- 食名 -->
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
@@ -25,6 +29,20 @@
 
         <!-- 某某食物详情 -->
         <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity" >
+        </activity>
+
+        <!-- 推荐 -->
+        <activity android:name="com.jiangkaiquan.activity.Recomend" >
+        </activity>
+        <!-- 产品详情 -->
+        <activity android:name="com.jiangkaiquan.activity.Produce_detail" >
+        </activity>
+        <!-- 功能 -->
+        <activity android:name="com.jiangkaiquan.activity.Founction" >
+        </activity>
+
+        <!-- 我的朋友 -->
+        <activity android:name="com.jiangkaiquan.activity.MyFriend" >
         </activity>
 
         <!-- 登录 -->
@@ -48,6 +66,7 @@
         <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity" >
         </activity>
         <!-- 设置页面 -->
+
         <activity android:name="com.zhangshun.activity.SetUpTheActivity" >
         </activity>
 
@@ -55,27 +74,14 @@
         <activity android:name="com.zhangshun.activity.PersonalInformationActivity" >
         </activity>
 
-        <!-- 推荐 -->
-        <activity android:name="com.jiangkaiquan.activity.Recomend" >
-        </activity>
-        <!-- 产品详情 -->
-        <activity android:name="com.jiangkaiquan.activity.Produce_detail" >
-        </activity>
-        <!-- 功能 -->
-        <activity android:name="com.jiangkaiquan.activity.Founction" >
-        </activity>
         <!-- 我的收藏页面 -->
         <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
-            
         </activity>
         <!-- 我的购物车 页面 -->
-        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
         </activity>
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName"></activity>
+        <activity android:name="com.zhangwenbin.activity.TodayEat"></activity>
     </application>
 
 </manifest>
