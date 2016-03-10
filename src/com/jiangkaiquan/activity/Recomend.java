@@ -42,7 +42,7 @@ public class Recomend extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.recomend_indext_2);
+        
       
         
         recomend_recomend_tx = (TextView) findViewById (R.id.recomend_recomend_tx);
