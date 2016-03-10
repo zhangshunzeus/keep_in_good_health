@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_name">keep_in_good_health</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="food_name">食名</string>
@@ -19,6 +20,38 @@
     <string name="food_name_taboo">食材禁忌</string>
     <string name="home_page_recommended">推荐</string>
     <string name="home_page_dietary">膳食</string>
+    <string name="function_contxt1">对于大多数人来说，提起大枣这种食物，
+    ，相的，信很多人首先会想到的就是其所具有的养颜补血的功效，在生活中，许多女性也是经常选这吃大枣来进行补血
+        因此，对于大枣的功效与作用，显然应当被大家所认知。</string>
+    <string name="function_context2">1.抗郭明 大枣乙醇提起物对特意反应性疾病，能抑制抗体的产生，对小老鼠fjadslkfjkasldfjasfjslfkj</string>
+    <string name="jjzz">如果你无法简洁的表达你的想法，那只说明你还不够了解它，\n阿尔伯特jbst</string>
+    <string name="todayeat_eattitle">今天吃什么</string>
+    <string name="todayeat_breakfast">营养早餐</string>
+    <string name="todayeat_lunch">丰富午餐</string>
+    <string name="todayeat_dinner">可口晚餐</string>
+    <string name="todayeat_breakfastcontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
+    <string name="todayeat_lunchcontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
+    <string name="todayeat_dinnercontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
+    <string name="Inquiry_doctor_edit_doctor">医生/病状科室</string>
+    <string name="Inquiry_doctor_doctor_inform">本周六  李明医生教授团队在线坐诊...</string>
+    <string name="Inquiry_doctor_Pediatrics_doctor">儿科</string>
+    <string name="Inquiry_doctor_text_doctor">文字</string>
+    <string name="Inquiry_doctor_dots">...</string>
+    <string name="personal_center_title">个人中心</string>
+    <string name="person_my_record">我的记录</string>
+    <string name="person_my_friend">我的好友</string>
+    <string name="person_my_collect">我的收藏</string>
+    <string name="person_my_share">我的分享</string>
+    <string name="person_shopping_cart">购物车</string>
+    <string name="person_vip">会员中心</string>
+    <string name="person_not_login">未登录</string>
+    <string name="personal_login_name">登录名</string>
+    <string name="Inquiry_doctor_order_doctor">预约医师</string>
+    <string name="Inquiry_doctor_all_doctor">全部</string>
+    <string name="Inquiry_doctor_doctor_name">名字</string>
+    <string name="home_page_btn">首页</string>
+    <string name="classification_btn">分类</string>
+    <string name="my_btn">我的</string>
     <string name="eattitle">今天吃什么</string>
     <string name="breakfast">营养早餐</string>
     <string name="lunch">丰富午餐</string>
@@ -26,9 +59,6 @@
     <string name="breakfastcontext">死定了风景卅fgdsfg份认购</string>
     <string name="lunchcontext">死定了风景卅按时发广东省多</string>
     <string name="dinnercontext">死定了风景卅儿童如果对方和</string>
-    <string name="home_page_btn">首页</string>
-    <string name="classification_btn">分类</string>
-    <string name="my_btn">我的</string>
     <string name="relate">某某相关食谱</string>
     <string name="login">登录</string>
     <string name="register">注册</string>
@@ -44,11 +74,6 @@
     <string name="register_password">请输入您的密码</string>
     <string name="register_inpassword">请再次输入您的密码</string>
     <string name="register_OK">完成</string>
-    <string name="function_contxt1">对于大多数人来说，提起大枣这种食物，
-    ，相的，信很多人首先会想到的就是其所具有的养颜补血的功效，在生活中，许多女性也是经常选这吃大枣来进行补血
-        因此，对于大枣的功效与作用，显然应当被大家所认知。</string>
-    <string name="function_context2">1.抗郭明 大枣乙醇提起物对特意反应性疾病，能抑制抗体的产生，对小老鼠fjadslkfjkasldfjasfjslfkj</string>
-    <string name="jjzz">如果你无法简洁的表达你的想法，那只说明你还不够了解它，\n阿尔伯特jbst</string>
     <string name="in_the_picture_at_the_top_of_the_back_button">位于图片左上方有返回按钮</string>
     <string name="reasons_for_the_formation">形成原因</string>
     <string name="rapid_interrogation">快速问诊</string>
@@ -78,10 +103,10 @@
     <string name="home_text">重庆</string>
     <string name="email_text">12345678@qq.com</string>
     <string name="personal_elucidation_text">介绍以下自己吧</string>
-    <string name="app_name">keep_in_good_health</string>
     <string name="my_collection_title">我的收藏</string>
     <string name="my_collection_content_title">标题</string>
     <string name="my_collection_content">如果你无法简洁的表达你的想法，那只说明你还不够了解它</string>
+    <string name="the_shopping_cart_title">我的购物车</string>
     <string name="product_name">产品名</string>
     <string name="product_name_title">产品名字</string>
     <string name="product_name_price">价格</string>
