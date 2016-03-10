@@ -2,6 +2,7 @@ package com.ruajiawei.baseadapter;
 
 import java.util.ArrayList;
 
+import com.ruanjiawei.demo.FoodNameAllInfo;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.content.Context;
