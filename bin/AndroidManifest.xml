@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="15"
         android:targetSdkVersion="18" />
 
     <application
@@ -26,34 +26,6 @@
         <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity" >
         </activity>
 
-        <!-- 登录 -->
-        <activity android:name="com.ruanjiawei.activity.LoginActivity" >
-        </activity>
-
-        <!-- 注册 -->
-        <activity android:name="com.ruanjiawei.activity.RegisterActivity" >
-        </activity>
-        <!-- 注册输入密码 -->
-        <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
-        </activity>
-
-        <!-- 常见疾病详情列表页面 -->
-        <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty" >
-        </activity>
-        <!-- 形成的原因页面 -->
-        <activity android:name="com.zhangshun.activity.ReasonsForTheFormationActivity" >
-        </activity>
-        <!-- 建议的细节页面 -->
-        <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity" >
-        </activity>
-        <!-- 设置页面 -->
-        <activity android:name="com.zhangshun.activity.SetUpTheActivity" >
-        </activity>
-
-        <!-- 个人信息页面 -->
-        <activity android:name="com.zhangshun.activity.PersonalInformationActivity" >
-        </activity>
-
         <!-- 推荐 -->
         <activity android:name="com.jiangkaiquan.activity.Recomend" >
         </activity>
@@ -63,19 +35,41 @@
         <!-- 功能 -->
         <activity android:name="com.jiangkaiquan.activity.Founction" >
         </activity>
-        <!-- 我的收藏页面 -->
-        <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
-            
-        </activity>
-        <!-- 我的购物车 页面 -->
-        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <!-- 我的朋友 -->
+        <activity android:name="com.jiangkaiquan.activity.MyFriend" ></activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- 登录 -->
+            <activity android:name="com.ruanjiawei.activity.LoginActivity" ></activity>
 
-        </activity>
+            <!-- 注册 -->
+            <activity android:name="com.ruanjiawei.activity.RegisterActivity" ></activity>
+            <!-- 注册输入密码 -->
+            <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" ></activity>
+
+            <!-- 常见疾病详情列表页面 -->
+            <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty" ></activity>
+            <!-- 形成的原因页面 -->
+            <activity android:name="com.zhangshun.activity.ReasonsForTheFormationActivity" ></activity>
+            <!-- 建议的细节页面 -->
+            <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity" ></activity>
+            <!-- 设置页面 -->
+
+            <activity android:name="com.zhangshun.activity.SetUpTheActivity" ></activity>
+
+            <!-- 个人信息页面 -->
+            <activity android:name="com.zhangshun.activity.PersonalInformationActivity" ></activity>
+
+            <!-- 我的收藏页面 -->
+            <activity android:name="com.zhangshun.activity.MyCollectionActivity" ></activity>
+            <!-- 我的购物车 页面 -->
+            <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+
     </application>
 
 </manifest>
