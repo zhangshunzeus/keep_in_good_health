@@ -35,6 +35,9 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
 
 
 
+
+
+
     }
 
     //这个是初始化，button和fragment的一些工作的
