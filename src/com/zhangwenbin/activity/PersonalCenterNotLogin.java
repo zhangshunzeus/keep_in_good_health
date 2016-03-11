@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 
+import com.jiangkaiquan.activity.MyFriend;
 import com.ruanjiawei.activity.LoginActivity;
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
@@ -90,7 +91,7 @@ public class PersonalCenterNotLogin extends Activity {
 				break;
 
 			case R.id.notlogin_intent_myfriend:
-				Intent intent = new Intent();
+				Intent intent = new Intent(PersonalCenterNotLogin.this,MyFriend.class);
 				startActivity(intent);
 				break;
 
