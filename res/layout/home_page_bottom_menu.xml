@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:padding="3dp" >
 
         <RadioButton
             android:id="@+id/home_page"
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/ic_launcher"
+            android:drawableTop="@drawable/rub_course_home_page_not_selected_bg"
             android:gravity="center_horizontal"
             android:text="@string/home_page_btn"
             android:textColor="#A89F9C"
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/ic_launcher"
+            android:drawableTop="@drawable/rub_course_category_not_selected_bg"
             android:gravity="center_horizontal"
             android:text="@string/classification_btn"
             android:textColor="#A89F9C"
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/ic_launcher"
+            android:drawableTop="@drawable/rub_course_me_not_selected_bg"
             android:gravity="center_horizontal"
             android:text="@string/my_btn"
             android:textColor="#A89F9C"

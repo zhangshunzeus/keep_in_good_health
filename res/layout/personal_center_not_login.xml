@@ -63,8 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center"
-                android:contentDescription="@drawable/ic_launcher"
-                android:src="@drawable/ic_launcher" />
+                android:contentDescription="@drawable/rub_course_go_to_next_right"
+                android:src="@drawable/rub_course_go_to_next_right" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -102,8 +102,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -131,8 +132,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -160,8 +162,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -189,8 +192,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -218,8 +222,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -247,8 +252,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -265,7 +271,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_homepage"
             android:gravity="center"
             android:text="@string/home_page_btn" />
 
@@ -275,7 +281,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_classify"
             android:gravity="center"
             android:text="@string/classification_btn" />
 
@@ -284,7 +290,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_my"
             android:gravity="center"
             android:text="@string/my_btn" />
     </LinearLayout>

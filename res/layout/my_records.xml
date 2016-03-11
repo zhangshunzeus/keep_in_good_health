@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_homepage"
             android:gravity="center"
             android:text="@string/home_page_btn" />
 
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_classify"
             android:gravity="center"
             android:text="@string/classification_btn" />
 
@@ -122,7 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_my"
             android:gravity="center"
             android:text="@string/my_btn" />
     </LinearLayout>

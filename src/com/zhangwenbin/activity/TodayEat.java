@@ -29,7 +29,7 @@ public class TodayEat extends Activity {
 		imageView.setOnClickListener(onClickListener);
 		linearLayout_breakfast = (LinearLayout) findViewById(R.id.intent_breakfast);
 		linearLayout_breakfast.setOnClickListener(onClickListener);
-		linearLayout_lunch = (LinearLayout) findViewById(R.id.intent_lunch);
+		linearLayout_lunch = (LinearLayout) findViewById(R.id.intent_lunch_one);
 		linearLayout_lunch.setOnClickListener(onClickListener);
 		linearLayout_lunch_two = (LinearLayout) findViewById(R.id.intent_lunch_two);
 		linearLayout_dinner = (LinearLayout) findViewById(R.id.intent_dinner);
@@ -50,7 +50,7 @@ public class TodayEat extends Activity {
 				Intent intent_breakfast = new Intent();
 				startActivity(intent_breakfast);
 				break;
-			case R.id.intent_lunch:
+			case R.id.intent_lunch_one:
 				Intent intent_lunch = new Intent(TodayEat.this,Food_name_Activity.class);
 				startActivity(intent_lunch);
 				break;

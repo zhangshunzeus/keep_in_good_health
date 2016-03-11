@@ -25,8 +25,12 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignTop="@id/image_title_doctor"
-            android:contentDescription="@drawable/ic_launcher"
-            android:src="@drawable/ic_launcher" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@drawable/mealname_back_icon"
+            android:padding="5dp"
+            android:src="@drawable/mealname_back_icon" />
     </RelativeLayout>
 
     <ScrollView
@@ -302,7 +306,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:button="@null"
-                        android:drawableTop="@drawable/ic_launcher"
+                        android:drawableTop="@drawable/circle_frame"
                         android:gravity="center"
                         android:text="@string/Inquiry_doctor_doctor_name" />
 
@@ -311,7 +315,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:button="@null"
-                        android:drawableTop="@drawable/ic_launcher"
+                        android:drawableTop="@drawable/circle_frame"
                         android:gravity="center"
                         android:text="@string/Inquiry_doctor_doctor_name" />
 
@@ -320,7 +324,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:button="@null"
-                        android:drawableTop="@drawable/ic_launcher"
+                        android:drawableTop="@drawable/circle_frame"
                         android:gravity="center"
                         android:text="@string/Inquiry_doctor_doctor_name" />
 
@@ -329,7 +333,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:button="@null"
-                        android:drawableTop="@drawable/ic_launcher"
+                        android:drawableTop="@drawable/circle_frame"
                         android:gravity="center"
                         android:text="@string/Inquiry_doctor_doctor_name" />
                 </RadioGroup>

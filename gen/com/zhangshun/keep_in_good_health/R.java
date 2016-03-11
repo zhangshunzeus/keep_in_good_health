@@ -39,18 +39,23 @@ public final class R {
         public static final int line=0x7f020009;
         public static final int login_edittext_bj=0x7f02000a;
         public static final int mealname_back_icon=0x7f02000b;
-        public static final int rub_course_go_to_next_right=0x7f02000c;
-        public static final int rub_course_home_page_not_selected_bg=0x7f02000d;
-        public static final int rub_course_home_page_selected_bg=0x7f02000e;
-        public static final int rub_course_me_not_selected_bg=0x7f02000f;
-        public static final int rub_course_me_selected_bg=0x7f020010;
-        public static final int selector_text_style=0x7f020011;
-        public static final int show=0x7f020012;
-        public static final int ssdk_oks_logo_facebookmessenger=0x7f020013;
-        public static final int ssdk_oks_logo_flickr=0x7f020014;
-        public static final int ssdk_oks_logo_foursquare=0x7f020015;
-        public static final int ssdk_oks_logo_sohusuishenkan=0x7f020016;
-        public static final int switch_bg=0x7f020017;
+        public static final int rub_course_category_not_selected_bg=0x7f02000c;
+        public static final int rub_course_category_selected_bg=0x7f02000d;
+        public static final int rub_course_go_to_next_right=0x7f02000e;
+        public static final int rub_course_home_page_not_selected_bg=0x7f02000f;
+        public static final int rub_course_home_page_selected_bg=0x7f020010;
+        public static final int rub_course_me_not_selected_bg=0x7f020011;
+        public static final int rub_course_me_selected_bg=0x7f020012;
+        public static final int selector_classify=0x7f020013;
+        public static final int selector_homepage=0x7f020014;
+        public static final int selector_my=0x7f020015;
+        public static final int selector_text_style=0x7f020016;
+        public static final int show=0x7f020017;
+        public static final int ssdk_oks_logo_facebookmessenger=0x7f020018;
+        public static final int ssdk_oks_logo_flickr=0x7f020019;
+        public static final int ssdk_oks_logo_foursquare=0x7f02001a;
+        public static final int ssdk_oks_logo_sohusuishenkan=0x7f02001b;
+        public static final int switch_bg=0x7f02001c;
     }
     public static final class id {
         public static final int action_settings=0x7f09009e;
@@ -101,7 +106,7 @@ public final class R {
         public static final int intent_breakfast=0x7f090055;
         public static final int intent_dinner=0x7f09009d;
         public static final int intent_food=0x7f090006;
-        public static final int intent_lunch=0x7f09009b;
+        public static final int intent_lunch_one=0x7f09009b;
         public static final int intent_lunch_two=0x7f09009c;
         public static final int loginname_intent_mycollection=0x7f09005f;
         public static final int loginname_intent_myfriend=0x7f09005e;

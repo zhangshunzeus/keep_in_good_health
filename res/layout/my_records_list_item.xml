@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/my_records_image"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
@@ -22,7 +22,7 @@
             android:src="@drawable/ic_launcher" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:orientation="vertical" >
@@ -47,14 +47,14 @@
 
         <ImageView
             android:id="@+id/my_records_intent"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:contentDescription="@drawable/ic_launcher"
-            android:src="@drawable/ic_launcher" />
+            android:layout_weight="0.5"
+            android:contentDescription="@drawable/rub_course_go_to_next_right"
+            android:src="@drawable/rub_course_go_to_next_right" />
     </LinearLayout>
 
 </LinearLayout>

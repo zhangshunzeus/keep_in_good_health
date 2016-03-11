@@ -15,28 +15,25 @@
         android:theme="@style/AppTheme" >
 
         <!-- 首页 -->
-        <activity
-
-            android:name="com.zhangshun.activity.HomePageActivity" >
-
-
-        </activity>
-
-        <!--推荐-->
-        <activity android:name="com.jiangkaiquan.activity.Recomend">
+        <activity android:name="com.zhangshun.activity.HomePageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--产品详情-->
-        <activity android:name="com.jiangkaiquan.activity.Produce_detail"></activity>
-        <!--功能-->
-        <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
-        <!--我的朋友-->
-        <activity android:name="com.jiangkaiquan.activity.MyFriend">
 
+        <!-- 推荐 -->
+        <activity android:name="com.jiangkaiquan.activity.Recomend" >
+        </activity>
+        <!-- 产品详情 -->
+        <activity android:name="com.jiangkaiquan.activity.Produce_detail" >
+        </activity>
+        <!-- 功能 -->
+        <activity android:name="com.jiangkaiquan.activity.Founction" >
+        </activity>
+        <!-- 我的朋友 -->
+        <activity android:name="com.jiangkaiquan.activity.MyFriend" >
         </activity>
         <!-- 食名 -->
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
@@ -81,6 +78,7 @@
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
         </activity>
 
+
         <!-- 分类：咨询医师页面 -->
         <activity android:name="com.zhangwenbin.activity.Inquiry_doctor"></activity>
         <!-- 我的：我的记录页面 -->
@@ -93,8 +91,6 @@
  		<activity android:name="com.zhangwenbin.activity.ShopCollection"></activity>   
     	<!-- 首页：今天吃什么页面 -->
  		<activity android:name="com.zhangwenbin.activity.TodayEat"></activity>
-
-
 
     </application>
 
