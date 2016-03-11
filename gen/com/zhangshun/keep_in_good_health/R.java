@@ -38,17 +38,19 @@ public final class R {
         public static final int line=0x7f020008;
         public static final int login_edittext_bj=0x7f020009;
         public static final int mealname_back_icon=0x7f02000a;
-        public static final int rub_course_go_to_next_right=0x7f02000b;
-        public static final int rub_course_home_page_not_selected_bg=0x7f02000c;
-        public static final int rub_course_home_page_selected_bg=0x7f02000d;
-        public static final int rub_course_me_not_selected_bg=0x7f02000e;
-        public static final int rub_course_me_selected_bg=0x7f02000f;
-        public static final int show=0x7f020010;
-        public static final int ssdk_oks_logo_facebookmessenger=0x7f020011;
-        public static final int ssdk_oks_logo_flickr=0x7f020012;
-        public static final int ssdk_oks_logo_foursquare=0x7f020013;
-        public static final int ssdk_oks_logo_sohusuishenkan=0x7f020014;
-        public static final int switch_bg=0x7f020015;
+        public static final int rub_course_category_not_selected_bg=0x7f02000b;
+        public static final int rub_course_category_selected_bg=0x7f02000c;
+        public static final int rub_course_go_to_next_right=0x7f02000d;
+        public static final int rub_course_home_page_not_selected_bg=0x7f02000e;
+        public static final int rub_course_home_page_selected_bg=0x7f02000f;
+        public static final int rub_course_me_not_selected_bg=0x7f020010;
+        public static final int rub_course_me_selected_bg=0x7f020011;
+        public static final int show=0x7f020012;
+        public static final int ssdk_oks_logo_facebookmessenger=0x7f020013;
+        public static final int ssdk_oks_logo_flickr=0x7f020014;
+        public static final int ssdk_oks_logo_foursquare=0x7f020015;
+        public static final int ssdk_oks_logo_sohusuishenkan=0x7f020016;
+        public static final int switch_bg=0x7f020017;
     }
     public static final class id {
         public static final int action_settings=0x7f09007c;
