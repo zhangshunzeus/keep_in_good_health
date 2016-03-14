@@ -27,7 +27,7 @@ public class TheShoppingCartActivity extends Activity {
 	
 	private void getData() {
 		
-		for(int i = 0; i < 10; i++){
+		for(int i = 0; i < 3; i++){
 			TheShoppingCartDemo buy = new TheShoppingCartDemo();
 			buy.setImg("");
 			buy.setMy_collection_content("如果你无法简洁的表达你的想法，那只说明你还不够了解它。 \n -- 阿尔伯特·爱因斯坦");

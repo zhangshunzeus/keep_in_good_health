@@ -16,11 +16,9 @@
 
         <!-- 首页 -->
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <!-- 水果页面 -->
+        <activity android:name="com.zhangshun.activity.FruitActivity" >
         </activity>
 
         <!-- 推荐 -->
@@ -76,6 +74,15 @@
         </activity>
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
+            
+        </activity>
+        <!-- 启动页面 -->
+        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
         </activity>
