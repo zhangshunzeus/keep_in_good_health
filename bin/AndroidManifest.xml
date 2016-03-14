@@ -16,6 +16,14 @@
 
         <!-- 首页 -->
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
+      
+        </activity>
+        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- 推荐 -->
@@ -43,11 +51,6 @@
 
         <!-- 注册 -->
         <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 注册输入密码 -->

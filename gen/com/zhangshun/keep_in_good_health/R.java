@@ -248,11 +248,12 @@ public final class R {
         public static final int register=0x7f030022;
         public static final int set_up_the_activity=0x7f030023;
         public static final int shop_details=0x7f030024;
-        public static final int suggestions_for_details_activity=0x7f030025;
-        public static final int the_launch_page_activity=0x7f030026;
-        public static final int the_shopping_cart_activity=0x7f030027;
-        public static final int the_shopping_cart_list=0x7f030028;
-        public static final int today_eat=0x7f030029;
+        public static final int shop_details_big=0x7f030025;
+        public static final int suggestions_for_details_activity=0x7f030026;
+        public static final int the_launch_page_activity=0x7f030027;
+        public static final int the_shopping_cart_activity=0x7f030028;
+        public static final int the_shopping_cart_list=0x7f030029;
+        public static final int today_eat=0x7f03002a;
     }
     public static final class menu {
         public static final int main=0x7f080000;
