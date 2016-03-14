@@ -1,4 +1,4 @@
-package adapter;
+package com.jiangkaiquan.activity.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -73,15 +73,16 @@ public class MyFriendsAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
         if (view == null) {
-            holder=new Holder();
+            holder = new Holder();
             view = inflater.inflate(R.layout.jiang_my_friend_ev, null);
             holder.text = (TextView) view.findViewById(R.id.ev_my_friend_tx);
             view.setTag(holder);
+
         } else {
             holder = (Holder) view.getTag();
         }
-        holder.text.setText(this.parent.get(i));
 
+        holder.text.setText(this.parent.get(i));
         return view;
     }
 

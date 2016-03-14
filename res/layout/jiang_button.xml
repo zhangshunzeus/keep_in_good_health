@@ -7,7 +7,7 @@
 
     >
 
-    <Button
+    <TextView
         android:id="@+id/my_friend_new_tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:drawableTop="@drawable/ic_launcher"
         android:text="首页" />
 
-    <Button
+    <TextView
         android:id="@+id/my_friend_issue_group_tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         android:gravity="center_horizontal|center_vertical"
         android:text="分类" />
 
-    <Button
+    <TextView
         android:id="@+id/my_friend_car_tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

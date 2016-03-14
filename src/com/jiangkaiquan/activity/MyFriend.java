@@ -11,13 +11,16 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
 import com.zhangshun.keep_in_good_health.R;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import adapter.MyFriendsAdapter;
+
+import com.jiangkaiquan.activity.adapter.MyFriendsAdapter;
 
 /**
- * 我的朋友页面
+ * 我的朋友页面,有更新,请看MyFriend1
  * Created by jkqme on 2016/3/9.
  */
 public class MyFriend extends Activity {
@@ -30,6 +33,7 @@ public class MyFriend extends Activity {
     private ExpandableListView eview;
     private PopupWindow pwind;
     private MyFriendsAdapter eadpter = new MyFriendsAdapter();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,13 +67,16 @@ public class MyFriend extends Activity {
     private View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            pwind.dismiss();
             switch (view.getId()) {
-                case R.id.my_friend_back_img:
-
-                    break;
                 case R.id.my_friend_add_img:
                     displayPopuwind();
                     break;
+
+                case R.id.my_friend_back_img:
+
+                    break;
+
                 case R.id.my_friend_new_tx:
                     break;
                 case R.id.my_friend_issue_group_tx:
@@ -117,7 +124,7 @@ public class MyFriend extends Activity {
                 text = (TextView) view.findViewById(id[i]);
                 text.setOnClickListener(listener);
             }
-
+            //显示popuwind
             pwind = new PopupWindow(view);
 
             //加pupowind页面

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:id="@+id/recomend1_recomend_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="推荐" />
+
+        <TextView
+            android:id="@+id/recomend1_food_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="膳食" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recomend_page_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/recomend_bttom_1_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center_horizontal"
+            android:text="首页" />
+
+        <TextView
+            android:id="@+id/recomend_bttom_2_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center_horizontal"
+            android:text="分类" />
+
+        <TextView
+            android:id="@+id/recomend_bttom_3_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center_horizontal"
+            android:text="我的" />
+    </LinearLayout>
+</LinearLayout>
+
