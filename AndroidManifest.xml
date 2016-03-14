@@ -32,25 +32,29 @@
         </activity>
         <!-- 食名 -->
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
-        <!-- 某某食物详情 -->
-        <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity" >
+        <!-- 更多 -->
+        <activity android:name="com.ruanjiawei.activity.MoreActivity" >
+             
         </activity>
         <!-- 登录 -->
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
         </activity>
 
         <!-- 注册 -->
-        <activity android:name="com.ruanjiawei.activity.RegisterActivity" >
-        </activity>
+        <activity android:name="com.ruanjiawei.activity.RegisterActivity" />
+
         <!-- 注册输入密码 -->
         <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
+        </activity>
+        <!-- 商品详情 -->
+        <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- 常见疾病详情列表页面 -->

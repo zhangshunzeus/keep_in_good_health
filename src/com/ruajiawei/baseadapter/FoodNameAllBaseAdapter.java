@@ -54,23 +54,39 @@ public class FoodNameAllBaseAdapter extends BaseAdapter {
 		// TODO Auto-generated method stub
 		ViewHolder holder;
 		if (convertView == null) {
-			convertView = inflater.inflate(R.layout.food_name_all_listview, null);
+			convertView = inflater.inflate(R.layout.more_listview, null);
 			holder = new ViewHolder();
-			holder.food_name_all_listview_image = (ImageView) convertView
-					.findViewById(R.id.food_name_all_listview_image);
-			holder.food_name_all_listview_text = (TextView) convertView.findViewById(R.id.food_name_all_listview_text);
+			holder.more_listview_image = (ImageView) convertView.findViewById(R.id.more_listview_image);
+			holder.more_name_all_listview_title = (TextView) convertView
+					.findViewById(R.id.more_name_all_listview_title);
+			holder.more_name_all_listview_weight = (TextView) convertView
+					.findViewById(R.id.more_name_all_listview_weight);
+			holder.more_name_all_listview_giving = (TextView) convertView
+					.findViewById(R.id.more_name_all_listview_giving);
+			holder.more_name_all_listview_price = (TextView) convertView
+					.findViewById(R.id.more_name_all_listview_price);
+			holder.more_name_all_listview_nice = (TextView) convertView.findViewById(R.id.more_name_all_listview_nice);
 			convertView.setTag(holder);
 		}
 		holder = (ViewHolder) convertView.getTag();
 		FoodNameAllInfo all = (FoodNameAllInfo) getItem(posistion);
-		holder.food_name_all_listview_image.setImageResource(all.getFood_name_all_listview_image());
-		holder.food_name_all_listview_text.setText(all.getFood_name_all_listview_text());
+		holder.more_listview_image.setImageResource(all.getMore_listview_image());
+		holder.more_name_all_listview_title.setText(all.getMore_name_all_listview_title());
+		holder.more_name_all_listview_weight.setText(all.getMore_name_all_listview_weight());
+		holder.more_name_all_listview_giving.setText(all.getMore_name_all_listview_giving());
+		holder.more_name_all_listview_price.setText(all.getMore_name_all_listview_price());
+		holder.more_name_all_listview_nice.setText(all.getMore_name_all_listview_nice());
+
 		return convertView;
 	}
 
 	class ViewHolder {
-		ImageView food_name_all_listview_image;
-		TextView food_name_all_listview_text;
+		ImageView more_listview_image;
+		TextView more_name_all_listview_title;
+		TextView more_name_all_listview_weight;
+		TextView more_name_all_listview_giving;
+		TextView more_name_all_listview_price;
+		TextView more_name_all_listview_nice;
 	}
 
 }
