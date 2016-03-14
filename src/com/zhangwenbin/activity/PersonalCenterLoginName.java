@@ -38,9 +38,9 @@ public class PersonalCenterLoginName extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_login_name);
-		intentHomePage=(RadioButton)findViewById(R.id.loginname_intent_homepage);
+		intentHomePage=(RadioButton)findViewById(R.id.home_page);
 		intentHomePage.setOnCheckedChangeListener(listener);
-		intentClassify=(RadioButton)findViewById(R.id.loginname_intent_Classify);
+		intentClassify=(RadioButton)findViewById(R.id.classify);
 		intentClassify.setOnCheckedChangeListener(listener);
 		
 		intentMyCollection = (LinearLayout) findViewById(R.id.loginname_intent_mycollection);
@@ -74,13 +74,13 @@ public class PersonalCenterLoginName extends Activity {
 		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			case R.id.loginname_intent_homepage:
+			case R.id.home_page:
 				Intent intent_homepage = new Intent();
 				intent_homepage.setClass(PersonalCenterLoginName.this,
 						HomePageActivity.class);
 				startActivity(intent_homepage);
 				break;
-			case R.id.loginname_intent_Classify:
+			case R.id.classify:
 				Intent intent_class = new Intent();
 				intent_class.setClass(PersonalCenterLoginName.this,
 						CommonDiseasesListForDetailsAcitivty.class);
