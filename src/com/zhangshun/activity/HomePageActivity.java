@@ -1,68 +1,56 @@
 package com.zhangshun.activity;
 
-import com.jiangkaiquan.activity.Recomend;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import com.zhangshun.keep_in_good_health.R;
-import com.zhangwenbin.activity.PersonalCenterLoginName;
-import com.zhangwenbin.activity.TodayEat;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.GridView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 public class HomePageActivity extends Activity {
 
 	Button my_friend_issue_group_tx, my_friend_car_tx;
-	TextView dietary,intent_food;
+	TextView dietary, intent_food;
+	GridView home_page_gridview;
+	private SimpleAdapter sim_adapter;
+	private List<Map<String, Object>> data_list;
+	// 图片封装为一个数组
+	private int[] icon = { R.drawable.rub_course_group_category_family, R.drawable.rub_course_group_category_family,
+			R.drawable.rub_course_group_category_family, R.drawable.rub_course_group_category_family,
+			R.drawable.rub_course_group_category_family, R.drawable.rub_course_group_category_family,
+			R.drawable.rub_course_group_category_family, R.drawable.rub_course_group_category_family };
+	private String[] iconName = { "煲汤", "煲汤", "煲汤", "煲汤", "煲汤", "煲汤", "煲汤", "煲汤" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_page);
-
-		my_friend_issue_group_tx = (Button) findViewById(R.id.my_friend_issue_group_tx);
-		my_friend_car_tx = (Button) findViewById(R.id.my_friend_car_tx);
-		dietary = (TextView) findViewById (R.id.dietary);
-		intent_food = (TextView) findViewById (R.id.intent_food);
-
-		my_friend_issue_group_tx.setOnClickListener(listener);
-		my_friend_car_tx.setOnClickListener(listener);
-		dietary.setOnClickListener(listener);
-		intent_food.setOnClickListener(listener);
-
+		home_page_gridview = (GridView) findViewById(R.id.home_page_gridview);
+		data_list = new ArrayList<Map<String, Object>>();
+		getData();
+		// 新建适配器
+		String[] from = { "image", "text" };
+		int[] to = { R.id.ItemImage, R.id.ItemText };
+		sim_adapter = new SimpleAdapter(this, data_list, R.layout.home_page_gridview, from, to);
+		// 配置适配器
+		home_page_gridview.setAdapter(sim_adapter);
 	}
 
-	OnClickListener listener = new OnClickListener() {
-
-		public void onClick(View v) {
-			// TODO Auto-generated method stub
-			switch (v.getId()) {
-			case R.id.my_friend_issue_group_tx:
-				// Intent intent = new Intent();
-				// intent.setClass(HomePageActivity.this,  .class);
-				//startActivity(intent);
-				break;
-			case R.id.my_friend_car_tx:
-				Intent intent = new Intent();
-				intent.setClass(HomePageActivity.this, PersonalCenterLoginName.class);
-				startActivity(intent);
-				break;
-			case R.id.dietary:
-				Intent intetn_dietary = new Intent();
-				intetn_dietary.setClass(HomePageActivity.this,Recomend.class);
-				startActivity(intetn_dietary);
-				break;
-			case R.id.intent_food:
-				Intent intent_todayEat = new Intent();
-				intent_todayEat.setClass(HomePageActivity.this, TodayEat.class);
-				startActivity(intent_todayEat);
-				break;
-			default:
-				break;
-			}
+	public List<Map<String, Object>> getData() {
+		// cion和iconName的长度是相同的，这里任选其一都可以
+		for (int i = 0; i < icon.length; i++) {
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("image", icon[i]);
+			map.put("text", iconName[i]);
+			data_list.add(map);
 		}
-	};
+
+		return data_list;
+	}
+
 }
