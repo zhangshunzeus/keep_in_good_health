@@ -7,9 +7,10 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/check_color"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" 
+        android:layout_weight="0.5">
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,7 +31,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp" >
+        android:layout_height="0dp" 
+        android:layout_weight="2">
 
         <ImageView
             android:id="@+id/personal_background"
@@ -45,7 +47,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_weight="1"
             android:alpha="0.5"
             android:contentDescription="@drawable/circle_frame"
             android:src="@drawable/circle_frame" />
@@ -57,7 +58,6 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_weight="2"
             android:text="@string/personal_login_name"
             android:textColor="#ffffff" />
     </RelativeLayout>
@@ -65,7 +65,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="2" 
+        android:layout_marginTop="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -224,22 +225,25 @@
         </LinearLayout>
     </ScrollView>
 
-    <!--
-         <LinearLayout
+    <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="5dp"
-        android:orientation="horizontal" >
-
+        android:orientation="horizontal" 
+		android:layout_weight="0.5"
+        android:background="#dfdfdf">
+      
         <RadioButton
             android:id="@+id/loginname_intent_homepage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_homepage"
             android:gravity="center"
-            android:text="@string/home_page_btn" />
+            android:text="@string/home_page_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
         <RadioButton
             android:id="@+id/loginname_intent_Classify"
@@ -247,24 +251,22 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_classify"
             android:gravity="center"
-            android:text="@string/classification_btn" />
+            android:text="@string/classification_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
         <RadioButton
+            android:id="@+id/loginname_intent_my"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_my"
             android:gravity="center"
-            android:text="@string/my_btn" />
-    </LinearLayout>
-    -->
+            android:text="@string/my_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/jiang_button" />
+    </RadioGroup>
 
 </LinearLayout>

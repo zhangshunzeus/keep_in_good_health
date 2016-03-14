@@ -16,7 +16,11 @@
 
         <!-- 首页 -->
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
-            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- 推荐 -->
@@ -86,16 +90,14 @@
             
         </activity>
         <!-- 我的：个人中心未登录页面 -->
-        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin"></activity>
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin">
+            
+        </activity>
     	<!-- 我的：店铺收藏页面 -->
  		<activity android:name="com.zhangwenbin.activity.ShopCollection"></activity>   
     	<!-- 首页：今天吃什么页面 -->
  		<activity android:name="com.zhangwenbin.activity.TodayEat">
- 		    <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+ 		    
  		</activity>
 
     </application>

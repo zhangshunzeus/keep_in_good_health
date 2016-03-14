@@ -7,11 +7,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
 import com.jiangkaiquan.activity.MyFriend;
+import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.activity.MyCollectionActivity;
 import com.zhangshun.activity.PersonalInformationActivity;
@@ -35,13 +38,11 @@ public class PersonalCenterLoginName extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_login_name);
-
-		// intentClassify = (RadioButton)
-		// findViewById(R.id.loginname_intent_Classify);
-		// intentClassify.setOnClickListener(onClickListener);
-		// intentHomePage = (RadioButton)
-		// findViewById(R.id.loginname_intent_homepage);
-		// intentHomePage.setOnClickListener(onClickListener);
+		intentHomePage=(RadioButton)findViewById(R.id.loginname_intent_homepage);
+		intentHomePage.setOnCheckedChangeListener(listener);
+		intentClassify=(RadioButton)findViewById(R.id.loginname_intent_Classify);
+		intentClassify.setOnCheckedChangeListener(listener);
+		
 		intentMyCollection = (LinearLayout) findViewById(R.id.loginname_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
 		intentMyFriend = (LinearLayout) findViewById(R.id.loginname_intent_myfriend);
@@ -55,34 +56,53 @@ public class PersonalCenterLoginName extends Activity {
 		intentSetUp = (ImageView) findViewById(R.id.loginname_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
 
-		my_friend_new_tx = (Button) findViewById(R.id.my_friend_new_tx);
-		my_friend_issue_group_tx = (Button) findViewById(R.id.my_friend_issue_group_tx);
 
-		my_friend_new_tx.setOnClickListener(listener);
-		my_friend_issue_group_tx.setOnClickListener(listener);
+		/*
+		 * my_friend_new_tx = (Button) findViewById(R.id.my_friend_new_tx);
+		 * my_friend_issue_group_tx = (Button)
+		 * findViewById(R.id.my_friend_issue_group_tx);
+		 * 
+		 * my_friend_new_tx.setOnClickListener(listener);
+		 * my_friend_issue_group_tx.setOnClickListener(listener);
+		 */
 
 	}
 
-	OnClickListener listener = new OnClickListener() {
+	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
 
 		@Override
-		public void onClick(View v) {
+		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 			// TODO Auto-generated method stub
-			switch (v.getId()) {
-			case R.id.my_friend_new_tx:
-				Intent intent = new Intent();
-				intent.setClass(PersonalCenterLoginName.this,
+			switch (arg0.getId()) {
+			case R.id.loginname_intent_homepage:
+				Intent intent_homepage = new Intent();
+				intent_homepage.setClass(PersonalCenterLoginName.this,
 						HomePageActivity.class);
-				startActivity(intent);
+				startActivity(intent_homepage);
 				break;
-			case R.id.my_friend_issue_group_tx:
+			case R.id.loginname_intent_Classify:
+				Intent intent_class = new Intent();
+				intent_class.setClass(PersonalCenterLoginName.this,
+						CommonDiseasesListForDetailsAcitivty.class);
+				startActivity(intent_class);
 				break;
-			default:
-				break;
-			}
+		}
 		}
 
+		
 	};
+
+	/*
+	 * OnClickListener listener = new OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) { // TODO Auto-generated method
+	 * stub switch (v.getId()) { case R.id.my_friend_new_tx: Intent intent = new
+	 * Intent(); intent.setClass(PersonalCenterLoginName.this,
+	 * HomePageActivity.class); startActivity(intent); break; case
+	 * R.id.my_friend_issue_group_tx: break; default: break; } }
+	 * 
+	 * };
+	 */
 
 	OnClickListener onClickListener = new OnClickListener() {
 
@@ -143,8 +163,9 @@ public class PersonalCenterLoginName extends Activity {
 			default:
 				break;
 			}
+		
 		}
-
 	};
 
-}
+	}
+

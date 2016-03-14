@@ -101,7 +101,7 @@
         android:layout_height="0dp"
         android:layout_weight="7" />
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
@@ -139,6 +139,6 @@
             android:gravity="center"
             android:text="@string/my_btn" 
             android:textColor="@drawable/selector_text_style"/>
-    </LinearLayout>
+    </RadioGroup>
 
 </LinearLayout>

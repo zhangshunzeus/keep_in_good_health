@@ -373,7 +373,8 @@
             </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/today_radiogroup"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
@@ -414,6 +415,6 @@
             android:text="@string/my_btn" 
             android:textColor="@drawable/selector_text_style"/>
 
-    </LinearLayout>
+    </RadioGroup>
 
 </LinearLayout>
