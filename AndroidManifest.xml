@@ -17,13 +17,15 @@
         <!-- 首页 -->
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
         </activity>
-        <!-- 水果页面 -->
-        <activity android:name="com.zhangshun.activity.FruitActivity" >
-        </activity>
 
         <!-- 推荐 -->
         <activity android:name="com.jiangkaiquan.activity.Recomend" >
         </activity>
+
+        <!-- 水果页面 -->
+        <activity android:name="com.zhangshun.activity.FruitActivity" >
+        </activity>
+
         <!-- 产品详情 -->
         <activity android:name="com.jiangkaiquan.activity.Produce_detail" >
         </activity>
@@ -37,18 +39,22 @@
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
 
-        <!-- 某某食物详情 -->
-        <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity" >
+        <!-- 更多 -->
+        <activity android:name="com.ruanjiawei.activity.MoreActivity" >
         </activity>
         <!-- 登录 -->
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
         </activity>
 
         <!-- 注册 -->
-        <activity android:name="com.ruanjiawei.activity.RegisterActivity" >
+        <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
         </activity>
+
         <!-- 注册输入密码 -->
         <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
+        </activity>
+        <!-- 商品详情 -->
+        <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
         </activity>
 
         <!-- 常见疾病详情列表页面 -->
@@ -74,10 +80,9 @@
         </activity>
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
-            
         </activity>
         <!-- 启动页面 -->
-        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity">
+        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
