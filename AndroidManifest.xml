@@ -36,25 +36,25 @@
 
         <!-- 更多 -->
         <activity android:name="com.ruanjiawei.activity.MoreActivity" >
-             
         </activity>
         <!-- 登录 -->
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
         </activity>
 
         <!-- 注册 -->
-        <activity android:name="com.ruanjiawei.activity.RegisterActivity" />
+        <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!-- 注册输入密码 -->
         <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
         </activity>
         <!-- 商品详情 -->
         <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 常见疾病详情列表页面 -->
