@@ -55,6 +55,7 @@ public final class R {
         public static final int ssdk_oks_logo_foursquare=0x7f020017;
         public static final int ssdk_oks_logo_sohusuishenkan=0x7f020018;
         public static final int switch_bg=0x7f020019;
+        public static final int the_launch_page=0x7f02001a;
     }
     public static final class id {
         public static final int A_combined=0x7f090082;
@@ -239,9 +240,10 @@ public final class R {
         public static final int register_password=0x7f030022;
         public static final int set_up_the_activity=0x7f030023;
         public static final int suggestions_for_details_activity=0x7f030024;
-        public static final int the_shopping_cart_activity=0x7f030025;
-        public static final int the_shopping_cart_list=0x7f030026;
-        public static final int today_eat=0x7f030027;
+        public static final int the_launch_page_activity=0x7f030025;
+        public static final int the_shopping_cart_activity=0x7f030026;
+        public static final int the_shopping_cart_list=0x7f030027;
+        public static final int today_eat=0x7f030028;
     }
     public static final class menu {
         public static final int main=0x7f080000;

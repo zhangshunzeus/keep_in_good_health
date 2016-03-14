@@ -17,6 +17,7 @@
         <!-- 首页 -->
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
         </activity>
+        <!-- 水果页面 -->
         <activity android:name="com.zhangshun.activity.FruitActivity" >
         </activity>
 
@@ -73,6 +74,10 @@
         </activity>
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
+            
+        </activity>
+        <!-- 启动页面 -->
+        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
