@@ -131,6 +131,10 @@
     <string name="product_name_title">产品名字</string>
     <string name="product_name_price">价格</string>
     <string name="product_name_btn">立即购买</string>
+
+    <string name="the_shopping_title">普洱茶 陈皮普洱三颗装</string>
+    <string name="the_shopping_content">小茶婆婆出品</string>
+    <string name="the_shopping_number">数量: 1包</string>
     <string name="forger_phone">请输入手机号码</string>
     <string name="forger_code">请输入验证码</string>
     <string name="forger_newpassword">请输入新密码</string>
@@ -147,8 +151,5 @@
     <string name="buy">购买</string>
     <string name="numb">1</string>
     <string name="numbs">2</string>
-    <string name="the_shopping_title">普洱茶 陈皮普洱三颗装</string>
-    <string name="the_shopping_content">小茶婆婆出品</string>
-    <string name="the_shopping_number">数量: 1包</string>
 
 </resources>
