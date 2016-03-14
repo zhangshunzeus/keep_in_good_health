@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/recomend_recomend_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="推荐" />
+
+        <TextView
+            android:id="@+id/recomend_food_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="膳食" />
+
+    </LinearLayout>
+    <!-- 水果按钮                                   //////////////////////////////////////////-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/recomend1_fruit_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_launcher"
+            android:text="水果" />
+
+        <GridView
+
+            android:id="@+id/recomend1_fruit_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:visibility="gone"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看跟多"
+            android:id="@+id/recomend_chekmore_f_tx"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            />
+
+
+        <!-- 肉按钮                                   //////////////////////////////////////////-->
+        <TextView
+            android:id="@+id/recomend1_flish_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_launcher"
+            android:text="肉食"
+
+            />
+
+        <GridView
+
+            android:id="@+id/recomend_flish_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看跟多"
+            android:id="@+id/recomend_chekmore_r_tx"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            />
+
+        <!--素食/////////////////////////////////////////////////////////////////-->
+        <TextView
+            android:id="@+id/recomend1_vgtable_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_launcher"
+            android:text="素食" />
+
+        <GridView
+
+            android:id="@+id/recomend_vgtable_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:visibility="gone"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看跟多"
+            android:id="@+id/recomend_chekmore_v_tx"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            />
+        <!--  饮茶-->
+        <TextView
+            android:id="@+id/recomend1_tea_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_launcher"
+            android:text="饮茶"
+
+            />
+
+        <GridView
+
+            android:id="@+id/recomend_tea_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:visibility="gone" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看跟多"
+            android:id="@+id/recomend_chekmore_t_tx"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/recomend_bttom_1_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center_horizontal"
+            android:text="首页" />
+
+        <TextView
+            android:id="@+id/recomend_bttom_2_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center_horizontal"
+            android:text="分类" />
+
+        <TextView
+            android:id="@+id/recomend_bttom_3_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center_horizontal"
+            android:text="我的" />
+    </LinearLayout>
+</LinearLayout>
+
