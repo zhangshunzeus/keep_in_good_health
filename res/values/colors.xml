@@ -5,5 +5,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="at_the_top_of_the_background_color">#22c39d</color>
+    <color name="line">#F1F1F1</color>
 
 </resources>
