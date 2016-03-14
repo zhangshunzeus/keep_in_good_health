@@ -2,20 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="#f1f1f1">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_height="0dp"
+        android:background="@color/check_color"
+        android:orientation="horizontal" 
+        android:layout_weight="0.5">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/personal_center_title" />
+            android:text="@string/my_btn"
+            android:textColor="#ffffff" />
 
         <ImageView
+            android:id="@+id/loginname_intent_setup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -26,42 +31,42 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp" >
+        android:layout_height="0dp" 
+        android:layout_weight="2">
 
         <ImageView
             android:id="@+id/personal_background"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="match_parent"
             android:alpha="0.5"
             android:contentDescription="@drawable/ic_launcher"
             android:src="@drawable/ic_launcher" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/loginname_touxiang_intent_"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal" >
+            android:layout_centerInParent="true"
+            android:alpha="0.5"
+            android:contentDescription="@drawable/circle_frame"
+            android:src="@drawable/circle_frame" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@drawable/ic_launcher"
-                android:src="@drawable/ic_launcher" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text="@string/personal_login_name" />
-        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginname_touxiang_intent_"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/personal_login_name"
+            android:textColor="#ffffff" />
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="2" 
+        android:layout_marginTop="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,90 +74,7 @@
             android:orientation="vertical" >
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/person_my_record" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/person_my_friend" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/person_my_collect" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-            </LinearLayout>
-
-            <LinearLayout
+                android:id="@+id/loginname_intent_shoppingcart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -175,12 +97,14 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/loginname_intent_myfriend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -198,7 +122,23 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="@string/person_my_share" />
+                    android:text="@string/person_my_friend" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginname_intent_myrecords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="0dp"
@@ -206,9 +146,55 @@
                     android:layout_weight="1"
                     android:contentDescription="@drawable/ic_launcher"
                     android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:text="@string/my_records_title" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/loginname_intent_mycollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/ic_launcher"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:text="@string/my_collection_title" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginname_intent_vip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -231,50 +217,56 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-<!--     <LinearLayout
+    <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="5dp"
-        android:orientation="horizontal" >
-
+        android:orientation="horizontal" 
+		android:layout_weight="0.5"
+        android:background="#dfdfdf">
+      
         <RadioButton
+            android:id="@+id/loginname_intent_homepage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_homepage"
             android:gravity="center"
-            android:text="@string/home_page_btn" />
+            android:text="@string/home_page_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
         <RadioButton
+            android:id="@+id/loginname_intent_Classify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_classify"
             android:gravity="center"
-            android:text="@string/classification_btn" />
+            android:text="@string/classification_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
         <RadioButton
+            android:id="@+id/loginname_intent_my"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_my"
             android:gravity="center"
-            android:text="@string/my_btn" />
-    </LinearLayout> -->
+            android:text="@string/my_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/jiang_button" />
+    </RadioGroup>
 
 </LinearLayout>
