@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@color/line" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#666666"
+        android:background="@color/at_the_top_of_the_background_color"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp" >
@@ -25,20 +26,12 @@
             android:gravity="center"
             android:text="@string/personal_information_title"
             android:textColor="@android:color/white" />
-
-        <TextView
-            android:id="@+id/the_editor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/the_editor"
-            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/black" />
+        android:layout_height="12dp"
+        android:background="@color/line" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,254 +45,313 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="10dp"
+                android:background="@android:color/white" >
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/head_portrait"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/head_portrait"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/head_portrait_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="@string/username"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/username"
+                    android:id="@+id/username_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/username_text" />
+
+                <ImageView
+                    android:id="@+id/username_text_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/black" />
+                android:layout_height="15dp"
+                android:background="@color/line" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="10dp"
+                android:background="@android:color/white" >
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sex"
-                    android:textSize="14sp" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/sex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/sex_text" />
+                    android:layout_weight="1"
+                    android:text="@string/log_in_the_phone" />
+
+                <TextView
+                    android:id="@+id/log_in_the_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify_the" />
+
+                <ImageView
+                    android:id="@+id/log_in_the_phone_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="0.5dp"
-                android:background="@android:color/black" />
+                android:background="@color/line" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="10dp"
+                android:background="@android:color/white" >
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/age"
-                    android:textSize="14sp" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/age_text" />
+                    android:layout_weight="1"
+                    android:text="@string/the_login_password" />
+
+                <TextView
+                    android:id="@+id/the_login_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify_the" />
+
+                <ImageView
+                    android:id="@+id/the_login_password_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/black" />
+                android:layout_height="15dp"
+                android:background="@color/line" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="10dp"
+                android:background="@android:color/white" >
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/the_constellation"
-                    android:textSize="14sp" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/the_constellation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/the_constellation_text" />
+                    android:layout_weight="1"
+                    android:text="@string/binding_weChat_ID" />
+
+                <TextView
+                    android:id="@+id/binding_weChat_ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unbounded" />
+
+                <ImageView
+                    android:id="@+id/binding_weChat_ID_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="0.5dp"
-                android:background="@android:color/black" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginTop="20dp"
-                android:background="@android:color/black" />
+                android:background="@color/line" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="10dp"
+                android:background="@android:color/white" >
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/professional"
-                    android:textSize="14sp" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/professional"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/professional_text" />
+                    android:layout_weight="1"
+                    android:text="@string/Binding_QQ_number" />
+
+                <TextView
+                    android:id="@+id/Binding_QQ_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Is_binding" />
+
+                <ImageView
+                    android:id="@+id/Binding_QQ_number_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="0.5dp"
-                android:background="@android:color/black" />
+                android:background="@color/line" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="10dp"
+                android:background="@android:color/white" >
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/the_company"
-                    android:textSize="14sp" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/the_company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/the_company_text" />
+                    android:layout_weight="1"
+                    android:text="@string/The_binding_of_sina_weibo" />
+
+                <TextView
+                    android:id="@+id/The_binding_of_sina_weibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unbounded" />
+
+                <ImageView
+                    android:id="@+id/The_binding_of_sina_weibo_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/black" />
+                android:layout_height="13dp"
+                android:background="@color/line" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="10dp"
+                android:background="@android:color/white" >
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/home"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/home_text" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/black" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp" >
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/email"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/email_text" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/black" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/black" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp" >
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/personal_elucidation"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/personal_elucidation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/personal_elucidation_text" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/black" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/black" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp" >
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/interests_and_hobbies"
-                    android:textSize="14sp" />
+                    android:layout_weight="1"
+                    android:text="@string/Binding_alipay" />
+
+                <TextView
+                    android:id="@+id/Binding_alipay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unbounded" />
+
+                <ImageView
+                    android:id="@+id/Binding_alipay_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/black" />
+           
         </LinearLayout>
     </ScrollView>
 
