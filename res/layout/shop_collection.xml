@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@drawable/doctor_edittext_frame"
+                android:background="@drawable/selector_change_receive"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="@string/shop_collection_all_shop" />
@@ -73,7 +73,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/doctor_edittext_frame"
+                android:background="@drawable/selector_change_receive"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="@string/shop_collection_new_shop" />
@@ -85,7 +85,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/doctor_edittext_frame"
+                android:background="@drawable/selector_change_receive"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="@string/shop_collection_my_orderform" />

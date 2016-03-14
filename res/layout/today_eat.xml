@@ -2,12 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="#f1f1f1">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp" 
-        android:layout_weight="0.5">
+        android:layout_weight="0.5"
+        android:background="@color/check_color">
 
         <ImageView
             android:id="@+id/today_eat_return"
@@ -26,15 +28,13 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/todayeat_eattitle"
-            android:textColor="@color/title"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="#ffffff"/>
     </RelativeLayout>
 
     <ImageView
-        android:layout_width="280dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
         android:layout_weight="1"
         android:background="#000000"
         android:contentDescription="#000000" />
@@ -378,7 +378,8 @@
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:orientation="horizontal" 
-        android:layout_weight="0.5">
+        android:layout_weight="0.5"
+        android:background="#dfdfdf">
       
         <RadioButton
             android:id="@+id/todayeat_intent_homepage"
@@ -388,7 +389,8 @@
             android:button="@null"
             android:drawableTop="@drawable/selector_homepage"
             android:gravity="center"
-            android:text="@string/home_page_btn" />
+            android:text="@string/home_page_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
         <RadioButton
             android:id="@+id/todayeat_intent_Classify"
@@ -398,7 +400,8 @@
             android:button="@null"
             android:drawableTop="@drawable/selector_classify"
             android:gravity="center"
-            android:text="@string/classification_btn" />
+            android:text="@string/classification_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
         <RadioButton
             android:id="@+id/todayeat_intent_my"
@@ -408,7 +411,8 @@
             android:button="@null"
             android:drawableTop="@drawable/selector_my"
             android:gravity="center"
-            android:text="@string/my_btn" />
+            android:text="@string/my_btn" 
+            android:textColor="@drawable/selector_text_style"/>
 
     </LinearLayout>
 

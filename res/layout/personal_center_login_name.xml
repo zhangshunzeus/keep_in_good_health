@@ -2,18 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="#f1f1f1">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/check_color"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/my_btn" />
+            android:text="@string/my_btn"
+            android:textColor="#ffffff" />
 
         <ImageView
             android:id="@+id/loginname_intent_setup"
@@ -37,27 +40,26 @@
             android:contentDescription="@drawable/ic_launcher"
             android:src="@drawable/ic_launcher" />
 
-       
+        <ImageView
+            android:id="@+id/loginname_touxiang_intent_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:contentDescription="@drawable/circle_frame"
+            android:src="@drawable/circle_frame" />
 
-            <ImageView
-                android:id="@+id/loginname_touxiang_intent_"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:alpha="0.5"
-                android:layout_centerInParent="true"
-                android:contentDescription="@drawable/circle_frame"
-                android:src="@drawable/circle_frame" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text="@string/personal_login_name" 
-                android:layout_below="@id/loginname_touxiang_intent_"
-                android:layout_centerInParent="true"/>
-       
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginname_touxiang_intent_"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:text="@string/personal_login_name"
+            android:textColor="#ffffff" />
     </RelativeLayout>
 
     <ScrollView
@@ -71,96 +73,7 @@
             android:orientation="vertical" >
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/person_my_record" />
-
-                <ImageView
-                    android:id="@+id/loginname_intent_myrecords"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:contentDescription="@drawable/rub_course_go_to_next_right"
-                    android:src="@drawable/rub_course_go_to_next_right" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/person_my_friend" />
-
-                <ImageView
-                    android:id="@+id/loginname_intent_myfriend"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:contentDescription="@drawable/rub_course_go_to_next_right"
-                    android:src="@drawable/rub_course_go_to_next_right" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/person_my_collect" />
-
-                <ImageView
-                    android:id="@+id/loginname_intent_mycollection"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:contentDescription="@drawable/rub_course_go_to_next_right"
-                    android:src="@drawable/rub_course_go_to_next_right" />
-            </LinearLayout>
-
-            <LinearLayout
+                android:id="@+id/loginname_intent_shoppingcart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -181,16 +94,16 @@
                     android:text="@string/person_shopping_cart" />
 
                 <ImageView
-                    android:id="@+id/loginname_intent_shoppingcart"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:contentDescription="@drawable/rub_course_go_to_next_right"
                     android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/loginname_intent_myfriend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -208,19 +121,79 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="@string/person_my_share" />
+                    android:text="@string/person_my_friend" />
 
                 <ImageView
-                    android:id="@+id/loginname_intent_myshare"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:contentDescription="@drawable/rub_course_go_to_next_right"
                     android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/loginname_intent_myrecords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/ic_launcher"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:text="@string/my_records_title" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginname_intent_mycollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/ic_launcher"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:text="@string/my_collection_title" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginname_intent_vip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -241,18 +214,18 @@
                     android:text="@string/person_vip" />
 
                 <ImageView
-                    android:id="@+id/loginname_intent_vip"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:contentDescription="@drawable/rub_course_go_to_next_right"
                     android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-<!--     <LinearLayout
+    <!--
+         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -286,7 +259,8 @@
             android:drawableTop="@drawable/switch_bg"
             android:gravity="center"
             android:text="@string/my_btn" />
-    </LinearLayout> -->
+    </LinearLayout>
+    -->
 
     <include
         android:layout_width="fill_parent"

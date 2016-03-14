@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
 import com.jiangkaiquan.activity.MyFriend;
@@ -19,12 +20,11 @@ import com.zhangshun.activity.TheShoppingCartActivity;
 import com.zhangshun.keep_in_good_health.R;
 
 public class PersonalCenterLoginName extends Activity {
-	ImageView intentMyRecords;
-	ImageView intentMyFriend;
-	ImageView intentMyCollection;
-	ImageView intentShopCart;
-	ImageView intentMyShare;
-	ImageView intentVIP;
+	LinearLayout intentMyRecords;
+	LinearLayout intentMyFriend;
+	LinearLayout intentMyCollection;
+	LinearLayout intentShopCart;
+	LinearLayout intentVIP;
 	RadioButton intentHomePage;
 	RadioButton intentClassify;
 	ImageView intentSetUp;
@@ -42,17 +42,15 @@ public class PersonalCenterLoginName extends Activity {
 		// intentHomePage = (RadioButton)
 		// findViewById(R.id.loginname_intent_homepage);
 		// intentHomePage.setOnClickListener(onClickListener);
-		intentMyCollection = (ImageView) findViewById(R.id.loginname_intent_mycollection);
+		intentMyCollection = (LinearLayout) findViewById(R.id.loginname_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
-		intentMyFriend = (ImageView) findViewById(R.id.loginname_intent_myfriend);
+		intentMyFriend = (LinearLayout) findViewById(R.id.loginname_intent_myfriend);
 		intentMyFriend.setOnClickListener(onClickListener);
-		intentMyRecords = (ImageView) findViewById(R.id.loginname_intent_myrecords);
+		intentMyRecords = (LinearLayout) findViewById(R.id.loginname_intent_myrecords);
 		intentMyRecords.setOnClickListener(onClickListener);
-		intentMyShare = (ImageView) findViewById(R.id.loginname_intent_myshare);
-		intentMyShare.setOnClickListener(onClickListener);
-		intentShopCart = (ImageView) findViewById(R.id.loginname_intent_shoppingcart);
+		intentShopCart = (LinearLayout) findViewById(R.id.loginname_intent_shoppingcart);
 		intentShopCart.setOnClickListener(onClickListener);
-		intentVIP = (ImageView) findViewById(R.id.loginname_intent_vip);
+		intentVIP = (LinearLayout) findViewById(R.id.loginname_intent_vip);
 		intentVIP.setOnClickListener(onClickListener);
 		intentSetUp = (ImageView) findViewById(R.id.loginname_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
@@ -129,12 +127,6 @@ public class PersonalCenterLoginName extends Activity {
 						PersonalCenterLoginName.this, MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
-
-			case R.id.loginname_intent_myshare:
-				Intent intent_myshare = new Intent();
-				startActivity(intent_myshare);
-				break;
-
 			case R.id.loginname_intent_shoppingcart:
 				Intent intent_shopingcart = new Intent(
 						PersonalCenterLoginName.this,

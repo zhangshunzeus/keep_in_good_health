@@ -6,5 +6,6 @@
     <item 
         android:state_checked="true"
         android:drawable="@drawable/rub_course_home_page_selected_bg"/>
+    <item android:drawable="@drawable/rub_course_home_page_not_selected_bg"></item>
 
 </selector>

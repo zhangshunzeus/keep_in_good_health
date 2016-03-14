@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 
 import com.ruanjiawei.activity.Food_name_Activity;
 import com.zhangshun.activity.HomePageActivity;
@@ -19,6 +20,9 @@ public class TodayEat extends Activity {
 	LinearLayout linearLayout_lunch;
 	LinearLayout linearLayout_lunch_two;
 	LinearLayout linearLayout_dinner;
+	RadioButton intent_homepage;
+	RadioButton intent_classify;
+	RadioButton intent_my;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

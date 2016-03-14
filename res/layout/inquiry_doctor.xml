@@ -49,7 +49,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="3dp"
-                android:background="@drawable/doctor_edittext_frame"
+                android:background="@drawable/selector_change_receive"
                 android:drawableLeft="@drawable/ic_launcher"
                 android:drawableStart="@drawable/ic_launcher"
                 android:hint="@string/Inquiry_doctor_edit_doctor" />

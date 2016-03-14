@@ -20,7 +20,7 @@ import com.zhangshun.keep_in_good_health.R;
 
 public class MyRecords extends Activity {
 	ListView listView;
-	ArrayList<MyRecordsDemo> data;
+	ArrayList<MyRecordsDemo> data=new ArrayList<MyRecordsDemo>();
 	MyRecordsAdapter adapter;
 	ImageView intentLoginName;
 	RadioButton intentHomePage;
@@ -78,9 +78,12 @@ public class MyRecords extends Activity {
 		for (int i = 0; i < 3; i++) {
 			MyRecordsDemo myRecord = new MyRecordsDemo();
 			myRecord.setImage(R.drawable.ic_launcher);
-			myRecord.setMy_records_title("标题");
+			myRecord.setMy_records_shop_name("欧姆龙专卖店");
+			myRecord.setMy_records_list_goodsstates("店家已发货");
 			myRecord.setMy_records_content("如果你无法简洁的表达你的想法，那只说明你还不够了解他");
-			myRecord.setMy_records_intent(R.drawable.ic_launcher);
+			myRecord.setMy_records_shop_type("TH457A ￥55.00");
+			myRecord.setMy_records_shop_number("共一件商品  实付：");
+			myRecord.setMy_records_shop_money("￥50.00");
 			data.add(myRecord);
 		}
 
