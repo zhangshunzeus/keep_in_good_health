@@ -5,11 +5,11 @@ import com.zhangshun.keep_in_good_health.R;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class RegisterPasswordActivity extends Activity{
+public class ForgetPasswordActivity extends Activity{
   @Override
 protected void onCreate(Bundle savedInstanceState) {
 	// TODO Auto-generated method stub
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.register_password);
+	setContentView(R.layout.forget_password);
 }
 }
