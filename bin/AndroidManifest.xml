@@ -24,6 +24,11 @@
 
         <!-- 水果页面 -->
         <activity android:name="com.zhangshun.activity.FruitActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- 产品详情 -->
@@ -83,11 +88,7 @@
         </activity>
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
 
         <!-- 分类：咨询医师页面 -->

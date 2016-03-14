@@ -22,7 +22,7 @@
             android:drawableTop="@drawable/home_page"
             android:gravity="center_horizontal"
             android:text="@string/home_page_btn"
-            android:textColor="#22c39d"
+            android:textColor="#A89F9C"
             android:textSize="12sp" />
 
         <RadioButton
