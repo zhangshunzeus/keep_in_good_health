@@ -42,7 +42,7 @@ public class Recomend extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.recomend_indext_2);
+        setContentView(R.layout.jiang_recomend_1);
       
         
         recomend_recomend_tx = (TextView) findViewById (R.id.recomend_recomend_tx);
@@ -57,7 +57,7 @@ public class Recomend extends Activity {
         recomend_bttom_3_tx = (TextView) findViewById (R.id.recomend_bttom_3_tx);
         recomend_bttom_3_tx.setOnClickListener(click);
 
-        setContentView(R.layout.jiang_recomend_1);
+       
         loadVary();
 
     }

@@ -4,35 +4,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/dietary"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
-
-        <TextView
-            android:id="@+id/recommended"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/home_page_recommended" />
-
-        <TextView
-            android:id="@+id/dietary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/home_page_dietary" />
-    </LinearLayout>
+        android:background="#22c39d"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/home_page_text"
+        android:textColor="@android:color/white" />
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1" >
 
         <LinearLayout
@@ -40,115 +24,124 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="120dp"
-                android:background="@android:color/black" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="#CCCCCC" >
+                android:background="#C4C4C4" >
 
                 <AutoCompleteTextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/home_page_auto_bg"
                     android:hint="@string/home_page_search"
                     android:padding="5dp"
+                    android:textColor="@android:color/white"
                     android:textSize="12sp" />
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <GridView
+                android:id="@+id/home_page_gridview"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/intent_food"
-                    android:layout_width="fill_parent"
-                    android:layout_height="80dp"
-                    android:layout_margin="5dp"
-                    android:background="@android:color/black" />
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/home_page_oneday_title"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/home_page_oneday_content"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" >
+            </GridView>
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="8dp"
-                android:background="#ADADAD" />
+                android:background="#f1f1f1" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/home_page_carefully" />
+                android:text="@string/home_page_carefully"
+                android:textSize="14sp" />
 
-            <LinearLayout
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/three_meals_a_day_content"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="5dp" >
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/three_meals_a_day_content"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="110dp"
-                    android:background="@android:color/black" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="8dp"
+                android:background="#f1f1f1" />
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp" >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/meticulous_care_is_recommended"
+                android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="fill_parent"
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow>
+
+                    <Button
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_page_carefully_title"
-                        android:textSize="12sp" />
+                        android:layout_weight="1" >
+                    </Button>
 
-                    <TextView
-                        android:layout_width="fill_parent"
+                    <Button
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/home_page_carefully_content"
-                        android:textSize="12sp" />
+                        android:layout_weight="1" >
+                    </Button>
+                </TableRow>
 
-                    <TextView
-                        android:layout_width="fill_parent"
+                <TableRow>
+
+                    <Button
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_page_carefully_signature"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </LinearLayout>
+                        android:layout_weight="1" >
+                    </Button>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+                    </Button>
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
     </ScrollView>
 
     <include
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/jiang_button" />
+        layout="@layout/home_page_bottom_menu" />
 
 </LinearLayout>
