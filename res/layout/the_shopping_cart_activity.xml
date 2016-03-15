@@ -13,11 +13,11 @@
         android:orientation="horizontal"
         android:padding="10dp" >
 
-        <TextView
-            android:id="@+id/return_btn"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/black" />
+        <ImageView
+            android:id="@+id/the_shopping_cart_return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/return_btn" />
 
         <TextView
             android:layout_width="0dp"
