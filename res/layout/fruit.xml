@@ -4,19 +4,8 @@
     android:layout_height="match_parent"
     android:background="#C4C4C4"
     android:orientation="vertical" >
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#C4C4C4"
-            android:orientation="vertical" >
-
-            <LinearLayout
+    
+    <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/at_the_top_of_the_background_color"
@@ -39,6 +28,19 @@
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
             </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4"
+            android:orientation="vertical" >
+
+            
 
             <ImageView
                 android:layout_width="wrap_content"
