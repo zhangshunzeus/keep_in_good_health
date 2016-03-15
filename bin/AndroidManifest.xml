@@ -83,7 +83,7 @@
         </activity>
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
-            <intent-filter>
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -108,6 +108,7 @@
         <!-- 首页：今天吃什么页面 -->
         <activity android:name="com.zhangwenbin.activity.TodayEat" >
         </activity>
+
     </application>
 
 </manifest>

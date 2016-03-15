@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.jiangkaiquan.activity.MyFriend;
 import com.ruanjiawei.activity.LoginActivity;
@@ -29,6 +32,7 @@ public class PersonalCenterNotLogin extends Activity {
 	RadioButton intentClassify;
 	ImageView intentLoginName;
 	ImageView intentSetUp;
+	TextView intentLogin;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,32 +41,30 @@ public class PersonalCenterNotLogin extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_not_login);
 		intentClassify = (RadioButton) findViewById(R.id.notlogin_intent_Classify);
-		intentClassify.setOnClickListener(onClickListener);
+		intentClassify.setOnCheckedChangeListener(listener);
 		intentHomePage = (RadioButton) findViewById(R.id.notlogin_intent_homepage);
-		intentHomePage.setOnClickListener(onClickListener);
+		intentHomePage.setOnCheckedChangeListener(listener);
 		intentMyCollection = (ImageView) findViewById(R.id.notlogin_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
 		intentMyFriend = (ImageView) findViewById(R.id.notlogin_intent_myfriend);
 		intentMyFriend.setOnClickListener(onClickListener);
 		intentMyRecords = (ImageView) findViewById(R.id.notlogin_intent_myrecords);
 		intentMyRecords.setOnClickListener(onClickListener);
-		intentMyShare = (ImageView) findViewById(R.id.notlogin_intent_myshare);
-		intentMyShare.setOnClickListener(onClickListener);
 		intentShopCart = (ImageView) findViewById(R.id.notlogin_intent_shoppingcart);
 		intentShopCart.setOnClickListener(onClickListener);
 		intentVIP = (ImageView) findViewById(R.id.notlogin_intent_vip);
 		intentVIP.setOnClickListener(onClickListener);
-		intentLoginName = (ImageView) findViewById(R.id.notlogin_intent_loginname);
-		intentLoginName.setOnClickListener(onClickListener);
 		intentSetUp = (ImageView) findViewById(R.id.notlogin_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
+		intentLogin=(TextView)findViewById(R.id.personal_not_login_intent_login);
+		intentLogin.setOnClickListener(onClickListener);
 
 	}
-
-	OnClickListener onClickListener = new OnClickListener() {
+	
+	OnCheckedChangeListener listener=new OnCheckedChangeListener(){
 
 		@Override
-		public void onClick(View arg0) {
+		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.notlogin_intent_Classify:
@@ -77,11 +79,22 @@ public class PersonalCenterNotLogin extends Activity {
 						PersonalCenterNotLogin.this, HomePageActivity.class);
 				startActivity(intent_homepage);
 				break;
+			}
+		}
+		
+		
+	};
 
-			case R.id.notlogin_intent_loginname:
-				Intent intent_loginname = new Intent(
+	OnClickListener onClickListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			switch (arg0.getId()) {
+			case R.id.personal_not_login_intent_login:
+				Intent intent_login = new Intent(
 						PersonalCenterNotLogin.this, LoginActivity.class);
-				startActivity(intent_loginname);
+				startActivity(intent_login);
 				break;
 
 			case R.id.notlogin_intent_mycollection:
@@ -100,13 +113,6 @@ public class PersonalCenterNotLogin extends Activity {
 						PersonalCenterNotLogin.this, MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
-
-			case R.id.notlogin_intent_myshare:
-				Intent intent_myshare = new Intent(PersonalCenterNotLogin.this,
-						LoginActivity.class);
-				startActivity(intent_myshare);
-				break;
-
 			case R.id.notlogin_intent_shoppingcart:
 				Intent intent_shopingcart = new Intent(
 						PersonalCenterNotLogin.this,

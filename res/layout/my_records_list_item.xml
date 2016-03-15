@@ -2,19 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:padding="1dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" >
+        android:layout_marginTop="15dp" >
 
         <TextView
             android:id="@+id/my_records_list_shopname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
             android:text="@string/my_records_list_name" />
 
         <TextView
@@ -23,9 +24,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:text="@string/my_records_list_goods" />
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:text="@string/my_records_list_goods" 
+            android:textColor="@color/check_color"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -42,8 +44,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:contentDescription="@drawable/ic_launcher"
-            android:src="@drawable/ic_launcher" />
+            android:contentDescription="@drawable/myrecords_picture_one"
+            android:src="@drawable/myrecords_picture_one" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -84,7 +86,8 @@
                     android:id="@+id/my_records_shop_money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/my_records_list_shop_money" />
+                    android:text="@string/my_records_list_shop_money" 
+                    android:textColor="#ff0000"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -97,7 +100,8 @@
             android:background="@drawable/selector_change"
             android:text="@string/my_records_change_receive"
             android:textSize="12sp" 
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColor="@color/check_color"/>
     </LinearLayout>
 
 </LinearLayout>
