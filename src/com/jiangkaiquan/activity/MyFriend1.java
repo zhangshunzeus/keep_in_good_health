@@ -91,7 +91,7 @@ public class MyFriend1 extends Activity {
                 case R.id.myfriend1_back_img:
                     break;
                 case R.id.myfriend1_add_img:
-                    setDiolog();
+                    showDiolog();
                     break;
                 case R.id.myfriend1_friend_tx:
                     friend.setTextColor(getResources().getColor(R.color.friendbt_change));
@@ -147,7 +147,7 @@ public class MyFriend1 extends Activity {
     };
 
     //设置diolog
-    private void setDiolog() {
+    private void showDiolog() {
         if (dialog == null) {
             //dialog 弹出窗试图
             int id[] = {R.id.friend_swap_tx, R.id.friend_add_tx, R.id.friend_creat_social_tx};
@@ -172,8 +172,8 @@ public class MyFriend1 extends Activity {
             //重新设置
            lp = window.getAttributes();
             window.setGravity(Gravity.RIGHT | Gravity.TOP);
-            lp.x = w - lp.x; // 新位置X坐标
-            lp.y = h; // 新位置Y坐标
+            lp.x =200; // 新位置X坐标
+            lp.y = 200; // 新位置Y坐标
             lp.width = ViewGroup.LayoutParams.WRAP_CONTENT; // 宽度
             lp.height = ViewGroup.LayoutParams.WRAP_CONTENT; // 高度
             //lp.alpha = 0.7f; // 透明度
@@ -184,7 +184,7 @@ public class MyFriend1 extends Activity {
         }
         //builder.notify();
         dialog.show();
-        dialog.getWindow().setAttributes(lp);
+
     }
     //我的好友数据
     private void getFriendDate() {
