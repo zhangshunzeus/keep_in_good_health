@@ -55,25 +55,31 @@ public class TheShoppingCartAdapter extends BaseAdapter {
 		if(convertView == null){
 			convertView = mInflater.inflate(R.layout.the_shopping_cart_list, null);
 			viewHodler = new ViewHolder();
-			viewHodler.img = (TextView) convertView.findViewById(R.id.img);
-			viewHodler.my_collection_content = (TextView) convertView.findViewById(R.id.my_collection_content);
-			viewHodler.content_list_btn = (ImageView) convertView.findViewById(R.id.content_list_btn);
+			viewHodler.img = (ImageView) convertView.findViewById(R.id.pu_er_tea);
+			viewHodler.the_shopping_title = (TextView) convertView.findViewById(R.id.the_shopping_title);
+			viewHodler.the_shopping_content = (TextView) convertView.findViewById(R.id.the_shopping_content);
+			viewHodler.the_shopping_number = (TextView) convertView.findViewById(R.id.the_shopping_number);
+			viewHodler.The_price = (TextView) convertView.findViewById(R.id.The_price);
 			convertView.setTag(viewHodler);
 		}
 		
 		viewHodler = (ViewHolder) convertView.getTag();
 		TheShoppingCartDemo theShoppingCartDemo = (TheShoppingCartDemo) getItem(position);
 		theShoppingCartDemo.setImg(theShoppingCartDemo.getImg());
-		theShoppingCartDemo.setMy_collection_content(theShoppingCartDemo.getMy_collection_content());
-		theShoppingCartDemo.setContent_list_btn(theShoppingCartDemo.getContent_list_btn());
+		theShoppingCartDemo.setThe_shopping_title(theShoppingCartDemo.getThe_shopping_title());
+		theShoppingCartDemo.setThe_shopping_content(theShoppingCartDemo.getThe_shopping_content());
+		theShoppingCartDemo.setThe_shopping_number(theShoppingCartDemo.getThe_shopping_number());
+		theShoppingCartDemo.setThe_price(theShoppingCartDemo.getThe_price());
 		return convertView;
 	}
 	
 	class ViewHolder{
 
-		public ImageView content_list_btn;
-		public TextView my_collection_content;
-		public TextView img;
+		public TextView The_price;
+		public TextView the_shopping_number;
+		public TextView the_shopping_content;
+		public TextView the_shopping_title;
+		public ImageView img;
 		
 	}
 
