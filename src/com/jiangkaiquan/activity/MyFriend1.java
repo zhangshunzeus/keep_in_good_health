@@ -32,6 +32,9 @@ import com.jiangkaiquan.activity.adapter.RecomendAdapter;
  * MyFriend 的更新
  */
 public class MyFriend1 extends Activity {
+    private TextView view1;
+    private TextView view2;
+
     private ImageView back;
     private ImageView add;
     private TextView friend;
@@ -42,8 +45,8 @@ public class MyFriend1 extends Activity {
     private ListView listView2;
     private MyFriend1Ad adpter;
     private MyFriend1Ad adpter2;
-    private ArrayList<HashMap<String,Object>> list;
-    private ArrayList<HashMap<String,Object>> list2;
+    private ArrayList<HashMap<String, Object>> list;
+    private ArrayList<HashMap<String, Object>> list2;
 
     private RelativeLayout layout;
     private AlertDialog dialog;
@@ -60,13 +63,16 @@ public class MyFriend1 extends Activity {
         friend = (TextView) findViewById(R.id.myfriend1_friend_tx);
         social = (TextView) findViewById(R.id.myfriend1_social_tx);
         layout = (RelativeLayout) findViewById(R.id.friend1_rl);
+
+        view1 = (TextView) findViewById(R.id.myfriend_line1_v);
+        view2 = (TextView) findViewById(R.id.myfriend_line2_v);
         // listview 准备
         getFriendDate();
         getSocialDate();
         listview = (ListView) findViewById(R.id.myfrend1_lv);
-        listView2=(ListView)findViewById(R.id.myfrend1_1v2);
-        adpter = new MyFriend1Ad(list, this,true);
-        adpter2=new MyFriend1Ad(list2,this,false);
+        listView2 = (ListView) findViewById(R.id.myfrend1_1v2);
+        adpter = new MyFriend1Ad(list, this, true);
+        adpter2 = new MyFriend1Ad(list2, this, false);
         Log.i("onCreate", "listview");
         listview.setAdapter(adpter);
         listView2.setAdapter(adpter2);
@@ -97,11 +103,17 @@ public class MyFriend1 extends Activity {
                     friend.setTextColor(getResources().getColor(R.color.friendbt_change));
                     social.setTextColor(getResources().getColor(R.color.frendbt_no_change));
                     listview.setVisibility(View.VISIBLE);
+
                     listView2.setVisibility(View.GONE);
+                   view1.setVisibility(View.VISIBLE);
+                   view2.setVisibility(View.INVISIBLE);
                     break;
                 case R.id.myfriend1_social_tx:
                     social.setTextColor(getResources().getColor(R.color.friendbt_change));
                     friend.setTextColor(getResources().getColor(R.color.frendbt_no_change));
+                    view2.setVisibility(View.VISIBLE);
+                    view1.setVisibility(View.INVISIBLE);
+
                     listView2.setVisibility(View.VISIBLE);
                     listview.setVisibility(View.GONE);
                     break;
@@ -170,9 +182,9 @@ public class MyFriend1 extends Activity {
             Window window = dialog.getWindow();
 
             //重新设置
-           lp = window.getAttributes();
+            lp = window.getAttributes();
             window.setGravity(Gravity.RIGHT | Gravity.TOP);
-            lp.x =200; // 新位置X坐标
+            lp.x = 200; // 新位置X坐标
             lp.y = 200; // 新位置Y坐标
             lp.width = ViewGroup.LayoutParams.WRAP_CONTENT; // 宽度
             lp.height = ViewGroup.LayoutParams.WRAP_CONTENT; // 高度
@@ -186,31 +198,33 @@ public class MyFriend1 extends Activity {
         dialog.show();
 
     }
+
     //我的好友数据
     private void getFriendDate() {
-         HashMap<String,Object>map;
-        list = new ArrayList<HashMap<String,Object>>();
+        HashMap<String, Object> map;
+        list = new ArrayList<HashMap<String, Object>>();
 
-        int imgId[]={R.drawable.friend1,R.drawable.friend2,R.drawable.friend3,R.drawable.friend4,R.drawable.friend5,R.drawable.friend6,R.drawable.friend7,R.drawable.friend8};
-        String text[]={"重我最帅","fdsa","我来拯救地球","美女","较比手好用","哈","天王","着了"};
-       for(int i=0;i<imgId.length;i++){
-           map=new HashMap<String, Object>();
-           map.put("img",imgId[i]);
-           map.put("text",text[i]);
-           list.add(map);
-       }
+        int imgId[] = {R.drawable.friend1, R.drawable.friend2, R.drawable.friend3, R.drawable.friend4, R.drawable.friend5, R.drawable.friend6, R.drawable.friend7, R.drawable.friend8};
+        String text[] = {"重我最帅", "fdsa", "我来拯救地球", "美女", "较比手好用", "哈", "天王", "着了"};
+        for (int i = 0; i < imgId.length; i++) {
+            map = new HashMap<String, Object>();
+            map.put("img", imgId[i]);
+            map.put("text", text[i]);
+            list.add(map);
+        }
 
     }
+
     //我的群数据
     private void getSocialDate() {
-        HashMap<String,Object>map;
-        list2 = new ArrayList<HashMap<String,Object>>();
-        int imgId[]={R.drawable.social1,R.drawable.social2,R.drawable.social3,R.drawable.social6};
-        String text[]={"健康","美丽","运动","90后"};
-        for(int i=0;i<imgId.length;i++){
-            map=new HashMap<String, Object>();
-            map.put("img",imgId[i]);
-            map.put("text",text[i]);
+        HashMap<String, Object> map;
+        list2 = new ArrayList<HashMap<String, Object>>();
+        int imgId[] = {R.drawable.social1, R.drawable.social2, R.drawable.social3, R.drawable.social6};
+        String text[] = {"健康", "美丽", "运动", "90后"};
+        for (int i = 0; i < imgId.length; i++) {
+            map = new HashMap<String, Object>();
+            map.put("img", imgId[i]);
+            map.put("text", text[i]);
             list2.add(map);
         }
     }
