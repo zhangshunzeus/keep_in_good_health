@@ -29,27 +29,19 @@
             android:textSize="16sp" />
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="120dp"
-        android:background="@android:color/white"
-        android:gravity="bottom" >
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:layout_marginBottom="25dp"
-            android:background="@android:color/black" />
-    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fruit_top_bg" />
 
     <GridView
         android:id="@+id/fruit_gridview"
         android:layout_width="match_parent"
-        android:layout_weight="1"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
         android:numColumns="2"
-        android:stretchMode="columnWidth"
-        android:layout_margin="5dp" >
+        android:stretchMode="columnWidth" >
     </GridView>
 
     <include
