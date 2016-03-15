@@ -29,10 +29,11 @@
         因此，对于大枣的功效与作用，显然应当被大家所认知。    </string>
     <string name="function_context2">1.抗郭明 大枣乙醇提起物对特意反应性疾病，能抑制抗体的产生，对小老鼠fjadslkfjkasldfjasfjslfkj</string>
     <string name="jjzz">如果你无法简洁的表达你的想法，那只说明你还不够了解它，\n阿尔伯特jbst</string>
-    <string name="todayeat_eattitle">今天吃什么</string>
+    <string name="todayeat_eattitle">今日推荐</string>
     <string name="todayeat_breakfast">营养早餐</string>
     <string name="todayeat_lunch">丰富午餐</string>
     <string name="todayeat_dinner">可口晚餐</string>
+    <string name="lucky_fruit">幸运水果</string>
     <string name="todayeat_breakfastcontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
     <string name="todayeat_lunchcontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
     <string name="todayeat_dinnercontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
@@ -47,12 +48,31 @@
     <string name="person_my_collect">我的收藏</string>
     <string name="person_my_share">我的分享</string>
     <string name="person_shopping_cart">购物车</string>
-    <string name="person_vip">会员中心</string>
+    <string name="person_vip">个人信息</string>
     <string name="person_not_login">未登录</string>
     <string name="personal_login_name">登录名</string>
     <string name="Inquiry_doctor_order_doctor">预约医师</string>
     <string name="Inquiry_doctor_all_doctor">全部</string>
     <string name="Inquiry_doctor_doctor_name">名字</string>
+    <string name="shop_collection_title_name">店铺收藏</string>
+    <string name="shop_collection_all_shop">全部商品</string>
+    <string name="shop_collection_new_shop">新品上线</string>
+    <string name="shop_collection_my_orderform">我的订单</string>
+    <string name="shop_collection_shopname">产品名</string>
+    <string name="shop_collection_shop_money">35</string>
+    <string name="my_records_title">我的记录</string>
+    <string name="my_records_pay_money">待付款</string>
+    <string name="my_records_send_shop">待发货</string>
+    <string name="my_records_take_delivered">待收货</string>
+    <string name="my_records_evaluates">待评价</string>
+    <string name="my_records_all">全部</string>
+    <string name="my_records_list_name">欧姆龙专卖店</string>
+    <string name="my_records_list_goods">店家已发货</string>
+    <string name="my_records_list_thingsmoney">TH457A ￥55.00</string>
+    <string name="my_records_list_shop_number">共一件商品   实付：</string>
+    <string name="my_records_list_shop_money">￥50.00</string>
+    <string name="my_records_change_receive">确认收货</string>
+    <string name="my_records_list_text">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
     <string name="home_page_btn">首页</string>
     <string name="classification_btn">分类</string>
     <string name="my_btn">我的</string>
@@ -136,6 +156,7 @@
     <string name="the_shopping_content">小茶婆婆出品</string>
     <string name="the_shopping_number">数量: 1包</string>
 
+
     <string name="forger_phone">请输入手机号码</string>
     <string name="forger_code">请输入验证码</string>
     <string name="forger_newpassword">请输入新密码</string>
@@ -152,7 +173,6 @@
     <string name="buy">购买</string>
     <string name="numb">1</string>
     <string name="numbs">2</string>
-
 
 
 </resources>

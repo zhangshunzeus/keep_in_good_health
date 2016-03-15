@@ -16,6 +16,7 @@
             android:text="@string/personal_center_title" />
 
         <ImageView
+            android:id="@+id/notlogin_intent_setup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -46,8 +47,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:contentDescription="@drawable/ic_launcher"
-                android:src="@drawable/ic_launcher" />
+                android:contentDescription="@drawable/circle_frame"
+                android:src="@drawable/circle_frame" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,11 +58,13 @@
                 android:text="@string/person_not_login" />
 
             <ImageView
+                android:id="@+id/notlogin_intent_loginname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:contentDescription="@drawable/ic_launcher"
-                android:src="@drawable/ic_launcher" />
+                android:layout_gravity="center"
+                android:contentDescription="@drawable/rub_course_go_to_next_right"
+                android:src="@drawable/rub_course_go_to_next_right" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -95,11 +98,13 @@
                     android:text="@string/person_my_record" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_myrecords"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -123,11 +128,13 @@
                     android:text="@string/person_my_friend" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_myfriend"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -151,11 +158,13 @@
                     android:text="@string/person_my_collect" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_mycollection"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -179,11 +188,13 @@
                     android:text="@string/person_shopping_cart" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_shoppingcart"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -207,11 +218,13 @@
                     android:text="@string/person_my_share" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_myshare"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
             <LinearLayout
@@ -235,11 +248,13 @@
                     android:text="@string/person_vip" />
 
                 <ImageView
+                    android:id="@+id/notlogin_intent_vip"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center"
+                    android:contentDescription="@drawable/rub_course_go_to_next_right"
+                    android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -251,20 +266,22 @@
         android:orientation="horizontal" >
 
         <RadioButton
+            android:id="@+id/notlogin_intent_homepage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_homepage"
             android:gravity="center"
             android:text="@string/home_page_btn" />
 
         <RadioButton
+            android:id="@+id/notlogin_intent_Classify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_classify"
             android:gravity="center"
             android:text="@string/classification_btn" />
 
@@ -273,7 +290,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
+            android:drawableTop="@drawable/selector_my"
             android:gravity="center"
             android:text="@string/my_btn" />
     </LinearLayout>

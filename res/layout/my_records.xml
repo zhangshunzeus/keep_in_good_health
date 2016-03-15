@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" 
+        android:background="@color/check_color">
+
+        <ImageView
+            android:id="@+id/myrecords_intent_loginname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@drawable/mealname_back_icon"
+            android:src="@drawable/mealname_back_icon" 
+            android:layout_centerInParent="true"
+             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my_records_title" 
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/my_records_all"
+            android:textColor="@drawable/selector_text_style"
+            android:drawableBottom="@drawable/selector_myrecords_below"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/my_records_pay_money"
+            android:textColor="@drawable/selector_text_style"
+            android:drawableBottom="@drawable/selector_myrecords_below"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/my_records_send_shop"
+            android:textColor="@drawable/selector_text_style"
+            android:drawableBottom="@drawable/selector_myrecords_below"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/my_records_take_delivered"
+            android:textColor="@drawable/selector_text_style"
+            android:drawableBottom="@drawable/selector_myrecords_below" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/my_records_evaluates"
+            android:textColor="@drawable/selector_text_style"
+            android:drawableBottom="@drawable/selector_myrecords_below"/>
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/my_records_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/myrecords_intent_homepage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_homepage"
+            android:gravity="center"
+            android:text="@string/home_page_btn" 
+            android:textColor="@drawable/selector_text_style"/>
+
+        <RadioButton
+            android:id="@+id/myrecords_intent_classify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_classify"
+            android:gravity="center"
+            android:text="@string/classification_btn" 
+            android:textColor="@drawable/selector_text_style"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_my"
+            android:gravity="center"
+            android:text="@string/my_btn" 
+            android:textColor="@drawable/selector_text_style"/>
+    </RadioGroup>
+
+</LinearLayout>
