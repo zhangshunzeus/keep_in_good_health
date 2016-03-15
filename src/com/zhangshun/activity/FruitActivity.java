@@ -10,14 +10,15 @@ import android.widget.ImageView;
 
 public class FruitActivity extends Activity {
 
-	ImageView return_btn;
+	ImageView fruit_return_btn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fruit);
-		return_btn = (ImageView) findViewById(R.id.return_btn);
+		fruit_return_btn = (ImageView) findViewById(R.id.fruit_return_btn);
+		fruit_return_btn.setOnClickListener(click);
 
 	}
 
@@ -28,7 +29,7 @@ public class FruitActivity extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			case R.id.return_btn:
+			case R.id.fruit_return_btn:
 				Intent intent_home = new Intent();
 				intent_home.setClass(FruitActivity.this,HomePageActivity.class);
 				startActivity(intent_home);
