@@ -6,54 +6,58 @@
     android:orientation="vertical">
 
     <RelativeLayout
+
+        android:id="@+id/friend1_rl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/friendtb">
 
         <ImageView
             android:id="@+id/myfriend1_back_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/myfrind1_title_tx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:padding="12dp"
-            android:text="我的好友" />
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="15dp"
+            android:text="我的好友"
+            android:textColor="@color/friendt"
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/myfriend1_add_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_launcher" />
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/add" />
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/myfriend1_friend_tx"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.2"
-            android:background="@drawable/freind"
+            android:layout_weight="1"
+
+            android:textSize="27sp"
+            android:textColor="@color/friendbt_change"
             android:gravity="center"
-            android:paddingBottom="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="5dp"
+
+            android:padding="13dp"
             android:text="好友" />
 
         <TextView
@@ -61,27 +65,31 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
+            android:textColor="@color/frendbt_no_change"
             android:gravity="center"
-            android:paddingBottom="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="5dp"
+            android:textSize="27sp"
+            android:padding="13dp"
             android:text="交流群"
 
             />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
     </LinearLayout>
 
     <ListView
-        android:layout_weight="1"
         android:id="@+id/myfrend1_lv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
-<include layout="@layout/jiang_button"/>
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"
+        ></ListView>
+    <ListView
+        android:id="@+id/myfrend1_1v2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"
+        android:visibility="gone"
+        ></ListView>
+
+    <include layout="@layout/jiang_button" />
 </LinearLayout>

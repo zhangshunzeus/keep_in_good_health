@@ -3,4 +3,10 @@
     <color name="title">#474747</color>
     <color name="blue">#1EA000</color>
     <color name="wite">#ffffff</color>
+    <!-- friend 色值设置-->
+    <color name="friendt">#ffffff</color>
+    <color name="friendtb">#22c39d</color>
+    <color name="friendbt_change">#22c39d</color>
+    <color name="frendbt_no_change">#474747</color>
+    <color name="frend_child_tx">#757575</color>
 </resources>

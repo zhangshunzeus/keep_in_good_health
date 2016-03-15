@@ -8,29 +8,35 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue">
+
+        android:background="@color/friendtb">
 
         <ImageView
             android:id="@+id/recomend2_back_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back" />
 
         <TextView
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:padding="8dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="15dp"
             android:text="今日推荐"
+            android:textColor="@color/friendt"
+            android:textSize="30sp"
 
             />
     </RelativeLayout>
-
+<!--大图片-->
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        >
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,11 +48,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:background="@drawable/ic_launcher" />
+                android:src="@drawable/eatwhat" ></ImageView>
             <!--幸运水果-->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
+                android:layout_height="15dp"
                 android:background="@drawable/black1" />
 
             <TextView
@@ -54,11 +60,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="幸运水果"
-                android:textSize="20sp" />
+                android:padding="15dp"
+                android:textColor="@color/title"
+                android:textSize="27sp" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@drawable/black1" />
 
             <LinearLayout
@@ -70,34 +78,40 @@
                     android:id="@+id/recomend2_food_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_launcher" />
+                    android:padding="15dp"
+                    android:src="@drawable/fruit" />
 
                 <TextView
                     android:id="@+id/recomend_friut_tx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/title"
                     android:paddingTop="13dp"
-                    android:text="柚子\n好吃好吃好吃好吃"
-                    android:textSize="15sp" />
+                    android:text="柚子\n好吃好吃吃好吃"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="20sp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_gravity="center_vertical"
+                    android:padding="10dp"
+                    android:src="@drawable/right" />
             </LinearLayout>
             <!--营养早餐-->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
+                android:layout_height="15dp"
                 android:background="@drawable/black1" />
 
             <TextView
                 android:id="@+id/recomend_chirld1_name_tx"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="幸运水果"
+                android:text="营养早餐"
+                android:padding="15dp"
+                android:textColor="@color/title"
                 android:textSize="20sp" />
 
             <View
@@ -114,27 +128,33 @@
                     android:id="@+id/recomend2_food1_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_launcher" />
+                    android:padding="15dp"
+                    android:src="@drawable/breakfirst" />
 
                 <TextView
                     android:id="@+id/recomend_friut1_tx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
                     android:paddingTop="13dp"
+
                     android:text="柚子\n好吃好吃好吃好吃"
-                    android:textSize="15sp" />
+
+                    android:textSize="20sp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher" />
+                    android:src="@drawable/right"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    />
             </LinearLayout>
             <!--丰盛午餐-->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
+                android:layout_height="15dp"
                 android:background="@drawable/black1" />
 
             <TextView
@@ -142,7 +162,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="丰盛午餐"
-                android:textSize="20sp" />
+                android:textColor="@color/title"
+                android:textSize="27sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -158,27 +179,35 @@
                     android:id="@+id/recomend2_food3_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_launcher" />
+                    android:padding="15dp"
+                    android:src="@drawable/lunch" />
 
                 <TextView
                     android:id="@+id/recomend_friut3_tx"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingTop="13dp"
                     android:text="柚子\n好吃好吃好吃好吃"
-                    android:textSize="15sp" />
+                    android:textSize="20sp"
+                    android:layout_gravity="center_vertical"
+                    />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher" />
+                    android:src="@drawable/right"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    />
                 <!-- 丰盛午餐2
                      >-->
 
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/black1" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -188,30 +217,39 @@
                     android:id="@+id/recomend2_food3_1_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_launcher" />
+                    android:padding="15dp"
+                    android:src="@drawable/bad" />
 
                 <TextView
                     android:id="@+id/recomend_friut3_1_tx"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingTop="13dp"
                     android:text="柚子\n好吃好吃好吃好吃"
-                    android:textSize="15sp" />
+                    android:textColor="@color/title"
+                    android:textSize="20sp" />
 
                 <ImageView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher" />
+                    android:padding="10dp"
+                    android:src="@drawable/right" />
             </LinearLayout>
             <!--可口晚餐-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/dinner" />
             <TextView
                 android:id="@+id/recomend_chirld4_name_tx"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="丰盛午餐"
-                android:textSize="20sp" />
+                android:text="可口晚餐"
+                android:textColor="@color/title"
+                android:textSize="27sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -227,26 +265,32 @@
                     android:id="@+id/recomend2_food4_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_launcher" />
+                    android:padding="15dp"
+                    android:src="@drawable/back" />
 
                 <TextView
                     android:id="@+id/recomend_friut4_tx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
                     android:paddingTop="13dp"
                     android:text="柚子\n好吃好吃好吃好吃"
-                    android:textSize="15sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/title"
+                    />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher" />
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right" />
 
 
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    <include layout="@layout/jiang_button"/>
+
+    <include layout="@layout/jiang_button" />
 </LinearLayout>

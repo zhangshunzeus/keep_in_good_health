@@ -35,7 +35,9 @@
 
         </activity>
         <!--我的朋友修改-->
-        <activity android:name="com.jiangkaiquan.activity.MyFriend1"></activity>
+        <activity android:name="com.jiangkaiquan.activity.MyFriend1">
+
+        </activity>
         <!--推荐修改-->
         <activity android:name="com.jiangkaiquan.activity.Rcomend2">
             <intent-filter>
