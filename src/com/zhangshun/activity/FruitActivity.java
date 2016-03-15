@@ -1,52 +1,44 @@
 package com.zhangshun.activity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.zhangshun.keep_in_good_health.R;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.GridView;
-import android.widget.SimpleAdapter;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
 public class FruitActivity extends Activity {
 
-	GridView fruit_gridview;
-	SimpleAdapter sim_adapter;
-	List<Map<String, Object>> data_list;
-	// 图片封装为一个数组
-		private int[] icon = {R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher};
-		private String[] iconName = { "水果","水果","水果","水果","水果","水果"  };
-	
+	ImageView fruit_return_btn;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fruit);
-		fruit_gridview = (GridView) findViewById(R.id.fruit_gridview);
-		data_list = new ArrayList<Map<String, Object>>();
-		getData();
-		// 新建适配器
-		String[] from = { "image", "text" };
-		int[] to = {R.id.gridview_img,R.id.describe};
-		sim_adapter = new SimpleAdapter(this, data_list, R.layout.fruit_gridview, from, to);
-		// 配置适配器
-		fruit_gridview.setAdapter(sim_adapter);
-	}
-	
-	public List<Map<String, Object>> getData() {
-		// cion和iconName的长度是相同的，这里任选其一都可以
-		for (int i = 0; i < icon.length; i++) {
-			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("image", icon[i]);
-			map.put("text", iconName[i]);
-			data_list.add(map);
-		}
+		fruit_return_btn = (ImageView) findViewById(R.id.fruit_return_btn);
+		fruit_return_btn.setOnClickListener(click);
 
-		return data_list;
 	}
-	
+
+
+	OnClickListener click = new OnClickListener() {
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			switch (arg0.getId()) {
+			case R.id.fruit_return_btn:
+				Intent intent_home = new Intent();
+				intent_home.setClass(FruitActivity.this,HomePageActivity.class);
+				startActivity(intent_home);
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
+
 }

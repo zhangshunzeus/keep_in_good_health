@@ -8,17 +8,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#22c39d"
-        android:orientation="horizontal" 
-        android:padding="17dp">
+        android:background="@color/check_color"
+        android:orientation="horizontal"
+        android:padding="17dp" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/my_btn"
-            android:textColor="#ffffff" 
-            android:textSize="18sp"/>
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/loginname_intent_setup"
@@ -32,9 +32,11 @@
             android:contentDescription="@drawable/mysetup"
             android:src="@drawable/mysetup" />
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="2dp"
         android:layout_weight="2" >
 
         <LinearLayout
@@ -42,84 +44,50 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/personal_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@drawable/mytouxiangbeijing"
-            android:src="@drawable/mytouxiangbeijing" 
-            android:adjustViewBounds="true"/>
-
-        <ImageView
-            android:id="@+id/loginname_touxiang_intent_"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-			android:layout_centerInParent="true"
-            android:contentDescription="@drawable/mytouxiang"
-            android:src="@drawable/mytouxiang"
-            android:adjustViewBounds="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/personal_background"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="30dp"
-            android:layout_centerHorizontal="true"
-            android:text="@string/personal_login_name"
-            android:textColor="#ffffff" 
-            android:textSize="18sp"/>
-    </RelativeLayout>
-     <View 
+            <View
                 android:layout_width="330dp"
                 android:layout_height="10dp"
-                android:background="#e5e5e5"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/loginname_intent_shoppingcart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
-                android:orientation="horizontal" 
-                >
+                android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myshopcart"
-                    android:src="@drawable/myshopcart" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/myshopcart" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_shopping_cart" 
-                    android:textSize="18sp"
-                    android:layout_marginTop="18dp"/>
+                    android:text="@string/person_shopping_cart"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-            <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/loginname_intent_myfriend"
@@ -131,35 +99,34 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myfriend"
-                    android:src="@drawable/myfriend"
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/myfriend" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
                     android:text="@string/person_my_friend"
-                    android:textSize="18sp" 
-                    android:layout_marginTop="18dp"/>
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/loginname_intent_myrecords"
@@ -171,35 +138,35 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myrecords"
-                    android:src="@drawable/myrecords" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/myrecords" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/my_records_title" 
-                    android:textSize="18sp"
-                    android:layout_marginTop="18dp"/>
+                    android:text="@string/my_records_title"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-				
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
+
             <LinearLayout
                 android:id="@+id/loginname_intent_mycollection"
                 android:layout_width="match_parent"
@@ -210,35 +177,34 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mycollection"
-                    android:src="@drawable/mycollection" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/mycollection" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
                     android:text="@string/my_collection_title"
-                    android:textSize="18sp" 
-                    android:layout_marginTop="18dp"/>
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/loginname_intent_vip"
@@ -250,81 +216,40 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mypersonal"
-                    android:src="@drawable/mypersonal" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/mypersonal" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_vip" 
-                    android:textSize="18sp"
-                    android:layout_marginTop="18dp"/>
+                    android:text="@string/person_vip"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
         </LinearLayout>
     </ScrollView>
 
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="7dp"
-        android:background="#eeeeee"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/loginname_intent_homepage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/selector_homepage"
-            android:gravity="center"
-            android:text="@string/home_page_btn"
-            android:textColor="@drawable/selector_text_style"
-            android:textSize="12sp" />
-
-        <RadioButton
-            android:id="@+id/loginname_intent_Classify"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/selector_classify"
-            android:gravity="center"
-            android:text="@string/classification_btn"
-            android:textColor="@drawable/selector_text_style"
-            android:textSize="12sp" />
-
-        <RadioButton
-            android:id="@+id/loginname_intent_my"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/selector_my"
-            android:gravity="center"
-            android:text="@string/my_btn"
-            android:textColor="@drawable/selector_text_style" 
-            android:textSize="12sp"/>
-    </RadioGroup>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_page_bottom_menu" />
 
 </LinearLayout>

@@ -18,11 +18,9 @@
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
         </activity>
 
-
         <!-- 推荐 -->
         <activity android:name="com.jiangkaiquan.activity.Recomend" >
         </activity>
-
 
         <!-- 水果页面 -->
         <activity android:name="com.zhangshun.activity.FruitActivity" >
@@ -82,7 +80,6 @@
         </activity>
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
-
         </activity>
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
@@ -93,28 +90,24 @@
             </intent-filter>
         </activity>
 
-
-
         <!-- 分类：咨询医师页面 -->
-        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor"></activity>
+        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor" >
+        </activity>
         <!-- 我的：我的记录页面 -->
-        <activity android:name="com.zhangwenbin.activity.MyRecords">
-            
+        <activity android:name="com.zhangwenbin.activity.MyRecords" >
         </activity>
         <!-- 我的：个人中心登陆名页面 -->
-        <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName">
-            
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
         </activity>
         <!-- 我的：个人中心未登录页面 -->
-        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin">
-            
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin" >
         </activity>
-    	<!-- 我的：店铺收藏页面 -->
- 		<activity android:name="com.zhangwenbin.activity.ShopCollection"></activity>   
-    	<!-- 首页：今天吃什么页面 -->
- 		<activity android:name="com.zhangwenbin.activity.TodayEat">
- 		   
- 		</activity>
+        <!-- 我的：店铺收藏页面 -->
+        <activity android:name="com.zhangwenbin.activity.ShopCollection" >
+        </activity>
+        <!-- 首页：今天吃什么页面 -->
+        <activity android:name="com.zhangwenbin.activity.TodayEat" >
+        </activity>
 
     </application>
 

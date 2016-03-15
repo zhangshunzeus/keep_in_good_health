@@ -2,17 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/dietary"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/at_the_top_of_the_background_color"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="@string/home_page_text"
-        android:textColor="@android:color/white" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -26,8 +17,10 @@
 
             <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="120dp"
-                android:background="#C4C4C4" >
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_page_top_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
 
                 <AutoCompleteTextView
                     android:layout_width="fill_parent"
@@ -36,43 +29,199 @@
                     android:layout_marginRight="40dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/home_page_auto_bg"
+                    android:drawableRight="@drawable/search"
+                    android:focusable="false"
                     android:hint="@string/home_page_search"
                     android:padding="5dp"
-                    android:textColor="@android:color/white"
+                    android:textColor="#F1F1F1"
                     android:textSize="12sp" />
             </RelativeLayout>
 
-            <GridView
-                android:id="@+id/home_page_gridview"
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="7dp"
+                android:paddingTop="12dp" >
+
+                <ImageView
+                    android:id="@+id/soup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/soup" />
+
+                <ImageView
+                    android:id="@+id/snacks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/snacks" />
+
+                <ImageView
+                    android:id="@+id/the_dessert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/the_dessert" />
+
+                <ImageView
+                    android:id="@+id/rice_porridge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/rice_porridge" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:columnWidth="80dp"
-                android:numColumns="auto_fit"
-                android:stretchMode="columnWidth" >
-            </GridView>
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/soup_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/soup"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/snacks_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="零嘴"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/the_dessert_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="甜点"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/rice_porridge_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="粥类"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="7dp"
+                android:paddingTop="12dp" >
+
+                <ImageView
+                    android:id="@+id/fruit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/fruit" />
+
+                <ImageView
+                    android:id="@+id/meat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/meat" />
+
+                <ImageView
+                    android:id="@+id/a_vegetarian_diet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/a_vegetarian_diet" />
+
+                <ImageView
+                    android:id="@+id/drinking_tea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/drinking_tea" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/fruit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="水果"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/meat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="肉食"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/a_vegetarian_diet_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="素食"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/drinking_tea_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="饮茶"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
                 android:background="#f1f1f1" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
+                android:background="@android:color/white"
+                android:padding="10dp"
                 android:text="@string/home_page_carefully"
-                android:textSize="14sp" />
+                android:textColor="#474747"
+                android:textSize="15sp" />
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@android:color/black" />
+                android:src="@drawable/what_to_eat_today_bg" />
 
             <TextView
                 android:id="@+id/three_meals_a_day_content"
@@ -106,32 +255,40 @@
 
                 <TableRow>
 
-                    <Button
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" >
-                    </Button>
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/elaborate_recommendations_one" >
+                    </ImageView>
 
-                    <Button
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" >
-                    </Button>
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/elaborate_recommendations_two" >
+                    </ImageView>
                 </TableRow>
 
                 <TableRow>
 
-                    <Button
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" >
-                    </Button>
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/elaborate_recommendations_three" >
+                    </ImageView>
 
-                    <Button
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" >
-                    </Button>
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/elaborate_recommendations_four" >
+                    </ImageView>
                 </TableRow>
             </TableLayout>
         </LinearLayout>
