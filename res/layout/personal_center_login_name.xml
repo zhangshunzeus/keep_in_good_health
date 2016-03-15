@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/check_color"
+        android:background="#22c39d"
         android:orientation="horizontal"
         android:padding="17dp" >
 
@@ -43,6 +43,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
+            
+            <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+       <ImageView
+            android:id="@+id/personal_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@drawable/mytouxiangbeijing"
+            android:src="@drawable/mytouxiangbeijing" 
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/loginname_touxiang_intent_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+            android:contentDescription="@drawable/mytouxiang"
+            android:src="@drawable/mytouxiang"
+            android:adjustViewBounds="true" />
+
+         <TextView
+            android:id="@+id/personal_not_login_intent_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/personal_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/person_not_login"
+            android:textColor="#ffffff" 
+            android:textSize="15sp"/>
+    </RelativeLayout>
 
             <View
                 android:layout_width="330dp"
