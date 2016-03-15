@@ -2,73 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f1f1f1"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:background="@color/check_color"
+        android:orientation="horizontal"
+        android:padding="17dp" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/personal_center_title" />
+            android:text="@string/my_btn"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/loginname_intent_setup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:contentDescription="@drawable/ic_launcher"
-            android:src="@drawable/ic_launcher" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp" >
-
-        <ImageView
-            android:id="@+id/personal_background"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:alpha="0.5"
-            android:contentDescription="@drawable/ic_launcher"
-            android:src="@drawable/ic_launcher" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@drawable/ic_launcher"
-                android:src="@drawable/ic_launcher" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text="@string/personal_login_name" />
-        </LinearLayout>
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:contentDescription="@drawable/mysetup"
+            android:src="@drawable/mysetup" />
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_marginTop="2dp"
+        android:layout_weight="2" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <View
+                android:layout_width="330dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:background="#e5e5e5" />
+
             <LinearLayout
+                android:id="@+id/loginname_intent_shoppingcart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -77,26 +60,37 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/myshopcart"
+                    android:src="@drawable/myshopcart" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_my_record" />
+                    android:text="@string/person_shopping_cart"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
 
+            <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#e5e5e5" />
+
             <LinearLayout
+                android:id="@+id/loginname_intent_myfriend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -105,26 +99,37 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/myfriend"
+                    android:src="@drawable/myfriend" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_my_friend" />
+                    android:text="@string/person_my_friend"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
 
+            <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#e5e5e5" />
+
             <LinearLayout
+                android:id="@+id/loginname_intent_myrecords"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -133,26 +138,37 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/myrecords"
+                    android:src="@drawable/myrecords" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_my_collect" />
+                    android:text="@string/my_records_title"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
 
+            <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#e5e5e5" />
+
             <LinearLayout
+                android:id="@+id/loginname_intent_mycollection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -161,26 +177,37 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/mycollection"
+                    android:src="@drawable/mycollection" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_shopping_cart" />
+                    android:text="@string/my_collection_title"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
 
+            <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#e5e5e5" />
+
             <LinearLayout
+                android:id="@+id/loginname_intent_vip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -189,92 +216,40 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/mypersonal"
+                    android:src="@drawable/mypersonal" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_my_share" />
+                    android:text="@string/person_vip"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/person_vip" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@drawable/ic_launcher"
-                    android:src="@drawable/ic_launcher" />
-            </LinearLayout>
+            <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#e5e5e5" />
         </LinearLayout>
     </ScrollView>
-
-<!--     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
-            android:gravity="center"
-            android:text="@string/home_page_btn" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
-            android:gravity="center"
-            android:text="@string/classification_btn" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/switch_bg"
-            android:gravity="center"
-            android:text="@string/my_btn" />
-    </LinearLayout> -->
 
     <include
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/jiang_button" />
+        layout="@layout/home_page_bottom_menu" />
 
 </LinearLayout>

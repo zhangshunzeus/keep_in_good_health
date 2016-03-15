@@ -3,8 +3,10 @@ package com.jiangkaiquan.activity;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
 
+
 import com.zhangwenbin.activity.PersonalCenterLoginName;
 
+import com.zhangwenbin.activity.PersonalCenterLoginName;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,6 +16,17 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+
+import android.widget.ExpandableListView;
+import android.widget.GridView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+
+import com.jiangkaiquan.activity.adapter.RecomendAdapter;
+
+
 /**
  * Created by jkqme on 2016/3/8.
  * 合并了膳食
@@ -21,15 +34,28 @@ import android.widget.TextView;
 
 
 public class Recomend extends Activity {
-
-    TextView recomend_recomend_tx, recomend_bttom_1_tx, recomend_bttom_2_tx, recomend_bttom_3_tx;
+    private GridView gridView[] = new GridView[4];
+    private int gid[] = {R.id.recomend1_fruit_gv, R.id.recomend_flish_gv, R.id.recomend_vgtable_gv, R.id.recomend_tea_gv};
+    private int checkId[] = {R.id.recomend_chekmore_f_tx, R.id.recomend_chekmore_r_tx, R.id.recomend_chekmore_v_tx, R.id.recomend_chekmore_t_tx};
+    private int foodTypId[] = {R.id.recomend1_fruit_tx, R.id.recomend1_flish_tx, R.id.recomend1_vgtable_tx, R.id.recomend1_tea_tx};
+    private TextView text, recomend_recomend_tx, recomend_bttom_1_tx, recomend_bttom_2_tx, recomend_bttom_3_tx;
+    private int curentDisplay = 4;
+    private RecomendAdapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.jiang_recomend_1);
         recomend_recomend_tx = (TextView) findViewById(R.id.recomend_recomend_tx);
+
+
+        setContentView(R.layout.jiang_recomend_1);
+
+
+        recomend_recomend_tx = (TextView) findViewById(R.id.recomend_recomend_tx);
+
         recomend_recomend_tx.setOnClickListener(click);
 
         recomend_bttom_1_tx = (TextView) findViewById(R.id.recomend_bttom_1_tx);
@@ -40,7 +66,6 @@ public class Recomend extends Activity {
 
         recomend_bttom_3_tx = (TextView) findViewById(R.id.recomend_bttom_3_tx);
         recomend_bttom_3_tx.setOnClickListener(click);
-
 
     }
 
@@ -73,6 +98,16 @@ public class Recomend extends Activity {
             }
         }
     };
+
+
+    /**
+     * @i 列表项
+     */
+    private void getAdpter(int i) {
+        ArrayList<Object> list = new ArrayList<Object>();
+        adapter = new RecomendAdapter(list, this);
+        gridView[i].setAdapter(adapter);
+    }
 
 
 }

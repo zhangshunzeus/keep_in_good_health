@@ -27,11 +27,13 @@ public class TheShoppingCartActivity extends Activity {
 	
 	private void getData() {
 		
-		for(int i = 0; i < 10; i++){
+		for(int i = 0; i < 3; i++){
 			TheShoppingCartDemo buy = new TheShoppingCartDemo();
-			buy.setImg("");
-			buy.setMy_collection_content("如果你无法简洁的表达你的想法，那只说明你还不够了解它。 \n -- 阿尔伯特·爱因斯坦");
-			buy.setContent_list_btn(R.drawable.rub_course_go_to_next_right);
+			buy.setImg(R.drawable.pu_er_tea);
+			buy.setThe_shopping_title("");
+			buy.setThe_shopping_content("");
+			buy.setThe_shopping_number("");
+			buy.setThe_price("");
 			list.add(buy);
 		}
 		

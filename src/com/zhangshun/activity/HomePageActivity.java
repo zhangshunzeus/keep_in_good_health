@@ -1,68 +1,77 @@
 package com.zhangshun.activity;
 
-import com.jiangkaiquan.activity.Recomend;
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.PersonalCenterLoginName;
-import com.zhangwenbin.activity.TodayEat;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 
 public class HomePageActivity extends Activity {
 
-	Button my_friend_issue_group_tx, my_friend_car_tx;
-	TextView dietary,intent_food;
-
+	RadioButton home_page,classify,circle;
+	ImageView soup,fruit;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_page);
 
-		my_friend_issue_group_tx = (Button) findViewById(R.id.my_friend_issue_group_tx);
-		my_friend_car_tx = (Button) findViewById(R.id.my_friend_car_tx);
-		dietary = (TextView) findViewById (R.id.dietary);
-		intent_food = (TextView) findViewById (R.id.intent_food);
-
-		my_friend_issue_group_tx.setOnClickListener(listener);
-		my_friend_car_tx.setOnClickListener(listener);
-		dietary.setOnClickListener(listener);
-		intent_food.setOnClickListener(listener);
-
+		home_page = (RadioButton) findViewById (R.id.home_page);
+		classify = (RadioButton) findViewById (R.id.classify);
+		circle = (RadioButton) findViewById (R.id.circle);
+		
+		fruit = (ImageView) findViewById (R.id.fruit);
+		fruit.setOnClickListener(click);
+		
+		home_page.setOnCheckedChangeListener(listener);
+		classify.setOnCheckedChangeListener(listener);
+		circle.setOnCheckedChangeListener(listener);
+		
 	}
-
-	OnClickListener listener = new OnClickListener() {
-
-		public void onClick(View v) {
+	
+	OnClickListener click = new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
-			switch (v.getId()) {
-			case R.id.my_friend_issue_group_tx:
-				// Intent intent = new Intent();
-				// intent.setClass(HomePageActivity.this,  .class);
-				//startActivity(intent);
+			switch (arg0.getId()) {
+			case R.id.fruit:
+				Intent intent_fruit = new Intent();
+				intent_fruit.setClass(HomePageActivity.this,FruitActivity.class);
+				startActivity(intent_fruit);
 				break;
-			case R.id.my_friend_car_tx:
-				Intent intent = new Intent();
-				intent.setClass(HomePageActivity.this, PersonalCenterLoginName.class);
-				startActivity(intent);
-				break;
-			case R.id.dietary:
-				Intent intetn_dietary = new Intent();
-				intetn_dietary.setClass(HomePageActivity.this,Recomend.class);
-				startActivity(intetn_dietary);
-				break;
-			case R.id.intent_food:
-				Intent intent_todayEat = new Intent();
-				intent_todayEat.setClass(HomePageActivity.this, TodayEat.class);
-				startActivity(intent_todayEat);
-				break;
+
 			default:
 				break;
 			}
 		}
 	};
+	
+	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
+
+		@Override
+		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+			// TODO Auto-generated method stub
+			switch (arg0.getId()) {
+			case R.id.circle:
+				Intent intent_circle= new Intent();
+				intent_circle.setClass(HomePageActivity.this,
+						PersonalCenterLoginName.class);
+				startActivity(intent_circle);
+				break;
+
+			default:
+				break;
+			}
+		}
+		
+	};
+
 }

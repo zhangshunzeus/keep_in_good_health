@@ -1,5 +1,6 @@
 package com.zhangwenbin.activity;
 
+import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;
@@ -30,7 +31,7 @@ public class Inquiry_doctor extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.doctor_return:
-				Intent intent=new Intent();
+				Intent intent=new Intent(Inquiry_doctor.this,HomePageActivity.class);
 				startActivity(intent);
 				break;
 
