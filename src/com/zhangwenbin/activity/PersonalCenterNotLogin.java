@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -22,12 +23,12 @@ import com.zhangshun.activity.TheShoppingCartActivity;
 import com.zhangshun.keep_in_good_health.R;
 
 public class PersonalCenterNotLogin extends Activity {
-	ImageView intentMyRecords;
-	ImageView intentMyFriend;
-	ImageView intentMyCollection;
-	ImageView intentShopCart;
-	ImageView intentMyShare;
-	ImageView intentVIP;
+	LinearLayout intentMyRecords;
+	LinearLayout intentMyFriend;
+	LinearLayout intentMyCollection;
+	LinearLayout intentShopCart;
+	LinearLayout intentMyShare;
+	LinearLayout intentVIP;
 	RadioButton intentHomePage;
 	RadioButton intentClassify;
 	ImageView intentLoginName;
@@ -44,15 +45,17 @@ public class PersonalCenterNotLogin extends Activity {
 		intentClassify.setOnCheckedChangeListener(listener);
 		intentHomePage = (RadioButton) findViewById(R.id.notlogin_intent_homepage);
 		intentHomePage.setOnCheckedChangeListener(listener);
-		intentMyCollection = (ImageView) findViewById(R.id.notlogin_intent_mycollection);
+		
+		
+		intentMyCollection = (LinearLayout) findViewById(R.id.notlogin_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
-		intentMyFriend = (ImageView) findViewById(R.id.notlogin_intent_myfriend);
+		intentMyFriend = (LinearLayout) findViewById(R.id.notlogin_intent_myfriend);
 		intentMyFriend.setOnClickListener(onClickListener);
-		intentMyRecords = (ImageView) findViewById(R.id.notlogin_intent_myrecords);
+		intentMyRecords = (LinearLayout) findViewById(R.id.notlogin_intent_myrecords);
 		intentMyRecords.setOnClickListener(onClickListener);
-		intentShopCart = (ImageView) findViewById(R.id.notlogin_intent_shoppingcart);
+		intentShopCart = (LinearLayout) findViewById(R.id.notlogin_intent_shoppingcart);
 		intentShopCart.setOnClickListener(onClickListener);
-		intentVIP = (ImageView) findViewById(R.id.notlogin_intent_vip);
+		intentVIP = (LinearLayout) findViewById(R.id.notlogin_intent_vip);
 		intentVIP.setOnClickListener(onClickListener);
 		intentSetUp = (ImageView) findViewById(R.id.notlogin_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
