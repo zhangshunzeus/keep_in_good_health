@@ -65,8 +65,8 @@ public class MyFriend1 extends Activity {
         getSocialDate();
         listview = (ListView) findViewById(R.id.myfrend1_lv);
         listView2=(ListView)findViewById(R.id.myfrend1_1v2);
-        adpter = new MyFriend1Ad(list, this);
-        adpter2=new MyFriend1Ad(list2,this);
+        adpter = new MyFriend1Ad(list, this,true);
+        adpter2=new MyFriend1Ad(list2,this,false);
         Log.i("onCreate", "listview");
         listview.setAdapter(adpter);
         listView2.setAdapter(adpter2);

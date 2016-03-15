@@ -36,15 +36,15 @@
         </activity>
         <!--我的朋友修改-->
         <activity android:name="com.jiangkaiquan.activity.MyFriend1">
-
-        </activity>
-        <!--推荐修改-->
-        <activity android:name="com.jiangkaiquan.activity.Rcomend2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!--推荐修改-->
+        <activity android:name="com.jiangkaiquan.activity.Rcomend2">
+
         </activity>
 
 

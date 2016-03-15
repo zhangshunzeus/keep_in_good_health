@@ -23,11 +23,12 @@
         android:textSize="28sp" />
 
     <ImageView
+        android:id="@+id/friend_child_right_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_margin="15dp"
         android:src="@drawable/right"
-
+           android:visibility="gone"
         />
 </LinearLayout>

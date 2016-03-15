@@ -21,13 +21,15 @@ public class MyFriend1Ad extends BaseAdapter {
     ArrayList<HashMap<String,Object>>list;
     Context context;
     LayoutInflater inflater;
+    boolean isfreind;
     public MyFriend1Ad() {
 
     }
     public MyFriend1Ad(ArrayList<HashMap<String,Object>>list,
-            Context context) {
+            Context context,boolean isfreind) {
         this.context=context;
         this.list=list;
+        this.isfreind=isfreind;
         inflater=LayoutInflater.from(context);
     }
 
@@ -55,14 +57,18 @@ public class MyFriend1Ad extends BaseAdapter {
            Log.i("getView","adpter==null");
            holder=new Holder();
            view=inflater.inflate(R.layout.friend_child,null);
-          holder.textView=(TextView)view.findViewById(R.id.friend_child_tx);
+           holder.textView=(TextView)view.findViewById(R.id.friend_child_tx);
            holder.img=(ImageView)view.findViewById(R.id.friend_child_img);
+           holder.img1=(ImageView)view.findViewById(R.id.friend_child_right_img);
             view.setTag(holder);
        }else {
            holder=(Holder)view.getTag();
            Log.i("getView","adpter==null");}
         holder.img.setImageDrawable(view.getResources().getDrawable((Integer)list.get(i).get("img")));
         holder.textView.setText((String)list.get(i).get("text"));
+        if(!isfreind){
+            holder.img1.setVisibility(View.VISIBLE);
+        }
 
 
     return view;
@@ -70,5 +76,6 @@ public class MyFriend1Ad extends BaseAdapter {
     class Holder{
         ImageView img;
         TextView textView;
+        ImageView img1;
     }
 }
