@@ -12,11 +12,11 @@
         android:padding="10dp"
         android:background="@android:color/white" >
 
-        <TextView
-            android:id="@+id/img"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@android:color/black" />
+        <ImageView
+            android:id="@+id/pu_er_tea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pu_er_tea" />
 
         <LinearLayout
             android:layout_width="0dp"
