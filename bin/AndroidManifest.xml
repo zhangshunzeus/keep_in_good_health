@@ -16,10 +16,7 @@
 
         <!-- 首页 -->
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
-        </activity>
-
-        <!-- 推荐 -->
-        <activity android:name="com.jiangkaiquan.activity.Recomend" >
+      
         </activity>
 
         <!-- 水果页面 -->
@@ -80,6 +77,7 @@
         </activity>
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
+
         </activity>
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
@@ -93,6 +91,8 @@
         </activity>
         <activity android:name="com.zhangwenbin.activity.TodayEat" >
         </activity>
+
+
     </application>
 
 </manifest>
