@@ -32,7 +32,6 @@ public class FruitActivity extends Activity {
 			case R.id.fruit_return_btn:
 				finish();
 				break;
-
 			default:
 				break;
 			}
