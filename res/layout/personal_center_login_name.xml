@@ -27,6 +27,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
+            android:padding="8dp"
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
             android:contentDescription="@drawable/mysetup"
@@ -247,9 +248,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/home_page_bottom_menu" />
+ 
 
 </LinearLayout>

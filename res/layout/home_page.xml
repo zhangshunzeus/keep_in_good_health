@@ -5,32 +5,6 @@
     android:background="@android:color/white"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
-
-        <TextView
-            android:id="@+id/recommended"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/home_page_recommended" />
-
-        <TextView
-            android:id="@+id/dietary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/home_page_dietary" />
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -243,6 +217,7 @@
                 android:textSize="15sp" />
 
             <ImageView
+                android:id="@+id/todayEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -290,6 +265,7 @@
                     </ImageView>
 
                     <ImageView
+                        android:id="@+id/shopDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -319,11 +295,7 @@
             </TableLayout>
         </LinearLayout>
     </ScrollView>
->>>>>>> origin/develop
 
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/home_page_bottom_menu" />
+  
 
 </LinearLayout>

@@ -4,6 +4,7 @@ package com.zhangshun.activity;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.zhangrong.activity.MainActivity;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;
@@ -17,7 +18,7 @@ public class TheLaunchPageActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.the_launch_page_activity);
-		 final Intent localIntent = new Intent(this, HomePageActivity.class);  
+		 final Intent localIntent = new Intent(this, MainActivity.class);  
         Timer timer = new Timer();  
         TimerTask tast = new TimerTask() {  
             @Override  

@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingLeft="25dp"
-    >
-
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <TextView
         android:id="@+id/friend_swap_tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:drawableLeft="@drawable/swap"
         android:gravity="center_vertical"
-        android:textSize="27sp"
-        android:layout_marginTop="17dp"
-        android:paddingTop="17dp"
-        android:paddingBottom="17dp"
-
-        android:textColor="@color/frend_dilog"
-        android:text="  扫一扫" />
+        android:drawableLeft="@drawable/ic_launcher"
+        android:text="扫一扫" />
 
     <TextView
         android:id="@+id/friend_add_tx"
@@ -28,25 +18,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
-        android:textColor="@color/frend_dilog"
-        android:drawableLeft="@drawable/addfriend"
-        android:textSize="27sp"
-        android:paddingTop="17dp"
-        android:paddingBottom="17dp"
+        android:drawableLeft="@drawable/ic_launcher"
         android:gravity="center_horizontal|center_vertical"
-        android:text="  添加好友" />
+        android:text="添加好友" />
 
     <TextView
         android:id="@+id/friend_creat_social_tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="27sp"
-        android:paddingTop="17dp"
-        android:textColor="@color/frend_dilog"
-        android:paddingBottom="17dp"
-        android:layout_marginBottom="17dp"
-        android:drawableLeft="@drawable/addsocil"
         android:gravity="center_horizontal"
-        android:text="  建立好友群" />
+        android:drawableLeft="@drawable/ic_launcher"
+        android:text="建立好友群" />
 </LinearLayout>
