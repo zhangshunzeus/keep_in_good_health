@@ -7,7 +7,6 @@ import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.adapter.MyRecordsAdapter;
 import com.zhangshun.demo.MyRecordsDemo;
 import com.zhangshun.keep_in_good_health.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
