@@ -3,7 +3,7 @@
     <item android:state_checked="false" 
         android:color="@color/title"/>
     <item android:state_checked="true"
-        android:color="@color/check_color"/>
+        android:color="@color/at_the_top_of_the_background_color"/>
     <item
         android:color="@color/title"/>
 </selector>

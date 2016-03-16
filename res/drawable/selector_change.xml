@@ -6,5 +6,7 @@
     <item 
         android:state_checked="true"
         android:drawable="@drawable/selector_change_receive"></item>
+    <item 
+        android:drawable="@drawable/no_check_change_receive"></item>
 
 </selector>

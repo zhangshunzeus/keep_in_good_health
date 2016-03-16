@@ -95,6 +95,7 @@
         </activity>
         <!-- 我的：我的记录页面 -->
         <activity android:name="com.zhangwenbin.activity.MyRecords" >
+            
         </activity>
         <!-- 我的：个人中心登陆名页面 -->
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
