@@ -66,13 +66,16 @@
 
         <!-- 商品详情 -->
         <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
-            <intent-filter>
+           
+        </activity>
+        <!-- 详情 -->
+        <activity android:name="com.ruanjiawei.activity.DetailsBigActivity">
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- 常见疾病详情列表页面 -->
         <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty" >
         </activity>
@@ -125,7 +128,6 @@
         <!-- 我的：店铺收藏页面 -->
         <activity android:name="com.zhangwenbin.activity.ShopCollection" >
         </activity>
-        >>>>>>> origin/develop
     </application>
 
 </manifest>

@@ -23,7 +23,6 @@
     <string name="food_name_details">如何挑选</string>
     <string name="food_name_select">好的菠萝摸上去坚挺有弹性。如果手感松软、按上去有凹陷的感觉、那么就可能成熟果高，容易变质。</string>
     <string name="food_name_selects">成熟的菠萝表皮微亮黄色，两端有些发绿，顶部的发冠微青褐色。</string>
-    
     <string name="food_name_taboo">食材禁忌</string>
     <string name="food_name_taboo_dit">\t患有溃疡病、肾脏病、凝血功能障碍等疾病的人最好不要吃菠萝。</string>
     <string name="home_page_text">首页</string>
@@ -131,12 +130,12 @@
     <string name="shop_bigtitle">为什么选择我们</string>
     <string name="shop_bigtitle_neir">我们采用传统酒酿工艺，经过发酵酿造、过滤、澄清等非常特别的工艺（绝不用一般工业厂所采用的勾兑、加澄清剂的方式）</string>
     <string name="shop_bigtitle_neirtwo">经过长达6个月以上的酿制，才能酿出上好的桂花酒。他的酒精度数在8度左右，有非常浓郁的桂花香，很好喝。</string>
-   <string name="details_goodeit">最佳饮用方法</string>
-   <string name="details_goodeit_frist">冷藏，饮前醒酒10分钟，可以直接饮用。</string>
-   <string name="details_goodeit_second">冬季可短时间温酒饮用，夏季可杯中加少许冰块。</string>
-   <string name="details_explain">特别说明</string>
-   <string name="details_explain_frist">桂花酒，收到后记得要冷藏。</string>
-   <string name="details_explain_second">果酒经过发酵，加上快递运输过程中的晃动，通常都会有一些气，请朋友们收到包裹后检查一下，万一出现漏的情况，请立即联系我们，我们会安排给补寄的，祝大家饮酒愉快！</string>
+    <string name="details_goodeit">最佳饮用方法</string>
+    <string name="details_goodeit_frist">冷藏，饮前醒酒10分钟，可以直接饮用。</string>
+    <string name="details_goodeit_second">冬季可短时间温酒饮用，夏季可杯中加少许冰块。</string>
+    <string name="details_explain">特别说明</string>
+    <string name="details_explain_frist">桂花酒，收到后记得要冷藏。</string>
+    <string name="details_explain_second">果酒经过发酵，加上快递运输过程中的晃动，通常都会有一些气，请朋友们收到包裹后检查一下，万一出现漏的情况，请立即联系我们，我们会安排给补寄的，祝大家饮酒愉快！</string>
     <string name="professional">职业</string>
     <string name="the_company">公司</string>
     <string name="home">所在地</string>
@@ -170,12 +169,9 @@
     <string name="product_name_title">产品名字</string>
     <string name="product_name_price">价格</string>
     <string name="product_name_btn">立即购买</string>
-
     <string name="the_shopping_title">普洱茶 陈皮普洱三颗装</string>
     <string name="the_shopping_content">小茶婆婆出品</string>
     <string name="the_shopping_number">数量: 1包</string>
-
-
     <string name="forger_phone">请输入手机号码</string>
     <string name="forger_code">请输入验证码</string>
     <string name="forger_newpassword">请输入新密码</string>
@@ -192,6 +188,11 @@
     <string name="buy">购买</string>
     <string name="numb">1</string>
     <string name="numbs">2</string>
-
+    <string name="details_big_title">汤臣倍健R蛋白粉450g/罐(附量具)</string>
+    <string name="details_big_nei">下单立减1元，买赠共750g蛋白粉+液体钙</string>
+    <string name="details_big_get">30粒增强免疫力 送小蛋粉 150g</string>
+    <string name="details_big_menoy">￥ 26.00</string>
+    <string name="details_big_nice">好评率89%</string>
+    <string name="details_big_image">详细参数</string>
 
 </resources>
