@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/sortfragment_line"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/sorttop_bg">
+
+        <ImageView
+            android:id="@+id/sortfragment_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="38px"
+            android:src="@drawable/meal_name_back" />
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="22px"
+            android:layout_marginEnd="68px"
+            android:layout_marginLeft="38px"
+            android:layout_marginTop="22px"
+            android:background="@drawable/sort_auto_bg"
+            android:drawableRight="@drawable/sort_auto_seek"
+            android:paddingEnd="9dp"
+            android:paddingLeft="4dp"
+            android:textColor="@color/mealname_font_headline_color"
+            android:textSize="10sp"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sortfragment_line"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:id="@+id/sortfragment_left_line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4.8"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/sort_left_group"
+                android:layout_width="wrap_content"
+                android:background="@drawable/sort_border_bg"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio1"
+                    android:layout_width="170px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="养生动态"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio2"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="春季饮食"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio3"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="饮茶养生"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio4"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="中医养生"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio5"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="健康饮酒"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio6"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="佛家养生"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio7"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="道家养生"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio8"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="运动养生"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio9"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="节气养生"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio10"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="民间偏方"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio11"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="日常养生"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+                <RadioButton
+                    android:id="@+id/sort_left_radio12"
+                    android:layout_width="170px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:text="夏季进补"
+                    android:textColor="@drawable/left_text_seletor"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/public_line" />
+
+
+            </RadioGroup>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/sortfragment_regit_line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sort_right_bg"
+            android:layout_marginLeft="18px"
+            android:orientation="vertical" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

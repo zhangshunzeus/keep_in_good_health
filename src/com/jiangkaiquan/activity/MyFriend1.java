@@ -95,6 +95,7 @@ public class MyFriend1 extends Activity {
             }
             switch (view.getId()) {
                 case R.id.myfriend1_back_img:
+                	finish();
                     break;
                 case R.id.myfriend1_add_img:
                     showDiolog();

@@ -17,6 +17,7 @@
                     android:id="@+id/fruit_return_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                   android:padding="10dp"
                     android:src="@drawable/return_btn" />
 
                 <TextView
@@ -58,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/pineapple"
+                    android:background="@drawable/small_pineapple"
                     android:gravity="bottom"
                     android:padding="5dp" >
 

@@ -18,4 +18,20 @@
     <color name="at_the_top_of_the_background_color">#22c39d</color>
     <color name="line">#F1F1F1</color>
 
+
+    <!-- 张荣 食品页面的使用颜色 -->
+
+    <color name="mealname_font_headline_color">#474747</color>
+    <color name="mealname_font_subtitle_color">#B3B3B3</color>
+    <color name="mealname_font_theme">#F1F1F1</color>
+    <color name="mealname_head_bg">#22C39D</color>
+    <color name="mealname_round_bg">#22C39D</color>
+    <color name="mealname_font_round_color">#F1F1F1</color>
+
+    <!-- 张荣 分类页面使用的颜色 -->
+
+    <color name="sorttop_bg">#22C39D</color>
+    <color name="public_line">#B3B3B3</color>
+    <color name="sort_right_image_text_color">#FFFFFF</color>
+
 </resources>

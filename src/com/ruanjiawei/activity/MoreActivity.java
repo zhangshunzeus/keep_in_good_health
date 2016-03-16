@@ -8,6 +8,7 @@ import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.ListView;
 
 public class MoreActivity extends Activity {
@@ -20,6 +21,7 @@ public class MoreActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.more);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		listview = (ListView) findViewById(R.id.more_listview);
 		getData();
 		adapter = new FoodNameAllBaseAdapter(list, this);

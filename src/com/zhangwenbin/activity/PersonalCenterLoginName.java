@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
 import com.jiangkaiquan.activity.MyFriend;
+import com.jiangkaiquan.activity.MyFriend1;
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.activity.MyCollectionActivity;
@@ -38,11 +39,11 @@ public class PersonalCenterLoginName extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_login_name);
-		intentHomePage=(RadioButton)findViewById(R.id.home_page);
+		intentHomePage = (RadioButton) findViewById(R.id.home_page);
 		intentHomePage.setOnCheckedChangeListener(listener);
-		intentClassify=(RadioButton)findViewById(R.id.classify);
+		intentClassify = (RadioButton) findViewById(R.id.classify);
 		intentClassify.setOnCheckedChangeListener(listener);
-		
+
 		intentMyCollection = (LinearLayout) findViewById(R.id.loginname_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
 		intentMyFriend = (LinearLayout) findViewById(R.id.loginname_intent_myfriend);
@@ -55,7 +56,6 @@ public class PersonalCenterLoginName extends Activity {
 		intentVIP.setOnClickListener(onClickListener);
 		intentSetUp = (ImageView) findViewById(R.id.loginname_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
-
 
 		/*
 		 * my_friend_new_tx = (Button) findViewById(R.id.my_friend_new_tx);
@@ -76,20 +76,17 @@ public class PersonalCenterLoginName extends Activity {
 			switch (arg0.getId()) {
 			case R.id.home_page:
 				Intent intent_homepage = new Intent();
-				intent_homepage.setClass(PersonalCenterLoginName.this,
-						HomePageActivity.class);
+				intent_homepage.setClass(PersonalCenterLoginName.this, HomePageActivity.class);
 				startActivity(intent_homepage);
 				break;
 			case R.id.classify:
 				Intent intent_class = new Intent();
-				intent_class.setClass(PersonalCenterLoginName.this,
-						CommonDiseasesListForDetailsAcitivty.class);
+				intent_class.setClass(PersonalCenterLoginName.this, CommonDiseasesListForDetailsAcitivty.class);
 				startActivity(intent_class);
 				break;
-		}
+			}
 		}
 
-		
 	};
 
 	/*
@@ -124,48 +121,38 @@ public class PersonalCenterLoginName extends Activity {
 			// break;
 
 			case R.id.loginname_intent_setup:
-				Intent intent_setup = new Intent(PersonalCenterLoginName.this,
-						SetUpTheActivity.class);
+				Intent intent_setup = new Intent(PersonalCenterLoginName.this, SetUpTheActivity.class);
 				startActivity(intent_setup);
 				break;
 
 			case R.id.loginname_intent_mycollection:
-				Intent intent_mycollection = new Intent(
-						PersonalCenterLoginName.this,
-						MyCollectionActivity.class);
+				Intent intent_mycollection = new Intent(PersonalCenterLoginName.this, MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
 
 			case R.id.loginname_intent_myfriend:
-				Intent intent = new Intent(PersonalCenterLoginName.this,
-						MyFriend.class);
+				Intent intent = new Intent(PersonalCenterLoginName.this, MyFriend1.class);
 				startActivity(intent);
 				break;
 
 			case R.id.loginname_intent_myrecords:
-				Intent intent_myrecords = new Intent(
-						PersonalCenterLoginName.this, MyRecords.class);
+				Intent intent_myrecords = new Intent(PersonalCenterLoginName.this, MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
 			case R.id.loginname_intent_shoppingcart:
-				Intent intent_shopingcart = new Intent(
-						PersonalCenterLoginName.this,
-						TheShoppingCartActivity.class);
+				Intent intent_shopingcart = new Intent(PersonalCenterLoginName.this, TheShoppingCartActivity.class);
 				startActivity(intent_shopingcart);
 				break;
 			case R.id.loginname_intent_vip:
-				Intent intent_vippage = new Intent(
-						PersonalCenterLoginName.this,
-						PersonalInformationActivity.class);
+				Intent intent_vippage = new Intent(PersonalCenterLoginName.this, PersonalInformationActivity.class);
 				startActivity(intent_vippage);
 				break;
 
 			default:
 				break;
 			}
-		
+
 		}
 	};
 
-	}
-
+}

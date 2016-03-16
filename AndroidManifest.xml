@@ -46,18 +46,22 @@
         </activity>
 
         <!-- 食名 -->
+
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
 
         <!-- 更多 -->
+
         <activity android:name="com.ruanjiawei.activity.MoreActivity" >
         </activity>
 
         <!-- 登录 -->
+
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
         </activity>
 
         <!-- 注册 -->
+
         <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
         </activity>
 
@@ -66,15 +70,9 @@
 
         <!-- 商品详情 -->
         <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
-           
         </activity>
         <!-- 详情 -->
-        <activity android:name="com.ruanjiawei.activity.DetailsBigActivity">
-             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.ruanjiawei.activity.DetailsBigActivity" >
         </activity>
         <!-- 常见疾病详情列表页面 -->
         <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty" >
@@ -85,12 +83,16 @@
         <!-- 建议的细节页面 -->
         <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity" >
         </activity>
+        <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
+        </activity>
+
         <!-- 设置页面 -->
 
         <activity android:name="com.zhangshun.activity.SetUpTheActivity" >
         </activity>
 
         <!-- 个人信息页面 -->
+
         <activity android:name="com.zhangshun.activity.PersonalInformationActivity" >
         </activity>
 
@@ -115,18 +117,27 @@
             </intent-filter>
         </activity>
 
-        <!-- 分类：咨询医师页面 -->
-        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor" >
-        </activity>
-        <!-- 我的：我的记录页面 -->
-        <activity android:name="com.zhangwenbin.activity.MyRecords" >
+        <!-- 餐名 页面 -->
+
+        <activity
+            android:name="com.zhangrong.activity.MealNameActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
 
-        <!-- 我的：个人中心未登录页面 -->
-        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin" >
+        <!-- 支付界面 -->
+
+        <activity
+            android:name="com.zhangrong.activity.PaymentInterfaceActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-        <!-- 我的：店铺收藏页面 -->
-        <activity android:name="com.zhangwenbin.activity.ShopCollection" >
+
+        <!-- 分类主界面 -->
+
+        <activity
+            android:name="com.zhangrong.activity.MainActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity android:name="com.zhangwenbin.activity.MyRecords" >
         </activity>
     </application>
 
