@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:background="@color/blue">
+
+        <ImageView
+            android:id="@+id/recomend2_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="8dp"
+            android:text="支付页面"
+            android:textSize="20sp"
+
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/recomend_chirld_name_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择支付方式"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/black1" />
+<!--阿里支付-->
+    <RelativeLayout
+        android:id="@+id/pay_aliy_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:padding="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/pay_aliy_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/pay_aliy_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_toRightOf="@id/pay_aliy_img"
+            android:padding="8dp"
+            android:text="支付宝"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:id="@+id/pay_aliy1_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pay_aliy_img"
+            android:layout_below="@id/pay_aliy_tx"
+            android:padding="8dp"
+
+            android:text="支持储蓄卡，银行卡，信用卡，各种卡。。"
+            android:textSize="13sp"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <!--腾讯支付-->
+    <RelativeLayout
+        android:id="@+id/pay_tx_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:padding="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/pay_tx_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/pay_tx_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pay_tx_img"
+            android:padding="8dp"
+            android:text="网银"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:id="@+id/pay_tx1_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pay_tx_img"
+            android:layout_below="@id/pay_tx_tx"
+            android:padding="8dp"
+
+            android:text="支持储蓄卡，银行卡，信用卡，各种卡。。"
+            android:textSize="13sp"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <!--网银-->
+    <RelativeLayout
+        android:id="@+id/pay_ebank_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:padding="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/pay_ebank_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/pay_ebank_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pay_ebank_img"
+            android:padding="8dp"
+            android:text="网银"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:id="@+id/pay_ebank1_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pay_ebank_img"
+            android:layout_below="@id/pay_ebank_tx"
+            android:padding="8dp"
+
+            android:text="支持储蓄卡，银行卡，信用卡，各种卡。。"
+            android:textSize="13sp"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

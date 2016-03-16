@@ -2,7 +2,6 @@ package com.zhangshun.activity;
 
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.PersonalCenterLoginName;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

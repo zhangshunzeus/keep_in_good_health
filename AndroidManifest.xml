@@ -83,7 +83,7 @@
         </activity>
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -95,7 +95,6 @@
         </activity>
         <!-- 我的：我的记录页面 -->
         <activity android:name="com.zhangwenbin.activity.MyRecords" >
-            
         </activity>
         <!-- 我的：个人中心登陆名页面 -->
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
@@ -110,6 +109,25 @@
         <activity android:name="com.zhangwenbin.activity.TodayEat" >
         </activity>
 
+        <!-- 餐名 页面 -->
+
+        <activity
+            android:name="com.zhangrong.activity.MealNameActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <!-- 支付界面 -->
+
+        <activity
+            android:name="com.zhangrong.activity.PaymentInterfaceActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <!-- 分类主界面 -->
+        <activity
+            android:name="com.zhangrong.activity.MainActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
     </application>
 
 </manifest>

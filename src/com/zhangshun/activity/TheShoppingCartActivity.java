@@ -1,11 +1,16 @@
 package com.zhangshun.activity;
 
 import java.util.ArrayList;
+
 import com.zhangshun.adapter.TheShoppingCartAdapter;
 import com.zhangshun.demo.TheShoppingCartDemo;
 import com.zhangshun.keep_in_good_health.R;
+
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 public class TheShoppingCartActivity extends Activity {
@@ -13,6 +18,7 @@ public class TheShoppingCartActivity extends Activity {
 	TheShoppingCartAdapter mAdapter;
 	ListView mList;
 	ArrayList<TheShoppingCartDemo> list = new ArrayList<TheShoppingCartDemo>();
+	ImageView the_shopping_cart_return_btn;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,10 @@ public class TheShoppingCartActivity extends Activity {
 		getData();
 		mAdapter = new TheShoppingCartAdapter(this,list);
 		mList.setAdapter(mAdapter);
+		
+		the_shopping_cart_return_btn = (ImageView) findViewById (R.id.the_shopping_cart_return_btn);
+		the_shopping_cart_return_btn.setOnClickListener(click);
+		
 	}
 	
 	private void getData() {
@@ -38,5 +48,21 @@ public class TheShoppingCartActivity extends Activity {
 		}
 		
 	}
+	
+	OnClickListener click = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.the_shopping_cart_return_btn:
+				finish();
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 	
 }

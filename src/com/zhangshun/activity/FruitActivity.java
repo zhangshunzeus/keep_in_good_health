@@ -30,11 +30,8 @@ public class FruitActivity extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.fruit_return_btn:
-				Intent intent_home = new Intent();
-				intent_home.setClass(FruitActivity.this,HomePageActivity.class);
-				startActivity(intent_home);
+				finish();
 				break;
-
 			default:
 				break;
 			}
