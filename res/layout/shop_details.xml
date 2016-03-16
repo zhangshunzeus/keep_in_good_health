@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#22C39D"
+        android:background="#23C39D"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
         android:paddingRight="20dp" >
@@ -16,7 +16,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp" />
+            android:layout_gravity="center"
+            android:src="@drawable/myrecords_return" />
 
         <TextView
             android:layout_width="0dp"
@@ -52,18 +53,28 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher" />
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/details" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home_page_carefully_signature" />
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/shop_title" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/home_page_carefully_signature"
+                    android:background="#f1f1f1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/details_little"
+                    android:textColor="#B3B3B3"
                     android:textSize="12sp" />
 
                 <LinearLayout
@@ -74,6 +85,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:text="@string/fuhao"
                         android:textColor="#ff0000"
@@ -83,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/login"
+                        android:text="@string/moeny"
                         android:textColor="#ff0000"
                         android:textSize="12sp" />
 
@@ -96,7 +108,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:background="@drawable/shop_details_btn"
+                        android:background="@drawable/login_btn"
                         android:minHeight="0dp"
                         android:minWidth="40dp"
                         android:text="@string/buy"
@@ -126,7 +138,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="@string/food_name_taboo" />
+                    android:text="@string/shop_bigtitle"
+                    android:textColor="#474747" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -147,7 +160,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/function_contxt1"
+                        android:text="@string/shop_bigtitle_neir"
+                        android:textColor="#B3B3B3"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -170,7 +184,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/function_contxt1"
+                        android:text="@string/shop_bigtitle_neirtwo"
+                        android:textColor="#B3B3B3"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -178,7 +193,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="@string/food_name_taboo" />
+                    android:text="@string/details_goodeit"
+                    android:textColor="#474747" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -199,7 +215,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/function_contxt1"
+                        android:text="@string/details_goodeit_frist"
+                        android:textColor="#B3B3B3"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -222,7 +239,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/function_contxt1"
+                        android:text="@string/details_goodeit_second"
+                        android:textColor="#B3B3B3"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -230,10 +248,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="@string/food_name_taboo" />
+                    android:text="@string/details_explain" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
 
@@ -251,7 +269,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/function_contxt1"
+                        android:text="@string/details_explain_frist"
+                        android:textColor="#B3B3B3"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -274,7 +293,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/function_contxt1"
+                        android:textColor="#B3B3B3"
+                        android:text="@string/details_explain_second"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
