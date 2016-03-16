@@ -12,74 +12,64 @@ import com.zhangrong.fragment.SortFragment;
 import com.zhangshun.keep_in_good_health.R;
 
 import java.util.ArrayList;
- /*
- *   Õâ¸öÊÇ³ÌÐòµÄÖ÷½çÃæ   ½øÈëÖ®ºó£¬×Ô¶¯¼ÓÔØÕâ¸öÀà
-  */
+/*
+*   ï¿½ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ */
 
 public class MainActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener {
-    private RadioGroup group;           //Õâ½çÃæµÄradiogroup
-    private FragmentManager fragmentManager;   //fragmentµÄ¹ÜÀíÕß
-    private android.support.v4.app.FragmentTransaction transaction;  //fragmentµÄ´¦ÀíÕß
-    private ArrayList<Fragment> fragments = new ArrayList<Fragment>();
-    private HomepageFragment homeFragment;        //¼ÓÔØµÄÊ×Ò³°å¿éµÄFragment
-    private MyFragment myfragment;                //¼ÓÔØµÄÎÒµÄ°å¿éµÄFragment
-    private SortFragment sortFragment;            //¼ÓÔØµÄ·ÖÀà°å¿éµÄFragment
+	private RadioGroup group; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½radiogroup
+	private FragmentManager fragmentManager; // fragmentï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½
+	private android.support.v4.app.FragmentTransaction transaction; // fragmentï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
+	private ArrayList<Fragment> fragments = new ArrayList<Fragment>();
+	private HomepageFragment homeFragment; // ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½Fragment
+	private MyFragment myfragment; // ï¿½ï¿½ï¿½Øµï¿½ï¿½ÒµÄ°ï¿½ï¿½ï¿½Fragment
+	private SortFragment sortFragment; // ï¿½ï¿½ï¿½ØµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Fragment
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main_activity);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+		loadFragmentIniv();
 
-        loadFragmentIniv();
+	}
 
+	// ï¿½ï¿½ï¿½ï¿½Ç³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½buttonï¿½ï¿½fragmentï¿½ï¿½Ò»Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private void loadFragmentIniv() {
+		group = (RadioGroup) findViewById(R.id.radio_group);
+		group.setOnCheckedChangeListener(this);
+		fragmentManager = getSupportFragmentManager();
+		transaction = fragmentManager.beginTransaction();
+		homeFragment = new HomepageFragment();
+		transaction.add(R.id.main_fragment_line, homeFragment);
+		transaction.commit();
 
+	}
 
+	// ï¿½ï¿½ï¿½RadioButtonï¿½ï¿½ï¿½Ð»ï¿½fragmentï¿½ï¿½ï¿½Â¼ï¿½
+	@Override
+	public void onCheckedChanged(RadioGroup group, int checkedId) {
+		fragmentManager = getSupportFragmentManager();
+		transaction = fragmentManager.beginTransaction();
+		switch (checkedId) {
+		case R.id.home_page: // ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½Ð»ï¿½ï¿½ï¿½Fragment
+			homeFragment = new HomepageFragment();
+			transaction.replace(R.id.main_fragment_line, homeFragment);
+			// transaction.hide(homeFragment).show(homeFragment);
 
+			break;
+		case R.id.classify: // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Fragment,ï¿½Çµï¿½ï¿½Ôºï¿½ï¿½Òªï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			sortFragment = new SortFragment();
+			transaction.replace(R.id.main_fragment_line, sortFragment);
+			break;
+		case R.id.circle: // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Fragment
+			myfragment = new MyFragment();
+			transaction.replace(R.id.main_fragment_line, myfragment);
+			// transaction.hide(myfragment).hide(myfragment);
 
+			break;
+		}
+		transaction.commit();
 
-    }
-
-    //Õâ¸öÊÇ³õÊ¼»¯£¬buttonºÍfragmentµÄÒ»Ð©¹¤×÷µÄ
-    private void loadFragmentIniv() {
-        group = (RadioGroup) findViewById(R.id.radio_group);
-        group.setOnCheckedChangeListener(this);
-        fragmentManager = getSupportFragmentManager();
-        transaction = fragmentManager.beginTransaction();
-        homeFragment = new HomepageFragment();
-        transaction.add(R.id.main_fragment_line, homeFragment);
-        transaction.commit();
-
-
-
-    }
-
-
-
-   //µã»÷RadioButtonµÄÇÐ»»fragmentµÄÊÂ¼þ
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        fragmentManager = getSupportFragmentManager();
-        transaction = fragmentManager.beginTransaction();
-        switch (checkedId) {
-            case R.id.home_page:  //µã»÷Ê×Ò³ÇÐ»»µÄFragment
-                homeFragment = new HomepageFragment();
-                transaction.replace(R.id.main_fragment_line,homeFragment);
-              // transaction.hide(homeFragment).show(homeFragment);
-
-                break;
-            case R.id.classify:  //µã»÷·ÖÀàÇÐ»»µÄFragment,¼ÇµÃÒÔºó¸ÄÒªµã»÷ÊµÌåµÄÖ÷½çÃæ
-                sortFragment=new SortFragment();
-                transaction.replace(R.id.main_fragment_line,sortFragment);
-                break;
-            case R.id.circle:  //µã»÷ÎÒÇÐ»»µÄFragment
-                myfragment = new MyFragment();
-               transaction.replace(R.id.main_fragment_line, myfragment);
-             //transaction.hide(myfragment).hide(myfragment);
-
-                break;
-        }
-      transaction.commit();
-
-    }
+	}
 }

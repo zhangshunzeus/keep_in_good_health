@@ -123,11 +123,11 @@
 
         <!-- 启动页面 -->
 
--
+-
         <activity
             android:name="com.zhangshun.activity.TheLaunchPageActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
--
+-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -183,11 +183,11 @@
 
         <!-- 分类主界面 -->
 
-- 
+- 
         <activity
             android:name="com.zhangrong.activity.MainActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
- - 
+ - 
         </activity>
     </application>
 
