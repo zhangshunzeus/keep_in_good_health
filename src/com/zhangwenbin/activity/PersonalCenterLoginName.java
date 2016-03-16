@@ -14,11 +14,11 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
 import com.jiangkaiquan.activity.MyFriend;
-<<<<<<< HEAD
+
 import com.ruanjiawei.activity.LoginActivity;
-=======
+
 import com.jiangkaiquan.activity.MyFriend1;
->>>>>>> 03b82f97c39e4f3ee86f8f75ec818feb2d43c63b
+
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.activity.MyCollectionActivity;
@@ -61,10 +61,9 @@ public class PersonalCenterLoginName extends Activity {
 		intentVIP.setOnClickListener(onClickListener);
 		intentSetUp = (ImageView) findViewById(R.id.loginname_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
-<<<<<<< HEAD
+
 		head_intent_login = (ImageView) findViewById(R.id.loginname_touxiang_intent_);
 		head_intent_login.setOnClickListener(onClickListener);
-=======
 
 		/*
 		 * my_friend_new_tx = (Button) findViewById(R.id.my_friend_new_tx);
@@ -74,7 +73,6 @@ public class PersonalCenterLoginName extends Activity {
 		 * my_friend_new_tx.setOnClickListener(listener);
 		 * my_friend_issue_group_tx.setOnClickListener(listener);
 		 */
->>>>>>> 03b82f97c39e4f3ee86f8f75ec818feb2d43c63b
 
 	}
 
@@ -121,11 +119,9 @@ public class PersonalCenterLoginName extends Activity {
 				break;
 
 			case R.id.loginname_intent_myfriend:
-<<<<<<< HEAD
+
 				Intent intent = new Intent(PersonalCenterLoginName.this, MyFriend.class);
-=======
-				Intent intent = new Intent(PersonalCenterLoginName.this, MyFriend1.class);
->>>>>>> 03b82f97c39e4f3ee86f8f75ec818feb2d43c63b
+
 				startActivity(intent);
 				break;
 
