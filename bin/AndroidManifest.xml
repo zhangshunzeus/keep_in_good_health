@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="20" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +15,11 @@
         android:theme="@style/AppTheme">
 
         <!-- 首页 -->
-<<<<<<< HEAD
+
         <activity
 
             android:name="com.zhangshun.activity.HomePageActivity">
-
+            
         </activity>
 
         <!--推荐-->
@@ -31,73 +31,45 @@
         <!--功能-->
         <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
         <!--我的朋友-->
-        <activity android:name="com.jiangkaiquan.activity.MyFriend">
+        <activity android:name="com.jiangkaiquan.activity.MyFriend"></activity>
 
+
+
+
+        <!-- 推荐 -->
+
+
+        <!-- 水果页面 -->
+        <activity android:name="com.zhangshun.activity.FruitActivity">
 
         </activity>
         <!--我的朋友修改-->
-        <activity android:name="com.jiangkaiquan.activity.MyFriend1"></activity>
-        <!--推荐修改-->
-        <activity android:name="com.jiangkaiquan.activity.Rcomend2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name="com.jiangkaiquan.activity.MyFriend1">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
+        <!--推荐修改-->
+        <activity android:name="com.jiangkaiquan.activity.Rcomend2"></activity>
 
         <!-- 食名 -->
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity"></activity>
 
-        <!-- 某某食物详情 -->
-        <activity android:name="com.ruanjiawei.activity.FoodNameAllActivity"></activity>
 
-=======
-        <activity android:name="com.zhangshun.activity.HomePageActivity" >
-        </activity>
-
-        <!-- 推荐 -->
-        <activity android:name="com.jiangkaiquan.activity.Recomend" >
-        </activity>
-
-        <!-- 水果页面 -->
-        <activity android:name="com.zhangshun.activity.FruitActivity" >
-        </activity>
-
-        <!-- 产品详情 -->
-        <activity android:name="com.jiangkaiquan.activity.Produce_detail" >
-        </activity>
-        <!-- 功能 -->
-        <activity android:name="com.jiangkaiquan.activity.Founction" >
-        </activity>
-        <!-- 我的朋友 -->
-        <activity android:name="com.jiangkaiquan.activity.MyFriend" >
-        </activity>
-        <!-- 食名 -->
-        <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
-        </activity>
->>>>>>> origin/develop
 
         <!-- 更多 -->
-        <activity android:name="com.ruanjiawei.activity.MoreActivity" >
-        </activity>
+        <activity android:name="com.ruanjiawei.activity.MoreActivity"></activity>
+
         <!-- 登录 -->
         <activity android:name="com.ruanjiawei.activity.LoginActivity"></activity>
 
-<<<<<<< HEAD
-=======
+
         <!-- 注册 -->
-        <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
-        </activity>
+        <activity android:name="com.ruanjiawei.activity.RegiserActivity"></activity>
 
         <!-- 注册输入密码 -->
-        <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
-        </activity>
+
         <!-- 商品详情 -->
-        <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
-        </activity>
->>>>>>> origin/develop
+        <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity"></activity>
+
 
         <!-- 常见疾病详情列表页面 -->
         <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty"></activity>
@@ -115,16 +87,15 @@
         <!-- 我的收藏页面 -->
         <activity android:name="com.zhangshun.activity.MyCollectionActivity"></activity>
         <!-- 我的购物车 页面 -->
-<<<<<<< HEAD
+
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity"></activity>
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName"></activity>
         <activity android:name="com.zhangwenbin.activity.TodayEat"></activity>
-=======
-        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
-        </activity>
+
+
         <!-- 启动页面 -->
-        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
-             <intent-filter>
+        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -132,25 +103,16 @@
         </activity>
 
         <!-- 分类：咨询医师页面 -->
-        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor" >
-        </activity>
+        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor"></activity>
         <!-- 我的：我的记录页面 -->
-        <activity android:name="com.zhangwenbin.activity.MyRecords" >
-        </activity>
-        <!-- 我的：个人中心登陆名页面 -->
-        <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
-        </activity>
-        <!-- 我的：个人中心未登录页面 -->
-        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin" >
-        </activity>
-        <!-- 我的：店铺收藏页面 -->
-        <activity android:name="com.zhangwenbin.activity.ShopCollection" >
-        </activity>
-        <!-- 首页：今天吃什么页面 -->
-        <activity android:name="com.zhangwenbin.activity.TodayEat" >
-        </activity>
+        <activity android:name="com.zhangwenbin.activity.MyRecords"></activity>
 
->>>>>>> origin/develop
+        <!-- 我的：个人中心未登录页面 -->
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin"></activity>
+        <!-- 我的：店铺收藏页面 -->
+        <activity android:name="com.zhangwenbin.activity.ShopCollection"></activity>
+
+        >>>>>>> origin/develop
     </application>
 
 </manifest>

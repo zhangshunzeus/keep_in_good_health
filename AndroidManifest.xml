@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="20" />
 
     <application
         android:allowBackup="true"
@@ -19,12 +19,7 @@
         <activity
 
             android:name="com.zhangshun.activity.HomePageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
 
         <!--推荐-->
