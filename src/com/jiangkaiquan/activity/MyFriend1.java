@@ -3,6 +3,7 @@ package com.jiangkaiquan.activity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 
 import com.jiangkaiquan.activity.adapter.MyFriend1Ad;
 import com.zhangshun.keep_in_good_health.R;
+import com.zhangwenbin.activity.PersonalCenterLoginName;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,7 +36,9 @@ import com.jiangkaiquan.activity.adapter.RecomendAdapter;
 public class MyFriend1 extends Activity {
     private TextView view1;
     private TextView view2;
-
+    
+   
+    private Intent intent;
     private ImageView back;
     private ImageView add;
     private TextView friend;
@@ -95,6 +99,8 @@ public class MyFriend1 extends Activity {
             }
             switch (view.getId()) {
                 case R.id.myfriend1_back_img:
+                	intent=new Intent(MyFriend1.this,PersonalCenterLoginName.class);
+                	startActivity(intent);
                     break;
                 case R.id.myfriend1_add_img:
                     showDiolog();
