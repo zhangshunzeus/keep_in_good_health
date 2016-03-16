@@ -94,39 +94,43 @@ public class PersonalCenterNotLogin extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
+			/*跳转到已登录*/
 			case R.id.personal_not_login_intent_login:
 				Intent intent_login = new Intent(
 						PersonalCenterNotLogin.this, LoginActivity.class);
 				startActivity(intent_login);
 				break;
-
+				/*跳转到我的收藏*/
 			case R.id.notlogin_intent_mycollection:
 				Intent intent_mycollection = new Intent(
 						PersonalCenterNotLogin.this, MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
-
+				/*跳转到我的好友*/
 			case R.id.notlogin_intent_myfriend:
 				Intent intent = new Intent(PersonalCenterNotLogin.this,MyFriend.class);
 				startActivity(intent);
 				break;
-
+				/*跳转到我的记录*/
 			case R.id.notlogin_intent_myrecords:
 				Intent intent_myrecords = new Intent(
 						PersonalCenterNotLogin.this, MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
+				/*跳转到购物车*/
 			case R.id.notlogin_intent_shoppingcart:
 				Intent intent_shopingcart = new Intent(
 						PersonalCenterNotLogin.this,
 						TheShoppingCartActivity.class);
 				startActivity(intent_shopingcart);
 				break;
+				/*跳转到设置*/
 			case R.id.notlogin_intent_setup:
 				Intent intent_setup = new Intent(PersonalCenterNotLogin.this,
 						SetUpTheActivity.class);
 				startActivity(intent_setup);
 				break;
+				/*跳转到个人信息*/
 			case R.id.notlogin_intent_vip:
 				Intent intent_vip = new Intent(PersonalCenterNotLogin.this,
 						LoginActivity.class);

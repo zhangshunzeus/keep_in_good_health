@@ -22,7 +22,7 @@ import com.zhangshun.keep_in_good_health.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
+
 
 import com.jiangkaiquan.activity.adapter.RecomendAdapter;
 
