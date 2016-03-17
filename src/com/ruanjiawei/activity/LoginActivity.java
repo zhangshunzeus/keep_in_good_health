@@ -59,7 +59,7 @@ public class LoginActivity extends Activity {
 				try {
 					JSONObject jo=new JSONObject(result);
 					if (jo.getInt("status") == 1) {
-						Intent intent = new Intent(LoginActivity.this, HomePageActivity.class);
+						Intent intent = new Intent(LoginActivity.this, MoreActivity.class);
 						startActivity(intent);
 					} else {
 						Toast.makeText(getApplication(), jo.getString("message"), Toast.LENGTH_LONG).show();
@@ -73,10 +73,11 @@ public class LoginActivity extends Activity {
 		
 		@Override
 		public void onClick(View v) {
+			Intent intent = new Intent();
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.login_register:
-				Intent intent = new Intent(LoginActivity.this, RegiserActivity.class);
+				intent.setClass(LoginActivity.this, RegiserActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.forget_password:
@@ -89,11 +90,12 @@ public class LoginActivity extends Activity {
 			password=login_password.getText().toString();
 			logintools.setOnHttpListener(mListener);
 			logintools.loginAccount(tel, password);
-			Intent intent_home=new Intent(LoginActivity.this,HomePageActivity.class);
-			startActivity(intent_home);
+			/*intent.setClass(LoginActivity.this,MoreActivity.class);
+			startActivity(intent);*/
 			break;
 			default:
 				break;
+				
 			}
 		}
 	};

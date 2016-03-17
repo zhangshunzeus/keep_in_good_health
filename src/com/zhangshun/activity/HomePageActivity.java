@@ -16,37 +16,39 @@ import android.widget.RadioButton;
 
 public class HomePageActivity extends Activity {
 
-	RadioButton home_page,classify,circle;
-	ImageView soup,fruit;
-	
+	RadioButton home_page, classify, circle;
+	ImageView soup, fruit;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.home_page);
 
-		home_page = (RadioButton) findViewById (R.id.home_page);
-		classify = (RadioButton) findViewById (R.id.classify);
-		circle = (RadioButton) findViewById (R.id.circle);
-		
-		fruit = (ImageView) findViewById (R.id.fruit);
+		home_page = (RadioButton) findViewById(R.id.home_page);
+		classify = (RadioButton) findViewById(R.id.classify);
+		circle = (RadioButton) findViewById(R.id.circle);
+
+		fruit = (ImageView) findViewById(R.id.fruit);
 		fruit.setOnClickListener(click);
-		
+
 		home_page.setOnCheckedChangeListener(listener);
 		classify.setOnCheckedChangeListener(listener);
 		circle.setOnCheckedChangeListener(listener);
-		
+
 	}
-	
+
 	OnClickListener click = new OnClickListener() {
-		
+
 		@Override
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.fruit:
 				Intent intent_fruit = new Intent();
-				intent_fruit.setClass(HomePageActivity.this,FruitActivity.class);
+				intent_fruit.setClass(HomePageActivity.this,
+						FruitActivity.class);
 				startActivity(intent_fruit);
 				break;
 
@@ -55,7 +57,7 @@ public class HomePageActivity extends Activity {
 			}
 		}
 	};
-	
+
 	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
 
 		@Override
@@ -63,7 +65,7 @@ public class HomePageActivity extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.circle:
-				Intent intent_circle= new Intent();
+				Intent intent_circle = new Intent();
 				intent_circle.setClass(HomePageActivity.this,
 						PersonalCenterLoginName.class);
 				startActivity(intent_circle);
@@ -73,7 +75,7 @@ public class HomePageActivity extends Activity {
 				break;
 			}
 		}
-		
+
 	};
 
 }

@@ -58,6 +58,7 @@
         <!-- 登录 -->
 
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
+            
         </activity>
 
         <!-- 注册 -->
@@ -65,8 +66,9 @@
         <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
         </activity>
 
-        <!-- 注册输入密码 -->
-
+        <!-- 忘记密码 -->
+        <activity android:name="com.ruanjiawei.activity.ForgetPasswordActivity" >
+        </activity>
 
         <!-- 商品详情 -->
         <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >

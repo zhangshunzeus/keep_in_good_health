@@ -11,19 +11,21 @@ import android.widget.Button;
 
 public class Food_name_Activity extends Activity {
 	Button black;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		
+
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+
 		setContentView(R.layout.food_name);
 
-		black=(Button) findViewById(R.id.black);
+		black = (Button) findViewById(R.id.black);
 		black.setOnClickListener(l);
 	}
-	OnClickListener l=new OnClickListener() {
-		
+
+	OnClickListener l = new OnClickListener() {
+
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub

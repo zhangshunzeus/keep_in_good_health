@@ -62,7 +62,8 @@ public class LoginTools {
 			e.printStackTrace();
 		}
 
-		return "error";
+		login="error";
+		return login;
 
 	}
 
