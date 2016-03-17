@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
+/*我的記錄中的fragment相對的待收貨頁面*/
 public class MyRecordsFragmentReceive extends Fragment {
 	ListView listView;
 	ArrayList<MyRecordsDemo> data = new ArrayList<MyRecordsDemo>();

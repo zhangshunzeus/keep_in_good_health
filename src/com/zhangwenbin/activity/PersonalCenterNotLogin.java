@@ -21,7 +21,7 @@ import com.zhangshun.activity.MyCollectionActivity;
 import com.zhangshun.activity.SetUpTheActivity;
 import com.zhangshun.activity.TheShoppingCartActivity;
 import com.zhangshun.keep_in_good_health.R;
-
+				/*我的（未登錄）頁面*/
 public class PersonalCenterNotLogin extends Activity {
 	LinearLayout intentMyRecords;
 	LinearLayout intentMyFriend;
@@ -70,13 +70,14 @@ public class PersonalCenterNotLogin extends Activity {
 		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
+			/*跳转到分类*/
 			case R.id.notlogin_intent_Classify:
 				Intent intent_classify = new Intent(
 						PersonalCenterNotLogin.this,
 						CommonDiseasesListForDetailsAcitivty.class);
 				startActivity(intent_classify);
 				break;
-
+				/*跳转首页*/
 			case R.id.notlogin_intent_homepage:
 				Intent intent_homepage = new Intent(
 						PersonalCenterNotLogin.this, HomePageActivity.class);

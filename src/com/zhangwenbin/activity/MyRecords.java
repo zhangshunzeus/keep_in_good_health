@@ -17,19 +17,19 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
-
+			/*我的记录页面*/
 public class MyRecords extends Activity {
 
-	ImageView intentLoginName;
-	RadioButton intentHomePage;
-	RadioButton intentClassify;
-	RadioGroup return_home;
+	ImageView intentLoginName;//返回按钮
+	RadioButton intentHomePage;//首页按钮
+	RadioButton intentClassify;//分类按钮
+	RadioGroup return_home;//group名
 
 	Fragment[] myfragment;
 	FragmentTransaction transaction;
 	FragmentManager manager;
 	RadioGroup radioGroup;
-	RadioButton btnAll, btnPayMoney, btnSend, btnReceive, btnComment;
+	RadioButton btnAll, btnPayMoney, btnSend, btnReceive, btnComment;//5个链接fragment按钮
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +37,15 @@ public class MyRecords extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.my_records);
-
+		/*用于跳转监听*/
 		return_home = (RadioGroup) findViewById(R.id.my_records_return_home);
 		return_home.setOnCheckedChangeListener(listener);
 		intentClassify = (RadioButton) findViewById(R.id.myrecords_intent_classify);
 		intentHomePage = (RadioButton) findViewById(R.id.myrecords_intent_homepage);
-
+		/*返回监听*/
 		intentLoginName = (ImageView) findViewById(R.id.myrecords_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
-
+		//设置需要切换的相对应fragment页面
 		myfragment = new Fragment[5];
 		manager = getFragmentManager();
 		myfragment[0] = manager.findFragmentById(R.id.my_records_all);
@@ -53,7 +53,7 @@ public class MyRecords extends Activity {
 		myfragment[2] = manager.findFragmentById(R.id.my_records_send);
 		myfragment[3] = manager.findFragmentById(R.id.my_records_receive);
 		myfragment[4] = manager.findFragmentById(R.id.my_records_comment);
-
+		
 		transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2])
 				.hide(myfragment[3]).hide(myfragment[4]);
 		transaction.show(myfragment[0]).commit();
@@ -61,6 +61,7 @@ public class MyRecords extends Activity {
 	}
 
 	public void setFragmentIndicator() {
+		//设置切换按钮的监听，对应相对的页面
 		radioGroup = (RadioGroup) findViewById(R.id.rb_group);
 		btnAll = (RadioButton) findViewById(R.id.rb_all);
 		btnPayMoney = (RadioButton) findViewById(R.id.rb_paymoney);

@@ -1,6 +1,5 @@
 package com.zhangwenbin.activity;
 
-import com.ruanjiawei.activity.Food_name_Activity;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;
@@ -11,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
+			/*今天吃什麼頁面*/
 public class TodayEat extends Activity {
 	ImageView imageView;
 	LinearLayout linearLayout_breakfast;
@@ -53,17 +52,17 @@ public class TodayEat extends Activity {
 				break;
 			case R.id.intent_lunch:
 				/*跳转到午餐*/
-				Intent intent_lunch = new Intent(TodayEat.this,
+				/*Intent intent_lunch = new Intent(TodayEat.this,
 						Food_name_Activity.class);
-				startActivity(intent_lunch);
+				startActivity(intent_lunch);*/
 				break;
 			case R.id.intent_lunch_two:
-				Intent intent_lunch_two = new Intent();
-				startActivity(intent_lunch_two);
+				/*Intent intent_lunch_two = new Intent();
+				startActivity(intent_lunch_two);*/
 				break;
 			case R.id.intent_dinner:
-				Intent intent_dinner = new Intent();
-				startActivity(intent_dinner);
+				/*Intent intent_dinner = new Intent();
+				startActivity(intent_dinner);*/
 				break;
 
 			default:

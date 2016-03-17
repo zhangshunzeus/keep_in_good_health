@@ -15,7 +15,7 @@ import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.adapter.ShopCollectionAdapter;
 import com.zhangshun.demo.ShopCollectionDemo;
 import com.zhangshun.keep_in_good_health.R;
-
+			/*放棄掉的店鋪收藏頁面*/
 public class ShopCollection extends Activity {
 	ListView listView;
 	ArrayList<ShopCollectionDemo> data;

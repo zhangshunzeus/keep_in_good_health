@@ -68,8 +68,8 @@
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:text="@string/lucky_fruit"
-                android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -106,8 +106,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:text="@string/lucky_fruit"
-                        android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
                         android:layout_marginTop="5dp"
                         android:text="@string/todayeat_breakfastcontext"
                         android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView
@@ -147,8 +147,8 @@
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:text="@string/todayeat_breakfast"
-                android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -185,8 +185,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:text="@string/lucky_fruit"
-                        android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -197,7 +197,7 @@
                         android:layout_marginTop="5dp"
                         android:text="@string/todayeat_breakfastcontext"
                         android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView
@@ -225,8 +225,8 @@
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
                 android:text="@string/todayeat_lunch"
-                android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -238,6 +238,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="#ffffff"
                 android:orientation="horizontal" >
 
                 <ImageView
@@ -262,8 +263,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:text="@string/lucky_fruit"
-                        android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -274,7 +275,7 @@
                         android:layout_marginTop="5dp"
                         android:text="@string/todayeat_breakfastcontext"
                         android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView
@@ -322,8 +323,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:text="@string/lucky_fruit"
-                        android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -334,7 +335,7 @@
                         android:layout_marginTop="5dp"
                         android:text="@string/todayeat_breakfastcontext"
                         android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView
@@ -362,8 +363,8 @@
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
                 android:text="@string/todayeat_dinner"
-                android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -375,6 +376,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="#ffffff"
                 android:orientation="horizontal" >
 
                 <ImageView
@@ -399,8 +401,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:text="@string/lucky_fruit"
-                        android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -411,7 +413,7 @@
                         android:layout_marginTop="5dp"
                         android:text="@string/todayeat_breakfastcontext"
                         android:textColor="@color/title"
-                        android:textSize="15sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView

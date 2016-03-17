@@ -20,7 +20,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-
+				/*我的（已登录）页面*/
 public class PersonalCenterLoginName extends Activity {
 	LinearLayout intentMyRecords;
 	LinearLayout intentMyFriend;
@@ -69,14 +69,14 @@ public class PersonalCenterLoginName extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.home_page:
-				Intent intent_homepage = new Intent();
+				//Intent intent_homepage = new Intent();
 				//intent_homepage.setClass(PersonalCenterLoginName.this, HomePageActivity.class);
-				startActivity(intent_homepage);
+				//startActivity(intent_homepage);
 				break;
 			case R.id.classify:
-				Intent intent_class = new Intent();
+				//Intent intent_class = new Intent();
 				//intent_class.setClass(PersonalCenterLoginName.this, CommonDiseasesListForDetailsAcitivty.class);
-				startActivity(intent_class);
+				//startActivity(intent_class);
 				break;
 			}
 		}
@@ -89,36 +89,37 @@ public class PersonalCenterLoginName extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
+			/*跳转登陆*/
 			case R.id.loginname_touxiang_intent_login:
 				Intent intent_login = new Intent(PersonalCenterLoginName.this, LoginActivity.class);
 				startActivity(intent_login);
 				break;
-
+				/*跳转设置*/
 			case R.id.loginname_intent_setup:
 				Intent intent_setup = new Intent(PersonalCenterLoginName.this, SetUpTheActivity.class);
 				startActivity(intent_setup);
 				break;
-
+				/*跳转我的收藏*/
 			case R.id.loginname_intent_mycollection:
 				Intent intent_mycollection = new Intent(PersonalCenterLoginName.this, MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
-
+				/*跳转我的朋友*/
 			case R.id.loginname_intent_myfriend:
-
 				Intent intent = new Intent(PersonalCenterLoginName.this, MyFriend.class);
-
 				startActivity(intent);
 				break;
-
+				/*跳转我的记录*/
 			case R.id.loginname_intent_myrecords:
 				Intent intent_myrecords = new Intent(PersonalCenterLoginName.this, MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
+				/*跳转购物车*/
 			case R.id.loginname_intent_shoppingcart:
 				Intent intent_shopingcart = new Intent(PersonalCenterLoginName.this, TheShoppingCartActivity.class);
 				startActivity(intent_shopingcart);
 				break;
+				/*跳转个人信息*/
 			case R.id.loginname_intent_vip:
 				Intent intent_vippage = new Intent(PersonalCenterLoginName.this, PersonalInformationActivity.class);
 				startActivity(intent_vippage);

@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
-
+			/*放棄掉的咨詢醫師頁面*/
 public class Inquiry_doctor extends Activity {
 	ImageView imageViewReturn;
 	@Override
