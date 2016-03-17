@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
-import com.jiangkaiquan.activity.MyFriend;
+import com.jiangkaiquan.activity.MyFriend1;
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.activity.MyCollectionActivity;
@@ -97,7 +97,7 @@ public class MyFragment extends Fragment {
 
 			case R.id.loginname_intent_myfriend:
 				Intent intent = new Intent(getActivity(),
-						MyFriend.class);
+						MyFriend1.class);
 				startActivity(intent);
 				break;
 

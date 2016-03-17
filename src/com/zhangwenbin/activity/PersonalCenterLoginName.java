@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
-import com.jiangkaiquan.activity.MyFriend;
+
 import com.jiangkaiquan.activity.MyFriend1;
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
