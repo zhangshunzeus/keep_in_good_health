@@ -40,10 +40,7 @@ public class PersonalCenterNotLogin extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_not_login);
-		intentClassify = (RadioButton) findViewById(R.id.notlogin_intent_Classify);
-		intentClassify.setOnCheckedChangeListener(listener);
-		intentHomePage = (RadioButton) findViewById(R.id.notlogin_intent_homepage);
-		intentHomePage.setOnCheckedChangeListener(listener);
+
 		intentMyCollection = (ImageView) findViewById(R.id.notlogin_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
 		intentMyFriend = (ImageView) findViewById(R.id.notlogin_intent_myfriend);
@@ -61,29 +58,6 @@ public class PersonalCenterNotLogin extends Activity {
 
 	}
 	
-	OnCheckedChangeListener listener=new OnCheckedChangeListener(){
-
-		@Override
-		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
-			// TODO Auto-generated method stub
-			switch (arg0.getId()) {
-			case R.id.notlogin_intent_Classify:
-				Intent intent_classify = new Intent(
-						PersonalCenterNotLogin.this,
-						CommonDiseasesListForDetailsAcitivty.class);
-				startActivity(intent_classify);
-				break;
-
-			case R.id.notlogin_intent_homepage:
-				Intent intent_homepage = new Intent(
-						PersonalCenterNotLogin.this, HomePageActivity.class);
-				startActivity(intent_homepage);
-				break;
-			}
-		}
-		
-		
-	};
 
 	OnClickListener onClickListener = new OnClickListener() {
 

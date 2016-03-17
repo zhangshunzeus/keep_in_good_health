@@ -20,8 +20,9 @@ public class MoreActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.more);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.more);
+
 		listview = (ListView) findViewById(R.id.more_listview);
 		getData();
 		adapter = new FoodNameAllBaseAdapter(list, this);

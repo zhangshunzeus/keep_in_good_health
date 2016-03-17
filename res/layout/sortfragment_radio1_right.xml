@@ -13,13 +13,12 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/sort_right_image"
-                android:layout_width="match_parent"
+                android:layout_width="510px"
                 android:layout_height="480px"
-                android:layout_marginEnd="20px"
                 android:layout_marginLeft="18px"
                 android:layout_marginTop="36px"
                 android:background="@drawable/sort_radio1_image_bg"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@drawable/sort_right_show" />
             <TextView
                 android:layout_width="match_parent"
