@@ -1,31 +1,35 @@
 package com.zhangwenbin.activity;
 
-import java.util.ArrayList;
-
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
-import com.zhangshun.adapter.MyRecordsAdapter;
-import com.zhangshun.demo.MyRecordsDemo;
 import com.zhangshun.keep_in_good_health.R;
+
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 
 public class MyRecords extends Activity {
-	ListView listView;
-	ArrayList<MyRecordsDemo> data = new ArrayList<MyRecordsDemo>();
-	MyRecordsAdapter adapter;
+
 	ImageView intentLoginName;
 	RadioButton intentHomePage;
 	RadioButton intentClassify;
+	RadioGroup return_home;
+	
+	Fragment[] myfragment;
+	FragmentTransaction transaction;
+	FragmentManager manager;
+	RadioGroup radioGroup;
+	RadioButton btnAll,btnPayMoney,btnSend,btnReceive,btnComment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,25 +37,75 @@ public class MyRecords extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.my_records);
-		listView = (ListView) findViewById(R.id.my_records_listview);
-		getData();
-		adapter = new MyRecordsAdapter(data, MyRecords.this);
-		listView.setAdapter(adapter);
+		
+		return_home=(RadioGroup)findViewById(R.id.my_records_return_home);
+		return_home.setOnCheckedChangeListener(listener);
 		intentClassify = (RadioButton) findViewById(R.id.myrecords_intent_classify);
-		intentClassify.setOnCheckedChangeListener(listener);
 		intentHomePage = (RadioButton) findViewById(R.id.myrecords_intent_homepage);
-		intentHomePage.setOnCheckedChangeListener(listener);
+
 		intentLoginName = (ImageView) findViewById(R.id.myrecords_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
-
+		
+		myfragment=new Fragment[5];
+		manager=getFragmentManager();
+		myfragment[0]=manager.findFragmentById(R.id.my_records_all);
+		myfragment[1]=manager.findFragmentById(R.id.my_records_pay_money);
+		myfragment[2]=manager.findFragmentById(R.id.my_records_send);
+		myfragment[3]=manager.findFragmentById(R.id.my_records_receive);
+		myfragment[4]=manager.findFragmentById(R.id.my_records_comment);
+		
+		transaction=manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
+		transaction.show(myfragment[0]).commit();
+		setFragmentIndicator();
+	}
+	public void setFragmentIndicator(){
+		radioGroup=(RadioGroup)findViewById(R.id.rb_group);
+		btnAll=(RadioButton)findViewById(R.id.rb_all);
+		btnPayMoney=(RadioButton)findViewById(R.id.rb_paymoney);
+		btnSend=(RadioButton)findViewById(R.id.rb_send);
+		btnReceive=(RadioButton)findViewById(R.id.rb_receive);
+		btnComment=(RadioButton)findViewById(R.id.rb_comment);
+		radioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
+		
 	}
 	
-	OnCheckedChangeListener listener=new OnCheckedChangeListener(){
+	OnCheckedChangeListener onCheckedChangeListener=new OnCheckedChangeListener(){
 
 		@Override
-		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+		public void onCheckedChanged(RadioGroup arg0, int arg1) {
 			// TODO Auto-generated method stub
-			switch (arg0.getId()) {
+			transaction=manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
+			switch (arg1) {
+			case R.id.rb_all:
+				transaction.show(myfragment[0]).commit();
+				break;
+			case R.id.rb_paymoney:
+				transaction.show(myfragment[1]).commit();
+				break;
+			case R.id.rb_send:
+				transaction.show(myfragment[2]).commit();
+				break;
+			case R.id.rb_receive:
+				transaction.show(myfragment[3]).commit();
+				break;
+			case R.id.rb_comment:
+				transaction.show(myfragment[4]).commit();
+				break;
+
+			default:
+				break;
+			}
+		}
+		
+		
+	};
+
+	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
+
+		@Override
+		public void onCheckedChanged(RadioGroup arg0, int arg1) {
+			// TODO Auto-generated method stub
+			switch (arg1) {
 			case R.id.myrecords_intent_classify:
 				Intent intent_classify = new Intent(MyRecords.this, CommonDiseasesListForDetailsAcitivty.class);
 				startActivity(intent_classify);
@@ -64,8 +118,8 @@ public class MyRecords extends Activity {
 				break;
 			}
 		}
-		
-		
+
+
 	};
 
 	OnClickListener onClickListener = new OnClickListener() {
@@ -74,7 +128,7 @@ public class MyRecords extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			
+
 			case R.id.myrecords_intent_loginname:
 				Intent intent_loginname = new Intent(MyRecords.this, PersonalCenterLoginName.class);
 				startActivity(intent_loginname);
@@ -86,30 +140,5 @@ public class MyRecords extends Activity {
 		}
 
 	};
-
-	public void getData() {
-		for (int i = 0; i < 3; i++) {
-
-			MyRecordsDemo myRecord = new MyRecordsDemo();
-			myRecord.setImage(R.drawable.myrecords_picture_one);
-			myRecord.setMy_records_shop_name("欧姆龙专卖店");
-			myRecord.setMy_records_list_goodsstates("店家已发货");
-			myRecord.setMy_records_content("OMRON欧姆龙红外耳饰体温计");
-			myRecord.setMy_records_shop_type("TH457A ￥55.00");
-			myRecord.setMy_records_shop_number("共一件商品  实付：");
-			myRecord.setMy_records_shop_money("￥50.00");
-			data.add(myRecord);
-			MyRecordsDemo myRecord_one = new MyRecordsDemo();
-			myRecord_one.setImage(R.drawable.myrecords_picture_two);
-			myRecord_one.setMy_records_shop_name("鼎力托玛琳自然热四季款护腰带");
-			myRecord_one.setMy_records_list_goodsstates("店家已发货");
-			myRecord_one.setMy_records_content("鼎力托玛琳自然热四季款护腰带");
-			myRecord_one.setMy_records_shop_type("领款中号 ￥184.00");
-			myRecord_one.setMy_records_shop_number("共一件商品  实付：");
-			myRecord_one.setMy_records_shop_money("￥180.00");
-			data.add(myRecord_one);
-		}
-
-	}
 
 }
