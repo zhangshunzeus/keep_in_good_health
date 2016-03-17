@@ -24,12 +24,12 @@ public class MyRecords extends Activity {
 	RadioButton intentHomePage;
 	RadioButton intentClassify;
 	RadioGroup return_home;
-	
+
 	Fragment[] myfragment;
 	FragmentTransaction transaction;
 	FragmentManager manager;
 	RadioGroup radioGroup;
-	RadioButton btnAll,btnPayMoney,btnSend,btnReceive,btnComment;
+	RadioButton btnAll, btnPayMoney, btnSend, btnReceive, btnComment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,44 +37,47 @@ public class MyRecords extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.my_records);
-		
-		return_home=(RadioGroup)findViewById(R.id.my_records_return_home);
+
+		return_home = (RadioGroup) findViewById(R.id.my_records_return_home);
 		return_home.setOnCheckedChangeListener(listener);
 		intentClassify = (RadioButton) findViewById(R.id.myrecords_intent_classify);
 		intentHomePage = (RadioButton) findViewById(R.id.myrecords_intent_homepage);
 
 		intentLoginName = (ImageView) findViewById(R.id.myrecords_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
-		
-		myfragment=new Fragment[5];
-		manager=getFragmentManager();
-		myfragment[0]=manager.findFragmentById(R.id.my_records_all);
-		myfragment[1]=manager.findFragmentById(R.id.my_records_pay_money);
-		myfragment[2]=manager.findFragmentById(R.id.my_records_send);
-		myfragment[3]=manager.findFragmentById(R.id.my_records_receive);
-		myfragment[4]=manager.findFragmentById(R.id.my_records_comment);
-		
-		transaction=manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
+
+		myfragment = new Fragment[5];
+		manager = getFragmentManager();
+		myfragment[0] = manager.findFragmentById(R.id.my_records_all);
+		myfragment[1] = manager.findFragmentById(R.id.my_records_pay_money);
+		myfragment[2] = manager.findFragmentById(R.id.my_records_send);
+		myfragment[3] = manager.findFragmentById(R.id.my_records_receive);
+		myfragment[4] = manager.findFragmentById(R.id.my_records_comment);
+
+		transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2])
+				.hide(myfragment[3]).hide(myfragment[4]);
 		transaction.show(myfragment[0]).commit();
 		setFragmentIndicator();
 	}
-	public void setFragmentIndicator(){
-		radioGroup=(RadioGroup)findViewById(R.id.rb_group);
-		btnAll=(RadioButton)findViewById(R.id.rb_all);
-		btnPayMoney=(RadioButton)findViewById(R.id.rb_paymoney);
-		btnSend=(RadioButton)findViewById(R.id.rb_send);
-		btnReceive=(RadioButton)findViewById(R.id.rb_receive);
-		btnComment=(RadioButton)findViewById(R.id.rb_comment);
+
+	public void setFragmentIndicator() {
+		radioGroup = (RadioGroup) findViewById(R.id.rb_group);
+		btnAll = (RadioButton) findViewById(R.id.rb_all);
+		btnPayMoney = (RadioButton) findViewById(R.id.rb_paymoney);
+		btnSend = (RadioButton) findViewById(R.id.rb_send);
+		btnReceive = (RadioButton) findViewById(R.id.rb_receive);
+		btnComment = (RadioButton) findViewById(R.id.rb_comment);
 		radioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
-		
+
 	}
-	
-	OnCheckedChangeListener onCheckedChangeListener=new OnCheckedChangeListener(){
+
+	OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
 
 		@Override
 		public void onCheckedChanged(RadioGroup arg0, int arg1) {
 			// TODO Auto-generated method stub
-			transaction=manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
+			transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2])
+					.hide(myfragment[3]).hide(myfragment[4]);
 			switch (arg1) {
 			case R.id.rb_all:
 				transaction.show(myfragment[0]).commit();
@@ -96,8 +99,7 @@ public class MyRecords extends Activity {
 				break;
 			}
 		}
-		
-		
+
 	};
 
 	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
@@ -118,7 +120,6 @@ public class MyRecords extends Activity {
 				break;
 			}
 		}
-
 
 	};
 
