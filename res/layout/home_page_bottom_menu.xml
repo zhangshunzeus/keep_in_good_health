@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -48,7 +47,6 @@
             android:text="@string/my_btn"
             android:textColor="@drawable/selector_text_style"
             android:textSize="12sp" />
-
     </RadioGroup>
 
 </LinearLayout>
