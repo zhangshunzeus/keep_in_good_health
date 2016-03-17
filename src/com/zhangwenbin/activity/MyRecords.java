@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -36,18 +38,18 @@ public class MyRecords extends Activity {
 		adapter = new MyRecordsAdapter(data, MyRecords.this);
 		listView.setAdapter(adapter);
 		intentClassify = (RadioButton) findViewById(R.id.myrecords_intent_classify);
-		intentClassify.setOnClickListener(onClickListener);
+		intentClassify.setOnCheckedChangeListener(listener);
 		intentHomePage = (RadioButton) findViewById(R.id.myrecords_intent_homepage);
-		intentHomePage.setOnClickListener(onClickListener);
+		intentHomePage.setOnCheckedChangeListener(listener);
 		intentLoginName = (ImageView) findViewById(R.id.myrecords_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
 
 	}
-
-	OnClickListener onClickListener = new OnClickListener() {
+	
+	OnCheckedChangeListener listener=new OnCheckedChangeListener(){
 
 		@Override
-		public void onClick(View arg0) {
+		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.myrecords_intent_classify:
@@ -58,6 +60,21 @@ public class MyRecords extends Activity {
 				Intent intent_homepage = new Intent(MyRecords.this, HomePageActivity.class);
 				startActivity(intent_homepage);
 				break;
+			default:
+				break;
+			}
+		}
+		
+		
+	};
+
+	OnClickListener onClickListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			switch (arg0.getId()) {
+			
 			case R.id.myrecords_intent_loginname:
 				Intent intent_loginname = new Intent(MyRecords.this, PersonalCenterLoginName.class);
 				startActivity(intent_loginname);

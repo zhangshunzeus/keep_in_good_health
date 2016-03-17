@@ -58,7 +58,7 @@
             android:adjustViewBounds="true"/>
 
         <ImageView
-            android:id="@+id/loginname_touxiang_intent_"
+            android:id="@+id/loginname_touxiang_intent_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 			android:layout_centerInParent="true"
