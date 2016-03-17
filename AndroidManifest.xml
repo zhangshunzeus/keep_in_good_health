@@ -45,7 +45,7 @@
         <activity android:name="com.jiangkaiquan.activity.Rcomend2" >
         </activity>
 
-        <!-- 食名 -->
+        <!-- 菠萝 -->
 
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
