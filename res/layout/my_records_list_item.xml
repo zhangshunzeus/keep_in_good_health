@@ -94,31 +94,21 @@
             </LinearLayout>
         </LinearLayout>
 
-        <Button
+        <CheckBox
             android:id="@+id/my_records_change_receiving"
             android:layout_width="0dp"
             android:layout_height="25dp"
             android:layout_gravity="bottom"
             android:layout_weight="1"
             android:background="@drawable/selector_change"
+            android:button="@null"
             android:text="@string/my_records_change_receive"
             android:textSize="12sp" 
             android:gravity="center"
-            android:textColor="#22c39d"
-            android:clickable="true"/>
-        <TextView
-            android:id="@+id/my_records_change_receiving_yes"
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="@drawable/selector_change_receive"
-            android:text="@string/my_records_change_receive"
-            android:textSize="12sp"
-            android:gravity="center"
-            android:textColor="#ffffff"
+            android:textColor="@drawable/selector_myrecords_textchange"
             android:clickable="true"
-            android:visibility="gone"/>
+            android:focusable="false"/>
+  
     </LinearLayout>
 
 </LinearLayout>

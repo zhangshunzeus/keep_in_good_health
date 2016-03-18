@@ -101,7 +101,7 @@
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myshopcart"
                     android:src="@drawable/myshopcart" 
-                    android:layout_marginTop="18dp"/>
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -141,7 +141,7 @@
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myfriend"
                     android:src="@drawable/myfriend" 
-                    android:layout_marginTop="18dp"/>
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -181,7 +181,7 @@
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myrecords"
                     android:src="@drawable/myrecords" 
-                    android:layout_marginTop="18dp"/>
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -220,7 +220,7 @@
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mycollection"
                     android:src="@drawable/mycollection" 
-                    android:layout_marginTop="18dp"/>
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -260,7 +260,7 @@
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mypersonal"
                     android:src="@drawable/mypersonal" 
-                    android:layout_marginTop="18dp"/>
+                    android:layout_marginTop="20dp"/>
 
                 <TextView
                     android:layout_width="0dp"

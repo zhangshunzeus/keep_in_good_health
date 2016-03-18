@@ -45,6 +45,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 			myRecord.setMy_records_shop_type("TH457A ￥55.00");
 			myRecord.setMy_records_shop_number("共一件商品  实付：");
 			myRecord.setMy_records_shop_money("￥50.00");
+			//myRecord.setMy_records_change_receiving(R.drawable.selector_change_receive);
 			data.add(myRecord);
 			MyRecordsDemo myRecord_one = new MyRecordsDemo();
 			myRecord_one.setImage(R.drawable.myrecords_picture_two);
@@ -54,6 +55,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 			myRecord_one.setMy_records_shop_type("领款中号 ￥184.00");
 			myRecord_one.setMy_records_shop_number("共一件商品  实付：");
 			myRecord_one.setMy_records_shop_money("￥180.00");
+			//myRecord_one.setMy_records_change_receiving(R.drawable.no_check_change_receive);
 			data.add(myRecord_one);
 		}
 

@@ -1,6 +1,6 @@
 package com.zhangwenbin.activity;
 
-import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
+import com.zhangrong.activity.MainActivity;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
 
@@ -108,9 +108,9 @@ public class MyRecords extends Activity {
 		@Override
 		public void onCheckedChanged(RadioGroup arg0, int arg1) {
 			// TODO Auto-generated method stub
-			switch (arg1) {
+			switch (arg0.getId()) {
 			case R.id.myrecords_intent_classify:
-				Intent intent_classify = new Intent(MyRecords.this, CommonDiseasesListForDetailsAcitivty.class);
+				Intent intent_classify = new Intent(MyRecords.this, MainActivity.class);
 				startActivity(intent_classify);
 				break;
 			case R.id.myrecords_intent_homepage:

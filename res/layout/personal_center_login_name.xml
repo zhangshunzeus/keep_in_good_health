@@ -95,7 +95,7 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myshopcart"
                     android:src="@drawable/myshopcart" />
@@ -134,7 +134,7 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myfriend"
                     android:src="@drawable/myfriend" />
@@ -173,7 +173,7 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myrecords"
                     android:src="@drawable/myrecords" />
@@ -212,7 +212,7 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mycollection"
                     android:src="@drawable/mycollection" />
@@ -251,7 +251,7 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mypersonal"
                     android:src="@drawable/mypersonal" />

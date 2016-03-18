@@ -1,17 +1,21 @@
 package com.zhangshun.adapter;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import com.zhangshun.demo.MyRecordsDemo;
 import com.zhangshun.keep_in_good_health.R;
 
+import android.R.integer;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +24,7 @@ public class MyRecordsAdapter extends BaseAdapter {
 	ArrayList<MyRecordsDemo> data;
 	Context context;
 	LayoutInflater inflater;
+	Map<integer, integer> selector;
 
 	public MyRecordsAdapter() {
 		// TODO Auto-generated constructor stub
@@ -73,35 +78,27 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype = (TextView) view.findViewById(R.id.my_records_shop_type);
 			holder.myrecordshopnumber = (TextView) view.findViewById(R.id.my_records_shop_type);
 			holder.myrecordshopmoney = (TextView) view.findViewById(R.id.my_records_shop_money);
-			holder.myrecordchangereceive=(TextView)view.findViewById(R.id.my_records_change_receiving);
-			/*
-			 * holder.myrecordchangereceive = (TextView) view
-			 * .findViewById(R.id.my_records_change_receiving);
-			 */
+			holder.myrecordchangereceive = (CheckBox) view.findViewById(R.id.my_records_change_receiving);
+			holder.myrecordchangereceive.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+				@Override
+				public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+					// TODO Auto-generated method stub
+					//ViewHolderMyRecords myRecords=new ViewHolderMyRecords();
+					Toast.makeText(context, "点击确认收货", Toast.LENGTH_SHORT).show();
+					if (arg1) {
+						arg0.setChecked(true);
+					}else{
+						arg0.setChecked(false);
+						arg0.setClickable(false);
+					}
+				}
+				
+			});
 			view.setTag(holder);
 
 		}
-		/*
-		 * holder = (ViewHolderMyRecords) view.getTag(); MyRecordsDemo
-		 * myRecordsDemo = (MyRecordsDemo) getItem(position);
-		 * myRecordsDemo.setMy_records_shop_name(myRecordsDemo
-		 * .getMy_records_shop_name());
-		 * myRecordsDemo.setMy_records_list_goodsstates(myRecordsDemo
-		 * .getMy_records_list_goodsstates());
-		 * myRecordsDemo.setImage(myRecordsDemo.getImage());
-		 * myRecordsDemo.setMy_records_content(myRecordsDemo
-		 * .getMy_records_content());
-		 * myRecordsDemo.setMy_records_shop_type(myRecordsDemo
-		 * .getMy_records_shop_type());
-		 * myRecordsDemo.setMy_records_shop_number(myRecordsDemo
-		 * .getMy_records_shop_number());
-		 * myRecordsDemo.setMy_records_shop_money(myRecordsDemo
-		 * .getMy_records_shop_money());
-		 */
-		/*
-		 * myRecordsDemo.setMy_records_change_receiving(myRecordsDemo
-		 * .getMy_records_change_receiving());
-		 */
+
 		if (position == 1) {
 			holder = (ViewHolderMyRecords) view.getTag();
 			MyRecordsDemo myRecordsDemo_one = (MyRecordsDemo) getItem(position);
@@ -112,23 +109,9 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			holder.myrecordchangereceive.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View arg0) {
-					// TODO Auto-generated method stub
-					Toast.makeText(context, "点击确认收货", Toast.LENGTH_SHORT).show();
-					
-					/*case R.id.my_records_change_receiving_yes:
-						myRecords.myrecordchangereceiveyes.setVisibility(View.VISIBLE);
-						break;*/
-
-					}
-				
-			});
-			//holder.myrecordchangereceiveyes.setOnClickListener(onClickListener);
 			
 		}
-		
+
 		if (position == 2) {
 			holder = (ViewHolderMyRecords) view.getTag();
 			MyRecordsDemo myRecordsDemo_one = (MyRecordsDemo) getItem(position);
@@ -139,15 +122,11 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			//holder.myrecordchangereceive.setOnClickListener(onClickListener);
-			//holder.myrecordchangereceiveyes.setOnClickListener(onClickListener);
 
 		}
 		return view;
-		
+
 	}
-	
-	
 
 	class ViewHolderMyRecords {
 		ImageView myrecordimage;
@@ -157,8 +136,8 @@ public class MyRecordsAdapter extends BaseAdapter {
 		TextView myrecordshoptype;
 		TextView myrecordshopnumber;
 		TextView myrecordshopmoney;
-		TextView myrecordchangereceive;
-		TextView myrecordchangereceiveyes;
+		CheckBox myrecordchangereceive;
+		CheckBox myrecordchangereceiveyes;
 
 	}
 
