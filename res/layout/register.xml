@@ -34,6 +34,7 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/register_tel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
@@ -50,6 +51,7 @@
         android:orientation="horizontal" >
 
         <EditText
+            android:id="@+id/register_verify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -60,6 +62,7 @@
             android:padding="10dp" />
 
         <Button
+            android:id="@+id/register_gainverify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/login_btn"
@@ -70,6 +73,7 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/register_word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
@@ -80,6 +84,7 @@
         android:padding="10dp" />
 
     <EditText
+        android:id="@+id/register_reword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
@@ -107,6 +112,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/register_finsh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -114,7 +120,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/login_btn"
-        android:text="@string/login"
+        android:text="@string/register_finsh"
         android:textColor="#ffffff" />
 
 </LinearLayout>

@@ -4,10 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 
-import javax.net.ssl.HttpsURLConnection;
+
+
 
 import android.os.AsyncTask;
 
@@ -31,11 +34,11 @@ public class LoginTools {
 
 		URL url;
 		try {
-			String urlName = httpHost + "?" + urltel + tel + "&" + passwordkey
+			String urlName = httpHost + "?" + urltel +tel + "&" + passwordkey
 					+ password; // url资源地址
 			url = new URL(urlName);
-			HttpsURLConnection connection = (HttpsURLConnection) url
-					.openConnection();
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			
 			connection.setRequestMethod("GET");
 			connection.setReadTimeout(5000);
 			connection.connect();
@@ -62,8 +65,7 @@ public class LoginTools {
 			e.printStackTrace();
 		}
 
-		login="error";
-		return login;
+		return "error";
 
 	}
 
