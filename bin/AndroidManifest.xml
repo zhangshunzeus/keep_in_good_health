@@ -15,10 +15,8 @@
         android:theme="@style/AppTheme" >
 
         <!-- 首页 -->
-
         <activity android:name="com.zhangshun.activity.HomePageActivity" >
         </activity>
-
         <!-- 推荐 -->
         <activity android:name="com.jiangkaiquan.activity.Recomend" >
         </activity>
@@ -31,10 +29,6 @@
         <!-- 我的朋友 -->
         <activity android:name="com.jiangkaiquan.activity.MyFriend" >
         </activity>
-
-        <!-- 推荐 -->
-
-
         <!-- 水果页面 -->
         <activity android:name="com.zhangshun.activity.FruitActivity" >
         </activity>
@@ -44,30 +38,18 @@
         <!-- 推荐修改 -->
         <activity android:name="com.jiangkaiquan.activity.Rcomend2" >
         </activity>
-
         <!-- 食名 -->
-
         <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
         </activity>
-
         <!-- 更多 -->
-
         <activity android:name="com.ruanjiawei.activity.MoreActivity" >
         </activity>
-
         <!-- 登录 -->
-
         <activity android:name="com.ruanjiawei.activity.LoginActivity" >
         </activity>
-
         <!-- 注册 -->
-
         <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
         </activity>
-
-        <!-- 注册输入密码 -->
-
-
         <!-- 商品详情 -->
         <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
         </activity>
@@ -85,29 +67,22 @@
         </activity>
         <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
         </activity>
-
         <!-- 设置页面 -->
-
         <activity android:name="com.zhangshun.activity.SetUpTheActivity" >
         </activity>
-
         <!-- 个人信息页面 -->
-
         <activity android:name="com.zhangshun.activity.PersonalInformationActivity" >
         </activity>
-
         <!-- 我的收藏页面 -->
         <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
         </activity>
         <!-- 我的购物车 页面 -->
-
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
         </activity>
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
         </activity>
         <activity android:name="com.zhangwenbin.activity.TodayEat" >
         </activity>
-
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
             <intent-filter>
@@ -140,7 +115,8 @@
         <activity android:name="com.zhangwenbin.activity.MyRecords" >
         </activity>
         <!-- 忘记密码页面 -->
-        <activity android:name="com.ruanjiawei.activity.ForgetPasswordActivity"></activity>
+        <activity android:name="com.ruanjiawei.activity.ForgetPasswordActivity" >
+        </activity>
     </application>
 
 </manifest>

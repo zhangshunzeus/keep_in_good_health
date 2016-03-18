@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
@@ -18,6 +20,8 @@ public class HomePageActivity extends Activity {
 
 	RadioButton home_page,classify,circle;
 	ImageView soup,fruit;
+	AutoCompleteTextView home_page_search;
+	ArrayAdapter<String> arrayAdapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,11 @@ public class HomePageActivity extends Activity {
 		home_page.setOnCheckedChangeListener(listener);
 		classify.setOnCheckedChangeListener(listener);
 		circle.setOnCheckedChangeListener(listener);
+		
+		home_page_search =(AutoCompleteTextView) findViewById(R.id.home_page_search);
+        String [] arr={"煲汤","零嘴","甜点","粥类","水果","肉食","素食","饮茶","今日吃什么","营养早餐"};
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,arr);
+        home_page_search.setAdapter(arrayAdapter);
 		
 	}
 	

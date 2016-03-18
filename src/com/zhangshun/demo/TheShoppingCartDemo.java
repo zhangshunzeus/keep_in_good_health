@@ -1,9 +1,23 @@
 package com.zhangshun.demo;
 
+import android.widget.CheckBox;
+
 public class TheShoppingCartDemo {
 
 	int img;
-	String the_shopping_title, the_shopping_content, the_shopping_number, The_price;
+	String the_shopping_title,
+	the_shopping_content,
+	the_shopping_number,
+	The_price;
+	CheckBox Future_generations;
+
+	public CheckBox getFuture_generations() {
+		return Future_generations;
+	}
+
+	public void setFuture_generations(CheckBox future_generations) {
+		Future_generations = future_generations;
+	}
 
 	public String getThe_shopping_title() {
 		return the_shopping_title;
