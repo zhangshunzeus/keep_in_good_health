@@ -9,10 +9,12 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MyRecordsAdapter extends BaseAdapter {
 	ArrayList<MyRecordsDemo> data;
@@ -71,6 +73,7 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype = (TextView) view.findViewById(R.id.my_records_shop_type);
 			holder.myrecordshopnumber = (TextView) view.findViewById(R.id.my_records_shop_type);
 			holder.myrecordshopmoney = (TextView) view.findViewById(R.id.my_records_shop_money);
+			holder.myrecordchangereceive=(TextView)view.findViewById(R.id.my_records_change_receiving);
 			/*
 			 * holder.myrecordchangereceive = (TextView) view
 			 * .findViewById(R.id.my_records_change_receiving);
@@ -109,8 +112,23 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
+			holder.myrecordchangereceive.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					Toast.makeText(context, "点击确认收货", Toast.LENGTH_SHORT).show();
+					
+					/*case R.id.my_records_change_receiving_yes:
+						myRecords.myrecordchangereceiveyes.setVisibility(View.VISIBLE);
+						break;*/
 
+					}
+				
+			});
+			//holder.myrecordchangereceiveyes.setOnClickListener(onClickListener);
+			
 		}
+		
 		if (position == 2) {
 			holder = (ViewHolderMyRecords) view.getTag();
 			MyRecordsDemo myRecordsDemo_one = (MyRecordsDemo) getItem(position);
@@ -121,10 +139,15 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
+			//holder.myrecordchangereceive.setOnClickListener(onClickListener);
+			//holder.myrecordchangereceiveyes.setOnClickListener(onClickListener);
 
 		}
 		return view;
+		
 	}
+	
+	
 
 	class ViewHolderMyRecords {
 		ImageView myrecordimage;
@@ -135,6 +158,7 @@ public class MyRecordsAdapter extends BaseAdapter {
 		TextView myrecordshopnumber;
 		TextView myrecordshopmoney;
 		TextView myrecordchangereceive;
+		TextView myrecordchangereceiveyes;
 
 	}
 
