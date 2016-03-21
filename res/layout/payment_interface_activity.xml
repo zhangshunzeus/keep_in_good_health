@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/payment_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mealname_head_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/payment_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/myrecords_return" />
+
+        <TextView
+            android:id="@+id/payment_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:background="@color/mealname_head_bg"
+            android:textColor="@color/mealname_font_theme"
+
+            android:gravity="center"
+            android:text="支付界面"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/payment_pay_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="8dp"
+        android:text="请选择支付方式"
+        android:textSize="18sp" />
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/public_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"     
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/payment_pay_image_one"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+          
+            android:layout_below="@id/food_title_one"
+            android:layout_gravity="top"
+            android:src="@drawable/payment_pay_image_one" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/payment_pay_name_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:layout_marginTop="24px"
+                android:layout_marginLeft="30px"
+                android:layout_weight="1"
+                android:text="支付宝" />
+
+            <TextView
+                android:id="@+id/payment_pay_text_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_pay_name_one"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="20px"
+
+                android:layout_weight="1"
+                android:text="支持存储卡信用卡，无需开通网银" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/food_line_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28px"
+            android:layout_marginTop="46px"
+             android:padding="8dp"
+            android:layout_toEndOf="@+id/food_text_one"
+           
+            android:src="@drawable/food_line_one" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/public_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+         android:layout_marginBottom="6dp"  
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/payment_pay_image_two"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+         
+            android:layout_below="@id/food_title_one"
+            android:layout_gravity="center"
+            android:src="@drawable/payment_pay_image_two" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/payment_pay_name_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="24px"
+                android:layout_marginLeft="30px"
+              
+                android:layout_weight="1"
+                android:text="易支付" />
+
+            <TextView
+                android:id="@+id/payment_pay_text_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_pay_name_two"
+  android:layout_marginLeft="30px"
+                android:layout_marginTop="20px"
+                android:layout_weight="1"
+                android:text="使用农业银行的易支付进行付款" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/food_line_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28px"
+            android:layout_marginTop="46px"
+             android:padding="8dp"
+            android:layout_toEndOf="@+id/food_text_one"
+            android:src="@drawable/food_line_one" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/public_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/payment_pay_image_three"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/food_title_one"
+            android:layout_gravity="center"
+            android:src="@drawable/payment_pay_image_three" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/payment_pay_name_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24px"
+                android:layout_marginLeft="30px"
+                android:layout_weight="1"
+                android:text="网银" />
+
+            <TextView
+                android:id="@+id/payment_pay_text_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_pay_name_three"
+ android:layout_marginLeft="30px"
+                android:layout_marginTop="20px"
+                android:layout_weight="1"
+                android:text="使用网银进行付款" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/food_line_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginEnd="28px"
+            android:layout_marginTop="46px"
+             android:padding="8dp"
+            android:layout_toEndOf="@+id/food_text_one"
+            android:src="@drawable/food_line_one" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/public_line"/>
+
+</LinearLayout>

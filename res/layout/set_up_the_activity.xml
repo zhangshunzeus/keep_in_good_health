@@ -2,20 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#f1f1f1" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#666666"
+        android:background="@color/at_the_top_of_the_background_color"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp" >
 
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/black" />
+        <ImageView
+            android:id="@+id/set_up_the_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/return_btn"
+            android:padding="5dp" />
 
         <TextView
             android:layout_width="0dp"
@@ -23,25 +26,28 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/set_up_the_text"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="10dp"
-        android:background="@android:color/black" />
+        android:background="#E5E5E5" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp" >
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:gravity="center" >
 
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alerts" />
 
         <TextView
             android:layout_width="0dp"
@@ -49,29 +55,33 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="@string/alerts" />
+            android:text="@string/alerts"
+            android:textSize="14sp" />
 
-        <Switch
+        <ImageView
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_does_not_click" />
     </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@android:color/black" />
+        android:background="#E5E5E5" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp" >
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:gravity="center" >
 
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_receiving" />
 
         <TextView
             android:layout_width="0dp"
@@ -79,29 +89,33 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="@string/alerts" />
+            android:text="图片接收"
+            android:textSize="14sp" />
 
-        <Switch
+        <ImageView
             android:id="@+id/switch2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_does_not_click" />
     </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@android:color/black" />
+        android:background="#E5E5E5" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp" >
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:gravity="center" >
 
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/feedback" />
 
         <TextView
             android:layout_width="0dp"
@@ -109,29 +123,69 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="@string/alerts" />
+            android:text="意见反馈"
+            android:textSize="14sp" />
 
-        <Switch
+        <ImageView
+            android:id="@+id/feedback_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/intent_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#E5E5E5" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rights_and_privacy"
+            android:layout_marginLeft="3dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:text="权限与隐私"
+            android:textSize="14sp" />
+
+        <ImageView
             android:id="@+id/switch3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_does_not_click" />
     </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@android:color/black" />
+        android:background="#E5E5E5" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp" >
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:gravity="center" >
 
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/change_the_password"
+            android:layout_marginLeft="3dp" />
 
         <TextView
             android:layout_width="0dp"
@@ -139,47 +193,19 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="@string/alerts" />
+            android:text="修改密码"
+            android:textSize="14sp" />
 
-        <Switch
-            android:id="@+id/switch4"
+        <ImageView
+            android:id="@+id/change_the_password_btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="0.5dp"
-        android:background="@android:color/black" />
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp" >
-
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/black" />
-
-        <TextView
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:text="@string/alerts" />
-
-        <Switch
-            android:id="@+id/switch5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:src="@drawable/intent_content" />
     </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@android:color/black" />
+        android:background="#E5E5E5" />
 
 </LinearLayout>

@@ -29,7 +29,6 @@
             android:padding="15dp"
             android:text="我的好友"
             android:textColor="@color/friendt"
-
             android:textSize="30sp" />
 
         <ImageView

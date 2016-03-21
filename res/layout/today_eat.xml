@@ -44,9 +44,10 @@
             android:orientation="vertical" >
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="169dp"
         android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         android:contentDescription="@drawable/today"
         android:src="@drawable/today" />
 
@@ -430,50 +431,5 @@
                 android:background="#e5e5e5" />
         </LinearLayout>
     </ScrollView>
-
-    <RadioGroup
-        android:id="@+id/today_radiogroup"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="7dp"
-        android:background="#eeeeee"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/todayeat_intent_homepage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/selector_homepage"
-            android:gravity="center"
-            android:text="@string/home_page_btn"
-            android:textColor="@drawable/selector_text_style"
-            android:textSize="12sp" />
-
-        <RadioButton
-            android:id="@+id/todayeat_intent_Classify"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/selector_classify"
-            android:gravity="center"
-            android:text="@string/classification_btn"
-            android:textColor="@drawable/selector_text_style"
-            android:textSize="12sp" />
-
-        <RadioButton
-            android:id="@+id/todayeat_intent_my"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/selector_my"
-            android:gravity="center"
-            android:text="@string/my_btn"
-            android:textColor="@drawable/selector_text_style"
-            android:textSize="12sp" />
-    </RadioGroup>
 
 </LinearLayout>

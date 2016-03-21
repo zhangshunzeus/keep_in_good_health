@@ -1,17 +1,15 @@
 package com.zhangshun.demo;
 
 public class MyCollectionDemo {
-
+	int img;
 	String content_title;
 	String my_collection_content;
-	int content_list_btn;
-	String img;
 
-	public String getImg() {
+	public int getImg() {
 		return img;
 	}
 
-	public void setImg(String img) {
+	public void setImg(int img) {
 		this.img = img;
 	}
 
@@ -29,14 +27,6 @@ public class MyCollectionDemo {
 
 	public void setMy_collection_content(String my_collection_content) {
 		this.my_collection_content = my_collection_content;
-	}
-
-	public int getContent_list_btn() {
-		return content_list_btn;
-	}
-
-	public void setContent_list_btn(int content_list_btn) {
-		this.content_list_btn = content_list_btn;
 	}
 
 }

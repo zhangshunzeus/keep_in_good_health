@@ -13,9 +13,11 @@
         android:paddingRight="20dp" >
 
         <ImageView
+            android:id="@+id/myrecords_return_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp" />
+            android:layout_gravity="center"
+            android:src="@drawable/myrecords_return" />
 
         <TextView
             android:layout_width="0dp"
@@ -106,6 +108,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/register_ok_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -113,7 +116,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/login_btn"
-        android:text="@string/login"
+        android:text="完成"
         android:textColor="#ffffff" />
 
 </LinearLayout>

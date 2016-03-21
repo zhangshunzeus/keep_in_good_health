@@ -36,10 +36,7 @@ public class MyRecords extends Activity {
 		getData();
 		adapter = new MyRecordsAdapter(data, MyRecords.this);
 		listView.setAdapter(adapter);
-		intentClassify = (RadioButton) findViewById(R.id.myrecords_intent_classify);
-		intentClassify.setOnClickListener(onClickListener);
-		intentHomePage = (RadioButton) findViewById(R.id.myrecords_intent_homepage);
-		intentHomePage.setOnClickListener(onClickListener);
+		
 		intentLoginName = (ImageView) findViewById(R.id.myrecords_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
 
@@ -51,20 +48,11 @@ public class MyRecords extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			case R.id.myrecords_intent_classify:
-				Intent intent_classify = new Intent(MyRecords.this,
-						CommonDiseasesListForDetailsAcitivty.class);
-				startActivity(intent_classify);
-				break;
-			case R.id.myrecords_intent_homepage:
-				Intent intent_homepage = new Intent(MyRecords.this,
-						HomePageActivity.class);
-				startActivity(intent_homepage);
-				break;
+			
+			
+				
 			case R.id.myrecords_intent_loginname:
-				Intent intent_loginname = new Intent(MyRecords.this,
-						PersonalCenterLoginName.class);
-				startActivity(intent_loginname);
+				finish();
 				break;
 
 			default:

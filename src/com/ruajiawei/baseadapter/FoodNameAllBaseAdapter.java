@@ -76,17 +76,25 @@ public class FoodNameAllBaseAdapter extends BaseAdapter {
 		holder.more_name_all_listview_giving.setText(all.getMore_name_all_listview_giving());
 		holder.more_name_all_listview_price.setText(all.getMore_name_all_listview_price());
 		holder.more_name_all_listview_nice.setText(all.getMore_name_all_listview_nice());
+		/*all.setMore_listview_image(all.getMore_listview_image());
+		all.setMore_name_all_listview_title(all.getMore_name_all_listview_title());
+		all.setMore_name_all_listview_weight(all.getMore_name_all_listview_weight());
+		all.setMore_name_all_listview_giving(all.getMore_name_all_listview_giving());
+		all.setMore_name_all_listview_price(all.getMore_name_all_listview_price());
+		all.setMore_name_all_listview_nice(all.getMore_name_all_listview_nice());*/
+		
+		
 
 		return convertView;
 	}
 
 	class ViewHolder {
-		ImageView more_listview_image;
-		TextView more_name_all_listview_title;
-		TextView more_name_all_listview_weight;
-		TextView more_name_all_listview_giving;
-		TextView more_name_all_listview_price;
-		TextView more_name_all_listview_nice;
+		public ImageView more_listview_image;
+		public TextView more_name_all_listview_title;
+		public TextView more_name_all_listview_weight;
+		public TextView more_name_all_listview_giving;
+		public TextView more_name_all_listview_price;
+		public TextView more_name_all_listview_nice;
 	}
 
 }

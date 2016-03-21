@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!-- 没有焦点时颜色 --> 
+<item
+	android:state_selected="false"
+	android:color="#FFFFFF"
+	android:drawable="@drawable/home_page" />
+<!--选中时的颜色  -->  
+<item
+	android:state_selected="true"
+	android:color="#22c39d"
+	android:drawable="@drawable/home_page_change" />
+<!-- 非触摸模式下获得焦点并单击时的颜色 -->  
+<item
+	android:state_focused="true"
+	android:state_pressed="true"
+	android:color="#22c39d"
+	android:drawable="@drawable/home_page_change" />
+
+</selector>
+

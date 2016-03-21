@@ -24,10 +24,6 @@ public class TodayEat extends Activity {
 	LinearLayout linearLayout_lunch;
 	LinearLayout linearLayout_lunch_two;
 	LinearLayout linearLayout_dinner;
-	RadioButton intent_homepage;
-	RadioButton intent_classify;
-	RadioButton intent_my;
-	RadioGroup radioGroup;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,43 +40,7 @@ public class TodayEat extends Activity {
 		linearLayout_dinner = (LinearLayout) findViewById(R.id.intent_dinner);
 		linearLayout_dinner.setOnClickListener(onClickListener);
 
-		intent_homepage = (RadioButton) findViewById(R.id.todayeat_intent_homepage);
-		intent_homepage.setOnCheckedChangeListener(listener);
-		intent_classify = (RadioButton) findViewById(R.id.todayeat_intent_Classify);
-		intent_classify.setOnCheckedChangeListener(listener);
-		intent_my = (RadioButton) findViewById(R.id.todayeat_intent_my);
-		intent_my.setOnCheckedChangeListener(listener);
 	}
-
-	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
-
-		@Override
-		public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
-			// TODO Auto-generated method stub
-			switch (arg0.getId()) {
-			case R.id.todayeat_intent_homepage:
-				Intent intent_homepage = new Intent();
-				intent_homepage.setClass(TodayEat.this, HomePageActivity.class);
-				startActivity(intent_homepage);
-				break;
-			case R.id.todayeat_intent_Classify:
-				Intent intent_class = new Intent();
-				intent_class.setClass(TodayEat.this,
-						CommonDiseasesListForDetailsAcitivty.class);
-				startActivity(intent_class);
-				break;
-			case R.id.todayeat_intent_my:
-				Intent intent_my = new Intent();
-				intent_my
-						.setClass(TodayEat.this, PersonalCenterLoginName.class);
-				startActivity(intent_my);
-				break;
-
-			default:
-				break;
-			}
-		}
-	};
 
 	OnClickListener onClickListener = new OnClickListener() {
 
@@ -89,9 +49,7 @@ public class TodayEat extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.today_eat_return:
-				Intent intent = new Intent(TodayEat.this,
-						HomePageActivity.class);
-				startActivity(intent);
+				finish();
 				break;
 			case R.id.intent_breakfast:
 				Intent intent_breakfast = new Intent();

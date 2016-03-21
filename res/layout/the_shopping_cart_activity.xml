@@ -17,6 +17,7 @@
             android:id="@+id/the_shopping_cart_return_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="8dp"
             android:src="@drawable/return_btn" />
 
         <TextView
@@ -44,7 +45,7 @@
         android:padding="5dp" >
 
         <CheckBox
-            android:id="@+id/Future_generations"
+            android:id="@+id/Future_generations_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -75,7 +76,7 @@
 
         <Button
             android:id="@+id/settlement"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="20dp"
             android:background="@drawable/settlement_btn_bg"
             android:text="@string/settlement"

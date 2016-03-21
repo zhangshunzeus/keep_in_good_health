@@ -11,11 +11,11 @@
         android:padding="10dp"
         android:gravity="center" >
 
-        <TextView
+        <ImageView
             android:id="@+id/img"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@android:color/black" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/electric_heating_protect_to_shoulder" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -41,11 +41,6 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/content_list_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rub_course_go_to_next_right" />
     </LinearLayout>
 
 </LinearLayout>

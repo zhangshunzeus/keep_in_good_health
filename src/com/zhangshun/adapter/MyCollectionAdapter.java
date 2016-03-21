@@ -54,10 +54,9 @@ public class MyCollectionAdapter extends BaseAdapter {
 		if(convertView == null){
 			convertView = mInflater.inflate(R.layout.my_collection_listview, null);
 			viewHodler = new ViewHolder();
-			viewHodler.img = (TextView) convertView.findViewById(R.id.img);
+			viewHodler.img = (ImageView) convertView.findViewById(R.id.img);
 			viewHodler.content_title = (TextView) convertView.findViewById(R.id.content_title);
 			viewHodler.my_collection_content = (TextView) convertView.findViewById(R.id.my_collection_content);
-			viewHodler.content_list_btn = (ImageView) convertView.findViewById(R.id.content_list_btn);
 			convertView.setTag(viewHodler);
 		}
 		viewHodler = (ViewHolder) convertView.getTag();
@@ -65,13 +64,12 @@ public class MyCollectionAdapter extends BaseAdapter {
 		myCollectionDemo.setImg(myCollectionDemo.getImg());
 		myCollectionDemo.setContent_title(myCollectionDemo.getContent_title());
 		myCollectionDemo.setMy_collection_content(myCollectionDemo.getMy_collection_content());
-		myCollectionDemo.setContent_list_btn(myCollectionDemo.getContent_list_btn());
 		return convertView;
 	}
 	
 	class ViewHolder {
 
-		public TextView img;
+		public ImageView img;
 		public ImageView content_list_btn;
 		public TextView my_collection_content;
 		public TextView content_title;
