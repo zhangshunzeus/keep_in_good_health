@@ -252,11 +252,12 @@ public final class R {
         public static final int xian=0x7f0200c4;
         public static final int yuan=0x7f0200c5;
         public static final int zero_to_round_eye=0x7f0200c6;
-        public static final int zhangwenbin_check_home=0x7f0200c7;
-        public static final int zhangwenbin_check_my=0x7f0200c8;
-        public static final int zhangwenbin_no_check_home=0x7f0200c9;
-        public static final int zhangwenbin_not_check_class=0x7f0200ca;
-        public static final int zhangwenbin_not_check_my=0x7f0200cb;
+        public static final int zhangwenbin_check_class=0x7f0200c7;
+        public static final int zhangwenbin_check_home=0x7f0200c8;
+        public static final int zhangwenbin_check_my=0x7f0200c9;
+        public static final int zhangwenbin_no_check_home=0x7f0200ca;
+        public static final int zhangwenbin_not_check_class=0x7f0200cb;
+        public static final int zhangwenbin_not_check_my=0x7f0200cc;
     }
     public static final class id {
         public static final int A_combined=0x7f090160;
