@@ -13,7 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.jiangkaiquan.activity.MyFriend;
+
+import com.jiangkaiquan.activity.MyFriend1;
 import com.ruanjiawei.activity.LoginActivity;
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
@@ -79,7 +80,7 @@ public class PersonalCenterNotLogin extends Activity {
 				break;
 				/*跳转到我的好友*/
 			case R.id.notlogin_intent_myfriend:
-				Intent intent = new Intent(PersonalCenterNotLogin.this,MyFriend.class);
+				Intent intent = new Intent(PersonalCenterNotLogin.this,MyFriend1.class);
 				startActivity(intent);
 				break;
 				/*跳转到我的记录*/

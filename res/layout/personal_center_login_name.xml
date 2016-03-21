@@ -281,8 +281,4 @@
                 android:background="#e5e5e5" />
         </LinearLayout>
     </ScrollView>
-
- 
-
->>>>>>> feature/zhangwenbin
 </LinearLayout>

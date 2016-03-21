@@ -33,7 +33,7 @@ public class HomepageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.home_page,container,false);
-        fruit=(ImageView) view.findViewById(R.id.fruit);
+        fruit=(ImageView) view.findViewById(R.id.home_page_fruit);
         shopDetails=(ImageView) view.findViewById(R.id.shopDetails);
         todayEat=(ImageView) view.findViewById(R.id.todayEat);
         loadinivListener();

@@ -1,4 +1,3 @@
-
 package com.zhangwenbin.activity;
 
 import com.jiangkaiquan.activity.MyFriend;
@@ -8,7 +7,6 @@ import com.zhangshun.activity.PersonalInformationActivity;
 import com.zhangshun.activity.SetUpTheActivity;
 import com.zhangshun.activity.TheShoppingCartActivity;
 import com.zhangshun.keep_in_good_health.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +19,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-				/*我的（已登录）页面*/
+
 public class PersonalCenterLoginName extends Activity {
 	LinearLayout intentMyRecords;
 	LinearLayout intentMyFriend;
