@@ -15,7 +15,7 @@ import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.adapter.ShopCollectionAdapter;
 import com.zhangshun.demo.ShopCollectionDemo;
 import com.zhangshun.keep_in_good_health.R;
-
+			/*放棄掉的店鋪收藏頁面*/
 public class ShopCollection extends Activity {
 	ListView listView;
 	ArrayList<ShopCollectionDemo> data;
@@ -46,10 +46,12 @@ public class ShopCollection extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
+			/*跳转到分类*/
 			case R.id.shopcollect_intent_classify:
 				Intent intent_classify=new Intent();
 				startActivity(intent_classify);
 				break;
+				/*跳转到首页*/
 			case R.id.shopcollect_intent_homepage:
 				Intent intent_homepage=new Intent(ShopCollection.this,HomePageActivity.class);
 				startActivity(intent_homepage);
@@ -77,3 +79,4 @@ public class ShopCollection extends Activity {
 		
 	}
 }
+

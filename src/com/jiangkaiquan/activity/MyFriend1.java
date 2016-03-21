@@ -17,13 +17,10 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.jiangkaiquan.activity.adapter.MyFriend1Ad;
 import com.zhangshun.keep_in_good_health.R;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import com.jiangkaiquan.activity.adapter.RecomendAdapter;
 
 /**
@@ -35,7 +32,6 @@ public class MyFriend1 extends Activity {
     private TextView view1;
     private TextView view2;
     private Intent intent;
-
     private ImageView back;
     private ImageView add;
     private TextView friend;
@@ -232,4 +228,3 @@ public class MyFriend1 extends Activity {
         }
     }
 }
-

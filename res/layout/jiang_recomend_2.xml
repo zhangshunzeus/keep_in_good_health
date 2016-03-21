@@ -292,5 +292,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <include layout="@layout/jiang_button" />
 </LinearLayout>

@@ -9,16 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#22c39d"
-        android:orientation="horizontal" 
-        android:padding="17dp">
+        android:orientation="horizontal"
+        android:padding="17dp" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/my_btn"
-            android:textColor="#ffffff" 
-            android:textSize="18sp"/>
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/notlogin_intent_setup"
@@ -32,7 +32,7 @@
             android:contentDescription="@drawable/mysetup"
             android:src="@drawable/mysetup" />
     </RelativeLayout>
-    
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -43,90 +43,85 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
-       <ImageView
-            android:id="@+id/personal_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@drawable/mytouxiangbeijing"
-            android:src="@drawable/mytouxiangbeijing" 
-            android:adjustViewBounds="true"/>
+                <ImageView
+                    android:id="@+id/personal_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@drawable/mytouxiangbeijing"
+                    android:src="@drawable/mytouxiangbeijing" />
 
-        <ImageView
-            android:id="@+id/loginname_touxiang_intent_"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-			android:layout_centerInParent="true"
-            android:contentDescription="@drawable/mytouxiang"
-            android:src="@drawable/mytouxiang"
-            android:adjustViewBounds="true" />
+                <ImageView
+                    android:id="@+id/no_login_touxiang_intent_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@drawable/mytouxiang"
+                    android:src="@drawable/mytouxiang" />
 
-         <TextView
-            android:id="@+id/personal_not_login_intent_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/personal_background"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="30dp"
-            android:layout_centerHorizontal="true"
-            android:text="@string/person_not_login"
-            android:textColor="#ffffff" 
-            android:textSize="15sp"
-            android:background="@drawable/frame_check_login"/>
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/personal_not_login_intent_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/personal_background"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/frame_check_login"
+                    android:text="@string/person_not_login"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
 
-       
-     <View 
+            <View
                 android:layout_width="330dp"
                 android:layout_height="10dp"
-                android:background="#e5e5e5"
-                android:layout_gravity="center"/>
-
-    
+                android:layout_gravity="center"
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/notlogin_intent_shoppingcart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
-                android:orientation="horizontal" 
-                >
+                android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myshopcart"
-                    android:src="@drawable/myshopcart" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/myshopcart" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_shopping_cart" 
-                    android:textSize="18sp"
-                    android:layout_marginTop="18dp"/>
+                    android:text="@string/person_shopping_cart"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-            <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/notlogin_intent_myfriend"
@@ -138,35 +133,34 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myfriend"
-                    android:src="@drawable/myfriend" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/myfriend" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
                     android:text="@string/person_my_friend"
-                    android:textSize="18sp" 
-                    android:layout_marginTop="18dp"/>
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/notlogin_intent_myrecords"
@@ -178,35 +172,35 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/myrecords"
-                    android:src="@drawable/myrecords" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/myrecords" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/my_records_title" 
-                    android:textSize="18sp"
-                    android:layout_marginTop="18dp"/>
+                    android:text="@string/my_records_title"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-				
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
+
             <LinearLayout
                 android:id="@+id/notlogin_intent_mycollection"
                 android:layout_width="match_parent"
@@ -217,35 +211,34 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mycollection"
-                    android:src="@drawable/mycollection" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/mycollection" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
                     android:text="@string/my_collection_title"
-                    android:textSize="18sp" 
-                    android:layout_marginTop="18dp"/>
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/notlogin_intent_vip"
@@ -257,38 +250,35 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="0.5"
                     android:contentDescription="@drawable/mypersonal"
-                    android:src="@drawable/mypersonal" 
-                    android:layout_marginTop="18dp"/>
+                    android:src="@drawable/mypersonal" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="18dp"
                     android:layout_weight="2"
-                    android:text="@string/person_vip" 
-                    android:textSize="18sp"
-                    android:layout_marginTop="18dp"/>
+                    android:text="@string/person_vip"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:contentDescription="@drawable/intent_intent"
-                    android:src="@drawable/intent_intent" 
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
-             <View 
+
+            <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="#e5e5e5"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"/>
+                android:background="#e5e5e5" />
         </LinearLayout>
     </ScrollView>
-
-   
 
 </LinearLayout>

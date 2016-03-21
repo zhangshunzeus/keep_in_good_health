@@ -67,7 +67,6 @@ public class Rcomend2 extends Activity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.my_friend_new_tx:
-                    display();
                     break;
                 case R.id.my_friend_issue_group_tx:
                     break;

@@ -16,7 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="17dp"
             android:layout_marginStart="17dp"
-            android:text="@string/my_records_list_name" />
+            android:text="@string/my_records_list_name"
+            android:textSize="13sp"/> 
 
         <TextView
             android:id="@+id/my_records_list_goodsstates"
@@ -26,8 +27,10 @@
             android:layout_alignParentRight="true"
             android:layout_marginEnd="18dp"
             android:layout_marginRight="18dp"
-            android:text="@string/my_records_list_goods" 
-            android:textColor="@color/check_color"/>
+            android:textColor="#22c39d"
+            android:text="@string/my_records_list_goods"
+            android:textSize="15sp"/> 
+            
     </RelativeLayout>
 
     <LinearLayout
@@ -35,17 +38,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" 
-        android:padding="10dp">
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/my_records_image"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:contentDescription="@drawable/myrecords_picture_one"
-            android:src="@drawable/myrecords_picture_one" />
+            android:src="@drawable/myrecords_picture_one"/> 
 
         <LinearLayout
             android:layout_width="0dp"
@@ -57,51 +58,57 @@
                 android:id="@+id/my_records_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:text="@string/my_records_list_text" />
+                android:text="@string/my_records_list_text"
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/my_records_shop_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:text="@string/my_records_list_thingsmoney" />
+                android:layout_marginTop="5dp"
+                android:text="@string/my_records_list_thingsmoney"
+                android:textSize="12sp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp" >
 
                 <TextView
                     android:id="@+id/my_records_shop_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/my_records_list_shop_number" />
+                    android:text="@string/my_records_list_shop_number" 
+                    android:textSize="12sp"
+                    android:textColor="@color/title"/>
 
                 <TextView
                     android:id="@+id/my_records_shop_money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/my_records_list_shop_money" 
-                    android:textColor="#ff0000"/>
+                    android:textColor="#ff0000"
+                    android:text="@string/my_records_list_shop_money"
+                    android:textSize="15sp"/>
+                    
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
+        <CheckBox
             android:id="@+id/my_records_change_receiving"
             android:layout_width="0dp"
             android:layout_height="25dp"
             android:layout_gravity="bottom"
             android:layout_weight="1"
             android:background="@drawable/selector_change"
+            android:button="@null"
             android:text="@string/my_records_change_receive"
             android:textSize="12sp" 
             android:gravity="center"
-            android:textColor="@color/check_color"/>
+            android:textColor="@drawable/selector_myrecords_textchange"
+            android:focusable="false"/>
+  
     </LinearLayout>
 
+>>>>>>> feature/zhangwenbin
 </LinearLayout>

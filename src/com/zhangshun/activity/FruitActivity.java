@@ -25,10 +25,12 @@ public class FruitActivity extends Activity {
 		setContentView(R.layout.fruit);
 		fruit_return_btn = (ImageView) findViewById(R.id.fruit_return_btn);
 		fruit_return_btn.setOnClickListener(click);
-		pineapple = (RelativeLayout) findViewById(R.id.pineapple);
+		
+		pineapple=(RelativeLayout) findViewById(R.id.pineapple);
 		pineapple.setOnClickListener(click);
 
 	}
+
 
 	OnClickListener click = new OnClickListener() {
 
@@ -40,9 +42,9 @@ public class FruitActivity extends Activity {
 				finish();
 				break;
 			case R.id.pineapple:
-				Intent intent_pineapple = new Intent();
-				intent_pineapple.setClass(FruitActivity.this, Food_name_Activity.class);
-				startActivity(intent_pineapple);
+				Intent intent=new Intent(FruitActivity.this,Food_name_Activity.class);
+				startActivity(intent);
+				break;
 			default:
 				break;
 			}
@@ -50,3 +52,4 @@ public class FruitActivity extends Activity {
 	};
 
 }
+

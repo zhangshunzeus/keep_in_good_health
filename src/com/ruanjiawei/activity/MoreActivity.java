@@ -58,9 +58,10 @@ public class MoreActivity extends Activity {
 		all3.setMore_name_all_listview_title("碧生源牌减肥茶");
 		all3.setMore_name_all_listview_giving("2.5g/袋*15袋/盒*4盒");
 		all3.setMore_name_all_listview_price("31.00");
-		food.setMore_name_all_listview_nice("95%");
+		all3.setMore_name_all_listview_nice("95%");
 		list.add(all3);
-		
+
 	}
 
 }
+
