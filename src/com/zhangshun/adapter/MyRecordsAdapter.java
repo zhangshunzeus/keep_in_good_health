@@ -11,11 +11,10 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,10 +62,10 @@ public class MyRecordsAdapter extends BaseAdapter {
 
 	@SuppressLint("InflateParams")
 	@Override
-	public View getView(int position, View view, ViewGroup parent) {
+	public View getView(final int position, View view, ViewGroup parent) {
 		// TODO Auto-generated method stub
 
-		ViewHolderMyRecords holder;
+		ViewHolderMyRecords holder = null;
 		if (view == null) {
 			view = inflater.inflate(R.layout.my_records_list_item, null);
 			holder = new ViewHolderMyRecords();
@@ -79,29 +78,23 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshopnumber = (TextView) view.findViewById(R.id.my_records_shop_type);
 			holder.myrecordshopmoney = (TextView) view.findViewById(R.id.my_records_shop_money);
 			holder.myrecordchangereceive = (CheckBox) view.findViewById(R.id.my_records_change_receiving);
-			holder.myrecordchangereceive.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			view.setTag(holder);
+			holder.myrecordchangereceive.setOnClickListener(new OnClickListener() {
 
 				@Override
-				public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
-					//ViewHolderMyRecords myRecords=new ViewHolderMyRecords();
 					Toast.makeText(context, "点击确认收货", Toast.LENGTH_SHORT).show();
-					if (arg1) {
-						arg0.setChecked(true);
-					}else{
-						arg0.setChecked(false);
-						arg0.setClickable(false);
-					}
-				}
-				
+					CheckBox checkBox=(CheckBox)arg0;
+					data.get(position).checked=checkBox.isChecked();
+				}				
 			});
-			view.setTag(holder);
-
 		}
-
+		
 		if (position == 1) {
 			holder = (ViewHolderMyRecords) view.getTag();
-			MyRecordsDemo myRecordsDemo_one = (MyRecordsDemo) getItem(position);
+			MyRecordsDemo myRecordsDemo_one = data.get(position);
 			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
 			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
 			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
@@ -110,19 +103,6 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
 			
-		}
-
-		if (position == 2) {
-			holder = (ViewHolderMyRecords) view.getTag();
-			MyRecordsDemo myRecordsDemo_one = (MyRecordsDemo) getItem(position);
-			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
-			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
-			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
-			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
-			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
-			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-
 		}
 		return view;
 
@@ -138,6 +118,7 @@ public class MyRecordsAdapter extends BaseAdapter {
 		TextView myrecordshopmoney;
 		CheckBox myrecordchangereceive;
 		CheckBox myrecordchangereceiveyes;
+		
 
 	}
 

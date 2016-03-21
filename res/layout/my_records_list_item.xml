@@ -106,7 +106,6 @@
             android:textSize="12sp" 
             android:gravity="center"
             android:textColor="@drawable/selector_myrecords_textchange"
-            android:clickable="true"
             android:focusable="false"/>
   
     </LinearLayout>

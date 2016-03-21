@@ -9,6 +9,7 @@ public class MyRecordsDemo {
 	private String my_records_shop_type;
 	private String my_records_shop_number;
 	private String my_records_shop_money;
+	public boolean checked;
 
 	public int getImage() {
 		return image;
