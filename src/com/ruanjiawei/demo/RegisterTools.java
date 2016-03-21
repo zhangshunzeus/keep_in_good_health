@@ -21,10 +21,6 @@ public class RegisterTools {
 		new AnyTask().execute(tel, verify, password, repassword);
 	}
 
-	public void verifyAccount(String tel) {
-		new AnyTask().execute(tel);
-	}
-
 	private String register(String tel, String verify, String password,
 			String repassword) {
 
@@ -59,7 +55,7 @@ public class RegisterTools {
 				String line = bufferedReader.readLine();
 				while (line != null && line.length() > 0) {
 					builder.append(line);
-					line = bufferedReader.toString();
+					line = bufferedReader.readLine();
 				}
 				return builder.toString();
 			}
@@ -120,9 +116,7 @@ public class RegisterTools {
 
 	}
 
-	OnHttpListener mListener,listener;
-	
-	
+	OnHttpListener mListener;
 
 	public void setOnHttpListener(OnHttpListener mListener) {
 		this.mListener = mListener;
