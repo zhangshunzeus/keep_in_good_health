@@ -2,19 +2,25 @@ package com.zhangshun.adapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+
 import com.zhangshun.demo.TheShoppingCartDemo;
 import com.zhangshun.keep_in_good_health.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TheShoppingCartAdapter extends BaseAdapter {
 
+    private TheShoppingCartAdapter mAdapter;
 	//上下文
 	Context context;
 	//用来导入布局
@@ -22,9 +28,6 @@ public class TheShoppingCartAdapter extends BaseAdapter {
 	//存储数据的list
 	ArrayList<TheShoppingCartDemo> list;
 	private Object viewHodle;
-	//用来控制CheckBox的选中状况
-	private static HashMap<Integer,Boolean> isSelected;
-	
 	
 	public TheShoppingCartAdapter() {
 		// TODO Auto-generated constructor stub
@@ -34,18 +37,8 @@ public class TheShoppingCartAdapter extends BaseAdapter {
 		this.context = context;
 		this.list = list;
 		mInflater = LayoutInflater.from(context);
-		isSelected = new HashMap<Integer,Boolean>();
-		//初始化数据
-		initDate();
-	}
-	
-	//初始化isSelected的数据
-	private void initDate(){
-		for (int i = 0; i < list.size(); i++){
-			getIsSelected().put(i,false);
-		}
-	}
 
+	}
 
 	@Override
 	public int getCount() {
@@ -92,8 +85,7 @@ public class TheShoppingCartAdapter extends BaseAdapter {
 		theShoppingCartDemo.setThe_shopping_content(theShoppingCartDemo.getThe_shopping_content());
 		theShoppingCartDemo.setThe_shopping_number(theShoppingCartDemo.getThe_shopping_number());
 		theShoppingCartDemo.setThe_price(theShoppingCartDemo.getThe_price());
-		//根据
-		viewHodler.Future_generations.setChecked(getIsSelected().get(position));
+		
 		return convertView;
 	}
 	
@@ -105,16 +97,9 @@ public class TheShoppingCartAdapter extends BaseAdapter {
 		public TextView the_shopping_content;
 		public TextView the_shopping_title;
 		public ImageView img;
+		public TextView tvName;    
+        public ImageButton deleteButton;    
 		
-	}
-	
-	public static HashMap<Integer, Boolean> getIsSelected() {
-		// TODO Auto-generated method stub
-		return isSelected;
-	}
-	
-	public static void setIsSelected(HashMap<Integer,Boolean>isSelected){
-		TheShoppingCartAdapter.isSelected = isSelected;
 	}
 
 }

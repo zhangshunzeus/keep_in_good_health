@@ -78,6 +78,11 @@
         </activity>
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
         </activity>
@@ -85,29 +90,18 @@
         </activity>
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
         <!-- 餐名 页面 -->
-
         <activity
             android:name="com.zhangrong.activity.MealNameActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-
         <!-- 支付界面 -->
-
         <activity
             android:name="com.zhangrong.activity.PaymentInterfaceActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-
         <!-- 分类主界面 -->
-
         <activity
             android:name="com.zhangrong.activity.MainActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >

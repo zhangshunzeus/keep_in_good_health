@@ -10,6 +10,7 @@ public class TheShoppingCartDemo {
 	the_shopping_number,
 	The_price;
 	CheckBox Future_generations;
+	public Integer id;
 
 	public CheckBox getFuture_generations() {
 		return Future_generations;
