@@ -37,7 +37,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 	}
 	
 	public void getData() {
-		//for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < 6; i++) {
 
 			MyRecordsDemo myRecord = new MyRecordsDemo();
 			myRecord.setImage(R.drawable.myrecords_picture_one);
@@ -49,7 +49,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 			myRecord.setMy_records_shop_money("￥50.00");
 			//myRecord.setMy_records_change_receiving(R.drawable.selector_change_receive);
 			data.add(myRecord);
-			MyRecordsDemo myRecord_one = new MyRecordsDemo();
+			/*MyRecordsDemo myRecord_one = new MyRecordsDemo();
 			myRecord_one.setImage(R.drawable.myrecords_picture_two);
 			myRecord_one.setMy_records_shop_name("鼎力托玛琳自然热四季款护腰带");
 			myRecord_one.setMy_records_list_goodsstates("店家已发货");
@@ -58,8 +58,8 @@ public class MyRecordsFragmentReceive extends Fragment {
 			myRecord_one.setMy_records_shop_number("共一件商品  实付：");
 			myRecord_one.setMy_records_shop_money("￥180.00");
 			//myRecord_one.setMy_records_change_receiving(R.drawable.no_check_change_receive);
-			data.add(myRecord_one);
-		//}
+			data.add(myRecord_one);*/
+		}
 
 }
 }

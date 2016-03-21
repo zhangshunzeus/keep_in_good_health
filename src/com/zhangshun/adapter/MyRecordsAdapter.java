@@ -92,7 +92,6 @@ public class MyRecordsAdapter extends BaseAdapter {
 			});
 		}
 		
-		if (position == 1) {
 			holder = (ViewHolderMyRecords) view.getTag();
 			MyRecordsDemo myRecordsDemo_one = data.get(position);
 			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
@@ -102,72 +101,10 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			
-		}
-		if (position == 2) {
-			holder = (ViewHolderMyRecords) view.getTag();
-			MyRecordsDemo myRecordsDemo_one = data.get(position);
-			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
-			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
-			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
-			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
-			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
-			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			
-		}
-		if (position == 3) {
-			holder = (ViewHolderMyRecords) view.getTag();
-			MyRecordsDemo myRecordsDemo_one = data.get(position);
-			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
-			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
-			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
-			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
-			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
-			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			
-		}
-		if (position == 4) {
-			holder = (ViewHolderMyRecords) view.getTag();
-			MyRecordsDemo myRecordsDemo_one = data.get(position);
-			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
-			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
-			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
-			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
-			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
-			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			
-		}
-		if (position == 5) {
-			holder = (ViewHolderMyRecords) view.getTag();
-			MyRecordsDemo myRecordsDemo_one = data.get(position);
-			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
-			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
-			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
-			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
-			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
-			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			
-		}
-		if (position == 6) {
-			holder = (ViewHolderMyRecords) view.getTag();
-			MyRecordsDemo myRecordsDemo_one = data.get(position);
-			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
-			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
-			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
-			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
-			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
-			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			
-		}
+
 		return view;
 
 	}
-
 	class ViewHolderMyRecords {
 		ImageView myrecordimage;
 		TextView myrecordcontent;
