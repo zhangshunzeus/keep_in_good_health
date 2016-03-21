@@ -5,11 +5,15 @@ import org.json.JSONObject;
 
 import com.ruanjiawei.demo.RegisterTools;
 import com.ruanjiawei.demo.RegisterTools.OnHttpListener;
+import com.ruanjiawei.demo.VerifyTools;
+import com.ruanjiawei.demo.VerifyTools.OnverifyListener;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View.OnClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -24,6 +28,7 @@ public class RegiserActivity extends Activity {
 	ImageView myrecords_return_btn;
 	String tel, verify, password, repassword;
 	RegisterTools registerTools = new RegisterTools();
+	VerifyTools verifyTools = new VerifyTools();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +66,10 @@ public class RegiserActivity extends Activity {
 						Intent intent = new Intent(RegiserActivity.this, LoginActivity.class);
 						startActivity(intent);
 					} else {
+
 						Toast.makeText(getApplication(), jo.getString("message"), Toast.LENGTH_LONG).show();
+
+						Toast.makeText(getApplication(), "验证码：" + jo.getString("message"), Toast.LENGTH_LONG).show();
 					}
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -71,7 +79,7 @@ public class RegiserActivity extends Activity {
 		};
 
 		// 获取验证码
-		private OnHttpListener listener = new OnHttpListener() {
+		private OnverifyListener listener = new OnverifyListener() {
 
 			@Override
 			public void start() {
@@ -83,14 +91,17 @@ public class RegiserActivity extends Activity {
 			public void end(String result) {
 				// TODO Auto-generated method stub
 				try {
+
 					JSONObject jo = new JSONObject(result);
-					Toast.makeText(getApplicationContext(), jo.getString("verify"), Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplication(), jo.getString("verify"), Toast.LENGTH_LONG).show();
 
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				Log.i("验证码", result);
 			}
+
 		};
 
 		@Override
@@ -99,11 +110,11 @@ public class RegiserActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.register_gainverify:
 				register_tel = (EditText) findViewById(R.id.register_tel);
-				register_verify = (EditText) findViewById(R.id.register_verify);
+
 				tel = register_tel.getText().toString();
-				verify = register_verify.getText().toString();
-				registerTools.setOnHttpListener(listener);
-				registerTools.verifyAccount(tel);
+				verifyTools.setOnverifyListener(listener);
+				verifyTools.verifyAccount(tel);
+
 				break;
 
 			case R.id.register_finsh:
