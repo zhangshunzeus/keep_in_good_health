@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="title">#474747</color>
+    <color name="title">#A89F9C</color>
     <color name="blue">#1EA000</color>
     <color name="wite">#ffffff</color>
     <!-- friend 色值设置 -->
@@ -18,7 +18,6 @@
     <color name="at_the_top_of_the_background_color">#22c39d</color>
     <color name="line">#F1F1F1</color>
 
-
     <!-- 张荣 食品页面的使用颜色 -->
 
     <color name="mealname_font_headline_color">#474747</color>
@@ -33,5 +32,6 @@
     <color name="sorttop_bg">#22C39D</color>
     <color name="public_line">#B3B3B3</color>
     <color name="sort_right_image_text_color">#FFFFFF</color>
+
 
 </resources>

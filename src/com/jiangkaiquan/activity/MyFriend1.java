@@ -3,7 +3,6 @@ package com.jiangkaiquan.activity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,6 +23,7 @@ import com.zhangshun.keep_in_good_health.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
 import com.jiangkaiquan.activity.adapter.RecomendAdapter;
 
 /**
@@ -34,7 +34,6 @@ import com.jiangkaiquan.activity.adapter.RecomendAdapter;
 public class MyFriend1 extends Activity {
     private TextView view1;
     private TextView view2;
-    private Intent intent;
 
     private ImageView back;
     private ImageView add;
@@ -58,7 +57,6 @@ public class MyFriend1 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.jiang_my_friend_1);
         back = (ImageView) findViewById(R.id.myfriend1_back_img);
         add = (ImageView) findViewById(R.id.myfriend1_add_img);
