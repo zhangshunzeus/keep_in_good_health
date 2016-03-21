@@ -27,7 +27,6 @@ public class Founction extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.jiang_function);
 	}
-
 	private void loadWeidegt() {
 		back = (ImageView) findViewById(R.id.function_back_img);
 		back.setOnClickListener(listener);
