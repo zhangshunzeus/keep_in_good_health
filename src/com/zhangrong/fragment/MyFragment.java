@@ -18,12 +18,12 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.jiangkaiquan.activity.MyFriend1;
 import com.ruanjiawei.activity.LoginActivity;
+import com.zhangrong.activity.TheShopingCartActivityGG;
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.activity.MyCollectionActivity;
 import com.zhangshun.activity.PersonalInformationActivity;
 import com.zhangshun.activity.SetUpTheActivity;
-import com.zhangshun.activity.TheShoppingCartActivity;
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.MyRecords;
 import com.zhangwenbin.activity.PersonalCenterLoginName;
@@ -94,7 +94,7 @@ public class MyFragment extends Fragment {
 				startActivity(intent_myrecords);
 				break;
 			case R.id.notlogin_intent_shoppingcart:
-				Intent intent_shopingcart = new Intent(getActivity(), TheShoppingCartActivity.class);
+				Intent intent_shopingcart = new Intent(getActivity(), TheShopingCartActivityGG.class);
 				startActivity(intent_shopingcart);
 				break;
 			case R.id.notlogin_intent_vip:

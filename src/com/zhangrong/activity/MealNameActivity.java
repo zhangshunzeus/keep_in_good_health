@@ -1,18 +1,17 @@
 package com.zhangrong.activity;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ListView;
-import android.widget.Toast;
-import com.ruanjiawei.activity.Food_name_Activity;
+import java.util.ArrayList;
+
 import com.zhangrong.adapter.MealnameListAdapter;
 import com.zhangrong.example.MealnameInfo;
 import com.zhangshun.keep_in_good_health.R;
-import com.zhangwenbin.activity.TodayEat;
 
-import java.util.ArrayList;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.ListView;
 
 /**
  * Created by zhang on 2016/3/10.
@@ -22,6 +21,7 @@ public class MealNameActivity extends Activity {
     private ArrayList<MealnameInfo> infoList;
     private MealnameInfo info = new MealnameInfo();
     private MealnameListAdapter adapter;
+    ImageView meal_name_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,10 @@ public class MealNameActivity extends Activity {
         loadiniv();
         adapter = new MealnameListAdapter(this, infoList);
         listView.setAdapter(adapter);
+        
+        meal_name_back = (ImageView) findViewById (R.id.meal_name_back);
+        meal_name_back.setOnClickListener(clcik);
+        
     }
 
     private void loadiniv() {
@@ -45,15 +49,30 @@ public class MealNameActivity extends Activity {
             info.setFood_text_two_text("燕麦可以改善血液循环，缓解生活工作带来的压力。");
             info.setMeal_name_Liao_text("草莓100g，燕窝片100g.");
             info.setMeal_name_dosing_text("荷兰乳牛乳酸牛奶200ml，水800ml。");
-            info.setMeal_name_practice_text("1.     2.    3.    4.");
+            info.setMeal_name_practice_text("1.先将草莓洗干净，并切成丁庄。");
             infoList.add(info);
 
         }
     }
     public void dian(View view){
-    	Intent intent= new Intent(MealNameActivity.this,
-    			TodayEat.class);
-		startActivity(intent);
+    	finish();
 
     }
+    
+    OnClickListener clcik = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.meal_name_back:
+				finish();
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
+    
 }

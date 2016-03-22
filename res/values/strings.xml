@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <resources>
 
     <string name="app_name">keep_in_good_health</string>
@@ -30,9 +30,7 @@
     <string name="three_meals_a_day_content">早饭要吃好，午饭要吃饱，晚饭要吃少，细中有粗、荤素搭配，营养均匀。</string>
     <string name="home_page_recommended">推荐</string>
     <string name="home_page_dietary">膳食</string>
-    <string name="function_contxt1">对于大多数人来说，提起大枣这种食物，
-    ，相的，信很多人首先会想到的就是其所具有的养颜补血的功效，在生活中，许多女性也是经常选这吃大枣来进行补血
-        因此，对于大枣的功效与作用，显然应当被大家所认知。    </string>
+    <string name="function_contxt1">对于大多数人来说，提起大枣这种食物， ，相的，信很多人首先会想到的就是其所具有的养颜补血的功效，在生活中，许多女性也是经常选这吃大枣来进行补血 因此，对于大枣的功效与作用，显然应当被大家所认知。 </string>
     <string name="function_context2">1.抗郭明 大枣乙醇提起物对特意反应性疾病，能抑制抗体的产生，对小老鼠fjadslkfjkasldfjasfjslfkj</string>
     <string name="jjzz">如果你无法简洁的表达你的想法，那只说明你还不够了解它，\n阿尔伯特jbst</string>
     <string name="todayeat_eattitle">今日推荐</string>
@@ -44,7 +42,7 @@
     <string name="todayeat_lunchcontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
     <string name="todayeat_dinnercontext">如果你无法简洁的表达你的想法，那只能说明你还不够了解它。</string>
     <string name="Inquiry_doctor_edit_doctor">医生/病状科室</string>
-    <string name="Inquiry_doctor_doctor_inform">本周六  李明医生教授团队在线坐诊...</string>
+    <string name="Inquiry_doctor_doctor_inform">本周六 李明医生教授团队在线坐诊...</string>
     <string name="Inquiry_doctor_Pediatrics_doctor">儿科</string>
     <string name="Inquiry_doctor_text_doctor">文字</string>
     <string name="Inquiry_doctor_dots">...</string>
@@ -75,7 +73,7 @@
     <string name="my_records_list_name">欧姆龙专卖店</string>
     <string name="my_records_list_goods">店家已发货</string>
     <string name="my_records_list_thingsmoney">TH457A ￥55.00</string>
-    <string name="my_records_list_shop_number">共一件商品   实付：</string>
+    <string name="my_records_list_shop_number">共一件商品 实付：</string>
     <string name="my_records_list_shop_money">￥50.00</string>
     <string name="my_records_change_receive">确认收货</string>
     <string name="my_records_list_text">OMRON欧姆龙红外耳机式体温计</string>
