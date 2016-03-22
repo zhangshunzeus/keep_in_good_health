@@ -81,6 +81,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/login_edittext_bj"
         android:hint="@string/register_password"
+        android:inputType="textPassword"
         android:padding="10dp" />
 
     <EditText
@@ -92,6 +93,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/login_edittext_bj"
         android:hint="@string/register_inpassword"
+        android:inputType="textPassword"
         android:padding="10dp" />
 
     <LinearLayout

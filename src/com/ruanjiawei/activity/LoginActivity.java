@@ -5,12 +5,15 @@ import org.json.JSONObject;
 
 import com.ruanjiawei.demo.LoginTools;
 import com.ruanjiawei.demo.LoginTools.OnHttpListener;
+import com.ruanjiawei.demo.SaveToken;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -27,6 +30,7 @@ public class LoginActivity extends Activity {
 	String tel;
 	String password;
 	LoginTools logintools = new LoginTools();
+	SaveToken saveToken=new SaveToken();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +41,14 @@ public class LoginActivity extends Activity {
 		login_register = (TextView) findViewById(R.id.login_register);
 
 		forget_password = (TextView) findViewById(R.id.forget_password);
+		
 		forget_password.setOnClickListener(l);
 		login_register.setOnClickListener(l);
 
 		login_btn = (Button) findViewById(R.id.login_btn);
 		login_btn.setOnClickListener(l);
+		
+		
 	}
 
 	OnClickListener l = new OnClickListener() {
@@ -60,9 +67,11 @@ public class LoginActivity extends Activity {
 				try {
 					JSONObject jo = new JSONObject(result);
 					if (jo.getInt("status") == 1) {
+						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
 								MoreActivity.class);
 						startActivity(intent);
+						
 					} else {
 						Toast.makeText(getApplication(),
 								jo.getString("message"), Toast.LENGTH_LONG)

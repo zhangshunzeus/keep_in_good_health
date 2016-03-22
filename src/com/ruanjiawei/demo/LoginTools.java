@@ -53,6 +53,10 @@ public class LoginTools {
 					line = bufferedReader.readLine(); // 读取出来
 					login = builder.toString();
 				}
+				
+				inputStream.close();
+				bufferedReader.close();
+				
 				login = builder.toString();
 				return login;
 			}

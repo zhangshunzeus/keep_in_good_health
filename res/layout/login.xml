@@ -58,6 +58,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/login_edittext_bj"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:padding="10dp" />
 
     <Button
@@ -110,8 +111,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:textColor="#969696"
-            android:text="@string/login_other" />
+            android:text="@string/login_other"
+            android:textColor="#969696" />
 
         <View
             android:layout_width="90dp"
