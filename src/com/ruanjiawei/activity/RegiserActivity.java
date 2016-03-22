@@ -70,6 +70,11 @@ public class RegiserActivity extends Activity {
 						Toast.makeText(getApplication(), jo.getString("message"), Toast.LENGTH_LONG).show();
 
 						Toast.makeText(getApplication(), "验证码：" + jo.getString("message"), Toast.LENGTH_LONG).show();
+
+						Toast.makeText(getApplication(),
+								"验证码：" + jo.getString("message"),
+								Toast.LENGTH_LONG).show();
+
 					}
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -93,7 +98,12 @@ public class RegiserActivity extends Activity {
 				try {
 
 					JSONObject jo = new JSONObject(result);
+
 					Toast.makeText(getApplication(), jo.getString("verify"), Toast.LENGTH_LONG).show();
+
+
+					Toast.makeText(getApplication(), jo.getString("verify"),
+							Toast.LENGTH_LONG).show();
 
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -126,8 +136,23 @@ public class RegiserActivity extends Activity {
 				verify = register_verify.getText().toString();
 				password = register_word.getText().toString();
 				repassword = register_reword.getText().toString();
+
 				registerTools.setOnHttpListener(mListener);
 				registerTools.registerAccount(tel, verify, password, repassword);
+
+				if (tel == null && tel == " ") {
+					Toast.makeText(getApplication(), "请输入手机号",
+							Toast.LENGTH_LONG).show();
+				}
+				if (register_word == null && password == " ") {
+					Toast.makeText(getApplication(), "请输入密码", Toast.LENGTH_LONG)
+							.show();
+				} else {
+					registerTools.setOnHttpListener(mListener);
+					registerTools.registerAccount(tel, verify, password,
+							repassword);
+				}
+
 
 				break;
 			case R.id.myrecords_return_btn:
