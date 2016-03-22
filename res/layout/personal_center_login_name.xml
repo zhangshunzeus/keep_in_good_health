@@ -37,7 +37,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="2dp"
         android:layout_weight="2" >
 
         <LinearLayout
@@ -51,7 +50,7 @@
 
        <ImageView
             android:id="@+id/personal_background"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@drawable/mytouxiangbeijing"
             android:src="@drawable/mytouxiangbeijing" 
@@ -59,7 +58,7 @@
 
         <ImageView
             android:id="@+id/loginname_touxiang_intent_login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 			android:layout_centerInParent="true"
             android:contentDescription="@drawable/mytouxiang"

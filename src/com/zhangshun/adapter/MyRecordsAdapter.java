@@ -92,7 +92,6 @@ public class MyRecordsAdapter extends BaseAdapter {
 			});
 		}
 		
-		if (position == 1) {
 			holder = (ViewHolderMyRecords) view.getTag();
 			MyRecordsDemo myRecordsDemo_one = data.get(position);
 			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
@@ -102,12 +101,10 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
-			
-		}
+
 		return view;
 
 	}
-
 	class ViewHolderMyRecords {
 		ImageView myrecordimage;
 		TextView myrecordcontent;

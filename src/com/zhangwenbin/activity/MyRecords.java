@@ -30,7 +30,6 @@ public class MyRecords extends Activity {
 	FragmentManager manager;
 	RadioGroup radioGroup;
 	RadioButton btnAll, btnPayMoney, btnSend, btnReceive, btnComment;//5个链接fragment按钮
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

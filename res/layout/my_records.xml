@@ -144,7 +144,7 @@
         android:id="@+id/my_records_return_home"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="5dp"
+        android:padding="5dp"
         android:layout_weight="1"
         android:background="#e5e5e5"
         android:orientation="horizontal" >
@@ -184,6 +184,4 @@
             android:textColor="@drawable/selector_text_style"
             android:textSize="12sp" />
     </RadioGroup>
-
->>>>>>> feature/zhangwenbin
 </LinearLayout>
