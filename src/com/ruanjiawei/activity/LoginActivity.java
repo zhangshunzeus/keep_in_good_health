@@ -14,11 +14,15 @@ import com.umeng.socialize.exception.SocializeException;
 import com.umeng.socialize.sso.UMSsoHandler;
 import com.umeng.soexample.commons.Constants;
 import com.ruanjiawei.activity.LoginActivity;
+import com.ruanjiawei.demo.SaveToken;
+import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -43,7 +47,7 @@ public class LoginActivity extends Activity {
 	private ImageView qqLoginButton;
 	private ImageView wechatLoginButton;
 	
-
+	SaveToken saveToken=new SaveToken();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,7 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.login);
 		login_register = (TextView) findViewById(R.id.login_register);
 		forget_password = (TextView) findViewById(R.id.forget_password);
+
 		myrecords_return_btn = (ImageView) findViewById (R.id.myrecords_return_btn);
 		sinaLoginButton = (ImageView) this.findViewById(R.id.btn_sina_login);
 		qqLoginButton = (ImageView) this.findViewById(R.id.btn_qq_login);
@@ -65,6 +70,8 @@ public class LoginActivity extends Activity {
 		login_register.setOnClickListener(l);
 		login_btn = (Button) findViewById(R.id.login_btn);
 		login_btn.setOnClickListener(l);
+		
+		
 	}
 
 	OnClickListener l = new OnClickListener() {
@@ -83,9 +90,11 @@ public class LoginActivity extends Activity {
 				try {
 					JSONObject jo = new JSONObject(result);
 					if (jo.getInt("status") == 1) {
+						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
 								MoreActivity.class);
 						startActivity(intent);
+						
 					} else {
 						Toast.makeText(getApplication(),
 								jo.getString("message"), Toast.LENGTH_LONG)

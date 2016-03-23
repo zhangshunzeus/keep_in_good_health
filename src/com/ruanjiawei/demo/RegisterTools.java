@@ -57,6 +57,8 @@ public class RegisterTools {
 					builder.append(line);
 					line = bufferedReader.readLine();
 				}
+				inputStream.close();
+				bufferedReader.close();
 				return builder.toString();
 			}
 
