@@ -11,13 +11,13 @@
                 android:background="@color/at_the_top_of_the_background_color"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp" >
+                android:padding="2dp" >
 
                 <ImageView
                     android:id="@+id/fruit_return_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                   android:padding="10dp"
+                   android:padding="8dp"
                     android:src="@drawable/return_btn" />
 
                 <TextView

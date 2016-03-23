@@ -29,6 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
+	// 整个平台的Controller,负责管理整个SDK的配置、操作等处理
 	private UMSocialService mController = UMServiceFactory
 			.getUMSocialService(Constants.DESCRIPTOR);
 	TextView login_register, forget_password;
@@ -41,6 +42,8 @@ public class LoginActivity extends Activity {
 	private ImageView sinaLoginButton;
 	private ImageView qqLoginButton;
 	private ImageView wechatLoginButton;
+	
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -126,7 +129,7 @@ public class LoginActivity extends Activity {
 			case R.id.btn_sina_login: // 新浪微博登录
 				login(SHARE_MEDIA.SINA);
 				break;
-			case R.id.btn_qq_login: // qq登录
+			case R.id.btn_qq_login: //  qq登录
 				login(SHARE_MEDIA.QQ);
 				break;
 			case R.id.btn_wechat_login: // 微信登陆
@@ -164,7 +167,7 @@ public class LoginActivity extends Activity {
 
 					@Override
 					public void onComplete(Bundle value, SHARE_MEDIA platform) {
-						// 获取uid
+						// 获得uid
 						String uid = value.getString("uid");
 						if (!TextUtils.isEmpty(uid)) {
 							// uid不为空，获取用户信息
@@ -219,6 +222,8 @@ public class LoginActivity extends Activity {
 			ssoHandler.authorizeCallBack(requestCode, resultCode, data);
 		}
 	}
+	
+	
 	
 }
 
