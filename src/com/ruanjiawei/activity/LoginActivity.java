@@ -1,8 +1,10 @@
 package com.ruanjiawei.activity;
 
 import java.util.Map;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import com.ruanjiawei.demo.LoginTools;
 import com.ruanjiawei.demo.LoginTools.OnHttpListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
@@ -17,6 +19,8 @@ import com.ruanjiawei.activity.LoginActivity;
 import com.ruanjiawei.demo.SaveToken;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
+import com.zhangwenbin.activity.PersonalCenterNotLogin;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -92,7 +96,7 @@ public class LoginActivity extends Activity {
 					if (jo.getInt("status") == 1) {
 						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
-								MoreActivity.class);
+								PersonalCenterNotLogin.class);
 						startActivity(intent);
 						
 					} else {
