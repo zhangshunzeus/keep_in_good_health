@@ -62,6 +62,10 @@ public class RegiserActivity extends Activity {
 						Intent intent = new Intent(RegiserActivity.this,
 								LoginActivity.class);
 						startActivity(intent);
+						
+						Toast.makeText(getApplication(),
+								"注册成功 请登录" ,Toast.LENGTH_LONG)
+								.show();
 					} else {
 						Toast.makeText(getApplication(),
 								jo.getString("message"), Toast.LENGTH_LONG)
