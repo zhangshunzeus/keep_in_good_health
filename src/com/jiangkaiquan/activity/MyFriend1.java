@@ -117,9 +117,11 @@ public class MyFriend1 extends Activity {
                     listview.setVisibility(View.GONE);
                     break;
                 case R.id.friend_swap_tx:
-                	showDiolog(false);
+                	
                 	intent=new Intent(MyFriend1.this,DecoderActivity.class);
+                	
                 	startActivity(intent);
+                	
                     break;
                 case R.id.friend_add_tx:
                     break;
@@ -234,5 +236,11 @@ public class MyFriend1 extends Activity {
             map.put("text", text[i]);
             list2.add(map);
         }
+    }
+    @Override
+    protected void onResume() {
+    	// TODO Auto-generated method stub
+    	showDiolog(false);
+    	super.onResume();
     }
 }

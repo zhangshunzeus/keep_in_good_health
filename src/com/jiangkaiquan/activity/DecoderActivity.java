@@ -1,10 +1,9 @@
 package com.jiangkaiquan.activity;
 
-
 import android.app.Activity;
 import android.graphics.PointF;
 import android.os.Bundle;
-
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
@@ -39,11 +38,9 @@ public class DecoderActivity extends Activity implements OnQRCodeReadListener {
                 TranslateAnimation.RELATIVE_TO_PARENT, 0f,
                 TranslateAnimation.RELATIVE_TO_PARENT, 0.5f);
        mAnimation.setDuration(1000);
-       
        mAnimation.setRepeatCount(-1);
        mAnimation.setRepeatMode(Animation.REVERSE);
        mAnimation.setInterpolator(new LinearInterpolator());
-       line_image.setImageAlpha( 2);
        line_image.setAnimation(mAnimation);
         
     }
@@ -55,16 +52,13 @@ public class DecoderActivity extends Activity implements OnQRCodeReadListener {
 	@Override
 	public void onQRCodeRead(String text, PointF[] points) {
 		myTextView.setText(text);
-		if(text!=null&&text!=""){
-			//finish();
-		}
 	}
 
 	
 	// Called when your device have no camera
 	@Override
 	public void cameraNotFound() {
-		myTextView.setText("没有相机");
+		
 	}
 
 	// Called when there's no QR codes in the camera preview image
