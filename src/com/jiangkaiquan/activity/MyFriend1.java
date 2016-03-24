@@ -96,7 +96,7 @@ public class MyFriend1 extends Activity {
                 	finish();
                     break;
                 case R.id.myfriend1_add_img:
-                    showDiolog();
+                    showDiolog(true);
                     break;
                 case R.id.myfriend1_friend_tx:
                     friend.setTextColor(getResources().getColor(R.color.friendbt_change));
@@ -117,6 +117,9 @@ public class MyFriend1 extends Activity {
                     listview.setVisibility(View.GONE);
                     break;
                 case R.id.friend_swap_tx:
+                	showDiolog(false);
+                	intent=new Intent(MyFriend1.this,DecoderActivity.class);
+                	startActivity(intent);
                     break;
                 case R.id.friend_add_tx:
                     break;
@@ -158,7 +161,7 @@ public class MyFriend1 extends Activity {
     };
 
     //设置diolog
-    private void showDiolog() {
+    private void showDiolog(boolean toshow) {
         if (dialog == null) {
             //dialog 弹出窗试图
             int id[] = {R.id.friend_swap_tx, R.id.friend_add_tx, R.id.friend_creat_social_tx};
@@ -183,18 +186,23 @@ public class MyFriend1 extends Activity {
             //重新设置
             lp = window.getAttributes();
             window.setGravity(Gravity.RIGHT | Gravity.TOP);
-            lp.x = 200; // 新位置X坐标
-            lp.y = 200; // 新位置Y坐标
-            lp.width = ViewGroup.LayoutParams.WRAP_CONTENT; // 宽度
-            lp.height = ViewGroup.LayoutParams.WRAP_CONTENT; // 高度
-            //lp.alpha = 0.7f; // 透明度
+            lp.x = 0; // 新位置X坐标
+            lp.y = 50; // 新位置Y坐标
+            lp.width = 100; // 宽度
+            lp.height = 200; // 高度
+            lp.alpha = 0.9f; // 透明度
 
             // dialog.onWindowAttributesChanged(lp);
             //(当Window的Attributes改变时系统会调用此函数)
             window.setAttributes(lp);
         }
         //builder.notify();
-        dialog.show();
+       
+        if(toshow){
+        	 dialog.show();
+        }else{
+        	dialog.hide();
+        }
 
     }
 

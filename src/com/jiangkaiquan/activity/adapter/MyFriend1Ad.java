@@ -50,7 +50,7 @@ public class MyFriend1Ad extends BaseAdapter {
 	Context context;
 	LayoutInflater inflater;
 	boolean isfreind;
-	String ip = "127.0.0.1";
+	String ip = "192.168.0.31";
 	String addDate = "addDate";
 	String addDates = "addDstes";
 	String addAll = "addAll";
