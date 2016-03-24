@@ -39,7 +39,7 @@ public class PersonalCenterNotLogin extends Activity {
 	RadioButton intentClassify;
 	ImageView intentLoginName;
 	ImageView intentSetUp;
-	TextView intentLogin;
+	TextView intentLogin, user_name;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +62,7 @@ public class PersonalCenterNotLogin extends Activity {
 		intentSetUp.setOnClickListener(onClickListener);
 		intentLogin = (TextView) findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setOnClickListener(onClickListener);
+		user_name = (TextView) findViewById(R.id.user_name);
 		CheckIsLogin();
 
 	}
@@ -143,6 +144,8 @@ public class PersonalCenterNotLogin extends Activity {
 	// 登录
 	private void judgeLongin() {
 		// TODO Auto-generated method stub
+		user_name = (TextView) findViewById(R.id.user_name);
+		user_name.setVisibility(View.INVISIBLE);
 		intentLogin.setVisibility(View.GONE);
 
 	}
@@ -150,6 +153,8 @@ public class PersonalCenterNotLogin extends Activity {
 	// 未登录
 	private void judgeUnLongin() {
 		// TODO Auto-generated method stub
+		user_name = (TextView) findViewById(R.id.user_name);
+		user_name.setVisibility(View.GONE);
 		intentLogin.setVisibility(View.INVISIBLE);
 	}
 
