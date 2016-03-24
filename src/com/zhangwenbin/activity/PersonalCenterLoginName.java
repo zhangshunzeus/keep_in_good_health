@@ -1,8 +1,22 @@
 package com.zhangwenbin.activity;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
 
 import com.jiangkaiquan.activity.MyFriend;
 import com.zhangshun.activity.MyCollectionActivity;
@@ -18,8 +32,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -219,13 +231,13 @@ public class PersonalCenterLoginName extends Activity {
 	}
 
 	@SuppressLint("NewApi")
-	@SuppressWarnings("deprecation")
+
 	// 将进行剪裁后的图片显示到UI界面上
 	public void setPicToView(Intent picdata) {
 		Bundle bundle = picdata.getExtras();
 		if (bundle != null) {
 			Bitmap photo = bundle.getParcelable("data");
-			//Drawable drawable = new BitmapDrawable(photo);
+			// Drawable drawable = new BitmapDrawable(photo);
 			head_intent_login.setImageBitmap(photo);
 		}
 	}
@@ -237,6 +249,39 @@ public class PersonalCenterLoginName extends Activity {
 		SimpleDateFormat format = new SimpleDateFormat("'IMG'_yyyyMMdd_HHmmss");
 		String datatime = format.format(date) + ".jpg";
 		return datatime;
+	}
+
+	public void sendResponsePost() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				BasicHttpParams basicHttpParams = new BasicHttpParams();
+				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
+				HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
+
+				HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
+				HttpPost httpPost = new HttpPost();
+				List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+				pairs.add(new BasicNameValuePair("", ""));
+				try {
+					UrlEncodedFormEntity entity = new UrlEncodedFormEntity(pairs);
+					httpPost.setEntity(entity);
+					httpClient.execute(httpPost);
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		});
 	}
 
 }

@@ -81,18 +81,18 @@
         </activity>
         <!-- 我的：已登录页面 -->
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <!-- 今天吃什么页面 -->
         <activity android:name="com.zhangwenbin.activity.TodayEat" >
         </activity>
         <!-- 启动页面 -->
         <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
-             
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!-- 餐名 页面 -->
         <activity
