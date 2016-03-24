@@ -12,7 +12,8 @@ public class ShopDetailsActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.shop_details);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.shop_details);
+		
 	}
 }

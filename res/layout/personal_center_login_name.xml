@@ -53,17 +53,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@drawable/mytouxiangbeijing"
-            android:src="@drawable/mytouxiangbeijing" 
+            android:src="@drawable/mytouxiangbeijing"
             android:adjustViewBounds="true"/>
 
-        <ImageView
+        <com.zhangwenbin.activity.CircleImageView
             android:id="@+id/loginname_touxiang_intent_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
 			android:layout_centerInParent="true"
-            android:contentDescription="@drawable/mytouxiang"
-            android:src="@drawable/mytouxiang"
-            android:adjustViewBounds="true" />
+            android:src="@drawable/elaborate_recommendations_two"/>
 
          <TextView
             android:id="@+id/personal_not_login_intent_login"

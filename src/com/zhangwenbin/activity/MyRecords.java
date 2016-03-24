@@ -3,7 +3,7 @@ package com.zhangwenbin.activity;
 import com.zhangrong.activity.MainActivity;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -30,6 +30,7 @@ public class MyRecords extends Activity {
 	FragmentManager manager;
 	RadioGroup radioGroup;
 	RadioButton btnAll, btnPayMoney, btnSend, btnReceive, btnComment;//5个链接fragment按钮
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -72,7 +73,8 @@ public class MyRecords extends Activity {
 	}
 
 	OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
-
+		//监听fragment页面转换
+		@SuppressLint("NewApi")
 		@Override
 		public void onCheckedChanged(RadioGroup arg0, int arg1) {
 			// TODO Auto-generated method stub

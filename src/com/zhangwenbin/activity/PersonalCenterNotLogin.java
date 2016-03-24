@@ -1,5 +1,6 @@
 package com.zhangwenbin.activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,6 +36,21 @@ public class PersonalCenterNotLogin extends Activity {
 	ImageView intentLoginName;
 	ImageView intentSetUp;
 	TextView intentLogin;
+	/*String address = "http://192.168.11.247/index.php/home/api/myrecords";
+	String response = HttpUtil.sendHttpRequest(address, new HttpCallBackInterface() {
+
+		public void onFinish(String response) {
+			// TODO Auto-generated method stub
+			// 在这里根据返回内容执行具体的逻辑，处理响应数据
+		}
+
+		public void onError(Exception e) {
+			// TODO Auto-generated method stub
+			// 在这里对异常情况进行处理
+		}
+	});
+
+	@SuppressLint("NewApi")*/
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +73,9 @@ public class PersonalCenterNotLogin extends Activity {
 		intentSetUp.setOnClickListener(onClickListener);
 		intentLogin=(TextView)findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setOnClickListener(onClickListener);
+		
+		/*MyRecordsFragmentReceive receive=new MyRecordsFragmentReceive();
+		receive.getJsonObject(response);*/
 
 	}
 
@@ -66,7 +85,7 @@ public class PersonalCenterNotLogin extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			/*跳转到已登录*/
+			/*跳转到登录*/
 			case R.id.personal_not_login_intent_login:
 				Intent intent_login = new Intent(
 						PersonalCenterNotLogin.this, LoginActivity.class);
@@ -88,6 +107,7 @@ public class PersonalCenterNotLogin extends Activity {
 				Intent intent_myrecords = new Intent(
 						PersonalCenterNotLogin.this, MyRecords.class);
 				startActivity(intent_myrecords);
+				
 				break;
 				/*跳转到购物车*/
 			case R.id.notlogin_intent_shoppingcart:

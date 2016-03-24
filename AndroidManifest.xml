@@ -79,17 +79,20 @@
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
         </activity>
+        <!-- 我的：已登录页面 -->
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
-        </activity>
-        <activity android:name="com.zhangwenbin.activity.TodayEat" >
-        </activity>
-        <!-- 启动页面 -->
-        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- 今天吃什么页面 -->
+        <activity android:name="com.zhangwenbin.activity.TodayEat" >
+        </activity>
+        <!-- 启动页面 -->
+        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
+             
         </activity>
         <!-- 餐名 页面 -->
         <activity
@@ -111,14 +114,8 @@
         <!-- 忘记密码页面 -->
         <activity android:name="com.ruanjiawei.activity.ForgetPasswordActivity" >
         </activity>
-        <!-- 分类：咨询医师页面 -->
-        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor" >
-        </activity>
         <!-- 我的：个人中心未登录页面 -->
         <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin" >
-        </activity>
-        <!-- 我的：店铺收藏页面 -->
-        <activity android:name="com.zhangwenbin.activity.ShopCollection" >
         </activity>
     </application>
 
