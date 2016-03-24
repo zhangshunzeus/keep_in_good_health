@@ -1,5 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <resources>
+
     <color name="title">#474747</color>
-    
+    <color name="blue">#1EA000</color>
+    <color name="wite">#ffffff</color>
+
+    <!-- friend 色值设置 -->
+
+    <color name="friendt">#ffffff</color>
+    <color name="friendtb">#22c39d</color>
+    <color name="friendbt_change">#22c39d</color>
+    <color name="frendbt_no_change">#474747</color>
+    <color name="frend_child_tx">#757575</color>
+    <color name="frend_dilog">#757575</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="check_color">#009944</color>
+    <color name="at_the_top_of_the_background_color">#22c39d</color>
+    <color name="line">#F1F1F1</color>
+
+    <!-- 张荣 食品页面的使用颜色 -->
+
+    <color name="mealname_font_headline_color">#474747</color>
+    <color name="mealname_font_subtitle_color">#B3B3B3</color>
+    <color name="mealname_font_theme">#F1F1F1</color>
+    <color name="mealname_head_bg">#22C39D</color>
+    <color name="mealname_round_bg">#22C39D</color>
+    <color name="mealname_font_round_color">#F1F1F1</color>
+
+    <!-- 张荣 分类页面使用的颜色 -->
+
+    <color name="sorttop_bg">#22C39D</color>
+    <color name="public_line">#B3B3B3</color>
+    <color name="sort_right_image_text_color">#FFFFFF</color>
+
 </resources>

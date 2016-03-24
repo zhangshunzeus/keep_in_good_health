@@ -2,53 +2,177 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhangshun.keep_in_good_health"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0" >
 
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-
-        <!-- 首页 -->
+        android:theme="@style/AppTheme" >
+        <!-- AppKey是多少来着 我忘记了 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="4eaee02c527015373b000003" >
+        </meta-data>
+         <!-- 腾讯SSO授权的Activity注册 -->
         <activity
-            android:name="com.zhangshun.activity.HomePageActivity"
-            android:label="@string/app_name">
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
         </activity>
 
-        <!--推荐-->
-        <activity android:name="com.jiangkaiquan.activity.Recomend">
+        <!-- 首页 -->
+        <activity android:name="com.zhangshun.activity.HomePageActivity" >
+        </activity>
+        <!-- 推荐 -->
+        <activity android:name="com.jiangkaiquan.activity.Recomend" >
+        </activity>
+        <!-- 产品详情 -->
+        <activity android:name="com.jiangkaiquan.activity.Produce_detail" >
+        </activity>
+        <!-- 功能 -->
+        <activity android:name="com.jiangkaiquan.activity.Founction" >
+        </activity>
+        <!-- 我的朋友 -->
+        <activity android:name="com.jiangkaiquan.activity.MyFriend" >
+        </activity>
+        <!-- 水果页面 -->
+        <activity android:name="com.zhangshun.activity.FruitActivity" >
+        </activity>
+        <!-- 我的朋友修改 -->
+        <activity android:name="com.jiangkaiquan.activity.MyFriend1" >
+        </activity>
+        <!-- 推荐修改 -->
+        <activity android:name="com.jiangkaiquan.activity.Rcomend2" >
+        </activity>
+        <!-- 食名 -->
+        <activity android:name="com.ruanjiawei.activity.Food_name_Activity" >
+        </activity>
+        <!-- 更多 -->
+        <activity android:name="com.ruanjiawei.activity.MoreActivity" >
+        </activity>
+        <!-- 登录 -->
+        <activity android:name="com.ruanjiawei.activity.LoginActivity" >
+        </activity>
+        <!-- 注册 -->
+        <activity android:name="com.ruanjiawei.activity.RegiserActivity" >
+        </activity>
+        <!-- 商品详情 -->
+        <activity android:name="com.ruanjiawei.activity.ShopDetailsActivity" >
+        </activity>
+        <!-- 详情 -->
+        <activity android:name="com.ruanjiawei.activity.DetailsBigActivity" >
+        </activity>
+        <!-- 常见疾病详情列表页面 -->
+        <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty" >
+        </activity>
+        <!-- 形成的原因页面 -->
+        <activity android:name="com.zhangshun.activity.ReasonsForTheFormationActivity" >
+        </activity>
+        <!-- 建议的细节页面 -->
+        <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity" >
+        </activity>
+        <activity android:name="com.ruanjiawei.activity.RegiserPasswordActivity" >
+        </activity>
+        <!-- 设置页面 -->
+        <activity android:name="com.zhangshun.activity.SetUpTheActivity" >
+        </activity>
+        <!-- 个人信息页面 -->
+        <activity android:name="com.zhangshun.activity.PersonalInformationActivity" >
+        </activity>
+        <!-- 我的收藏页面 -->
+        <activity android:name="com.zhangshun.activity.MyCollectionActivity" >
+        </activity>
+        <!-- 我的购物车 页面 -->
+        <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
+        </activity>
+        <activity android:name="com.zhangrong.activity.TheShopingCartActivityGG" >
+        </activity>
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
+        </activity>
+        <activity android:name="com.zhangwenbin.activity.TodayEat" >
+        </activity>
+        <!-- 启动页面 -->
+        <activity android:name="com.zhangshun.activity.TheLaunchPageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--产品详情-->
-        <activity android:name="com.jiangkaiquan.activity.Produce_detail"></activity>
-        <!--功能-->
-        <activity android:name="com.jiangkaiquan.activity.Founction"></activity>
-        <!--我的朋友-->
-        <activity android:name="com.jiangkaiquan.activity.MyFriend">
-
+        <!-- 餐名 页面 -->
+        <activity
+            android:name="com.zhangrong.activity.MealNameActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-
-
-        <activity android:name="com.ruanjiawei.activity.Food_name_Activity"></activity>
-        <!-- 常见疾病详情列表页面 -->
-        <activity android:name="com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty"></activity>
-        <!-- 形成的原因页面 -->
-        <activity android:name="com.zhangshun.activity.ReasonsForTheFormationActivity"></activity>
-        <!-- 建议的细节页面 -->
-        <activity android:name="com.zhangshun.activity.SuggestionsForDetailsActivity"></activity>
-        <!-- 设置页面 -->
-        <activity android:name="com.zhangshun.activity.SetUpTheActivity"></activity>
-
+        <!-- 支付界面 -->
+        <activity
+            android:name="com.zhangrong.activity.PaymentInterfaceActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <!-- 分类主界面 -->
+        <activity
+            android:name="com.zhangrong.activity.MainActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity android:name="com.zhangwenbin.activity.MyRecords" >
+        </activity>
+        <!-- 忘记密码页面 -->
+        <activity android:name="com.ruanjiawei.activity.ForgetPasswordActivity" >
+        </activity>
+        <!-- 分类：咨询医师页面 -->
+        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor" >
+        </activity>
+        <!-- 我的：个人中心未登录页面 -->
+        <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin" >
+        </activity>
+        <!-- 我的：店铺收藏页面 -->
+        <activity android:name="com.zhangwenbin.activity.ShopCollection" >
+        </activity>
+        <!-- bmob支付，专用activity -->
+        <activity
+            android:name="c.b.a.A"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="c.b.a.B"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- bmob专用activity请勿删除 -->
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="false" />
+        <uses-library android:name="android.test.runner" />
     </application>
 
 </manifest>

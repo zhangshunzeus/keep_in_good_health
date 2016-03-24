@@ -2,125 +2,297 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp" >
+        android:layout_height="wrap_content"
+        android:background="#22c39d"
+        android:padding="16dp" >
 
         <ImageView
             android:id="@+id/today_eat_return"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="19.5dp"
-            android:background="#000000" />
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@drawable/myrecords_return"
+            android:src="@drawable/myrecords_return" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/eattitle"
-            android:textColor="@color/title"
+            android:text="@string/todayeat_eattitle"
+            android:textColor="#ffffff"
             android:textSize="18sp" />
     </RelativeLayout>
-
-    <ImageView
-        android:layout_width="260dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="20dp"
-        android:background="#000000" />
-
+    
     <ScrollView
         android:id="@+id/scroll_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="0dp"
+        android:layout_weight="3" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@drawable/today"
+        android:src="@drawable/today" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#e5e5e5" />
+
+    
+
+            <!-- 幸运水果 -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/breakfast"
-                android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="@string/lucky_fruit"
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
+
+            <LinearLayout
+                android:id="@+id/intent_lucky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/today_lucky_fruit"
+                    android:src="@drawable/today_lucky_fruit" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/lucky_fruit"
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/todayeat_breakfastcontext"
+                        android:textColor="@color/mealname_font_subtitle_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#e5e5e5" />
+
+            <!-- 早餐 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="@string/todayeat_breakfast"
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/intent_breakfast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="#ffffff"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/breakfastcontext"
-                    android:textColor="@color/title"
-                    android:textSize="15sp" 
-                    android:layout_marginLeft="5dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/today_breakfast"
+                    android:src="@drawable/today_breakfast" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/lucky_fruit"
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/todayeat_breakfastcontext"
+                        android:textColor="@color/mealname_font_subtitle_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#e5e5e5" />
+
+            <!-- 午餐 -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lunch"
-                android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:text="@string/todayeat_lunch"
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/intent_lunch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="#ffffff"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/lunchcontext"
-                    android:textColor="@color/title"
-                    android:textSize="15sp" 
-                    android:layout_marginLeft="5dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/today_lunch_one"
+                    android:src="@drawable/today_lunch_one" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/lucky_fruit"
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/todayeat_breakfastcontext"
+                        android:textColor="@color/mealname_font_subtitle_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/intent_lunch_two"
@@ -130,70 +302,135 @@
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/lunchcontext"
-                    android:textColor="@color/title"
-                    android:textSize="15sp"
-                    android:layout_marginLeft="5dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/today_lunch_two"
+                    android:src="@drawable/today_lunch_two" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/lucky_fruit"
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/todayeat_breakfastcontext"
+                        android:textColor="@color/mealname_font_subtitle_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#e5e5e5" />
+
+            <!-- 晚餐 -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dinner"
-                android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:text="@string/todayeat_dinner"
+                android:textColor="@color/frendbt_no_change"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
 
             <LinearLayout
                 android:id="@+id/intent_dinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="#ffffff"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:text="@string/dinnercontext"
-                    android:textColor="@color/title"
-                    android:textSize="15sp" 
-                    android:layout_marginLeft="5dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/today_dinner"
+                    android:src="@drawable/today_dinner" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/lucky_fruit"
+                        android:textColor="@color/frendbt_no_change"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/todayeat_breakfastcontext"
+                        android:textColor="@color/mealname_font_subtitle_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="#000000" />
+                    android:layout_weight="0.5"
+                    android:contentDescription="@drawable/intent_intent"
+                    android:src="@drawable/intent_intent" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
         </LinearLayout>
     </ScrollView>
 

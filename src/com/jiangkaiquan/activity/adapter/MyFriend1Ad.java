@@ -1,3 +1,4 @@
+
 package com.jiangkaiquan.activity.adapter;
 
 import android.annotation.TargetApi;
@@ -31,6 +32,11 @@ import java.util.HashMap;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+/**
+ * Created by jkqme on 2016/3/14.
+ */
+
 
 /**
  * Created by jkqme on 2016/3/14.
@@ -318,3 +324,4 @@ public class MyFriend1Ad extends BaseAdapter {
 		boolean isget = false;
 	}
 }
+

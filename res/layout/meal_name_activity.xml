@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhangrong.activity.MealNameActivity" >
+
+    <LinearLayout
+        android:id="@+id/mealname_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mealname_head_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/meal_name_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@color/mealname_head_bg"
+            android:onClick="dian"
+            android:src="@drawable/myrecords_return" />
+
+        <TextView
+            android:id="@+id/meal_name_textview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@color/mealname_head_bg"
+            android:gravity="center"
+            android:text="餐名"
+            android:textColor="@color/mealname_font_round_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mealname_line" >
+
+        <ListView
+            android:id="@+id/meal_name_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mealname_line" >
+        </ListView>
+    </ScrollView>
+
+</RelativeLayout>

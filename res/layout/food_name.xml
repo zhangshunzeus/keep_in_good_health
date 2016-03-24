@@ -8,15 +8,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#ffffff"
+        android:background="#23C39D"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
         android:paddingRight="20dp" >
 
         <ImageView
+            android:id="@+id/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp" />
+            android:layout_gravity="center"
+            android:src="@drawable/myrecords_return" />
 
         <TextView
             android:layout_width="0dp"
@@ -24,7 +26,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/food_name" />
+            android:text="@string/food_name"
+            android:textColor="#ffffff" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -34,7 +37,8 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="0dp"
+        android:layout_weight="1" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,16 +52,20 @@
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="#fd012d"
-                    android:scaleType="fitXY" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    
+                    android:src="@drawable/pineapple" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
                     android:padding="5dp"
-                    android:text="@string/food_name_text" />
+                    android:text="@string/food_explain"
+                    android:textColor="#969696"
+                    android:textSize="10sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -77,38 +85,69 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
 
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="70dp"
-                        android:layout_margin="10dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#fd012d" />
+                        android:orientation="vertical" >
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="70dp"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:background="#fd012d" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/food_name_one" />
 
-                    <ImageView
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_name_one"
+                            android:textColor="#969696" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="70dp"
-                        android:layout_margin="10dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#fd012d" />
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/food_name_two" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_name_two"
+                            android:textColor="#969696" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/food_name_three" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_name_three"
+                            android:textColor="#969696" />
+                    </LinearLayout>
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#dbd6d6" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/food_name_checkall" />
             </LinearLayout>
 
             <LinearLayout
@@ -121,46 +160,81 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/food_name_details" />
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/food_name_details"
+                    android:textSize="14sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/food_name_text" />
-
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:background="#dbd6d6" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/food_name_effect" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/yuan"
+                        android:gravity="center"
+                        android:text="@string/numb"
+                        android:textSize="12sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/food_name_text" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/food_name_select"
+                        android:textColor="#969696"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:background="#dbd6d6" />
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/yuan"
+                        android:gravity="center"
+                        android:text="@string/numbs"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/food_name_selects"
+                        android:textColor="#969696"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#ffffff"
+                android:orientation="vertical" >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/food_name_taboo" />
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/food_name_taboo"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/food_name_text" />
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/food_name_taboo_dit"
+                    android:textColor="#969696"
+                    android:textSize="12sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
+>>>>>>> feature/ruajiawei
 </LinearLayout>

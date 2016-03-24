@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:id="@+id/friend1_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/friendtb">
+
+        <ImageView
+            android:id="@+id/myfriend1_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/myfrind1_title_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="15dp"
+            android:text="我的好友"
+            android:textColor="@color/friendt"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/myfriend1_add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/add" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/myfriend1_friend_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="好友"
+
+            android:textColor="@color/friendbt_change"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/myfriend1_social_tx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="交流群"
+            android:textColor="@color/frendbt_no_change"
+            android:textSize="14sp"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/myfriend_line1_v"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/view_btoon"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/myfriend_line2_v"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@drawable/view_btoon"/>
+        </LinearLayout>
+    <ListView
+        android:id="@+id/myfrend1_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"></ListView>
+
+    <ListView
+        android:id="@+id/myfrend1_1v2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"
+        android:visibility="gone"></ListView>
+
+
+</LinearLayout>

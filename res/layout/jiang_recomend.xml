@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 水果按钮                                   //////////////////////////////////////////-->
+
+
+    <TextView
+        android:id="@+id/recomend1_fruit_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_launcher"
+        android:text="水果" />
+
+    <GridView
+
+        android:id="@+id/recomend1_fruit_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/recomend_chekmore_f_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="查看跟多"
+        android:visibility="gone" />
+
+
+    <!-- 肉按钮                                   //////////////////////////////////////////-->
+    <TextView
+        android:id="@+id/recomend1_flish_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_launcher"
+        android:text="肉食"
+
+        />
+
+    <GridView
+
+        android:id="@+id/recomend_flish_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/recomend_chekmore_r_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="查看跟多"
+        android:visibility="gone" />
+
+    <!--素食/////////////////////////////////////////////////////////////////-->
+    <TextView
+        android:id="@+id/recomend1_vgtable_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_launcher"
+        android:text="素食" />
+
+    <GridView
+
+        android:id="@+id/recomend_vgtable_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/recomend_chekmore_v_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="查看跟多"
+        android:visibility="gone" />
+    <!--  饮茶-->
+    <TextView
+        android:id="@+id/recomend1_tea_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_launcher"
+        android:text="饮茶"
+
+        />
+
+    <GridView
+
+        android:id="@+id/recomend_tea_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/recomend_chekmore_t_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="查看跟多"
+        android:visibility="gone" />
+</LinearLayout>

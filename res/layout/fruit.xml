@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4C4C4"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/at_the_top_of_the_background_color"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/fruit_return_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:padding="10dp"
+                    android:src="@drawable/return_btn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/fruit"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4"
+            android:orientation="vertical" >
+
+            
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/fruit_top_bg" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/pineapple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/small_pineapple"
+                    android:gravity="bottom"
+                    android:padding="5dp" >
+
+                    <TextView
+                        
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@android:color/black"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="菠萝"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pears"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/pears"
+                    android:gravity="bottom"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@android:color/black"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="梨子"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/oranges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/oranges"
+                    android:gravity="bottom"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@android:color/black"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="橙子"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/kiwi_fruit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/kiwi_fruit"
+                    android:gravity="bottom"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@android:color/black"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="猕猴桃"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/coconut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/coconut"
+                    android:gravity="bottom"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@android:color/black"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="椰子"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pitaya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/pitaya"
+                    android:gravity="bottom"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@android:color/black"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="火龙果"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+>>>>>>> feature/ruajiawei
+</LinearLayout>
