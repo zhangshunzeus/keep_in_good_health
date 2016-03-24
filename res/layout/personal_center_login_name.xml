@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@drawable/mytouxiangbeijing"
-            android:src="@drawable/mytouxiangbeijing"
+            android:src="@drawable/mytouxiangbeijing" 
             android:adjustViewBounds="true"/>
 
         <com.zhangwenbin.activity.CircleImageView
@@ -61,7 +61,7 @@
             android:layout_width="130dp"
             android:layout_height="130dp"
 			android:layout_centerInParent="true"
-            android:src="@drawable/elaborate_recommendations_two"/>
+            android:src="@drawable/meal_name_show_image"/>
 
          <TextView
             android:id="@+id/personal_not_login_intent_login"
