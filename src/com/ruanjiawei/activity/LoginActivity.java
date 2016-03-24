@@ -131,9 +131,22 @@ public class LoginActivity extends Activity {
 				login_password = (EditText) findViewById(R.id.login_password);
 				tel = login_tel.getText().toString();
 				password = login_password.getText().toString();
+				
+				if(tel==null || tel.equals("")){
+					Toast.makeText(getApplication(), "请输入手机号",
+							Toast.LENGTH_LONG).show();
+				}else{
+					if(password==null ||password.equals("")){
+						Toast.makeText(getApplication(), "请输入密码",
+								Toast.LENGTH_LONG).show();
+					}else{
+						logintools.setOnHttpListener(mListener);
+						logintools.loginAccount(tel, password);
+					}
+					
+				}
 
-				logintools.setOnHttpListener(mListener);
-				logintools.loginAccount(tel, password);
+				
 				break;
 			case R.id.myrecords_return_btn:
 				finish();
@@ -234,7 +247,20 @@ public class LoginActivity extends Activity {
 		if (ssoHandler != null) {
 			ssoHandler.authorizeCallBack(requestCode, resultCode, data);
 		}
-	}
+	}                                                                               
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

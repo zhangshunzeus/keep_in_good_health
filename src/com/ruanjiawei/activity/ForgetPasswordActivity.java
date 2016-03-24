@@ -43,8 +43,6 @@ public class ForgetPasswordActivity extends Activity {
 		getverify = (Button) findViewById(R.id.getverify);
 		getverify.setOnClickListener(click);
 	}
-	
-	
 
 	OnClickListener click = new OnClickListener() {
 
@@ -116,7 +114,7 @@ public class ForgetPasswordActivity extends Activity {
 
 				tel = forget_tel.getText().toString();
 
-				if (tel == null && tel == " ") {
+				if (tel == null || tel.equals("")) {
 					Toast.makeText(getApplication(), "请输入手机号",
 							Toast.LENGTH_LONG).show();
 				} else {
@@ -136,8 +134,14 @@ public class ForgetPasswordActivity extends Activity {
 				password = forget_password.getText().toString();
 				repassword = forget_repassword.getText().toString();
 
-				tools.setOnForgetPasswordListener(listener);
-				tools.forgerpasswordAccount(tel, verify, password, repassword);
+				if (password == null || password.equals("")) {
+					Toast.makeText(getApplication(), "请输入密码", Toast.LENGTH_LONG)
+							.show();
+				} else {
+					tools.setOnForgetPasswordListener(listener);
+					tools.forgerpasswordAccount(tel, verify, password,
+							repassword);
+				}
 
 				break;
 

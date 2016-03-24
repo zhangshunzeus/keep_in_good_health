@@ -118,12 +118,11 @@ public class RegiserActivity extends Activity {
 				register_tel = (EditText) findViewById(R.id.register_tel);
 
 				tel = register_tel.getText().toString();
-				if (tel == null && tel == " ") {
+				if (tel == null || tel.equals("")) {
 					Toast.makeText(getApplication(), "请输入手机号",
 							Toast.LENGTH_LONG).show();
 				} else {
-
-					verifyTools.setOnverifyListener(listener);
+                    verifyTools.setOnverifyListener(listener);
 					verifyTools.verifyAccount(tel);
 				}
 
@@ -138,17 +137,18 @@ public class RegiserActivity extends Activity {
 				verify = register_verify.getText().toString();
 				password = register_word.getText().toString();
 				repassword = register_reword.getText().toString();
-				if (tel == null && tel == " ") {
+				if (tel == null || tel.equals("")) {
 					Toast.makeText(getApplication(), "请输入手机号",
 							Toast.LENGTH_LONG).show();
-				}
-				if (register_word == null && password == " ") {
+				}else{
+				if (password==null ||password.equals("")) {
 					Toast.makeText(getApplication(), "请输入密码", Toast.LENGTH_LONG)
 							.show();
 				} else {
 					registerTools.setOnHttpListener(mListener);
 					registerTools.registerAccount(tel, verify, password,
 							repassword);
+				}
 				}
 
 				break;
