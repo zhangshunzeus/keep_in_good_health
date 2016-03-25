@@ -843,6 +843,7 @@ public final class R {
         public static final int my_records_send_shop=0x7f060041;
         public static final int my_records_take_delivered=0x7f060042;
         public static final int my_records_title=0x7f06003f;
+        public static final int name=0x7f0600c0;
         public static final int nice=0x7f0600b6;
         public static final int numb=0x7f0600b8;
         public static final int numbs=0x7f0600b9;
