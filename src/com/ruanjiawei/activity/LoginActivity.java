@@ -1,6 +1,7 @@
 package com.ruanjiawei.activity;
 
 import java.util.Map;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.ruanjiawei.demo.LoginTools;
@@ -18,7 +19,7 @@ import com.ruanjiawei.demo.SaveToken;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.PersonalCenterLoginName;
-
+import com.zhangwenbin.activity.PersonalCenterNotLogin;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -94,7 +95,9 @@ public class LoginActivity extends Activity {
 					if (jo.getInt("status") == 1) {
 						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
+
 								PersonalCenterLoginName.class);
+
 						startActivity(intent);
 						
 					} else {
@@ -129,9 +132,22 @@ public class LoginActivity extends Activity {
 				login_password = (EditText) findViewById(R.id.login_password);
 				tel = login_tel.getText().toString();
 				password = login_password.getText().toString();
+				
+				if(tel==null || tel.equals("")){
+					Toast.makeText(getApplication(), "请输入手机号",
+							Toast.LENGTH_LONG).show();
+				}else{
+					if(password==null ||password.equals("")){
+						Toast.makeText(getApplication(), "请输入密码",
+								Toast.LENGTH_LONG).show();
+					}else{
+						logintools.setOnHttpListener(mListener);
+						logintools.loginAccount(tel, password);
+					}
+					
+				}
 
-				logintools.setOnHttpListener(mListener);
-				logintools.loginAccount(tel, password);
+				
 				break;
 			case R.id.myrecords_return_btn:
 				finish();
@@ -232,7 +248,20 @@ public class LoginActivity extends Activity {
 		if (ssoHandler != null) {
 			ssoHandler.authorizeCallBack(requestCode, resultCode, data);
 		}
-	}
+	}                                                                               
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

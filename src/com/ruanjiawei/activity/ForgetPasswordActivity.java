@@ -20,7 +20,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-
 public class ForgetPasswordActivity extends Activity {
 
 	ImageView myrecords_return_btn;
@@ -37,8 +36,8 @@ public class ForgetPasswordActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.forget_password);
 		forget_finish = (Button) findViewById(R.id.forget_finish);
-		myrecords_return_btn = (ImageView) findViewById (R.id.myrecords_return_btn);
-		
+		myrecords_return_btn = (ImageView) findViewById(R.id.myrecords_return_btn);
+
 		myrecords_return_btn.setOnClickListener(click);
 		forget_finish.setOnClickListener(click);
 		getverify = (Button) findViewById(R.id.getverify);
@@ -115,7 +114,7 @@ public class ForgetPasswordActivity extends Activity {
 
 				tel = forget_tel.getText().toString();
 
-				if (tel == null && tel == " ") {
+				if (tel == null || tel.equals("")) {
 					Toast.makeText(getApplication(), "请输入手机号",
 							Toast.LENGTH_LONG).show();
 				} else {
@@ -134,16 +133,21 @@ public class ForgetPasswordActivity extends Activity {
 				verify = forget_verify.getText().toString();
 				password = forget_password.getText().toString();
 				repassword = forget_repassword.getText().toString();
-				
-				tools.setOnForgetPasswordListener(listener);
-				tools.forgerpasswordAccount(tel, verify, password, repassword);
-				
+
+				if (password == null || password.equals("")) {
+					Toast.makeText(getApplication(), "请输入密码", Toast.LENGTH_LONG)
+							.show();
+				} else {
+					tools.setOnForgetPasswordListener(listener);
+					tools.forgerpasswordAccount(tel, verify, password,
+							repassword);
+				}
+
 				break;
 
 			case R.id.myrecords_return_btn:
 				finish();
 				break;
-
 
 			default:
 				break;
