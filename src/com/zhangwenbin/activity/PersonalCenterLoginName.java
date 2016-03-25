@@ -68,14 +68,8 @@ public class PersonalCenterLoginName extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.home_page:
-				//Intent intent_homepage = new Intent();
-				//intent_homepage.setClass(PersonalCenterLoginName.this, HomePageActivity.class);
-				//startActivity(intent_homepage);
 				break;
 			case R.id.classify:
-				//Intent intent_class = new Intent();
-				//intent_class.setClass(PersonalCenterLoginName.this, CommonDiseasesListForDetailsAcitivty.class);
-				//startActivity(intent_class);
 				break;
 			}
 		}

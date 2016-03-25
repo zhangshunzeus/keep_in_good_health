@@ -17,6 +17,8 @@ import com.ruanjiawei.activity.LoginActivity;
 import com.ruanjiawei.demo.SaveToken;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
+import com.zhangwenbin.activity.PersonalCenterLoginName;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -92,7 +94,7 @@ public class LoginActivity extends Activity {
 					if (jo.getInt("status") == 1) {
 						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
-								MoreActivity.class);
+								PersonalCenterLoginName.class);
 						startActivity(intent);
 						
 					} else {
