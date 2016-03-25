@@ -283,6 +283,7 @@ public class PersonalInformationActivity extends Activity {
 	/**
 	 * 绑定支付宝
 	 * */
+	
 	private void dialog_binding_alipay(){
 		
 		LayoutInflater factory = LayoutInflater.from(PersonalInformationActivity.this);
