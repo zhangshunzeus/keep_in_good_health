@@ -230,7 +230,7 @@ public class PersonalInformationActivity extends Activity {
 		LayoutInflater factory = LayoutInflater.from(PersonalInformationActivity.this);
         final View textEntryView = factory.inflate(R.layout.dialog_binding_qq_number, null);
          AlertDialog dlg = new AlertDialog.Builder(PersonalInformationActivity.this)
-           .setTitle("请输入手机号")
+           .setTitle("请输入QQ号")
              .setView(textEntryView)
                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                  public void onClick(DialogInterface dialog, int whichButton) {
@@ -263,7 +263,7 @@ public class PersonalInformationActivity extends Activity {
              .setView(textEntryView)
                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                  public void onClick(DialogInterface dialog, int whichButton) {
-                  EditText secondPwd = (EditText) textEntryView.findViewById(R.id.edit_dialog_binding_qq_number);
+                  EditText secondPwd = (EditText) textEntryView.findViewById(R.id.edit_dialog_the_binding_of_sina_weibo);
                    String inputPwd = secondPwd.getText().toString();
                     setTitle(inputPwd);
                      TextView tv=(TextView)findViewById(R.id.The_binding_of_sina_weibo_text);

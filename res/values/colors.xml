@@ -4,8 +4,8 @@
     <color name="title">#474747</color>
     <color name="blue">#1EA000</color>
     <color name="wite">#ffffff</color>
-    <color name="btn_exit_bg_no">#E94141</color>
-    <color name="btn_exit_bg">#AA0404</color>
+    <color name="btn_exit_bg_no">#00FF4A</color>
+    <color name="btn_exit_bg">#0F8C34</color>
 
     <!-- friend 色值设置 -->
 
