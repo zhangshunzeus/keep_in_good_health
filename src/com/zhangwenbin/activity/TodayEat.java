@@ -47,7 +47,7 @@ public class TodayEat extends Activity {
 				break;
 				
 			case R.id.intent_breakfast:
-				Intent intent_breakfast = new Intent();
+				Intent intent_breakfast = new Intent(TodayEat.this,PersonalCenterLoginName.class);
 				startActivity(intent_breakfast);
 				break;
 			case R.id.intent_lunch:

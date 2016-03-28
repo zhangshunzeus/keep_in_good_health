@@ -1,28 +1,22 @@
 package com.zhangwenbin.activity;
 
-import android.annotation.SuppressLint;
+import com.jiangkaiquan.activity.MyFriend1;
+import com.ruanjiawei.activity.LoginActivity;
+import com.zhangshun.activity.MyCollectionActivity;
+import com.zhangshun.activity.SetUpTheActivity;
+import com.zhangshun.activity.TheShoppingCartActivity;
+import com.zhangshun.keep_in_good_health.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
-
-import com.jiangkaiquan.activity.MyFriend1;
-import com.ruanjiawei.activity.LoginActivity;
-import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
-import com.zhangshun.activity.HomePageActivity;
-import com.zhangshun.activity.MyCollectionActivity;
-import com.zhangshun.activity.SetUpTheActivity;
-import com.zhangshun.activity.TheShoppingCartActivity;
-import com.zhangshun.keep_in_good_health.R;
 				/*我的（未登錄）頁面*/
 public class PersonalCenterNotLogin extends Activity {
 	LinearLayout intentMyRecords;

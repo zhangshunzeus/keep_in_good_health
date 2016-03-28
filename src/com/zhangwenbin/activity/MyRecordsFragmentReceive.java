@@ -48,6 +48,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		listView = (ListView) getView().findViewById(R.id.my_records_listview);
 		getData();
+		//sendResultRecponse();
 		adapter = new MyRecordsAdapter(data, getActivity());
 		listView.setAdapter(adapter);
 
@@ -90,31 +91,45 @@ public class MyRecordsFragmentReceive extends Fragment {
 
 	public void sendResultRecponse() {
 		new Thread(new Runnable() {
-			//使用HTTPclient请求数据响应，并调用getjsonobject（）方法经行数据解析
+			// 使用HTTPclient请求数据响应，并调用getjsonobject（）方法经行数据解析
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
 				BasicHttpParams basicHttpParams = new BasicHttpParams();
 				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
 				HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
-				
+
 				try {
 					HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
-					HttpGet httpGet = new HttpGet("http://www.baidu.com/");
+					HttpGet httpGet = new HttpGet("http://127.0.0.1/index.php/home/api/changeser");
 					httpClient.execute(httpGet);
 					HttpResponse httpResponse = httpClient.execute(httpGet);
 					if (httpResponse.getStatusLine().getStatusCode() == 200) {
 						HttpEntity entity = httpResponse.getEntity();
 						String response = EntityUtils.toString(entity, "utf-8");
-
-						getJsonObject(response);
-
+						JSONArray jsonArray=new JSONArray(response);
+						for (int i = 0; i < jsonArray.length(); i++) {
+							JSONObject jsonObject =jsonArray.getJSONObject(i);
+							MyRecordsDemo demo = new MyRecordsDemo();
+							demo.setMy_records_shop_name(jsonObject.getString("name"));
+							demo.setMy_records_list_goodsstates(jsonObject.getString("sendstates"));
+							demo.setMy_records_content(jsonObject.getString("content"));
+							demo.setMy_records_shop_money(jsonObject.getString("money"));
+							demo.setMy_records_shop_number(jsonObject.getString("number"));
+							demo.setMy_records_shop_type(jsonObject.getString("type"));
+							data.add(demo);
+							Log.i("my_", demo + "");
+						}
+				
 					}
 					Log.i("my", httpResponse + "");
 				} catch (ClientProtocolException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
@@ -124,34 +139,33 @@ public class MyRecordsFragmentReceive extends Fragment {
 
 	public void sendResultPost() {
 		new Thread(new Runnable() {
-			//使用post向服务器传递数据，发送请求信息
+			// 使用post向服务器传递数据，发送请求信息
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				BasicHttpParams basicHttpParams=new BasicHttpParams();
+				BasicHttpParams basicHttpParams = new BasicHttpParams();
 				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
 				HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
-				
-				HttpClient httpClient=new DefaultHttpClient();
-				HttpPost httpPost=new HttpPost();
-				List<NameValuePair> valuePairs=new ArrayList<NameValuePair>();
-				valuePairs.add(new BasicNameValuePair("tel","12345678910"));
-				valuePairs.add(new BasicNameValuePair("password", "123456"));
+
+				HttpClient httpClient = new DefaultHttpClient();
+				HttpPost httpPost = new HttpPost();
+				List<NameValuePair> valuePairs = new ArrayList<NameValuePair>();
+				valuePairs.add(new BasicNameValuePair("id", "1"));
+				// valuePairs.add(new BasicNameValuePair("password", "123456"));
 				UrlEncodedFormEntity entity;
 				try {
-					entity = new UrlEncodedFormEntity(valuePairs,"utf-8");
+					entity = new UrlEncodedFormEntity(valuePairs, "utf-8");
 					httpPost.setEntity(entity);
 				} catch (UnsupportedEncodingException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
 				try {
 					httpClient.execute(httpPost);
-					HttpResponse httpResponse=httpClient.execute(httpPost);
-					if (httpResponse.getStatusLine().getStatusCode()==200) {
-						HttpEntity httpEntity=httpResponse.getEntity();
-						String response=EntityUtils.toString(httpEntity);
+					HttpResponse httpResponse = httpClient.execute(httpPost);
+					if (httpResponse.getStatusLine().getStatusCode() == 200) {
+						HttpEntity httpEntity = httpResponse.getEntity();
+						String response = EntityUtils.toString(httpEntity);
 						Log.i("my_ok", response);
 					}
 				} catch (ClientProtocolException e) {
@@ -163,7 +177,6 @@ public class MyRecordsFragmentReceive extends Fragment {
 				}
 			}
 		}).start();
-
 	}
 
 	public void getJsonObject(String jsonData) {
