@@ -25,7 +25,7 @@ public class PaymentInterfaceActivity extends Activity implements OnClickListene
 	private String shopName=null;
 	
 
-    @Override
+    @Override 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         BP.init(this, "dd89992e72fed0a3878494fc468a3c92");

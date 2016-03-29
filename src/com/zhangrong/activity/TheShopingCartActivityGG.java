@@ -63,12 +63,6 @@ public class TheShopingCartActivityGG  extends Activity{
 	        }
 	        adapter=new ListPayAdapter(this, data);
 	        lv.setAdapter(adapter);
-		
-		
-		
-		
-		
-		
 	}
 	public void box_all(View view){
 
