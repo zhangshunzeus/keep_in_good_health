@@ -1,9 +1,11 @@
 package com.zhangrong.activity;
 
 import java.util.ArrayList;
+
 import com.zhangrong.adapter.ListPayAdapter;
 import com.zhangrong.example.ListPayInfo;
 import com.zhangshun.keep_in_good_health.R;
+
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;

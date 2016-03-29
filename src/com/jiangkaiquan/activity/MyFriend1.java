@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiConfiguration;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;

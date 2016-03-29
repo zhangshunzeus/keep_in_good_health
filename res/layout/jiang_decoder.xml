@@ -8,8 +8,7 @@
         android:id="@+id/qrdecoderview"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        />
+        android:layout_centerInParent="true" />
 
     <TextView
         android:id="@+id/exampleTextView"
@@ -18,9 +17,8 @@
         android:layout_above="@id/qrdecoderview"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-       
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
+    <!--
     <ImageView
         android:id="@+id/red_line_image"
         android:layout_width="200dp"
@@ -28,5 +26,6 @@
         android:layout_alignLeft="@id/qrdecoderview"
         android:layout_below="@+id/exampleTextView"
         android:src="@drawable/red_line" />
+    -->
 
 </RelativeLayout>

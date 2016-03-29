@@ -1,5 +1,7 @@
 package com.zhangrong.activity;
 
+
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +12,15 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import java.io.BufferedReader;
+
 import com.zhangshun.keep_in_good_health.R;
+
 import c.b.BP;
 import c.b.PListener;
+
+
 
 public class PaymentInterfaceActivity extends Activity implements OnClickListener{
 	private ImageView payment_back;
