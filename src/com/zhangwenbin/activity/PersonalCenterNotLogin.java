@@ -134,10 +134,10 @@ public class PersonalCenterNotLogin extends Activity {
 		Log.i("CheckIsLogin", "token=" + token);
 		if (token == null || token.equals("")) {// 判断获取的token值是否为空
 			Log.i("CheckIsLogin", "当前没有处于登录状态");
-			judgeUnLongin();
+			judgeUnLongin();   // 没有登录的方法
 		} else {
 			// 不为空，则显示个人信息
-			judgeLongin();
+			judgeLongin();   //登录成功的方法
 		}
 	}
 
