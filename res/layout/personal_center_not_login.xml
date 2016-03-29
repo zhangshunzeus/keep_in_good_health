@@ -75,6 +75,7 @@
                     android:background="@drawable/frame_check_login"
                     android:text="@string/person_not_login"
                     android:textColor="#ffffff"
+                    android:alpha="0.5"
                     android:textSize="15sp" />
             </RelativeLayout>
 
