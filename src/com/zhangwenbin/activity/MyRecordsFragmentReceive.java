@@ -28,6 +28,8 @@ import com.zhangshun.keep_in_good_health.R;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -47,12 +49,27 @@ public class MyRecordsFragmentReceive extends Fragment {
 		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
 		listView = (ListView) getView().findViewById(R.id.my_records_listview);
-		getData();
-		//sendResultRecponse();
-		adapter = new MyRecordsAdapter(data, getActivity());
-		listView.setAdapter(adapter);
+		// getData();
+
+		mTask.execute("fdsa");
 
 	}
+
+	AsyncTask<String, String, Context> mTask = new AsyncTask<String, String, Context>() {
+
+		@Override
+		protected Context doInBackground(String... arg0) {
+			// TODO Auto-generated method stub
+			Log.i("onActivity", "=========");
+			sendResultRecponse();
+			return getActivity();
+		}
+
+		protected void onPostExecute(Context result) {
+
+		};
+
+	};
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -90,51 +107,61 @@ public class MyRecordsFragmentReceive extends Fragment {
 	}
 
 	public void sendResultRecponse() {
-		new Thread(new Runnable() {
-			// 使用HTTPclient请求数据响应，并调用getjsonobject（）方法经行数据解析
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				BasicHttpParams basicHttpParams = new BasicHttpParams();
-				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
-				HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
 
-				try {
-					HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
-					HttpGet httpGet = new HttpGet("http://127.0.0.1/index.php/home/api/changeser");
-					httpClient.execute(httpGet);
-					HttpResponse httpResponse = httpClient.execute(httpGet);
-					if (httpResponse.getStatusLine().getStatusCode() == 200) {
-						HttpEntity entity = httpResponse.getEntity();
-						String response = EntityUtils.toString(entity, "utf-8");
-						JSONArray jsonArray=new JSONArray(response);
-						for (int i = 0; i < jsonArray.length(); i++) {
-							JSONObject jsonObject =jsonArray.getJSONObject(i);
-							MyRecordsDemo demo = new MyRecordsDemo();
-							demo.setMy_records_shop_name(jsonObject.getString("name"));
-							demo.setMy_records_list_goodsstates(jsonObject.getString("sendstates"));
-							demo.setMy_records_content(jsonObject.getString("content"));
-							demo.setMy_records_shop_money(jsonObject.getString("money"));
-							demo.setMy_records_shop_number(jsonObject.getString("number"));
-							demo.setMy_records_shop_type(jsonObject.getString("type"));
-							data.add(demo);
-							Log.i("my_", demo + "");
-						}
-				
-					}
-					Log.i("my", httpResponse + "");
-				} catch (ClientProtocolException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+		// 使用HTTPclient请求数据响应，并调用getjsonobject（）方法经行数据解析
+
+		// TODO Auto-generated method stub
+		BasicHttpParams basicHttpParams = new BasicHttpParams();
+		HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
+		HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
+
+		try {
+			HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
+			HttpGet httpGet = new HttpGet("http://192.168.11.247/index.php/home/api/changeser");
+			httpClient.execute(httpGet);
+			HttpResponse httpResponse = httpClient.execute(httpGet);
+			if (httpResponse.getStatusLine().getStatusCode() == 200) {
+				HttpEntity entity = httpResponse.getEntity();
+				String response = EntityUtils.toString(entity, "utf-8");
+				JSONArray jsonArray = new JSONArray(response);
+				for (int i = 0; i < jsonArray.length(); i++) {
+					JSONObject jsonObject = jsonArray.getJSONObject(i);
+					MyRecordsDemo demo = new MyRecordsDemo();
+					String name = jsonObject.getString("name");
+					String sendstates = jsonObject.getString("sendstates");
+					String content = jsonObject.getString("content");
+					String money = jsonObject.getString("money");
+					String number = jsonObject.getString("number");
+					String type = jsonObject.getString("type");
+					demo.setMy_records_shop_name(name);
+					demo.setMy_records_list_goodsstates(sendstates);
+					demo.setMy_records_content(content);
+					demo.setMy_records_shop_money(money);
+					demo.setMy_records_shop_number(number);
+					demo.setMy_records_shop_type(type);
+					data.add(demo);
+					Log.i("name", name + "");
+					Log.i("sendstates", sendstates + "");
+					Log.i("content", content + "");
+					Log.i("money", money + "");
+					Log.i("number", number + "");
+					Log.i("type", type + "");
 				}
+				adapter = new MyRecordsAdapter(data, getActivity());
+				listView.setAdapter(adapter);
+
 			}
-		});
+			Log.i("my", httpResponse + "");
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void sendResultPost() {
@@ -179,24 +206,4 @@ public class MyRecordsFragmentReceive extends Fragment {
 		}).start();
 	}
 
-	public void getJsonObject(String jsonData) {
-		// 解析json数据
-		JSONArray jsonArray;
-		try {
-			jsonArray = new JSONArray(jsonData);
-			for (int i = 0; i < jsonArray.length(); i++) {
-				JSONObject jsonObject = jsonArray.getJSONObject(i);
-				String id = jsonObject.getString("id");
-				String name = jsonObject.getString("name");
-				String money = jsonObject.getString("money");
-				Log.i("my_id", id);
-				Log.i("my_name", name);
-				Log.i("my_money", money);
-			}
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
 }
