@@ -204,7 +204,7 @@ public class LoginActivity extends Activity {
 									Toast.LENGTH_LONG).show();
 						}
 					}
-
+ 
 					@Override
 					public void onCancel(SHARE_MEDIA platform) {
 						Toast.makeText(LoginActivity.this, "授权取消",
