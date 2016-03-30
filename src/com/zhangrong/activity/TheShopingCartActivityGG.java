@@ -43,7 +43,7 @@ public class TheShopingCartActivityGG  extends Activity{
 	        text2= (TextView) findViewById(R.id.textTwo);
 	       // 准备数据
 	        int[] imageData={R.drawable.commodity_imger1,R.drawable.commodity_imger2,R.drawable.commodity_imger3};
-	        double[] price={0.01,0.02,0.03};
+	        double[] price={28.0,30,25.6};
 	        int[] shopping_number={1,3,2};
 	        String[] shopping_name={"金银花茶","蜜蜂糖","养生健康茶"};
 	        String[] shopping_content={"金银花茶价格是28.0元","蜜蜂糖是30元一罐","健康茶是25.6元"};
@@ -63,12 +63,6 @@ public class TheShopingCartActivityGG  extends Activity{
 	        }
 	        adapter=new ListPayAdapter(this, data);
 	        lv.setAdapter(adapter);
-		
-		
-		
-		
-		
-		
 	}
 	public void box_all(View view){
 
