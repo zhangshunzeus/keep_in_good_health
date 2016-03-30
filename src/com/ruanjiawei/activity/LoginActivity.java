@@ -4,6 +4,8 @@ import java.util.Map;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.jiangkaiquan.aplication.MyApplaication;
 import com.ruanjiawei.demo.LoginTools;
 import com.ruanjiawei.demo.LoginTools.OnHttpListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
@@ -36,6 +38,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
+	MyApplaication app;
 	// 整个平台的Controller,负责管理整个SDK的配置、操作等处理
 	private UMSocialService mController = UMServiceFactory
 			.getUMSocialService(Constants.DESCRIPTOR);
@@ -49,22 +52,24 @@ public class LoginActivity extends Activity {
 	private ImageView sinaLoginButton;
 	private ImageView qqLoginButton;
 	private ImageView wechatLoginButton;
-	
-	SaveToken saveToken=new SaveToken();
+
+	SaveToken saveToken = new SaveToken();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		app = (MyApplaication) getApplication();
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.login);
 		login_register = (TextView) findViewById(R.id.login_register);
 		forget_password = (TextView) findViewById(R.id.forget_password);
 
-		myrecords_return_btn = (ImageView) findViewById (R.id.myrecords_return_btn);
+		myrecords_return_btn = (ImageView) findViewById(R.id.myrecords_return_btn);
 		sinaLoginButton = (ImageView) this.findViewById(R.id.btn_sina_login);
 		qqLoginButton = (ImageView) this.findViewById(R.id.btn_qq_login);
-		wechatLoginButton = (ImageView) this.findViewById(R.id.btn_wechat_login);
+		wechatLoginButton = (ImageView) this
+				.findViewById(R.id.btn_wechat_login);
 		sinaLoginButton.setOnClickListener(l);
 		qqLoginButton.setOnClickListener(l);
 		wechatLoginButton.setOnClickListener(l);
@@ -73,8 +78,7 @@ public class LoginActivity extends Activity {
 		login_register.setOnClickListener(l);
 		login_btn = (Button) findViewById(R.id.login_btn);
 		login_btn.setOnClickListener(l);
-		
-		
+
 	}
 
 	OnClickListener l = new OnClickListener() {
@@ -93,13 +97,15 @@ public class LoginActivity extends Activity {
 				try {
 					JSONObject jo = new JSONObject(result);
 					if (jo.getInt("status") == 1) {
-						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
+						saveToken.saveToken(getApplicationContext(),
+								jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
 
-								PersonalCenterLoginName.class);
-
+						PersonalCenterLoginName.class);
+						// 保存token
+						app.user.setToken(jo.getString("token"));
 						startActivity(intent);
-						
+
 					} else {
 						Toast.makeText(getApplication(),
 								jo.getString("message"), Toast.LENGTH_LONG)
@@ -132,44 +138,46 @@ public class LoginActivity extends Activity {
 				login_password = (EditText) findViewById(R.id.login_password);
 				tel = login_tel.getText().toString();
 				password = login_password.getText().toString();
-				
-				if(tel==null || tel.equals("")){
+
+				if (tel == null || tel.equals("")) {
 					Toast.makeText(getApplication(), "请输入手机号",
 							Toast.LENGTH_LONG).show();
-				}else{
-					if(password==null ||password.equals("")){
+				} else {
+					if (password == null || password.equals("")) {
 						Toast.makeText(getApplication(), "请输入密码",
 								Toast.LENGTH_LONG).show();
-					}else{
+					} else {
 						logintools.setOnHttpListener(mListener);
 						logintools.loginAccount(tel, password);
+						app.user.setPhoneNum(tel);
+						app.user.setPassword(password);
+
 					}
-					
+
 				}
 
-				
 				break;
 			case R.id.myrecords_return_btn:
 				finish();
 				break;
-				
+
 			case R.id.btn_sina_login: // 新浪微博登录
 				login(SHARE_MEDIA.SINA);
 				break;
-			case R.id.btn_qq_login: //  qq登录
+			case R.id.btn_qq_login: // qq登录
 				login(SHARE_MEDIA.QQ);
 				break;
 			case R.id.btn_wechat_login: // 微信登陆
 				login(SHARE_MEDIA.WEIXIN);
 				break;
-				
+
 			default:
 				break;
 
 			}
 		}
 	};
-	
+
 	/**
 	 * 授权。如果授权成功，则获取用户信息
 	 * 
@@ -238,7 +246,6 @@ public class LoginActivity extends Activity {
 				});
 	}
 
-
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -248,22 +255,6 @@ public class LoginActivity extends Activity {
 		if (ssoHandler != null) {
 			ssoHandler.authorizeCallBack(requestCode, resultCode, data);
 		}
-	}                                                                               
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
+	}
 
+}

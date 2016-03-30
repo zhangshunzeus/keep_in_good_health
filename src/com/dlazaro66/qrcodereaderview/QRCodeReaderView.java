@@ -64,17 +64,21 @@ import java.io.IOException;
 public class QRCodeReaderView extends SurfaceView implements
 		SurfaceHolder.Callback, Camera.PreviewCallback {
 	private Handler handler = new Handler() {
+		// 自定义类的局部变量
+		int i = 70;
+
 		@Override
 		public void handleMessage(Message msg) {
 			// TODO Auto-generated method stub
-			for (int i = 0; i < 5; i++) {
-				Y = heights * i;
-				if (i == 5) {
-					i = 0;
-				}
-				invalidate();
-			}
 
+			Log.i("MyviewHander", heights + "");
+			if (i == 70) {
+				matrix.setTranslate(0, 0);
+				i = 1;
+			}
+			i++;
+			invalidate();
+			sendEmptyMessageDelayed(1, 60);
 		}
 	};
 
@@ -99,13 +103,16 @@ public class QRCodeReaderView extends SurfaceView implements
 
 	public QRCodeReaderView(Context context) {
 		super(context);
+		handler.sendEmptyMessage(1);
 		init();
 	}
 
 	public QRCodeReaderView(Context context, AttributeSet attrs) {
+		
 		super(context, attrs);
-		init();
 		handler.sendEmptyMessage(1);
+		init();
+		
 	}
 
 	public void setOnQRCodeReadListener(
@@ -338,7 +345,7 @@ public class QRCodeReaderView extends SurfaceView implements
 	}
 
 	private float heights = getHeight() / 5;
-	private float Y=0;
+	private float Y = 0;
 	Paint paint = new Paint();
 	Matrix matrix = new Matrix();
 
@@ -349,9 +356,16 @@ public class QRCodeReaderView extends SurfaceView implements
 	public void draw(Canvas canvas) {
 		// TODO Auto-generated method stub
 
-		matrix.setTranslate(0, Y);
-
-		canvas.drawBitmap(bitmap, matrix, paint);
 		super.draw(canvas);
+		float b[] = new float[9];
+		matrix.getValues(b);
+
+		for (int i = 0; i < 6;) {
+			// 打印坐标
+			Log.i("matrix", b[i] + "  " + b[i++] + "  " + b[i++]);
+
+		}
+		matrix.postTranslate(0, 4);
+		canvas.drawBitmap(bitmap, matrix, paint);
 	}
 }

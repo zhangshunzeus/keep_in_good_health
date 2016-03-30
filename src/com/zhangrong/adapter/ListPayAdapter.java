@@ -92,6 +92,7 @@ public class ListPayAdapter extends BaseAdapter {
                          */
                     Log.i("pay","ID:"+v.getId());
                     if(viewHolder.Future_generations_box.isChecked()) {
+                    	//将activity 拿到adpter里
                         TheShopingCartActivityGG activity = (TheShopingCartActivityGG) context;
                         View view = activity.getLayoutInflater().inflate(R.layout.theshopingcat_activity, null);
                         text1 = (TextView) view.findViewById(R.id.text1);

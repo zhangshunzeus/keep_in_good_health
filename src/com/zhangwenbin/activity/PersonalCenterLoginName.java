@@ -1,6 +1,7 @@
 package com.zhangwenbin.activity;
 
 import com.jiangkaiquan.activity.MyFriend;
+import com.jiangkaiquan.aplication.MyApplaication;
 import com.ruanjiawei.activity.LoginActivity;
 import com.zhangshun.activity.MyCollectionActivity;
 import com.zhangshun.activity.PersonalInformationActivity;
@@ -19,7 +20,12 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-
+import android.widget.TextView;
+/**
+ * 修改个人信息后跳转回的页面
+ * @author jkqme
+ *
+ */
 public class PersonalCenterLoginName extends Activity {
 	LinearLayout intentMyRecords;
 	LinearLayout intentMyFriend;
@@ -31,16 +37,23 @@ public class PersonalCenterLoginName extends Activity {
 	ImageView intentSetUp;
 	Button my_friend_new_tx, my_friend_issue_group_tx;
 	ImageView head_intent_login;
+	TextView userName;
+	ImageView headImg;
+
+	MyApplaication app;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_login_name);
-		/*intentHomePage = (RadioButton) findViewById(R.id.home_page);
-		intentHomePage.setOnCheckedChangeListener(listener);
-		intentClassify = (RadioButton) findViewById(R.id.classify);
-		intentClassify.setOnCheckedChangeListener(listener);*/
+		/*
+		 * intentHomePage = (RadioButton) findViewById(R.id.home_page);
+		 * intentHomePage.setOnCheckedChangeListener(listener); intentClassify =
+		 * (RadioButton) findViewById(R.id.classify);
+		 * intentClassify.setOnCheckedChangeListener(listener);
+		 */
+		app = (MyApplaication) getApplication();
 
 		intentMyCollection = (LinearLayout) findViewById(R.id.loginname_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
@@ -55,9 +68,10 @@ public class PersonalCenterLoginName extends Activity {
 		intentSetUp = (ImageView) findViewById(R.id.loginname_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
 
+		userName = (TextView) findViewById(R.id.personal_not_login_intent_login);
+
 		head_intent_login = (ImageView) findViewById(R.id.loginname_touxiang_intent_login);
 		head_intent_login.setOnClickListener(onClickListener);
-
 
 	}
 
@@ -82,39 +96,49 @@ public class PersonalCenterLoginName extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			/*跳转登陆*/
+			/* 跳转登陆 */
 			case R.id.loginname_touxiang_intent_login:
-				Intent intent_login = new Intent(PersonalCenterLoginName.this, LoginActivity.class);
+				Intent intent_login = new Intent(PersonalCenterLoginName.this,
+						LoginActivity.class);
 				startActivity(intent_login);
 				break;
-				/*跳转设置*/
+			/* 跳转设置 */
 			case R.id.loginname_intent_setup:
-				Intent intent_setup = new Intent(PersonalCenterLoginName.this, SetUpTheActivity.class);
+				Intent intent_setup = new Intent(PersonalCenterLoginName.this,
+						SetUpTheActivity.class);
 				startActivity(intent_setup);
 				break;
-				/*跳转我的收藏*/
+			/* 跳转我的收藏 */
 			case R.id.loginname_intent_mycollection:
-				Intent intent_mycollection = new Intent(PersonalCenterLoginName.this, MyCollectionActivity.class);
+				Intent intent_mycollection = new Intent(
+						PersonalCenterLoginName.this,
+						MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
-				/*跳转我的朋友*/
+			/* 跳转我的朋友 */
 			case R.id.loginname_intent_myfriend:
-				Intent intent = new Intent(PersonalCenterLoginName.this, MyFriend.class);
+				Intent intent = new Intent(PersonalCenterLoginName.this,
+						MyFriend.class);
 				startActivity(intent);
 				break;
-				/*跳转我的记录*/
+			/* 跳转我的记录 */
 			case R.id.loginname_intent_myrecords:
-				Intent intent_myrecords = new Intent(PersonalCenterLoginName.this, MyRecords.class);
+				Intent intent_myrecords = new Intent(
+						PersonalCenterLoginName.this, MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
-				/*跳转购物车*/
+			/* 跳转购物车 */
 			case R.id.loginname_intent_shoppingcart:
-				Intent intent_shopingcart = new Intent(PersonalCenterLoginName.this, TheShoppingCartActivity.class);
+				Intent intent_shopingcart = new Intent(
+						PersonalCenterLoginName.this,
+						TheShoppingCartActivity.class);
 				startActivity(intent_shopingcart);
 				break;
-				/*跳转个人信息*/
+			/* 跳转个人信息 */
 			case R.id.loginname_intent_vip:
-				Intent intent_vippage = new Intent(PersonalCenterLoginName.this, PersonalInformationActivity.class);
+				Intent intent_vippage = new Intent(
+						PersonalCenterLoginName.this,
+						PersonalInformationActivity.class);
 				startActivity(intent_vippage);
 				break;
 
@@ -125,5 +149,30 @@ public class PersonalCenterLoginName extends Activity {
 		}
 	};
 
-}
+	/**
+	 * 设置跳转到个人中心时用户的头像和昵称显示
+	 */
+	private void SetLoginState() {
+		// 设置昵称
+		if (app.user.getUserName() != null && app.user.getUserName() != "") {
 
+			userName.setText(app.user.getUserName());
+
+		} else if (app.user.getPhoneNum() != null
+				&& app.user.getPhoneNum() != "") {
+
+			userName.setText(app.user.getPhoneNum());
+		}
+
+		// 设置头像
+		if (app.user.getUserImg() != null) {
+			head_intent_login.setImageBitmap(app.user.getUserImg());
+		}
+	}
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		SetLoginState();
+		super.onResume();
+	}
+}
