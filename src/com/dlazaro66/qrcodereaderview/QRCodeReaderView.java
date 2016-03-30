@@ -77,8 +77,9 @@ public class QRCodeReaderView extends SurfaceView implements
 				i = 1;
 			}
 			i++;
-			invalidate();
-			sendEmptyMessageDelayed(1, 60);
+
+			// sendEmptyMessageDelayed(1, 60);
+			draw();
 		}
 	};
 
@@ -108,11 +109,11 @@ public class QRCodeReaderView extends SurfaceView implements
 	}
 
 	public QRCodeReaderView(Context context, AttributeSet attrs) {
-		
+
 		super(context, attrs);
 		handler.sendEmptyMessage(1);
 		init();
-		
+
 	}
 
 	public void setOnQRCodeReadListener(
@@ -153,7 +154,7 @@ public class QRCodeReaderView extends SurfaceView implements
 	@Override
 	public void surfaceCreated(SurfaceHolder holder) {
 		try {
-			// Indicate camera, our View dimensions
+			// Indicate camera, our View dimensions打开相机驱动
 			mCameraManager
 					.openDriver(holder, this.getWidth(), this.getHeight());
 		} catch (IOException e) {
@@ -162,12 +163,14 @@ public class QRCodeReaderView extends SurfaceView implements
 		}
 
 		try {
-			mQRCodeReader = new QRCodeReader();
+			mQRCodeReader = new QRCodeReader();// 相机开始烧苗
 			mCameraManager.startPreview();
+
 		} catch (Exception e) {
 			Log.e(TAG, "Exception: " + e.getMessage());
 			mCameraManager.closeDriver();
 		}
+		//handler.sendEmptyMessageDelayed(1, 60);
 	}
 
 	@Override
@@ -180,6 +183,7 @@ public class QRCodeReaderView extends SurfaceView implements
 	}
 
 	// Called when camera take a frame
+	// 获取到相机捕获的图像
 	@Override
 	public void onPreviewFrame(byte[] data, Camera camera) {
 
@@ -187,9 +191,11 @@ public class QRCodeReaderView extends SurfaceView implements
 				data, mPreviewWidth, mPreviewHeight);
 
 		HybridBinarizer hybBin = new HybridBinarizer(source);
+		// 获取图像
 		BinaryBitmap bitmap = new BinaryBitmap(hybBin);
 
 		try {
+			// 解析图像
 			Result result = mQRCodeReader.decode(bitmap);
 
 			// Notify we found a QRCode
@@ -352,20 +358,37 @@ public class QRCodeReaderView extends SurfaceView implements
 	Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
 			R.drawable.red_line);
 
-	@Override
-	public void draw(Canvas canvas) {
-		// TODO Auto-generated method stub
+	/*
+	 * 画扫描线
+	 */
+	public void draw() {
 
-		super.draw(canvas);
-		float b[] = new float[9];
-		matrix.getValues(b);
+		new Thread(new Runnable() {
 
-		for (int i = 0; i < 6;) {
-			// 打印坐标
-			Log.i("matrix", b[i] + "  " + b[i++] + "  " + b[i++]);
+			@Override
+			public void run() {
+				Canvas canvas = null;
+				// TODO Auto-generated method stub
+				try {
+					canvas = mHolder.lockCanvas();
+					float b[] = new float[9];
+					matrix.getValues(b);
 
-		}
-		matrix.postTranslate(0, 4);
-		canvas.drawBitmap(bitmap, matrix, paint);
+					for (int i = 0; i < 6;) {
+						// 打印坐标
+						Log.i("matrix", b[i] + "  " + b[i++] + "  " + b[i++]);
+
+					}
+					matrix.postTranslate(0, 4);
+					canvas.drawBitmap(bitmap, matrix, paint);
+					canvas.drawLine(0, 0, 100, 100, paint);
+				} catch (Exception e) {
+					e.printStackTrace();
+				} finally {
+					mHolder.unlockCanvasAndPost(canvas);
+				}
+			}
+		}).start();
+
 	}
 }

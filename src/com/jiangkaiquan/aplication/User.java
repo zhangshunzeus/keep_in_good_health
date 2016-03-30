@@ -11,6 +11,7 @@ import android.graphics.Bitmap;
  * 
  */
 public class User {
+
 	private String userName;
 	private String userToken;
 	private Bitmap userImg;

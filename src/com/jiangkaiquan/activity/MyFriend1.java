@@ -23,6 +23,8 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.jiangkaiquan.activity.adapter.MyFriend1Ad;
 import com.jiangkaiquan.activity.adapter.NetUrl;
 import com.zhangshun.keep_in_good_health.R;
@@ -30,6 +32,7 @@ import com.zhangshun.keep_in_good_health.R;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -347,8 +350,11 @@ public class MyFriend1 extends Activity {
 			connection.setReadTimeout(5000);
 			connection.setConnectTimeout(5000);
 			connection.setRequestMethod("GET");
-
-			connection.connect();
+			try{
+			connection.connect();}catch(ConnectException e){
+				Toast.makeText(this, "网络故障", 2000);
+				return null;
+			}
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					connection.getInputStream()));
 			if (connection.getResponseCode() == 200) {

@@ -14,6 +14,12 @@ import com.dlazaro66.qrcodereaderview.QRCodeReaderView;
 import com.dlazaro66.qrcodereaderview.QRCodeReaderView.OnQRCodeReadListener;
 import com.zhangshun.keep_in_good_health.R;
 
+/**
+ * 监听是view 传人值，在activity里获取
+ * 
+ * @author jkqme
+ * 
+ */
 public class DecoderActivity extends Activity implements OnQRCodeReadListener {
 
 	private TextView myTextView;
