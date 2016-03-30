@@ -31,7 +31,9 @@ import android.app.Fragment;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +45,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 	ListView listView;
 	ArrayList<MyRecordsDemo> data = new ArrayList<MyRecordsDemo>();
 	MyRecordsAdapter adapter;
+	String url="http://192.168.11.247/index.php/home/api/changeser";
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -50,7 +53,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		listView = (ListView) getView().findViewById(R.id.my_records_listview);
 		// getData();
-
+		
 		mTask.execute("fdsa");
 
 	}
@@ -61,7 +64,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		protected Context doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
 			Log.i("onActivity", "=========");
-			sendResultRecponse();
+			sendResultRecponse(url);
 			return getActivity();
 		}
 
@@ -77,7 +80,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		return inflater.inflate(R.layout.my_records_receive, container, false);
 
 	}
-
+	
 	public void getData() {
 		for (int i = 0; i < 3; i++) {
 			// myrecords的listview数据
@@ -106,7 +109,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		}
 	}
 
-	public void sendResultRecponse() {
+	public void sendResultRecponse(String url) {
 
 		// 使用HTTPclient请求数据响应，并调用getjsonobject（）方法经行数据解析
 
@@ -117,7 +120,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 
 		try {
 			HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
-			HttpGet httpGet = new HttpGet("http://192.168.11.247/index.php/home/api/changeser");
+			HttpGet httpGet = new HttpGet(url);
 			httpClient.execute(httpGet);
 			HttpResponse httpResponse = httpClient.execute(httpGet);
 			if (httpResponse.getStatusLine().getStatusCode() == 200) {

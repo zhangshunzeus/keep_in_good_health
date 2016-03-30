@@ -75,7 +75,7 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordimage = (ImageView) view.findViewById(R.id.my_records_image);
 			holder.myrecordcontent = (TextView) view.findViewById(R.id.my_records_content);
 			holder.myrecordshoptype = (TextView) view.findViewById(R.id.my_records_shop_type);
-			holder.myrecordshopnumber = (TextView) view.findViewById(R.id.my_records_shop_type);
+			holder.myrecordshopnumber = (TextView) view.findViewById(R.id.my_records_shop_number);
 			holder.myrecordshopmoney = (TextView) view.findViewById(R.id.my_records_shop_money);
 			holder.myrecordchangereceive = (CheckBox) view.findViewById(R.id.my_records_change_receiving);
 			
