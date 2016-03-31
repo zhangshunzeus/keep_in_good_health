@@ -139,8 +139,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7" />
-
-    <RadioGroup
+    
+     <RadioGroup
         android:id="@+id/my_records_return_home"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -183,5 +183,5 @@
             android:text="@string/my_btn"
             android:textColor="@drawable/selector_text_style"
             android:textSize="12sp" />
-    </RadioGroup>
+    </RadioGroup> 
 </LinearLayout>

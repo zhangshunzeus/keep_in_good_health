@@ -58,7 +58,7 @@ public class MyFriend1 extends Activity {
 	private TextView friend;
 	private TextView social;
 	private PopupWindow pwind;
-
+ 
 	private ListView listview;
 	private ListView listView2;
 	private MyFriend1Ad adpter;

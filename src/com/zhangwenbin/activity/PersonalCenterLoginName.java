@@ -1,16 +1,43 @@
 package com.zhangwenbin.activity;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+
 import com.jiangkaiquan.activity.MyFriend;
 import com.jiangkaiquan.aplication.MyApplaication;
-import com.ruanjiawei.activity.LoginActivity;
 import com.zhangshun.activity.MyCollectionActivity;
 import com.zhangshun.activity.PersonalInformationActivity;
 import com.zhangshun.activity.SetUpTheActivity;
 import com.zhangshun.activity.TheShoppingCartActivity;
 import com.zhangshun.keep_in_good_health.R;
+
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -42,11 +69,18 @@ public class PersonalCenterLoginName extends Activity {
 
 	MyApplaication app;
 
+	private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
+	private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
+	private static final int PHOTO_REQUEST_CUT = 3;// 结果
+	// 创建一个以当前时间为名称的文件
+	File tempFile = new File(Environment.getExternalStorageDirectory(), getPhotoFileName());
+
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_login_name);
+
 		/*
 		 * intentHomePage = (RadioButton) findViewById(R.id.home_page);
 		 * intentHomePage.setOnCheckedChangeListener(listener); intentClassify =
@@ -54,6 +88,7 @@ public class PersonalCenterLoginName extends Activity {
 		 * intentClassify.setOnCheckedChangeListener(listener);
 		 */
 		app = (MyApplaication) getApplication();
+
 
 		intentMyCollection = (LinearLayout) findViewById(R.id.loginname_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
@@ -82,8 +117,16 @@ public class PersonalCenterLoginName extends Activity {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
 			case R.id.home_page:
+				// Intent intent_homepage = new Intent();
+				// intent_homepage.setClass(PersonalCenterLoginName.this,
+				// HomePageActivity.class);
+				// startActivity(intent_homepage);
 				break;
 			case R.id.classify:
+				// Intent intent_class = new Intent();
+				// intent_class.setClass(PersonalCenterLoginName.this,
+				// CommonDiseasesListForDetailsAcitivty.class);
+				// startActivity(intent_class);
 				break;
 			}
 		}
@@ -96,11 +139,17 @@ public class PersonalCenterLoginName extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
+
 			/* 跳转登陆 */
-			case R.id.loginname_touxiang_intent_login:
+			/*case R.id.loginname_touxiang_intent_login:
 				Intent intent_login = new Intent(PersonalCenterLoginName.this,
 						LoginActivity.class);
 				startActivity(intent_login);
+				break;*/
+			/* 设置头像 */
+			case R.id.loginname_touxiang_intent_login:
+				showDialog();
+
 				break;
 			/* 跳转设置 */
 			case R.id.loginname_intent_setup:
@@ -174,5 +223,129 @@ public class PersonalCenterLoginName extends Activity {
 		// TODO Auto-generated method stub
 		SetLoginState();
 		super.onResume();
+	}
+
+	// 对话框
+	public void showDialog() {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("头像设置");
+		builder.setPositiveButton("拍照", new DialogInterface.OnClickListener() {
+
+			@TargetApi(Build.VERSION_CODES.CUPCAKE)
+			@SuppressLint("InlinedApi")
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				dialog.dismiss();
+				// 调用系统的拍照功能
+				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				// 指定调用相机拍照后照片的储存路径
+				intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(tempFile));
+				startActivityForResult(intent, PHOTO_REQUEST_TAKEPHOTO);
+			}
+		});
+		builder.setNegativeButton("相册", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface arg0, int arg1) {
+				// TODO Auto-generated method stub
+				arg0.dismiss();
+				Intent intent = new Intent(Intent.ACTION_PICK, null);
+				intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+				startActivityForResult(intent, PHOTO_REQUEST_GALLERY);
+			}
+		}).show();
+
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		switch (requestCode) {
+		case PHOTO_REQUEST_TAKEPHOTO:
+			startPhotoZoom(Uri.fromFile(tempFile), 80);
+			break;
+		case PHOTO_REQUEST_GALLERY:
+			if (data != null)
+				startPhotoZoom(data.getData(), 80);
+			break;
+		case PHOTO_REQUEST_CUT:
+			if (data != null)
+				setPicToView(data);
+			break;
+		default:
+			break;
+		}
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+
+	public void startPhotoZoom(Uri uri, int size) {
+		Intent intent = new Intent("com.android.camera.action.CROP");
+		intent.setDataAndType(uri, "image/*");
+		// crop为true是设置在开启的intent中设置显示的view可以剪裁
+		intent.putExtra("crop", "true");
+		// aspectX aspectY 是宽高的比例
+		intent.putExtra("aspectX", 1);
+		intent.putExtra("aspectY", 1);
+		// outputX,outputY 是剪裁图片的宽高
+		intent.putExtra("outputX", size);
+		intent.putExtra("outputY", size);
+		intent.putExtra("return-data", true);
+		startActivityForResult(intent, PHOTO_REQUEST_CUT);
+	}
+
+	@SuppressLint("NewApi")
+
+	// 将进行剪裁后的图片显示到UI界面上
+	public void setPicToView(Intent picdata) {
+		Bundle bundle = picdata.getExtras();
+		if (bundle != null) {
+			Bitmap photo = bundle.getParcelable("data");
+			// Drawable drawable = new BitmapDrawable(photo);
+			head_intent_login.setImageBitmap(photo);
+		}
+	}
+
+	@SuppressLint("SimpleDateFormat")
+	// 使用系统当前日期加以调整作为照片的名称
+	public String getPhotoFileName() {
+		Date date = new Date(System.currentTimeMillis());
+		SimpleDateFormat format = new SimpleDateFormat("'IMG'_yyyyMMdd_HHmmss");
+		String datatime = format.format(date) + ".jpg";
+		return datatime;
+	}
+
+	public void sendResponsePost() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				BasicHttpParams basicHttpParams = new BasicHttpParams();
+				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
+				HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
+
+				HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
+				HttpPost httpPost = new HttpPost();
+				List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+				pairs.add(new BasicNameValuePair("", ""));
+				try {
+					UrlEncodedFormEntity entity = new UrlEncodedFormEntity(pairs);
+					httpPost.setEntity(entity);
+					httpClient.execute(httpPost);
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		});
 	}
 }

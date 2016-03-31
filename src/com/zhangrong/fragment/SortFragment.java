@@ -21,7 +21,7 @@ public class SortFragment extends android.support.v4.app.Fragment implements
 	private android.support.v4.app.FragmentTransaction tran;
 	private SortFragmentRight righet;
 	private RadioGroup group;
-
+ 
 	private SortFragmentRighX righX;
 	private RadioButton radio3;
 	private RadioButton radio1;

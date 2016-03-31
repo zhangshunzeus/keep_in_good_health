@@ -75,13 +75,12 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordimage = (ImageView) view.findViewById(R.id.my_records_image);
 			holder.myrecordcontent = (TextView) view.findViewById(R.id.my_records_content);
 			holder.myrecordshoptype = (TextView) view.findViewById(R.id.my_records_shop_type);
-			holder.myrecordshopnumber = (TextView) view.findViewById(R.id.my_records_shop_type);
+			holder.myrecordshopnumber = (TextView) view.findViewById(R.id.my_records_shop_number);
 			holder.myrecordshopmoney = (TextView) view.findViewById(R.id.my_records_shop_money);
 			holder.myrecordchangereceive = (CheckBox) view.findViewById(R.id.my_records_change_receiving);
 			
 			view.setTag(holder);
 			holder.myrecordchangereceive.setOnClickListener(new OnClickListener() {
-
 				@Override
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
@@ -91,19 +90,17 @@ public class MyRecordsAdapter extends BaseAdapter {
 				}				
 			});
 		}
-		
 			holder = (ViewHolderMyRecords) view.getTag();
 			MyRecordsDemo myRecordsDemo_one = data.get(position);
 			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
 			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
+			holder.myrecordimage.setImageBitmap(myRecordsDemo_one.getImage());
 			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
 
 		return view;
-
 	}
 	class ViewHolderMyRecords {
 		ImageView myrecordimage;
@@ -116,7 +113,5 @@ public class MyRecordsAdapter extends BaseAdapter {
 		CheckBox myrecordchangereceive;
 		CheckBox myrecordchangereceiveyes;
 		
-
 	}
-
 }

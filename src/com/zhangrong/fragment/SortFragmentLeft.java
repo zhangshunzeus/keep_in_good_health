@@ -25,7 +25,7 @@ public class SortFragmentLeft extends Fragment {
     private ListView lv;
     private ArrayList<SortFragmentLeftinfo> info = new ArrayList<SortFragmentLeftinfo>();
     private SortFragmentLeftinfo data;
-
+ 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sortfragment_left, container, false);

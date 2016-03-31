@@ -1,21 +1,20 @@
 package com.zhangrong.activity;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import java.util.ArrayList;
+/*
+*   这个是程序的主界面   进入之后，自动加载这个类
+ */
 
 import com.zhangrong.fragment.HomepageFragment;
 import com.zhangrong.fragment.MyFragment;
 import com.zhangrong.fragment.SortFragment;
 import com.zhangshun.keep_in_good_health.R;
 
-import java.util.ArrayList;
-/*
-*   这个是程序的主界面   进入之后，自动加载这个类
- */
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.widget.RadioGroup;
 
 public class MainActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener {
 	private RadioGroup group; //这界面的radiogroup
@@ -35,8 +34,8 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
 		loadFragmentIniv();
 
 	}
+	// 这个是初始化，button和fragment的一些工作的
 
-	//这个是初始化，button和fragment的一些工作的
 	private void loadFragmentIniv() {
 		group = (RadioGroup) findViewById(R.id.radio_group);
 		group.setOnCheckedChangeListener(this);

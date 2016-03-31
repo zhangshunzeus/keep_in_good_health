@@ -13,5 +13,5 @@ public class SuggestionsForDetailsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.suggestions_for_details_activity);
 	}
-	
+
 }

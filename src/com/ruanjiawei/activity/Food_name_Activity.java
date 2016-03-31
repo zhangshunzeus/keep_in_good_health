@@ -23,7 +23,7 @@ public class Food_name_Activity extends Activity {
 		black = (ImageView) findViewById(R.id.black);
 		black.setOnClickListener(l);
 	}
-
+ 
 	OnClickListener l = new OnClickListener() {
 
 		@Override

@@ -37,7 +37,6 @@ public class TheShoppingCartActivity extends Activity {
 		the_shopping_cart_return_btn.setOnClickListener(click);
 
 	}
-
 	private void getData() {
 
 		for (int i = 0; i < 3; i++) {

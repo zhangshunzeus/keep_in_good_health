@@ -29,7 +29,7 @@ public class Rcomend2 extends Activity {
     private TextView fruit2_1;
     private TextView fruit3;
     private TextView fruit4;
-    //子项图片
+    //子项图片 
     private ImageView food[] = new ImageView[5];
     private ImageView food1;
     private ImageView food2;

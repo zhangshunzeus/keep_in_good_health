@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zhangshun.keep_in_good_health.R;
-
+ 
 /**
  * 这个fragment是，我的板块中的展示fragment，
  * 它加载的是我的板块布局

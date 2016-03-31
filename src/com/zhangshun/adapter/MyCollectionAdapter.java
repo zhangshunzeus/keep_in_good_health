@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MyCollectionAdapter extends BaseAdapter {
-	
+
 	Context context;
 	LayoutInflater mInflater;
 	ArrayList<MyCollectionDemo>list;

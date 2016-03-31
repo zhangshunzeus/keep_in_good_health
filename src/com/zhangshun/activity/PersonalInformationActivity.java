@@ -1,7 +1,6 @@
 package com.zhangshun.activity;
 
 import com.jiangkaiquan.aplication.MyApplaication;
-import com.jiangkaiquan.aplication.User;
 import com.zhangshun.keep_in_good_health.R;
 
 import android.app.Activity;
@@ -18,7 +17,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class PersonalInformationActivity extends Activity {
 

@@ -3,7 +3,7 @@ package com.zhangwenbin.activity;
 import com.zhangrong.activity.MainActivity;
 import com.zhangshun.activity.HomePageActivity;
 import com.zhangshun.keep_in_good_health.R;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -30,6 +31,7 @@ public class MyRecords extends Activity {
 	FragmentManager manager;
 	RadioGroup radioGroup;
 	RadioButton btnAll, btnPayMoney, btnSend, btnReceive, btnComment;//5个链接fragment按钮
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -38,9 +40,11 @@ public class MyRecords extends Activity {
 		setContentView(R.layout.my_records);
 		/*用于跳转监听*/
 		return_home = (RadioGroup) findViewById(R.id.my_records_return_home);
-		return_home.setOnCheckedChangeListener(listener);
+		//return_home.setOnClickListener(listener);
 		intentClassify = (RadioButton) findViewById(R.id.myrecords_intent_classify);
+		//intentClassify.setOnClickListener(listener);
 		intentHomePage = (RadioButton) findViewById(R.id.myrecords_intent_homepage);
+		//intentHomePage.setOnClickListener(listener);
 		/*返回监听*/
 		intentLoginName = (ImageView) findViewById(R.id.myrecords_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
@@ -72,7 +76,8 @@ public class MyRecords extends Activity {
 	}
 
 	OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
-
+		//监听fragment页面转换
+		@SuppressLint("NewApi")
 		@Override
 		public void onCheckedChanged(RadioGroup arg0, int arg1) {
 			// TODO Auto-generated method stub
@@ -94,20 +99,6 @@ public class MyRecords extends Activity {
 			case R.id.rb_comment:
 				transaction.show(myfragment[4]).commit();
 				break;
-
-			default:
-				break;
-			}
-		}
-
-	};
-
-	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
-
-		@Override
-		public void onCheckedChanged(RadioGroup arg0, int arg1) {
-			// TODO Auto-generated method stub
-			switch (arg0.getId()) {
 			case R.id.myrecords_intent_classify:
 				Intent intent_classify = new Intent(MyRecords.this, MainActivity.class);
 				startActivity(intent_classify);
@@ -116,13 +107,12 @@ public class MyRecords extends Activity {
 				Intent intent_homepage = new Intent(MyRecords.this, HomePageActivity.class);
 				startActivity(intent_homepage);
 				break;
+
 			default:
 				break;
 			}
 		}
-
 	};
-
 	OnClickListener onClickListener = new OnClickListener() {
 
 		@Override

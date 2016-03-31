@@ -65,7 +65,7 @@ public class MyFriend1Ad extends BaseAdapter {
 	boolean hasget = false;
 
 	public MyFriend1Ad() {
-
+ 
 	}
 
 	public MyFriend1Ad(ArrayList<HashMap<String, String>> list,

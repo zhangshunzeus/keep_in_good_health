@@ -29,7 +29,6 @@ public class Produce_detail extends Activity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.jiang_produce_detail);
     }
-
     private void loadWedige() {
         back = (ImageView) findViewById(R.id.produce_detail_back_img);
         back.setOnClickListener(listener);

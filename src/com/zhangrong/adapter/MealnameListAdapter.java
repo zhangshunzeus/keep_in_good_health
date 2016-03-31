@@ -25,7 +25,7 @@ public class MealnameListAdapter extends BaseAdapter {
         this.mealnameData = mealnameData;
 
     }
-
+ 
     @Override
     public int getCount() {
         return 1;
