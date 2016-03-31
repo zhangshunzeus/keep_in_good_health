@@ -51,7 +51,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 	ListView listView;
 	ArrayList<MyRecordsDemo> data = new ArrayList<MyRecordsDemo>();
 	MyRecordsAdapter adapter;
-	String url="http://192.168.11.247/index.php/home/api/changeser";
+	String url="http://192.168.11.247/index.php/home/api/myrecordslist";
 	
 
 	@Override
