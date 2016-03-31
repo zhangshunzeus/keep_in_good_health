@@ -63,25 +63,6 @@ import java.io.IOException;
  */
 public class QRCodeReaderView extends SurfaceView implements
 		SurfaceHolder.Callback, Camera.PreviewCallback {
-	private Handler handler = new Handler() {
-		// 自定义类的局部变量
-		int i = 70;
-
-		@Override
-		public void handleMessage(Message msg) {
-			// TODO Auto-generated method stub
-
-			Log.i("MyviewHander", heights + "");
-			if (i == 70) {
-				matrix.setTranslate(0, 0);
-				i = 1;
-			}
-			i++;
-
-			// sendEmptyMessageDelayed(1, 60);
-			draw();
-		}
-	};
 
 	public interface OnQRCodeReadListener {
 
@@ -104,14 +85,14 @@ public class QRCodeReaderView extends SurfaceView implements
 
 	public QRCodeReaderView(Context context) {
 		super(context);
-		handler.sendEmptyMessage(1);
+
 		init();
 	}
 
 	public QRCodeReaderView(Context context, AttributeSet attrs) {
 
 		super(context, attrs);
-		handler.sendEmptyMessage(1);
+
 		init();
 
 	}
@@ -127,10 +108,12 @@ public class QRCodeReaderView extends SurfaceView implements
 
 	@SuppressWarnings("deprecation")
 	private void init() {
+		// 是否可获取相机
 		if (checkCameraHardware(getContext())) {
 			mCameraManager = new CameraManager(getContext());
 
 			mHolder = this.getHolder();
+			// 返回试图
 			mHolder.addCallback(this);
 			mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS); // Need to
 																		// set
@@ -155,6 +138,7 @@ public class QRCodeReaderView extends SurfaceView implements
 	public void surfaceCreated(SurfaceHolder holder) {
 		try {
 			// Indicate camera, our View dimensions打开相机驱动
+			// 加载到surface view
 			mCameraManager
 					.openDriver(holder, this.getWidth(), this.getHeight());
 		} catch (IOException e) {
@@ -170,10 +154,11 @@ public class QRCodeReaderView extends SurfaceView implements
 			Log.e(TAG, "Exception: " + e.getMessage());
 			mCameraManager.closeDriver();
 		}
-		//handler.sendEmptyMessageDelayed(1, 60);
+		// handler.sendEmptyMessageDelayed(1, 60);
 	}
 
 	@Override
+	// 销毁
 	public void surfaceDestroyed(SurfaceHolder holder) {
 		Log.d(TAG, "surfaceDestroyed");
 		mCameraManager.getCamera().setPreviewCallback(null);
@@ -315,6 +300,7 @@ public class QRCodeReaderView extends SurfaceView implements
 	@TargetApi(Build.VERSION_CODES.FROYO)
 	@SuppressLint("NewApi")
 	@SuppressWarnings("deprecation")
+	// 控制画框旋转
 	public static void setCameraDisplayOrientation(Context context,
 			android.hardware.Camera camera) {
 		if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.GINGERBREAD) {
@@ -350,45 +336,4 @@ public class QRCodeReaderView extends SurfaceView implements
 		}
 	}
 
-	private float heights = getHeight() / 5;
-	private float Y = 0;
-	Paint paint = new Paint();
-	Matrix matrix = new Matrix();
-
-	Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-			R.drawable.red_line);
-
-	/*
-	 * 画扫描线
-	 */
-	public void draw() {
-
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				Canvas canvas = null;
-				// TODO Auto-generated method stub
-				try {
-					canvas = mHolder.lockCanvas();
-					float b[] = new float[9];
-					matrix.getValues(b);
-
-					for (int i = 0; i < 6;) {
-						// 打印坐标
-						Log.i("matrix", b[i] + "  " + b[i++] + "  " + b[i++]);
-
-					}
-					matrix.postTranslate(0, 4);
-					canvas.drawBitmap(bitmap, matrix, paint);
-					canvas.drawLine(0, 0, 100, 100, paint);
-				} catch (Exception e) {
-					e.printStackTrace();
-				} finally {
-					mHolder.unlockCanvasAndPost(canvas);
-				}
-			}
-		}).start();
-
-	}
 }
