@@ -1,7 +1,11 @@
 package com.zhangwenbin.activity;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +33,8 @@ import com.zhangshun.keep_in_good_health.R;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -46,6 +52,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 	ArrayList<MyRecordsDemo> data = new ArrayList<MyRecordsDemo>();
 	MyRecordsAdapter adapter;
 	String url="http://192.168.11.247/index.php/home/api/changeser";
+	
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -85,7 +92,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		for (int i = 0; i < 3; i++) {
 			// myrecords的listview数据
 			MyRecordsDemo myRecord = new MyRecordsDemo();
-			myRecord.setImage(R.drawable.myrecords_picture_one);
+			//myRecord.setImage(R.drawable.myrecords_picture_one);
 			myRecord.setMy_records_shop_name("欧姆龙专卖店");
 			myRecord.setMy_records_list_goodsstates("店家已发货");
 			myRecord.setMy_records_content("OMRON欧姆龙红外耳饰体温计");
@@ -136,12 +143,14 @@ public class MyRecordsFragmentReceive extends Fragment {
 					String money = jsonObject.getString("money");
 					String number = jsonObject.getString("number");
 					String type = jsonObject.getString("type");
+					String image=jsonObject.getString("image");
 					demo.setMy_records_shop_name(name);
 					demo.setMy_records_list_goodsstates(sendstates);
 					demo.setMy_records_content(content);
 					demo.setMy_records_shop_money(money);
 					demo.setMy_records_shop_number(number);
 					demo.setMy_records_shop_type(type);
+					demo.setImage(getPic(image));
 					data.add(demo);
 					Log.i("name", name + "");
 					Log.i("sendstates", sendstates + "");
@@ -166,6 +175,31 @@ public class MyRecordsFragmentReceive extends Fragment {
 			e.printStackTrace();
 		}
 	}
+	
+	// 传输网络图片
+	public Bitmap getPic(String urlImage) {
+	    URL imageUrl = null;
+	    Bitmap bitmap = null;
+	    try {
+	        imageUrl = new URL(urlImage);
+	    } catch (MalformedURLException e) {
+	        e.printStackTrace();
+	    }
+	    try {
+	        HttpURLConnection conn = (HttpURLConnection) imageUrl
+	                .openConnection();
+	        conn.connect();
+	        InputStream is = conn.getInputStream();
+	        bitmap = BitmapFactory.decodeStream(is);
+	 
+	        is.close();
+	 
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	    return bitmap;
+	}
+
 
 	public void sendResultPost() {
 		new Thread(new Runnable() {

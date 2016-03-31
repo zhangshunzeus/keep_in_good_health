@@ -96,7 +96,7 @@ public class MyRecordsAdapter extends BaseAdapter {
 			MyRecordsDemo myRecordsDemo_one = data.get(position);
 			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
 			holder.myrecordgoodstates.setText(myRecordsDemo_one.getMy_records_list_goodsstates());
-			holder.myrecordimage.setImageResource(myRecordsDemo_one.getImage());
+			holder.myrecordimage.setImageBitmap(myRecordsDemo_one.getImage());
 			holder.myrecordcontent.setText(myRecordsDemo_one.getMy_records_content());
 			holder.myrecordshoptype.setText(myRecordsDemo_one.getMy_records_shop_type());
 			holder.myrecordshopnumber.setText(myRecordsDemo_one.getMy_records_shop_number());
