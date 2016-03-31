@@ -9,10 +9,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+import com.jiangkaiquan.aplication.MyApplaication;
 
-
-
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.os.AsyncTask;
+import android.os.Build;
+import android.util.Log;
 
 public class LoginTools {
 
@@ -20,6 +23,7 @@ public class LoginTools {
 	public static String LOGIN_URL = "login";
 	String login;
 	String message;
+
 	public int status = 0;
 
 	public void loginAccount(String tel, String password) {
@@ -27,6 +31,7 @@ public class LoginTools {
 	}
 
 	private String postconn(String tel, String password) {
+
 		StringBuilder builder = new StringBuilder(); // 初始化一个Stringbuilder
 		String httpHost = "http://192.168.11.241/index.php/home/api/login";
 		String urltel = "tel=";
@@ -34,11 +39,12 @@ public class LoginTools {
 
 		URL url;
 		try {
-			String urlName = httpHost + "?" + urltel +tel + "&" + passwordkey
+			String urlName = httpHost + "?" + urltel + tel + "&" + passwordkey
 					+ password; // url资源地址
 			url = new URL(urlName);
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			
+			HttpURLConnection connection = (HttpURLConnection) url
+					.openConnection();
+
 			connection.setRequestMethod("GET");
 			connection.setReadTimeout(5000);
 			connection.connect();
@@ -53,11 +59,12 @@ public class LoginTools {
 					line = bufferedReader.readLine(); // 读取出来
 					login = builder.toString();
 				}
-				
+
 				inputStream.close();
 				bufferedReader.close();
-				
+
 				login = builder.toString();
+				Log.i("LoginTools====>用户信息", login);
 				return login;
 			}
 
@@ -75,10 +82,12 @@ public class LoginTools {
 
 	OnHttpListener mListener;
 
+	@SuppressLint("NewApi")
 	public void setOnHttpListener(OnHttpListener mListener) {
 		this.mListener = mListener;
 	}
 
+	@TargetApi(Build.VERSION_CODES.CUPCAKE)
 	class AnyTask extends AsyncTask<String, Void, String> {
 
 		@Override
@@ -98,6 +107,7 @@ public class LoginTools {
 	public interface OnHttpListener {
 		void start();
 
+		// 获取用户登录后的信息
 		void end(String result);
 
 	}

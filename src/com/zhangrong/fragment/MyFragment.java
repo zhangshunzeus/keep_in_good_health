@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.jiangkaiquan.activity.MyFriend1;
+import com.jiangkaiquan.aplication.MyApplaication;
 import com.ruanjiawei.activity.LoginActivity;
 import com.zhangrong.activity.TheShopingCartActivityGG;
 import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
@@ -35,35 +36,48 @@ import com.zhangwenbin.activity.PersonalCenterNotLogin;
  * @创建时间 2016-03-09
  */
 public class MyFragment extends Fragment {
+	MyApplaication app;
 	LinearLayout intentMyRecords;
 	LinearLayout intentMyFriend;
 	LinearLayout intentMyCollection;
 	LinearLayout intentShopCart;
 	LinearLayout intentVIP;
 	ImageView intentSetUp;
+	ImageView userImg;
 	Button my_friend_new_tx, my_friend_issue_group_tx;
 	TextView intentLogin;
+	TextView userName;
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// 拿到本地application
+		app = (MyApplaication) getActivity().getApplication();
+		View view = inflater.inflate(R.layout.personal_center_not_login,
+				container, false);
 
-		View view = inflater.inflate(R.layout.personal_center_not_login, container, false);
-
-		intentMyCollection = (LinearLayout) view.findViewById(R.id.notlogin_intent_mycollection);
+		intentMyCollection = (LinearLayout) view
+				.findViewById(R.id.notlogin_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
-		intentMyFriend = (LinearLayout) view.findViewById(R.id.notlogin_intent_myfriend);
+		intentMyFriend = (LinearLayout) view
+				.findViewById(R.id.notlogin_intent_myfriend);
 		intentMyFriend.setOnClickListener(onClickListener);
-		intentMyRecords = (LinearLayout) view.findViewById(R.id.notlogin_intent_myrecords);
+		intentMyRecords = (LinearLayout) view
+				.findViewById(R.id.notlogin_intent_myrecords);
 		intentMyRecords.setOnClickListener(onClickListener);
-		intentShopCart = (LinearLayout) view.findViewById(R.id.notlogin_intent_shoppingcart);
+		intentShopCart = (LinearLayout) view
+				.findViewById(R.id.notlogin_intent_shoppingcart);
 		intentShopCart.setOnClickListener(onClickListener);
 		intentVIP = (LinearLayout) view.findViewById(R.id.notlogin_intent_vip);
 		intentVIP.setOnClickListener(onClickListener);
 		intentSetUp = (ImageView) view.findViewById(R.id.notlogin_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
-		intentLogin = (TextView) view.findViewById(R.id.personal_not_login_intent_login);
+		intentLogin = (TextView) view
+				.findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setOnClickListener(onClickListener);
-
+		userName = (TextView) view.findViewById(R.id.user_name);
+		userImg = (ImageView) view.findViewById(R.id.no_login_touxiang_intent_);
+		SetLoginState();
 		return view;
 	}
 
@@ -75,12 +89,14 @@ public class MyFragment extends Fragment {
 			switch (arg0.getId()) {
 
 			case R.id.notlogin_intent_setup:
-				Intent intent_setup = new Intent(getActivity(), SetUpTheActivity.class);
+				Intent intent_setup = new Intent(getActivity(),
+						SetUpTheActivity.class);
 				startActivity(intent_setup);
 				break;
 
 			case R.id.notlogin_intent_mycollection:
-				Intent intent_mycollection = new Intent(getActivity(), MyCollectionActivity.class);
+				Intent intent_mycollection = new Intent(getActivity(),
+						MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
 
@@ -90,19 +106,23 @@ public class MyFragment extends Fragment {
 				break;
 
 			case R.id.notlogin_intent_myrecords:
-				Intent intent_myrecords = new Intent(getActivity(), MyRecords.class);
+				Intent intent_myrecords = new Intent(getActivity(),
+						MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
 			case R.id.notlogin_intent_shoppingcart:
-				Intent intent_shopingcart = new Intent(getActivity(), TheShopingCartActivityGG.class);
+				Intent intent_shopingcart = new Intent(getActivity(),
+						TheShopingCartActivityGG.class);
 				startActivity(intent_shopingcart);
 				break;
 			case R.id.notlogin_intent_vip:
-				Intent intent_vippage = new Intent(getActivity(), PersonalInformationActivity.class);
+				Intent intent_vippage = new Intent(getActivity(),
+						PersonalInformationActivity.class);
 				startActivity(intent_vippage);
 				break;
 			case R.id.personal_not_login_intent_login:
-				Intent intent_login = new Intent(getActivity(), LoginActivity.class);
+				Intent intent_login = new Intent(getActivity(),
+						LoginActivity.class);
 				startActivity(intent_login);
 				break;
 
@@ -113,4 +133,26 @@ public class MyFragment extends Fragment {
 		}
 	};
 
+	/**
+	 * 设置跳转到个人中心时用户的头像和昵称显示
+	 */
+	private void SetLoginState() {
+		// 设置昵称
+		if (app.user.getUserName() != null && app.user.getUserName() != "") {
+			intentLogin.setVisibility(View.GONE);
+			userName.setVisibility(View.VISIBLE);
+			userName.setText(app.user.getUserName());
+
+		} else if (app.user.getPhoneNum() != null
+				&& app.user.getPhoneNum() != "") {
+			intentLogin.setVisibility(View.GONE);
+			userName.setVisibility(View.VISIBLE);
+			userName.setText(app.user.getPhoneNum());
+		}
+
+		// 设置头像
+		if (app.user.getUserImg() != null) {
+			userImg.setImageBitmap(app.user.getUserImg());
+		}
+	}
 }

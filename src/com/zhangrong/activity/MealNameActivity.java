@@ -1,17 +1,19 @@
 package com.zhangrong.activity;
 
-import java.util.ArrayList;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.ruanjiawei.activity.Food_name_Activity;
 import com.zhangrong.adapter.MealnameListAdapter;
 import com.zhangrong.example.MealnameInfo;
 import com.zhangshun.keep_in_good_health.R;
+import com.zhangwenbin.activity.TodayEat;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.ListView;
+import java.util.ArrayList;
 
 /**
  * Created by zhang on 2016/3/10.
@@ -21,7 +23,6 @@ public class MealNameActivity extends Activity {
     private ArrayList<MealnameInfo> infoList;
     private MealnameInfo info = new MealnameInfo();
     private MealnameListAdapter adapter;
-    ImageView meal_name_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +33,6 @@ public class MealNameActivity extends Activity {
         loadiniv();
         adapter = new MealnameListAdapter(this, infoList);
         listView.setAdapter(adapter);
-        
-        meal_name_back = (ImageView) findViewById (R.id.meal_name_back);
-        meal_name_back.setOnClickListener(clcik);
-        
     }
 
     private void loadiniv() {
@@ -58,21 +55,4 @@ public class MealNameActivity extends Activity {
     	finish();
 
     }
-    
-    OnClickListener clcik = new OnClickListener() {
-		
-		@Override
-		public void onClick(View v) {
-			// TODO Auto-generated method stub
-			switch (v.getId()) {
-			case R.id.meal_name_back:
-				finish();
-				break;
-
-			default:
-				break;
-			}
-		}
-	};
-    
 }

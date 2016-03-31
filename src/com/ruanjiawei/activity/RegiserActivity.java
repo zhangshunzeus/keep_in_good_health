@@ -3,6 +3,7 @@ package com.ruanjiawei.activity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.jiangkaiquan.aplication.MyApplaication;
 import com.ruanjiawei.demo.RegisterTools;
 import com.ruanjiawei.demo.RegisterTools.OnHttpListener;
 import com.ruanjiawei.demo.VerifyTools;
@@ -22,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class RegiserActivity extends Activity {
+	MyApplaication app;
 	EditText register_tel, register_verify, register_word, register_reword;
 	Button register_gainverify, register_finsh;
 	ImageView back;
@@ -36,14 +38,12 @@ public class RegiserActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
-		
-		
+		app = (MyApplaication) getApplication();
 
 		register_gainverify = (Button) findViewById(R.id.register_gainverify);
 		register_gainverify.setOnClickListener(l);
 		register_finsh = (Button) findViewById(R.id.register_finsh);
 		register_finsh.setOnClickListener(l);
-		
 
 	}
 
@@ -67,10 +67,9 @@ public class RegiserActivity extends Activity {
 						Intent intent = new Intent(RegiserActivity.this,
 								LoginActivity.class);
 						startActivity(intent);
-						
-						Toast.makeText(getApplication(),
-								"注册成功 请登录" ,Toast.LENGTH_LONG)
-								.show();
+
+						Toast.makeText(getApplication(), "注册成功 请登录",
+								Toast.LENGTH_LONG).show();
 					} else {
 						Toast.makeText(getApplication(),
 								jo.getString("message"), Toast.LENGTH_LONG)
@@ -122,7 +121,7 @@ public class RegiserActivity extends Activity {
 					Toast.makeText(getApplication(), "请输入手机号",
 							Toast.LENGTH_LONG).show();
 				} else {
-                    verifyTools.setOnverifyListener(listener);
+					verifyTools.setOnverifyListener(listener);
 					verifyTools.verifyAccount(tel);
 				}
 
@@ -140,21 +139,23 @@ public class RegiserActivity extends Activity {
 				if (tel == null || tel.equals("")) {
 					Toast.makeText(getApplication(), "请输入手机号",
 							Toast.LENGTH_LONG).show();
-				}else{
-				if (password==null ||password.equals("")) {
-					Toast.makeText(getApplication(), "请输入密码", Toast.LENGTH_LONG)
-							.show();
 				} else {
-					registerTools.setOnHttpListener(mListener);
-					registerTools.registerAccount(tel, verify, password,
-							repassword);
-				}
+					if (password == null || password.equals("")) {
+						Toast.makeText(getApplication(), "请输入密码",
+								Toast.LENGTH_LONG).show();
+					} else {
+						// 向app 推入数据
+						app.user.setPhoneNum(tel);
+						app.user.setPassword(password);
+						registerTools.setOnHttpListener(mListener);
+						registerTools.registerAccount(tel, verify, password,
+								repassword);
+
+					}
 				}
 
 				break;
-				
-			
-				
+
 			default:
 				break;
 			}
