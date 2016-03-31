@@ -31,7 +31,7 @@ public class PaymentInterfaceActivity extends Activity implements
 	private LinearLayout pay_line3;
 
 	Double sun;
-<<<<<<< HEAD
+
 	private String shopName = null;
 
 	@Override
@@ -49,26 +49,6 @@ public class PaymentInterfaceActivity extends Activity implements
 		pay_line3.setOnClickListener(this);
 		payment_back.setOnClickListener(new OnClickListener() {
 
-=======
-	private String shopName=null;
-	
-
-    @Override 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        BP.init(this, "dd89992e72fed0a3878494fc468a3c92");
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.payment_interface_activity);
-        payment_back=(ImageView) findViewById(R.id.payment_back);
-        pay_line1=(LinearLayout) findViewById(R.id.pay_line1);
-        pay_line2=(LinearLayout) findViewById(R.id.pay_line2);
-        pay_line3=(LinearLayout) findViewById(R.id.pay_line3);
-        pay_line1.setOnClickListener(this);
-        pay_line2.setOnClickListener(this);
-        pay_line3.setOnClickListener(this);
-        payment_back.setOnClickListener(new OnClickListener() {
-			
->>>>>>> f1cfbca0cd42de029120b1ccd5955b0c4e6f2830
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(PaymentInterfaceActivity.this,
