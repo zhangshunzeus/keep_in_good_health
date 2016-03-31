@@ -5,8 +5,10 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 public class SaveToken {
-	public static void saveToken(Context context, String token) {
+
+	public static void saveToken(Context context, String token, String tel) {
 		Log.i("saveToken", "token！" + token);
+		Log.i("saveTel", tel);
 		SharedPreferences sharedPreferences = context.getSharedPreferences(
 				"token", Context.MODE_PRIVATE);
 		SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -23,8 +25,14 @@ public class SaveToken {
 	public static String getData(Context context) {
 		SharedPreferences preferences = context.getSharedPreferences("token",
 				Context.MODE_PRIVATE);
+		SharedPreferences sharedPreferences = context.getSharedPreferences(
+				"tel", Context.MODE_PRIVATE);
 		String data = preferences.getString("token", null);
-		Log.i("getData", "token获取成功！");
+		
+
+		Log.i("getData", data);
+
 		return data;
 	}
+
 }

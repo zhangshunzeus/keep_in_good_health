@@ -47,6 +47,7 @@ public class PersonalCenterNotLogin extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_not_login);
+		CheckIsLogin();
 
 		intentMyCollection = (LinearLayout) findViewById(R.id.notlogin_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
@@ -63,7 +64,7 @@ public class PersonalCenterNotLogin extends Activity {
 		intentLogin = (TextView) findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setOnClickListener(onClickListener);
 		user_name = (TextView) findViewById(R.id.user_name);
-		CheckIsLogin();
+		
 
 	}
 
@@ -112,9 +113,7 @@ public class PersonalCenterNotLogin extends Activity {
 				break;
 			/* 跳转到个人信息 */
 			case R.id.notlogin_intent_vip:
-				Intent intent_vip = new Intent(PersonalCenterNotLogin.this,
-						PersonalInformationActivity.class);
-				startActivity(intent_vip);
+				CheckLogin();
 				break;
 
 			default:
@@ -124,6 +123,20 @@ public class PersonalCenterNotLogin extends Activity {
 
 	};
 
+	private void CheckLogin() {
+		// 获取本地的SaveToken存储的token值
+		String token = SaveToken.getData(getApplicationContext());
+		if (token == null || token.equals("")) {
+			Intent intent_vip = new Intent(PersonalCenterNotLogin.this,
+					LoginActivity.class);
+			startActivity(intent_vip);
+		} else {
+			Intent intent_vip = new Intent(PersonalCenterNotLogin.this,
+					PersonalInformationActivity.class);
+			startActivity(intent_vip);
+		}
+	}
+
 	/**
 	 * 判断是否处于登录状态
 	 */
@@ -132,12 +145,12 @@ public class PersonalCenterNotLogin extends Activity {
 		// 获取本地的SaveToken存储的token值
 		String token = SaveToken.getData(getApplicationContext());
 		Log.i("CheckIsLogin", "token=" + token);
-		if (token == null || token.equals("")) {// 判断获取的token值是否为空
+		if (token == null && token.equals("")) {// 判断获取的token值是否为空
 			Log.i("CheckIsLogin", "当前没有处于登录状态");
-			judgeUnLongin();   // 没有登录的方法
+			judgeUnLongin(); // 没有登录的方法
 		} else {
 			// 不为空，则显示个人信息
-			judgeLongin();   //登录成功的方法
+			judgeLongin(); // 登录成功的方法
 		}
 	}
 
@@ -146,8 +159,8 @@ public class PersonalCenterNotLogin extends Activity {
 		// TODO Auto-generated method stub
 		user_name = (TextView) findViewById(R.id.user_name);
 		user_name.setVisibility(View.INVISIBLE);
+		intentLogin = (TextView) findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setVisibility(View.GONE);
-		user_name.setText("rqwrqr");
 
 	}
 
@@ -156,6 +169,7 @@ public class PersonalCenterNotLogin extends Activity {
 		// TODO Auto-generated method stub
 		user_name = (TextView) findViewById(R.id.user_name);
 		user_name.setVisibility(View.GONE);
+		intentLogin = (TextView) findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setVisibility(View.INVISIBLE);
 	}
 

@@ -93,7 +93,7 @@ public class LoginActivity extends Activity {
 				try {
 					JSONObject jo = new JSONObject(result);
 					if (jo.getInt("status") == 1) {
-						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
+						saveToken.saveToken(getApplicationContext(), jo.getString("token"),jo.getString("tel"));
 						Intent intent = new Intent(LoginActivity.this,
 
 								PersonalCenterNotLogin.class);
