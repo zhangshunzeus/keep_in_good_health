@@ -25,8 +25,7 @@ public class SaveToken {
 	public static String getData(Context context) {
 		SharedPreferences preferences = context.getSharedPreferences("token",
 				Context.MODE_PRIVATE);
-		SharedPreferences sharedPreferences = context.getSharedPreferences(
-				"tel", Context.MODE_PRIVATE);
+		
 		String data = preferences.getString("token", null);
 		
 
