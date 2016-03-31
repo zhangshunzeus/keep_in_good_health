@@ -117,7 +117,6 @@ public class MyRecordsFragmentReceive extends Fragment {
 	}
 
 	public void sendResultRecponse(String url) {
-
 		// 使用HTTPclient请求数据响应，并调用getjsonobject（）方法经行数据解析
 
 		// TODO Auto-generated method stub

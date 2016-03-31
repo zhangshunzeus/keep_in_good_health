@@ -1,7 +1,5 @@
 package com.ruanjiawei.demo;
 
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -50,6 +48,8 @@ public class VerifyTools {
 					builder.append(line);
 					line = bufferedReader.readLine();
 				}
+				inputStream.close();
+				bufferedReader.close();
 				return builder.toString();
 			}
 			return "mror";
@@ -71,26 +71,29 @@ public class VerifyTools {
 		this.listener = listener;
 	}
 
-	class AnyTask extends AsyncTask<String, Void, String>{
+	class AnyTask extends AsyncTask<String, Void, String> {
 
 		@Override
 		protected String doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
 			return setverify(arg0[0]);
 		}
-		protected void onPostExecute(String result){
-			if(listener !=null){
+
+		protected void onPostExecute(String result) {
+			if (listener != null) {
 				listener.end(result);
 			}
 		}
-		
+
 	}
-       public interface OnverifyListener{
-    	   void start();
-    	   void end(String result);
-       }
-       
-       public String getMessage(){
-    	   return message;
-       }
+
+	public interface OnverifyListener {
+		void start();
+
+		void end(String result);
+	}
+
+	public String getMessage() {
+		return message;
+	}
 }

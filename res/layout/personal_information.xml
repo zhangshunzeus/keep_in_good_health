@@ -43,6 +43,7 @@
             android:orientation="vertical" >
 
             <LinearLayout
+                android:id="@+id/dialog_head_portrait"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -83,6 +84,7 @@
                 android:background="@color/line" />
 
             <LinearLayout
+                android:id="@+id/dialog_username_text"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -106,8 +108,7 @@
                 <TextView
                     android:id="@+id/username_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/username_text" />
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/username_text_btn"
@@ -123,6 +124,7 @@
                 android:background="@color/line" />
 
             <LinearLayout
+                android:id="@+id/dialog_log_in_the_phone"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -145,8 +147,7 @@
                 <TextView
                     android:id="@+id/log_in_the_phone_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/modify_the" />
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/log_in_the_phone_btn"
@@ -162,6 +163,7 @@
                 android:background="@color/line" />
 
             <LinearLayout
+                android:id="@+id/dialog_the_login_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -184,8 +186,7 @@
                 <TextView
                     android:id="@+id/the_login_password_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/modify_the" />
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/the_login_password_btn"
@@ -201,6 +202,7 @@
                 android:background="@color/line" />
 
             <LinearLayout
+                android:id="@+id/dialog_binding_wechat_id"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -223,8 +225,7 @@
                 <TextView
                     android:id="@+id/binding_weChat_ID_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/unbounded" />
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/binding_weChat_ID_btn"
@@ -240,6 +241,7 @@
                 android:background="@color/line" />
 
             <LinearLayout
+                android:id="@+id/dialog_binding_qq_number"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -262,8 +264,7 @@
                 <TextView
                     android:id="@+id/Binding_QQ_number_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Is_binding" />
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/Binding_QQ_number_btn"
@@ -279,6 +280,7 @@
                 android:background="@color/line" />
 
             <LinearLayout
+                android:id="@+id/dialog_the_binding_of_sina_weibo"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -301,8 +303,7 @@
                 <TextView
                     android:id="@+id/The_binding_of_sina_weibo_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/unbounded" />
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/The_binding_of_sina_weibo_btn"
@@ -318,6 +319,7 @@
                 android:background="@color/line" />
 
             <LinearLayout
+                android:id="@+id/dialog_binding_alipay"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -340,8 +342,7 @@
                 <TextView
                     android:id="@+id/Binding_alipay_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/unbounded" />
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/Binding_alipay_btn"
@@ -351,6 +352,14 @@
                     android:src="@drawable/rub_course_go_to_next_right" />
             </LinearLayout>
 
+            <Button
+                android:layout_margin="10dp" 
+                android:id="@+id/btn_exit"
+                android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:text="退出登录"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:background="@drawable/btn_exit_bg" />
            
         </LinearLayout>
     </ScrollView>

@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#f1f1f1" >
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -17,8 +17,8 @@
             android:id="@+id/set_up_the_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/return_btn"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:src="@drawable/return_btn" />
 
         <TextView
             android:layout_width="0dp"
@@ -39,10 +39,10 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
         android:background="@android:color/white"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -58,11 +58,13 @@
             android:text="@string/alerts"
             android:textSize="14sp" />
 
-        <ImageView
+        <RadioButton
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/button_does_not_click" />
+            android:drawableLeft="@drawable/set_up_the_btn_bg"
+            android:button="@null" />
+        
     </LinearLayout>
 
     <TextView
@@ -73,10 +75,10 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
         android:background="@android:color/white"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -107,10 +109,10 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
         android:background="@android:color/white"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -141,16 +143,16 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
         android:background="@android:color/white"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rights_and_privacy"
-            android:layout_marginLeft="3dp" />
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/rights_and_privacy" />
 
         <TextView
             android:layout_width="0dp"
@@ -176,16 +178,16 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
         android:background="@android:color/white"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/change_the_password"
-            android:layout_marginLeft="3dp" />
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/change_the_password" />
 
         <TextView
             android:layout_width="0dp"

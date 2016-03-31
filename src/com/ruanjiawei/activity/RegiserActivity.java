@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View.OnClickListener;
 import android.view.View;
-
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,24 +24,26 @@ import android.widget.Toast;
 public class RegiserActivity extends Activity {
 	EditText register_tel, register_verify, register_word, register_reword;
 	Button register_gainverify, register_finsh;
-	ImageView myrecords_return_btn;
+	ImageView back;
+
 	String tel, verify, password, repassword;
 	RegisterTools registerTools = new RegisterTools();
 	VerifyTools verifyTools = new VerifyTools();
-
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
+		
+		
 
 		register_gainverify = (Button) findViewById(R.id.register_gainverify);
-		myrecords_return_btn = (ImageView) findViewById(R.id.myrecords_return_btn);
-		myrecords_return_btn.setOnClickListener(l);
 		register_gainverify.setOnClickListener(l);
 		register_finsh = (Button) findViewById(R.id.register_finsh);
 		register_finsh.setOnClickListener(l);
+		
 
 	}
 
@@ -63,13 +64,17 @@ public class RegiserActivity extends Activity {
 				try {
 					JSONObject jo = new JSONObject(result);
 					if (jo.getInt("status") == 1) {
-						Intent intent = new Intent(RegiserActivity.this, LoginActivity.class);
+						Intent intent = new Intent(RegiserActivity.this,
+								LoginActivity.class);
 						startActivity(intent);
+						
+						Toast.makeText(getApplication(),
+								"注册成功 请登录" ,Toast.LENGTH_LONG)
+								.show();
 					} else {
-
-						Toast.makeText(getApplication(), jo.getString("message"), Toast.LENGTH_LONG).show();
-
-						Toast.makeText(getApplication(), "验证码：" + jo.getString("message"), Toast.LENGTH_LONG).show();
+						Toast.makeText(getApplication(),
+								jo.getString("message"), Toast.LENGTH_LONG)
+								.show();
 					}
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -93,8 +98,9 @@ public class RegiserActivity extends Activity {
 				try {
 
 					JSONObject jo = new JSONObject(result);
-					Toast.makeText(getApplication(), jo.getString("verify"), Toast.LENGTH_LONG).show();
-
+					Toast.makeText(getApplication(),
+							"验证码：" + jo.getString("verify"), Toast.LENGTH_LONG)
+							.show();
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -112,8 +118,13 @@ public class RegiserActivity extends Activity {
 				register_tel = (EditText) findViewById(R.id.register_tel);
 
 				tel = register_tel.getText().toString();
-				verifyTools.setOnverifyListener(listener);
-				verifyTools.verifyAccount(tel);
+				if (tel == null || tel.equals("")) {
+					Toast.makeText(getApplication(), "请输入手机号",
+							Toast.LENGTH_LONG).show();
+				} else {
+                    verifyTools.setOnverifyListener(listener);
+					verifyTools.verifyAccount(tel);
+				}
 
 				break;
 
@@ -126,14 +137,24 @@ public class RegiserActivity extends Activity {
 				verify = register_verify.getText().toString();
 				password = register_word.getText().toString();
 				repassword = register_reword.getText().toString();
-				registerTools.setOnHttpListener(mListener);
-				registerTools.registerAccount(tel, verify, password, repassword);
+				if (tel == null || tel.equals("")) {
+					Toast.makeText(getApplication(), "请输入手机号",
+							Toast.LENGTH_LONG).show();
+				}else{
+				if (password==null ||password.equals("")) {
+					Toast.makeText(getApplication(), "请输入密码", Toast.LENGTH_LONG)
+							.show();
+				} else {
+					registerTools.setOnHttpListener(mListener);
+					registerTools.registerAccount(tel, verify, password,
+							repassword);
+				}
+				}
 
 				break;
-			case R.id.myrecords_return_btn:
-				finish();
-				break;
-
+				
+			
+				
 			default:
 				break;
 			}

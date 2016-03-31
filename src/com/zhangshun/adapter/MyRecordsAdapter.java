@@ -81,7 +81,6 @@ public class MyRecordsAdapter extends BaseAdapter {
 			
 			view.setTag(holder);
 			holder.myrecordchangereceive.setOnClickListener(new OnClickListener() {
-
 				@Override
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
@@ -91,7 +90,6 @@ public class MyRecordsAdapter extends BaseAdapter {
 				}				
 			});
 		}
-		
 			holder = (ViewHolderMyRecords) view.getTag();
 			MyRecordsDemo myRecordsDemo_one = data.get(position);
 			holder.myrecordshopname.setText(myRecordsDemo_one.getMy_records_shop_name());
@@ -103,7 +101,6 @@ public class MyRecordsAdapter extends BaseAdapter {
 			holder.myrecordshopmoney.setText(myRecordsDemo_one.getMy_records_shop_money());
 
 		return view;
-
 	}
 	class ViewHolderMyRecords {
 		ImageView myrecordimage;
@@ -116,7 +113,5 @@ public class MyRecordsAdapter extends BaseAdapter {
 		CheckBox myrecordchangereceive;
 		CheckBox myrecordchangereceiveyes;
 		
-
 	}
-
 }

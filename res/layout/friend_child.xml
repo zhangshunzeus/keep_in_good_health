@@ -20,7 +20,7 @@
         android:layout_weight="1"
         android:text="可口"
         android:textColor="@color/frend_child_tx"
-        android:textSize="24sp" />
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/friend_child_right_img"

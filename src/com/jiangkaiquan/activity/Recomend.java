@@ -42,7 +42,6 @@ public class Recomend extends Activity {
     private int curentDisplay = 4;
     private RecomendAdapter adapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,3 +110,4 @@ public class Recomend extends Activity {
 
 
 }
+

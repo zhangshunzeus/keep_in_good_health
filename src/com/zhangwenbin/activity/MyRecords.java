@@ -112,7 +112,6 @@ public class MyRecords extends Activity {
 				break;
 			}
 		}
-
 	};
 	OnClickListener onClickListener = new OnClickListener() {
 

@@ -20,7 +20,7 @@ public class MyCollectionActivity extends Activity {
 	ListView mList;
 	ArrayList<MyCollectionDemo> list = new ArrayList<MyCollectionDemo>();
 	ImageView return_btn;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

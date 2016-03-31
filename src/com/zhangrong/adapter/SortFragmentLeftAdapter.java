@@ -22,7 +22,6 @@ public class SortFragmentLeftAdapter extends BaseAdapter {
     public SortFragmentLeftAdapter(Context context,ArrayList<SortFragmentLeftinfo> data){
         this.context=context;
         this.data=data;
-
     }
     @Override
     public int getCount() {

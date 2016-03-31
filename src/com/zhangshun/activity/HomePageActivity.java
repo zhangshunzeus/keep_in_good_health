@@ -36,7 +36,6 @@ public class HomePageActivity extends Activity {
 		home_page.setOnCheckedChangeListener(listener);
 		classify.setOnCheckedChangeListener(listener);
 		circle.setOnCheckedChangeListener(listener);
-
 	}
 
 	OnClickListener click = new OnClickListener() {

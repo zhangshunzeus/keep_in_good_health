@@ -17,7 +17,7 @@ public class Founction extends Activity {
 	private TextView title1;
 	private TextView title2;
 	private TextView context1;
-
+ 
 	private TextView context2;
 	private ImageView client_img;
 	private TextView comment;
@@ -39,7 +39,6 @@ public class Founction extends Activity {
 		title2 = (TextView) findViewById(R.id.funcion_title2_tx);
 		context1 = (TextView) findViewById(R.id.funcion_context1_tx);
 		context2 = (TextView) findViewById(R.id.funcion_context2_tx);
-
 	}
 
 	private View.OnClickListener listener = new View.OnClickListener() {
