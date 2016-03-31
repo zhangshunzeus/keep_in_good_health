@@ -7,36 +7,35 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 
-public class VerifyTools {
+public class ChangeNameTools {
 	String message;
 	public int status = 0;
 
-	public void verifyAccount(String tel) {
-		new AnyTask().execute(tel);
-
+	public void changenameAccount(String tel, String token, String username) {
+		new AnyTask().execute(tel, token, username);
 	}
 
-	// 验证码地址
+	private String changename(String tel, String token, String username) {
 
-	@SuppressWarnings("unused")
-	private String setverify(String tel) {
 		StringBuilder builder = new StringBuilder();
-		String verifycode = "http://192.168.11.241/index.php/home/api/verify";
+		String httpHost = "http://192.168.11.241/index.php/home/api/changename";
 		String urltel = "tel=";
+		String urltoken = "token=";
+		String urlname = "username=";
 
 		URL url;
-
+		String urlchangename = httpHost + "?" + urltel + tel + "&" + urltoken
+				+ token + "&" + urlname + username;
 		try {
-			String urlverify = verifycode + "?" + urltel + tel;
-			url = new URL(urlverify);
+			url = new URL(urlchangename);
 			HttpURLConnection connection = (HttpURLConnection) url
 					.openConnection();
 
 			connection.setRequestMethod("GET");
-			connection.setReadTimeout(5000);
+			connection.setConnectTimeout(5000);
 			connection.connect();
 
 			if (connection.getResponseCode() == 200) {
@@ -45,14 +44,13 @@ public class VerifyTools {
 						new InputStreamReader(inputStream));
 				String line = bufferedReader.readLine();
 				while (line != null && line.length() > 0) {
+
 					builder.append(line);
-					line = bufferedReader.readLine();
+					line = bufferedReader.toString();
 				}
-				inputStream.close();
-				bufferedReader.close();
 				return builder.toString();
+
 			}
-			return "mror";
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -61,22 +59,30 @@ public class VerifyTools {
 			e.printStackTrace();
 		}
 
+	    
 		return "error";
 
 	}
 
-	OnverifyListener listener;
+	OnHttpChangename listener;
 
-	public void setOnverifyListener(OnverifyListener listener) {
+	public void setOnHttpChangename(OnHttpChangename listener) {
 		this.listener = listener;
 	}
 
+	public interface OnHttpChangename {
+		void start();
+
+		void end(String result);
+	}
+
+	@SuppressLint("NewApi")
 	class AnyTask extends AsyncTask<String, Void, String> {
 
 		@Override
 		protected String doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
-			return setverify(arg0[0]);
+			return changename(arg0[0], arg0[1], arg0[2]);
 		}
 
 		protected void onPostExecute(String result) {
@@ -87,13 +93,8 @@ public class VerifyTools {
 
 	}
 
-	public interface OnverifyListener {
-		void start();
-
-		void end(String result);
-	}
-
 	public String getMessage() {
 		return message;
 	}
+
 }

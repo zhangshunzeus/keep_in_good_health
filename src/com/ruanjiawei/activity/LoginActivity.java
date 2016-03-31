@@ -101,9 +101,14 @@ public class LoginActivity extends Activity {
 								jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
 
+<<<<<<< HEAD
 						PersonalCenterLoginName.class);
 						// 保存token
 						app.user.setToken(jo.getString("token"));
+=======
+								PersonalCenterNotLogin.class);
+
+>>>>>>> f1cfbca0cd42de029120b1ccd5955b0c4e6f2830
 						startActivity(intent);
 
 					} else {
@@ -212,7 +217,7 @@ public class LoginActivity extends Activity {
 									Toast.LENGTH_LONG).show();
 						}
 					}
-
+ 
 					@Override
 					public void onCancel(SHARE_MEDIA platform) {
 						Toast.makeText(LoginActivity.this, "授权取消",

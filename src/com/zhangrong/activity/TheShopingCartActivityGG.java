@@ -47,6 +47,7 @@ public class TheShopingCartActivityGG extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.theshopingcat_activity);
+<<<<<<< HEAD
 		cheak = (CheckBox) findViewById(R.id.radio1);
 		lv = (ListView) findViewById(R.id.listview);
 		radio5 = (TextView) findViewById(R.id.radio5);
@@ -172,6 +173,35 @@ public class TheShopingCartActivityGG extends Activity {
 			Toast.makeText(this, "请你选择要选购的商品", Toast.LENGTH_SHORT).show();
 		}
 
+=======
+		  cheak= (CheckBox) findViewById(R.id.radio1);
+	       lv= (ListView) findViewById(R.id.listview);
+	        radio5= (TextView) findViewById(R.id.radio5);
+	        text1= (TextView) findViewById(R.id.text1);
+	        text2= (TextView) findViewById(R.id.textTwo);
+	       // 准备数据
+	        int[] imageData={R.drawable.commodity_imger1,R.drawable.commodity_imger2,R.drawable.commodity_imger3};
+	        double[] price={28.0,30,25.6};
+	        int[] shopping_number={1,3,2};
+	        String[] shopping_name={"金银花茶","蜜蜂糖","养生健康茶"};
+	        String[] shopping_content={"金银花茶价格是28.0元","蜜蜂糖是30元一罐","健康茶是25.6元"};
+	        BroadcastReceiver receiver;
+	        IntentFilter filter=new IntentFilter();
+	        filter.addAction("sss");
+	        registerReceiver(mRe,filter);
+	        for(int i=0;i<shopping_name.length;i++){
+	            info=new ListPayInfo();
+	            info.setPu_er_tea(imageData[i]);
+	            info.setThe_shopping_title(shopping_name[i]);
+	            info.setThe_shopping_content(shopping_content[i]);
+	            info.setThe_price(price[i]);
+	            info.setThe_shopping_number(shopping_number[i]);
+	            info.setCheck(false);
+	            data.add(info);
+	        }
+	        adapter=new ListPayAdapter(this, data);
+	        lv.setAdapter(adapter);
+>>>>>>> f1cfbca0cd42de029120b1ccd5955b0c4e6f2830
 	}
 
 }
