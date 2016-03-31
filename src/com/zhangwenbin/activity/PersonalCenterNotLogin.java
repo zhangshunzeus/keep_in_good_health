@@ -147,6 +147,7 @@ public class PersonalCenterNotLogin extends Activity {
 		user_name = (TextView) findViewById(R.id.user_name);
 		user_name.setVisibility(View.INVISIBLE);
 		intentLogin.setVisibility(View.GONE);
+		user_name.setText("rqwrqr");
 
 	}
 

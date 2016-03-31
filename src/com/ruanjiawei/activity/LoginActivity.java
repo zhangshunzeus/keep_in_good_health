@@ -96,7 +96,7 @@ public class LoginActivity extends Activity {
 						saveToken.saveToken(getApplicationContext(), jo.getString("token"));
 						Intent intent = new Intent(LoginActivity.this,
 
-								PersonalCenterLoginName.class);
+								PersonalCenterNotLogin.class);
 
 						startActivity(intent);
 						
