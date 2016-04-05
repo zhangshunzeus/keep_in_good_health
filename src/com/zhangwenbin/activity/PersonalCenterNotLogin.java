@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
 import android.widget.Toast;
 
 import com.jiangkaiquan.activity.MyFriend1;
@@ -47,7 +46,7 @@ public class PersonalCenterNotLogin extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.personal_center_not_login);
-		CheckIsLogin();
+		// CheckIsLogin();
 
 		intentMyCollection = (LinearLayout) findViewById(R.id.notlogin_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
@@ -64,7 +63,6 @@ public class PersonalCenterNotLogin extends Activity {
 		intentLogin = (TextView) findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setOnClickListener(onClickListener);
 		user_name = (TextView) findViewById(R.id.user_name);
-		
 
 	}
 
@@ -74,7 +72,7 @@ public class PersonalCenterNotLogin extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			/* 跳转到已登录 */
+			/* 跳转到登录 */
 			case R.id.personal_not_login_intent_login:
 				Intent intent_login = new Intent(PersonalCenterNotLogin.this,
 						LoginActivity.class);
@@ -111,9 +109,13 @@ public class PersonalCenterNotLogin extends Activity {
 						SetUpTheActivity.class);
 				startActivity(intent_setup);
 				break;
-			/* 跳转到个人信息 */
+			/* 跳转到登录 */
 			case R.id.notlogin_intent_vip:
-				CheckLogin();
+				Intent login = new Intent(PersonalCenterNotLogin.this,
+						LoginActivity.class);
+				startActivity(login);
+				Toast.makeText(getApplicationContext(), "请先登录",
+						Toast.LENGTH_LONG).show();
 				break;
 
 			default:
@@ -126,7 +128,7 @@ public class PersonalCenterNotLogin extends Activity {
 	private void CheckLogin() {
 		// 获取本地的SaveToken存储的token值
 		String token = SaveToken.getData(getApplicationContext());
-		if (token == null || token.equals("")) {
+		if (token == null || token.equals(" ")) {
 			Intent intent_vip = new Intent(PersonalCenterNotLogin.this,
 					LoginActivity.class);
 			startActivity(intent_vip);
@@ -140,8 +142,9 @@ public class PersonalCenterNotLogin extends Activity {
 	/**
 	 * 判断是否处于登录状态
 	 */
+
 	private void CheckIsLogin() {
-		Log.i("CheckIsLogin", "CheckIsLogin");
+
 		// 获取本地的SaveToken存储的token值
 		String token = SaveToken.getData(getApplicationContext());
 		Log.i("CheckIsLogin", "token=" + token);
