@@ -4,10 +4,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.jiangkaiquan.aplication.MyApplaication;
+<<<<<<< HEAD
 import com.jiangkaiquan.aplication.User;
 import com.ruanjiawei.demo.LogoutTools;
 import com.ruanjiawei.demo.SaveToken;
 import com.ruanjiawei.demo.LogoutTools.OnLogoutListener;
+=======
+>>>>>>> develop
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.PersonalCenterNotLogin;
 
@@ -25,7 +28,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class PersonalInformationActivity extends Activity {
 

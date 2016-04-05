@@ -31,7 +31,6 @@ public class SortFragmentRightAdapter extends BaseAdapter {
         return data == null ? 0 : data.size();
     }
 
-
     @Override
     public Object getItem(int position) {
         return data.get(position);

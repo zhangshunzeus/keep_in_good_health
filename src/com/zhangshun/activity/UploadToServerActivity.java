@@ -1,5 +1,22 @@
 package com.zhangshun.activity;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.jiangkaiquan.aplication.MyApplaication;
+import com.zhangshun.keep_in_good_health.R;
+
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -20,30 +37,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-
-import com.jiangkaiquan.aplication.MyApplaication;
-import com.zhangshun.keep_in_good_health.R;
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class UploadToServerActivity extends Activity {
 
 	private MyApplaication app;
+
 	private TextView messageText;
 	private Button uploadButton;
 
@@ -59,7 +57,6 @@ public class UploadToServerActivity extends Activity {
 	private static final String JPEG_FILE_SUFFIX = ".jpg";
 
 	private String mCurrentPhotoPath = null;
-
 	private ImageView imageView;
 
 	@Override
@@ -67,7 +64,6 @@ public class UploadToServerActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_upload_to_server);
-		app = (MyApplaication) getApplication();
 
 		Button pickPhotoButton = (Button) findViewById(R.id.pickPhotoButton);
 		Button takePhotoButton = (Button) findViewById(R.id.takePhotoButton);
@@ -83,8 +79,7 @@ public class UploadToServerActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				Intent takePhotoIntent = new Intent(
-						Intent.ACTION_PICK,
+				Intent takePhotoIntent = new Intent(Intent.ACTION_PICK,
 						android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 				startActivityForResult(takePhotoIntent, RESULT_PICK_IMAGE);
 			}
@@ -93,11 +88,11 @@ public class UploadToServerActivity extends Activity {
 		// 拍照选取图片
 		takePhotoButton.setOnClickListener(new View.OnClickListener() {
 
+			@SuppressLint("InlinedApi")
 			@Override
 			public void onClick(View arg0) {
 				// 调用相机
-				Intent takePictureIntent = new Intent(
-						MediaStore.ACTION_IMAGE_CAPTURE);
+				Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
 				File f = null;
 				try {
@@ -105,8 +100,7 @@ public class UploadToServerActivity extends Activity {
 					mCurrentPhotoPath = f.getAbsolutePath();
 					Log.d("path", mCurrentPhotoPath);
 
-					takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-							Uri.fromFile(f));
+					takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
 				} catch (IOException e) {
 					e.printStackTrace();
 					f = null;
@@ -122,15 +116,13 @@ public class UploadToServerActivity extends Activity {
 			public void onClick(View v) {
 				if (mCurrentPhotoPath != null) {
 					// uploadFile(mCurrentPhotoPath, upLoadServerUri);
-					new FileUploadTask(mCurrentPhotoPath, upLoadServerUri)
-							.execute();
+					new FileUploadTask(mCurrentPhotoPath, upLoadServerUri).execute();
 				}
 			}
 		});
 
 	}
 
-	// 获取得到的图片
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -138,12 +130,10 @@ public class UploadToServerActivity extends Activity {
 		if (resultCode == Activity.RESULT_OK) {
 			switch (requestCode) {
 			case RESULT_PICK_IMAGE: {
-				// 设置本地获取到的图片
 				handlePickImage(data);
 			}
 				break;
 			case RESULT_TAKE_IMAGE: {
-				// 设置照相机获取到的图片
 				handleTakeImage();
 			}
 				break;
@@ -156,16 +146,14 @@ public class UploadToServerActivity extends Activity {
 
 	/**
 	 * Handle a picture from picking
-	 * 
+	 *
 	 * @param intent
 	 */
 	private void handlePickImage(Intent intent) {
-		// 传人的时图片路径
 		Uri selectedImage = intent.getData();
 		String[] filePathColumn = { MediaStore.Images.Media.DATA };
 
-		Cursor cursor = getContentResolver().query(selectedImage,
-				filePathColumn, null, null, null);
+		Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
 		cursor.moveToFirst();
 
 		int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
@@ -189,12 +177,11 @@ public class UploadToServerActivity extends Activity {
 
 	/**
 	 * Add a picture from taking to Gallery
-	 * 
+	 *
 	 * @param srcPath
 	 */
 	private void galleryAddPic(String srcPath) {
-		Intent mediaScanIntent = new Intent(
-				"android.intent.action.MEDIA_SCANNER_SCAN_FILE");
+		Intent mediaScanIntent = new Intent("android.intent.action.MEDIA_SCANNER_SCAN_FILE");
 		File f = new File(srcPath);
 		Uri contentUri = Uri.fromFile(f);
 		mediaScanIntent.setData(contentUri);
@@ -206,18 +193,15 @@ public class UploadToServerActivity extends Activity {
 	}
 
 	@TargetApi(Build.VERSION_CODES.FROYO)
+
 	@SuppressLint("NewApi")
 	public File getAlbumStorageDir(String albumName) {
-		return new File(
-				Environment
-						.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-				albumName);
+		return new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), albumName);
 	}
 
 	private File getAlbumDir() {
 		File storageDir = null;
-		if (Environment.MEDIA_MOUNTED.equals(Environment
-				.getExternalStorageState())) {
+		if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
 			storageDir = getAlbumStorageDir(getAlbumName());
 			if (storageDir != null) {
 				if (!storageDir.mkdirs()) {
@@ -229,8 +213,7 @@ public class UploadToServerActivity extends Activity {
 			}
 
 		} else {
-			Log.v(getString(R.string.app_name),
-					"External storage is not mounted READ/WRITE.");
+			Log.v(getString(R.string.app_name), "External storage is not mounted READ/WRITE.");
 		}
 
 		return storageDir;
@@ -238,12 +221,10 @@ public class UploadToServerActivity extends Activity {
 
 	private File createImageFile() throws IOException {
 		// Create an image file name
-		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss")
-				.format(new Date());
+		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 		String imageFileName = JPEG_FILE_PREFIX + timeStamp + "_";
 		File albumF = getAlbumDir();
-		File imageF = File.createTempFile(imageFileName, JPEG_FILE_SUFFIX,
-				albumF);
+		File imageF = File.createTempFile(imageFileName, JPEG_FILE_SUFFIX, albumF);
 		return imageF;
 	}
 
@@ -342,15 +323,14 @@ public class UploadToServerActivity extends Activity {
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Connection", "Keep-Alive");
 			conn.setRequestProperty("ENCTYPE", "multipart/form-data");
-			conn.setRequestProperty("Content-Type",
-					"multipart/form-data;boundary=" + boundary);
+			conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
 			conn.setRequestProperty("uploaded_file", fileName);
 
 			dos = new DataOutputStream(conn.getOutputStream());
 
 			dos.writeBytes(twoHyphens + boundary + lineEnd);
-			dos.writeBytes("Content-Disposition: form-data; name=\"uploaded_file\";filename=\""
-					+ fileName + "\"" + lineEnd);
+			dos.writeBytes(
+					"Content-Disposition: form-data; name=\"uploaded_file\";filename=\"" + fileName + "\"" + lineEnd);
 
 			dos.writeBytes(lineEnd);
 
@@ -380,16 +360,13 @@ public class UploadToServerActivity extends Activity {
 			serverResponseCode = conn.getResponseCode();
 			String serverResponseMessage = conn.getResponseMessage();
 
-			Log.i("uploadFile", "HTTP Response is : " + serverResponseMessage
-					+ ": " + serverResponseCode);
+			Log.i("uploadFile", "HTTP Response is : " + serverResponseMessage + ": " + serverResponseCode);
 
 			if (serverResponseCode == 200) {
 				runOnUiThread(new Runnable() {
 
 					public void run() {
-						Toast.makeText(UploadToServerActivity.this,
-								"File Upload Complete.", Toast.LENGTH_SHORT)
-								.show();
+						Toast.makeText(UploadToServerActivity.this, "File Upload Complete.", Toast.LENGTH_SHORT).show();
 					}
 				});
 			}
@@ -405,10 +382,8 @@ public class UploadToServerActivity extends Activity {
 
 			runOnUiThread(new Runnable() {
 				public void run() {
-					messageText
-							.setText("MalformedURLException Exception : check script url.");
-					Toast.makeText(UploadToServerActivity.this,
-							"MalformedURLException", Toast.LENGTH_SHORT).show();
+					messageText.setText("MalformedURLException Exception : check script url.");
+					Toast.makeText(UploadToServerActivity.this, "MalformedURLException", Toast.LENGTH_SHORT).show();
 				}
 			});
 
@@ -421,8 +396,7 @@ public class UploadToServerActivity extends Activity {
 			runOnUiThread(new Runnable() {
 				public void run() {
 					messageText.setText("Got Exception : see logcat ");
-					Toast.makeText(UploadToServerActivity.this,
-							"Got Exception : see logcat2 ", Toast.LENGTH_SHORT)
+					Toast.makeText(UploadToServerActivity.this, "Got Exception : see logcat2 ", Toast.LENGTH_SHORT)
 							.show();
 				}
 			});
@@ -486,8 +460,7 @@ public class UploadToServerActivity extends Activity {
 			int maxBufferSize = 256 * 1024;// 256KB
 
 			try {
-				FileInputStream fileInputStream = new FileInputStream(new File(
-						pathToOurFile));
+				FileInputStream fileInputStream = new FileInputStream(new File(pathToOurFile));
 
 				URL url = new URL(urlServer);
 				connection = (HttpURLConnection) url.openConnection();
@@ -504,17 +477,13 @@ public class UploadToServerActivity extends Activity {
 				connection.setRequestMethod("POST");
 				connection.setRequestProperty("Connection", "Keep-Alive");
 				connection.setRequestProperty("ENCTYPE", "multipart/form-data");
-				connection.setRequestProperty("Content-Type",
-						"multipart/form-data;boundary=" + boundary);
+				connection.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
 				connection.setRequestProperty("uploaded_file", pathToOurFile);
 
-				outputStream = new DataOutputStream(
-						connection.getOutputStream());
+				outputStream = new DataOutputStream(connection.getOutputStream());
 				outputStream.writeBytes(twoHyphens + boundary + lineEnd);
-				outputStream
-						.writeBytes("Content-Disposition: form-data; name=\" "
-								+ "uploaded_file" + "\";filename=\""
-								+ pathToOurFile + "\"" + lineEnd);
+				outputStream.writeBytes("Content-Disposition: form-data; name=\" " + "uploaded_file" + "\";filename=\""
+						+ pathToOurFile + "\"" + lineEnd);
 				outputStream.writeBytes(lineEnd);
 
 				bytesAvailable = fileInputStream.available();
@@ -535,8 +504,7 @@ public class UploadToServerActivity extends Activity {
 					bytesRead = fileInputStream.read(buffer, 0, bufferSize);
 				}
 				outputStream.writeBytes(lineEnd);
-				outputStream.writeBytes(twoHyphens + boundary + twoHyphens
-						+ lineEnd);
+				outputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
 				publishProgress(100);
 
 				// Responses from the server (code and message)

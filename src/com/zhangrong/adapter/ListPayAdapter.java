@@ -35,9 +35,6 @@ public class ListPayAdapter extends BaseAdapter {
     TextView text1;
     public   ArrayList<Boolean> isSelected;//判读是否选中
 
-
-
-
     private  ArrayList<ListPayInfo> data;
     public ListPayAdapter(Context context,ArrayList<ListPayInfo> data){
         this.context=context;

@@ -1,5 +1,6 @@
 package com.jiangkaiquan.activity.fragemt;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import com.jiangkaiquan.activity.adapter.RecomendAdapter;
 /**
  * Created by jkqme on 2016/3/11.
  */
+@SuppressLint("NewApi")
 public class RecomedFragment extends Fragment {
     private GridView gridView[] = new GridView[4];
     private int gid[] = {R.id.recomend1_fruit_gv, R.id.recomend_flish_gv, R.id.recomend_vgtable_gv, R.id.recomend_tea_gv};
@@ -26,12 +28,13 @@ public class RecomedFragment extends Fragment {
     private int curentDisplay = 4;
     private RecomendAdapter adapter;
     View view;
-    @Override
+    @SuppressLint("NewApi")
+	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
       view=inflater.inflate(R.layout.jiang_recomend,null);
         return super.onCreateView(inflater, container, savedInstanceState);
     }
-
+ 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

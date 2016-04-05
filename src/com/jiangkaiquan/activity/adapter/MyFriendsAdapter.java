@@ -33,7 +33,7 @@ public class MyFriendsAdapter extends BaseExpandableListAdapter {
         this.map = map;
         this.context = context;
         inflater = LayoutInflater.from(context);
-    }
+    } 
 
     @Override
     public int getGroupCount() {

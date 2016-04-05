@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    
      <ListView
         android:id="@+id/my_records_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:dividerHeight="1dp"
         android:divider="#e5e5e5"/>
-
+     
 </LinearLayout>

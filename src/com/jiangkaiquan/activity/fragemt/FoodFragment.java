@@ -1,5 +1,6 @@
 package com.jiangkaiquan.activity.fragemt;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,12 +17,14 @@ import com.zhangwenbin.activity.TodayEat;
 /**
  * Created by jkqme on 2016/3/11.
  */
+@SuppressLint("NewApi")
 public class FoodFragment extends Fragment {
     private View view;
     Button my_friend_issue_group_tx, my_friend_car_tx;
     TextView dietary, intent_food;
-
-    @Override
+ 
+    @SuppressLint("NewApi")
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

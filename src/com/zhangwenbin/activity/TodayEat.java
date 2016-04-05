@@ -32,7 +32,6 @@ public class TodayEat extends Activity {
 		linearLayout_lunch_two = (LinearLayout) findViewById(R.id.intent_lunch_two);
 		linearLayout_dinner = (LinearLayout) findViewById(R.id.intent_dinner);
 		linearLayout_dinner.setOnClickListener(onClickListener);
-
 	}
 
 	OnClickListener onClickListener = new OnClickListener() {
@@ -47,6 +46,8 @@ public class TodayEat extends Activity {
 				break;
 				
 			case R.id.intent_breakfast:
+				/*Intent intent_breakfast = new Intent(TodayEat.this,PersonalCenterLoginName.class);
+				startActivity(intent_breakfast);*/
 				break;
 			case R.id.intent_lunch:
 				/*跳转到午餐*/

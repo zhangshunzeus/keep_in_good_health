@@ -1,7 +1,11 @@
 package com.zhangshun.demo;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+
 public class MyRecordsDemo {
-	private int image;
+	private Bitmap image;
 	private String my_records_content;
 	private int my_records_change_receiving;
 	private String my_records_shop_name;
@@ -11,13 +15,6 @@ public class MyRecordsDemo {
 	private String my_records_shop_money;
 	public boolean checked;
 
-	public int getImage() {
-		return image;
-	}
-
-	public void setImage(int image) {
-		this.image = image;
-	}
 
 	public String getMy_records_content() {
 		return my_records_content;
@@ -74,6 +71,14 @@ public class MyRecordsDemo {
 	public void setMy_records_list_goodsstates(
 			String my_records_list_goodsstates) {
 		this.my_records_list_goodsstates = my_records_list_goodsstates;
+	}
+
+	public Bitmap getImage() {
+		return image;
+	}
+
+	public void setImage(Bitmap bitmap) {
+		this.image = bitmap;
 	}
 
 }

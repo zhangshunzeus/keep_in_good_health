@@ -31,7 +31,7 @@ public class RegiserActivity extends Activity {
 	String tel, verify, password, repassword;
 	RegisterTools registerTools = new RegisterTools();
 	VerifyTools verifyTools = new VerifyTools();
-
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

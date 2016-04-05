@@ -82,7 +82,7 @@ public class User {
 		this.phoneNum = phoneNum;
 	}
 
-	public String getPassword() {
+	private String getPassword() {
 		return password;
 	}
 

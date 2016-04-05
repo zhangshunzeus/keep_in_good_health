@@ -46,10 +46,12 @@ import org.json.JSONObject;
 /**
  * Created by jkqme on 2016/3/14.
  * <p/>
- * MyFriend 的更新 先在activity里获取好友列表，在adapter里或取头像列表
+ * MyFriend 的更新 先在activity里获取好友列表，在adapter里或取头像列表 //// \n添加好友的跳转resultCode=1;
  */
 @TargetApi(Build.VERSION_CODES.CUPCAKE)
 public class MyFriend1 extends Activity {
+
+	WifiConfiguration configuration;
 	private TextView view1;
 	private TextView view2;
 	private Intent intent;
@@ -58,7 +60,7 @@ public class MyFriend1 extends Activity {
 	private TextView friend;
 	private TextView social;
 	private PopupWindow pwind;
-
+ 
 	private ListView listview;
 	private ListView listView2;
 	private MyFriend1Ad adpter;
@@ -71,7 +73,7 @@ public class MyFriend1 extends Activity {
 	private AlertDialog.Builder builder;
 	WindowManager.LayoutParams lp;
 
-	String ip = "http://192.168.11.251";
+	String ip = NetUrl.ip1;
 	// String ips="http:";
 	String addDate = "addDate";
 	String addDates = "addDstes";
@@ -93,17 +95,24 @@ public class MyFriend1 extends Activity {
 					+ chekAll);
 			// Log.i("result==>Asy", friendDate);
 			Log.i("friendAsy", friendDate);
+			if (friendDate.equals("warn"))
+				return null;
 			DealJson dJson = new DealJson(friendDate, true);
 
 			return str;
 		}
 
 		protected void onPostExecute(Context result) {
-			adpter = new MyFriend1Ad(list1, result, true);
-
-			listview.setAdapter(adpter);
-
-		};
+			// 判断是否需要重置list
+			if (result != null) {
+				if (adpter != null) {
+					adpter.notiChange(list1);
+				} else {
+					adpter = new MyFriend1Ad(list1, result, false);
+					listview.setAdapter(adpter);
+				}
+			}
+		}
 	};
 	// 初始化list2;
 	@SuppressLint("NewApi")
@@ -118,22 +127,31 @@ public class MyFriend1 extends Activity {
 					+ chekAlls);
 			// Log.i("result==>Asy", friendDate);
 			Log.i("SocialAsy", friendDate);
+			if (friendDate.equals("warn"))
+				return null;
 			DealJson dJson = new DealJson(friendDate, false);
 
 			return str;
 		}
 
 		protected void onPostExecute(Context result) {
+			if (result != null) {
+				if (adpter2 != null) {
+					adpter2.notiChange(list2);
+				} else {
+					adpter2 = new MyFriend1Ad(list2, result, false);
+					listView2.setAdapter(adpter2);
+				}
 
-			adpter2 = new MyFriend1Ad(list2, result, false);
-			listView2.setAdapter(adpter2);
-		};
+			}
+		}
 	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+
 		setContentView(R.layout.jiang_my_friend_1);
 		back = (ImageView) findViewById(R.id.myfriend1_back_img);
 		add = (ImageView) findViewById(R.id.myfriend1_add_img);
@@ -201,8 +219,14 @@ public class MyFriend1 extends Activity {
 
 				break;
 			case R.id.friend_add_tx:
+				intent = new Intent(MyFriend1.this, AddFriendOrSocial.class);
+				intent.putExtra("isFriend", true);
+				startActivityForResult(intent, 1);
 				break;
 			case R.id.friend_creat_social_tx:
+				intent = new Intent(MyFriend1.this, AddFriendOrSocial.class);
+				intent.putExtra("isFriend", false);
+				startActivityForResult(intent, 1);
 				break;
 			}
 		}
@@ -350,8 +374,9 @@ public class MyFriend1 extends Activity {
 			connection.setReadTimeout(5000);
 			connection.setConnectTimeout(5000);
 			connection.setRequestMethod("GET");
-			try{
-			connection.connect();}catch(ConnectException e){
+			try {
+				connection.connect();
+			} catch (ConnectException e) {
 				Toast.makeText(this, "网络故障", 2000);
 				return null;
 			}
@@ -429,7 +454,7 @@ public class MyFriend1 extends Activity {
 				try {
 					map.put("textView",
 							json.getJSONObject(i).getString("frienname"));
-					map.put("img",json.getJSONObject(i).getString("friendimg"));
+					map.put("img", json.getJSONObject(i).getString("friendimg"));
 					list1.add(map);
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -446,7 +471,7 @@ public class MyFriend1 extends Activity {
 				try {
 					map.put("textView",
 							json.getJSONObject(i).getString("socialname"));
-					map.put("img",json.getJSONObject(i).getString("socialimg"));
+					map.put("img", json.getJSONObject(i).getString("socialimg"));
 					list2.add(map);
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -456,4 +481,38 @@ public class MyFriend1 extends Activity {
 		}
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		// 返回2的时候有效
+		if (resultCode == 2) {
+			if (data.getBooleanExtra("isFriend", true)) {
+				String friendDate = getDateByHttpConnection(ip + NetUrl.friend
+						+ chekAll);
+				// Log.i("result==>Asy", friendDate);
+				Log.i("friendAsy", friendDate);
+
+				DealJson dJson = new DealJson(friendDate, true);
+				if (adpter != null) {
+					adpter.notiChange(list1);
+					listview.setAdapter(adpter);
+					Log.i("list1", "不为空");
+				}
+			}
+
+			else {
+				String friendDate = getDateByHttpConnection(ip + NetUrl.friend
+						+ chekAlls);
+				// Log.i("result==>Asy", friendDate);
+				Log.i("friendAsy", friendDate);
+
+				DealJson dJson = new DealJson(friendDate, true);
+				if (adpter2 != null) {
+					adpter2.notiChange(list2);
+					listView2.setAdapter(adpter2);
+				}
+			}
+
+		}
+	}
 }

@@ -75,6 +75,8 @@
         <!-- 我的朋友修改 -->
         <activity android:name="com.jiangkaiquan.activity.MyFriend1" >
         </activity>
+        <activity android:name="com.jiangkaiquan.activity.AddFriendOrSocial" >
+        </activity>
         <!-- 推荐修改 -->
         <activity android:name="com.jiangkaiquan.activity.Rcomend2" >
         </activity>
@@ -119,10 +121,15 @@
         <!-- 我的购物车 页面 -->
         <activity android:name="com.zhangshun.activity.TheShoppingCartActivity" >
         </activity>
-        <activity android:name="com.zhangrong.activity.TheShopingCartActivityGG" >
+
+        <!-- 我的：已登录页面 -->
+<activity android:name="com.zhangrong.activity.TheShopingCartActivityGG" >
         </activity>
+
         <activity android:name="com.zhangwenbin.activity.PersonalCenterLoginName" >
+            
         </activity>
+        <!-- 今天吃什么页面 -->
         <activity android:name="com.zhangwenbin.activity.TodayEat" >
         </activity>
         <!-- 启动页面 -->
@@ -153,12 +160,11 @@
         <!-- 忘记密码页面 -->
         <activity android:name="com.ruanjiawei.activity.ForgetPasswordActivity" >
         </activity>
-        <!-- 分类：咨询医师页面 -->
-        <activity android:name="com.zhangwenbin.activity.Inquiry_doctor" >
-        </activity>
         <!-- 我的：个人中心未登录页面 -->
         <activity android:name="com.zhangwenbin.activity.PersonalCenterNotLogin" >
         </activity>
+
+
         <!-- 我的：店铺收藏页面 -->
         <activity android:name="com.zhangwenbin.activity.ShopCollection" >
         </activity>
@@ -181,6 +187,8 @@
 
         <activity android:name="com.zhangshun.activity.UploadToServerActivity" >
         </activity>
+
+
     </application>
 
 </manifest>

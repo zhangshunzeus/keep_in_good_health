@@ -38,7 +38,7 @@ public class TheLaunchPageActivity extends Activity {
 		};
 		timer.schedule(tast, 5000);
 	}
-
+ 
 	OnClickListener click = new OnClickListener() {
 
 		@Override
