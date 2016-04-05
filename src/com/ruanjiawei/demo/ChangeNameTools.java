@@ -48,7 +48,11 @@ public class ChangeNameTools {
 					builder.append(line);
 					line = bufferedReader.toString();
 				}
+				inputStream.close();
+				bufferedReader.close();
 				return builder.toString();
+				
+				
 
 			}
 		} catch (MalformedURLException e) {
