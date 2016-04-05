@@ -18,7 +18,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 
-import com.jiangkaiquan.activity.MyFriend;
+import com.jiangkaiquan.activity.OldFriend;
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.zhangshun.activity.MyCollectionActivity;
 import com.zhangshun.activity.PersonalInformationActivity;
@@ -167,7 +167,7 @@ public class PersonalCenterLoginName extends Activity {
 			/* 跳转我的朋友 */
 			case R.id.loginname_intent_myfriend:
 				Intent intent = new Intent(PersonalCenterLoginName.this,
-						MyFriend.class);
+						OldFriend.class);
 				startActivity(intent);
 				break;
 			/* 跳转我的记录 */
