@@ -8,6 +8,7 @@ import com.zhangwenbin.activity.TodayEat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -74,7 +75,13 @@ public class HomepageFragment extends Fragment {
 
 		home_page_search.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				home_page_search.setFocusable(true);
+				if (!home_page_search.isFocusable()) {
+					Log.i("Editex", "获取焦点");
+					home_page_search.setFocusable(true);
+					home_page_search.setFocusableInTouchMode(true);
+					home_page_search.requestFocus();
+				}
+
 			}
 		});
 

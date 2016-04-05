@@ -27,10 +27,10 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
-            android:padding="8dp"
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
             android:contentDescription="@drawable/mysetup"
+            android:padding="8dp"
             android:src="@drawable/mysetup" />
     </RelativeLayout>
 
@@ -43,39 +43,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-            
+
             <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
-       <ImageView
-            android:id="@+id/personal_background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@drawable/mytouxiangbeijing"
-            android:src="@drawable/mytouxiangbeijing" 
-            android:adjustViewBounds="true"/>
+                <ImageView
+                    android:id="@+id/personal_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@drawable/mytouxiangbeijing"
+                    android:src="@drawable/mytouxiangbeijing" />
 
-        <com.zhangwenbin.activity.CircleImageView
-            android:id="@+id/loginname_touxiang_intent_login"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-			android:layout_centerInParent="true"
-            android:src="@drawable/meal_name_show_image"/>
+                <com.zhangwenbin.activity.CircleImageView
+                    android:id="@+id/loginname_touxiang_intent_login"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/meal_name_show_image" />
 
-         <TextView
-            android:id="@+id/personal_not_login_intent_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/personal_background"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:text="@string/personal_login_name"
-            android:textColor="#ffffff" 
-            android:textSize="15sp"/>
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/personal_not_login_intent_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/personal_background"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="5dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/frame_check_login"
+                    android:text="@string/person_not_login"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
 
             <View
                 android:layout_width="330dp"
@@ -279,4 +280,5 @@
                 android:background="#e5e5e5" />
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

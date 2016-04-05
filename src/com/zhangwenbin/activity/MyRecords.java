@@ -38,13 +38,7 @@ public class MyRecords extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.my_records);
-		/*用于跳转监听*/
-		return_home = (RadioGroup) findViewById(R.id.my_records_return_home);
-		//return_home.setOnClickListener(listener);
-		intentClassify = (RadioButton) findViewById(R.id.myrecords_intent_classify);
-		//intentClassify.setOnClickListener(listener);
-		intentHomePage = (RadioButton) findViewById(R.id.myrecords_intent_homepage);
-		//intentHomePage.setOnClickListener(listener);
+		
 		/*返回监听*/
 		intentLoginName = (ImageView) findViewById(R.id.myrecords_intent_loginname);
 		intentLoginName.setOnClickListener(onClickListener);
@@ -99,15 +93,6 @@ public class MyRecords extends Activity {
 			case R.id.rb_comment:
 				transaction.show(myfragment[4]).commit();
 				break;
-			case R.id.myrecords_intent_classify:
-				Intent intent_classify = new Intent(MyRecords.this, MainActivity.class);
-				startActivity(intent_classify);
-				break;
-			case R.id.myrecords_intent_homepage:
-				Intent intent_homepage = new Intent(MyRecords.this, HomePageActivity.class);
-				startActivity(intent_homepage);
-				break;
-
 			default:
 				break;
 			}

@@ -101,15 +101,14 @@ public class LoginActivity extends Activity {
 						saveToken.saveToken(getApplicationContext(),
 								jo.getString("token"), jo.getString("tel"));
 
-						Intent intent = new Intent(LoginActivity.this,
+						//Intent intent = new Intent(LoginActivity.this,
 
-						PersonalCenterLoginName.class);
+						//PersonalCenterLoginName.class);
 						// 保存token
-						app.user.setToken(jo.getString("token"));
-						intent = new Intent(LoginActivity.this,
-								PersonalCenterNotLogin.class);
+						
 
-						startActivity(intent);
+						//startActivity(intent);
+						finish();
 
 					} else {
 						Toast.makeText(getApplication(),
