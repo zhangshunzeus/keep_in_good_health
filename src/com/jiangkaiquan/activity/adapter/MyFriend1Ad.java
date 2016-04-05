@@ -1,7 +1,5 @@
 package com.jiangkaiquan.activity.adapter;
 
-import android.R.integer;
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -18,21 +16,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.tencent.a.a.a.d;
 import com.zhangshun.keep_in_good_health.R;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * Created by jkqme on 2016/3/14.
@@ -42,6 +34,9 @@ import org.json.JSONObject;
  * Created by jkqme on 2016/3/14.
  */
 public class MyFriend1Ad extends BaseAdapter {
+	// 默认头像
+	String defult = "defult";
+
 	ArrayList<HashMap<String, Object>> list;
 	// 记录数据
 	ArrayList<HashMap<String, String>> list1 = new ArrayList<HashMap<String, String>>();
@@ -54,7 +49,7 @@ public class MyFriend1Ad extends BaseAdapter {
 	String friendDate = null;
 	// 群的json字符串
 	String socialDate = null;
-	String ip = "http://192.168.11.251";
+	String ip = NetUrl.ip2;
 	// String ips="http:";
 	String addDate = "addDate";
 	String addDates = "addDstes";
@@ -63,6 +58,7 @@ public class MyFriend1Ad extends BaseAdapter {
 	String chekAll = "chekAll";
 	String chekAlls = "chekAlls";
 	boolean hasget = false;
+	Bitmap defultBitmap;
 
 	public MyFriend1Ad() {
  
@@ -76,11 +72,25 @@ public class MyFriend1Ad extends BaseAdapter {
 		inflater = LayoutInflater.from(context);
 		MyAsy asy = new MyAsy();
 		asy.execute(chekAll);
+		defultBitmap = BitmapFactory.decodeResource(context.getResources(),
+				R.drawable.friend1);
 
 	}
-	private void notifyss(){
+
+	// 获取头像完成后调用
+	private void notifyss() {
 		this.notifyDataSetChanged();
 	}
+
+	// 添加好友或群后调用
+	public void notiChange(ArrayList<HashMap<String, String>> list) {
+		this.list1 = list;
+		list2.removeAll(list2);
+		MyAsy asy = new MyAsy();
+		asy.execute(chekAll);
+		Log.i("notiChange", "重新设置了数据");
+	}
+
 	@Override
 	public int getCount() {
 		return list1.size();
@@ -172,20 +182,35 @@ public class MyFriend1Ad extends BaseAdapter {
 			this.posion = position;
 		}
 
+		private void addImg() {
+			for (int i = 0; i < list1.size(); i++) {
+				// 没有设置头像的情况
+				if (list1.get(i).get("img").equals(defult)) {
+					bit = defultBitmap;
+					list2.add(bit);
+					continue;
+				}
+				// 设置了头像的情况
+				if (list1.get(i).get("img") != null
+						&& list1.get(i).get("img") != "") {
+					bit = getBit(list1.get(i).get("img"));
+				}
+
+				list2.add(bit);
+
+			}
+		}
+
 		// 无视if
 		@Override
 		protected String doInBackground(String... params) {
 			// TODO Auto-generated method stub params excute传人的字符串数组
 			String str = params[0];
 			String result = null;
-
+			addImg();
 			// String result = WebManger.getDateByHttpConnection(str, null);
 			// 或取单个pengyou信息
-			for (int i = 0; i < list1.size(); i++) {
-				bit = getBit(list1.get(i).get("img"));
-				list2.add(bit);
-				
-			}
+
 			return result;// 获取网络访问返回的数组
 		}
 
