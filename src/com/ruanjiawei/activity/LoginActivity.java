@@ -98,16 +98,19 @@ public class LoginActivity extends Activity {
 					JSONObject jo = new JSONObject(result);
 					if (jo.getInt("status") == 1) {
 
-						saveToken.saveToken(getApplicationContext(),
-								jo.getString("token"), jo.getString("tel"));
+						SaveToken.saveToken(getApplicationContext(),
+								jo.getString("token"));
 
-						//Intent intent = new Intent(LoginActivity.this,
+						// Intent intent = new Intent(LoginActivity.this,
 
-						//PersonalCenterLoginName.class);
+						// PersonalCenterLoginName.class);
 						// 保存token
-						
 
-						//startActivity(intent);
+						// app.user.setToken(jo.getString("token"));
+						// intent = new Intent(LoginActivity.this,
+						// PersonalCenterNotLogin.class);
+
+						// startActivity(intent);
 						finish();
 
 					} else {

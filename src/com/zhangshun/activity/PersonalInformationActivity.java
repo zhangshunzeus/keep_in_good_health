@@ -1,9 +1,17 @@
 package com.zhangshun.activity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 
 import com.jiangkaiquan.aplication.MyApplaication;
+import com.jiangkaiquan.aplication.User;
+import com.ruanjiawei.demo.LogoutTools;
+import com.ruanjiawei.demo.SaveToken;
+import com.ruanjiawei.demo.LogoutTools.OnLogoutListener;
 import com.zhangshun.keep_in_good_health.R;
+import com.zhangwenbin.activity.PersonalCenterNotLogin;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -24,6 +32,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PersonalInformationActivity extends Activity {
 
@@ -40,6 +49,7 @@ public class PersonalInformationActivity extends Activity {
 	LinearLayout dialog_the_binding_of_sina_weibo;// 绑定新浪微博
 	LinearLayout dialog_binding_alipay;// 绑定支付宝
 	Button btn_exit;// 退出
+	LogoutTools logout;
 
 	// 个人信息页面
 	@Override
@@ -79,6 +89,40 @@ public class PersonalInformationActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
+
+			OnLogoutListener mlistener = new OnLogoutListener() {
+
+				@Override
+				public void start() {
+					// TODO Auto-generated method stub
+
+				}
+
+				@Override
+				public void end(String result) {
+					try {
+						JSONObject js = new JSONObject(result);
+
+						if (js.getInt("status") == 1) {
+							Intent intent = new Intent(
+									PersonalInformationActivity.this,
+									PersonalCenterNotLogin.class);
+
+							startActivity(intent);
+						} else {
+							Toast.makeText(getApplication(),
+									js.getString("message"), Toast.LENGTH_LONG)
+									.show();
+						}
+
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+				}
+			};
+
 			switch (v.getId()) {
 			case R.id.return_btn:
 				finish();
@@ -108,14 +152,18 @@ public class PersonalInformationActivity extends Activity {
 				dialog_binding_alipay();
 				break;
 			case R.id.btn_exit:
-				finish();
+
+				Intent intent = new Intent(PersonalInformationActivity.this,
+						PersonalCenterNotLogin.class);
+				startActivity(intent);
+
 				break;
 			default:
 				break;
 			}
 		}
 	};
-	
+
 	/**
 	 * 点击修改头像
 	 * */
@@ -147,13 +195,14 @@ public class PersonalInformationActivity extends Activity {
 				// TODO Auto-generated method stub
 				arg0.dismiss();
 				Intent intent = new Intent(Intent.ACTION_PICK, null);
-				intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+				intent.setDataAndType(
+						MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
 				startActivityForResult(intent, PHOTO_REQUEST_GALLERY);
 			}
 		}).show();
 
 	}
-	
+
 	/**
 	 * 点击昵称 弹出Dialog 修改昵称
 	 * */
@@ -280,7 +329,7 @@ public class PersonalInformationActivity extends Activity {
 						setTitle(inputPwd);
 						TextView tv = (TextView) findViewById(R.id.binding_weChat_ID_text);
 						tv.setText(inputPwd);
-						 app.user.setVchar(inputPwd);
+						app.user.setVchar(inputPwd);
 					}
 				})
 				.setNegativeButton("Cancel",
@@ -399,4 +448,5 @@ public class PersonalInformationActivity extends Activity {
 		dlg.show();
 
 	}
+
 }
