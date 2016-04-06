@@ -41,21 +41,18 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
-import com.jiangkaiquan.activity.MyFriend;
+
 import com.jiangkaiquan.activity.MyFriend1;
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.ruanjiawei.activity.LoginActivity;
 import com.zhangrong.activity.TheShopingCartActivityGG;
-import com.zhangshun.activity.CommonDiseasesListForDetailsAcitivty;
-import com.zhangshun.activity.HomePageActivity;
+
 import com.zhangshun.activity.MyCollectionActivity;
 import com.zhangshun.activity.PersonalInformationActivity;
 import com.zhangshun.activity.SetUpTheActivity;
-import com.zhangshun.activity.TheShoppingCartActivity;
+
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.MyRecords;
-import com.zhangwenbin.activity.PersonalCenterLoginName;
-import com.zhangwenbin.activity.PersonalCenterNotLogin;
 
 /**
  * 这个fragment是，我的板块中的展示fragment， 它加载的是我的板块布局
@@ -63,7 +60,7 @@ import com.zhangwenbin.activity.PersonalCenterNotLogin;
  * @创建时间 2016-03-09
  */
 public class MyFragment extends Fragment {
-	
+
 	MyApplaication app;
 	LinearLayout intentMyRecords;
 	LinearLayout intentMyFriend;
@@ -76,7 +73,7 @@ public class MyFragment extends Fragment {
 	TextView intentLogin;
 	TextView userName;
 	private ImageView head_intent_login;
-	
+
 	private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
 	private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
 	private static final int PHOTO_REQUEST_CUT = 3;// 结果
@@ -89,24 +86,31 @@ public class MyFragment extends Fragment {
 		View view = inflater.inflate(R.layout.personal_center_login_name,
 				container, false);
 
-		intentMyCollection = (LinearLayout) view.findViewById(R.id.loginname_intent_mycollection);
+		intentMyCollection = (LinearLayout) view
+				.findViewById(R.id.loginname_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
-		intentMyFriend = (LinearLayout) view.findViewById(R.id.loginname_intent_myfriend);
+		intentMyFriend = (LinearLayout) view
+				.findViewById(R.id.loginname_intent_myfriend);
 		intentMyFriend.setOnClickListener(onClickListener);
-		intentMyRecords = (LinearLayout) view.findViewById(R.id.loginname_intent_myrecords);
+		intentMyRecords = (LinearLayout) view
+				.findViewById(R.id.loginname_intent_myrecords);
 		intentMyRecords.setOnClickListener(onClickListener);
-		intentShopCart = (LinearLayout) view.findViewById(R.id.loginname_intent_shoppingcart);
+		intentShopCart = (LinearLayout) view
+				.findViewById(R.id.loginname_intent_shoppingcart);
 		intentShopCart.setOnClickListener(onClickListener);
 		intentVIP = (LinearLayout) view.findViewById(R.id.loginname_intent_vip);
 		intentVIP.setOnClickListener(onClickListener);
-		intentSetUp = (ImageView) view.findViewById(R.id.loginname_intent_setup);
+		intentSetUp = (ImageView) view
+				.findViewById(R.id.loginname_intent_setup);
 		intentSetUp.setOnClickListener(onClickListener);
 
-		userName = (TextView) view.findViewById(R.id.personal_not_login_intent_login);
+		userName = (TextView) view
+				.findViewById(R.id.personal_not_login_intent_login);
 		userName.setOnClickListener(onClickListener);
-		head_intent_login = (ImageView) view.findViewById(R.id.loginname_touxiang_intent_login);
+		head_intent_login = (ImageView) view
+				.findViewById(R.id.loginname_touxiang_intent_login);
 		head_intent_login.setOnClickListener(onClickListener);
-		
+
 		SetLoginState();
 		return view;
 	}
@@ -117,7 +121,7 @@ public class MyFragment extends Fragment {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			
+
 			case R.id.personal_not_login_intent_login:
 				Intent intent_login = new Intent();
 				intent_login.setClass(getActivity(), LoginActivity.class);
@@ -136,34 +140,30 @@ public class MyFragment extends Fragment {
 				break;
 			/* 跳转我的收藏 */
 			case R.id.loginname_intent_mycollection:
-				Intent intent_mycollection = new Intent(
-						getActivity(),
+				Intent intent_mycollection = new Intent(getActivity(),
 						MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
 			/* 跳转我的朋友 */
 			case R.id.loginname_intent_myfriend:
-				Intent intent = new Intent(getActivity(),
-						MyFriend.class);
+				Intent intent = new Intent(getActivity(), MyFriend1.class);
 				startActivity(intent);
 				break;
 			/* 跳转我的记录 */
 			case R.id.loginname_intent_myrecords:
-				Intent intent_myrecords = new Intent(
-						getActivity(), MyRecords.class);
+				Intent intent_myrecords = new Intent(getActivity(),
+						MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
 			/* 跳转购物车 */
 			case R.id.loginname_intent_shoppingcart:
-				Intent intent_shopingcart = new Intent(
-						getActivity(),
+				Intent intent_shopingcart = new Intent(getActivity(),
 						TheShopingCartActivityGG.class);
 				startActivity(intent_shopingcart);
 				break;
 			/* 跳转个人信息 */
 			case R.id.loginname_intent_vip:
-				Intent intent_vippage = new Intent(
-						getActivity(),
+				Intent intent_vippage = new Intent(getActivity(),
 						PersonalInformationActivity.class);
 				startActivity(intent_vippage);
 				break;
@@ -193,6 +193,7 @@ public class MyFragment extends Fragment {
 			head_intent_login.setImageBitmap(app.user.getUserImg());
 		}
 	}
+
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
@@ -229,7 +230,8 @@ public class MyFragment extends Fragment {
 				// TODO Auto-generated method stub
 				arg0.dismiss();
 				Intent intent = new Intent(Intent.ACTION_PICK, null);
-				intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+				intent.setDataAndType(
+						MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
 				startActivityForResult(intent, PHOTO_REQUEST_GALLERY);
 			}
 		}).show();
@@ -273,7 +275,6 @@ public class MyFragment extends Fragment {
 	}
 
 	@SuppressLint("NewApi")
-
 	// 将进行剪裁后的图片显示到UI界面上
 	public void setPicToView(Intent picdata) {
 		Bundle bundle = picdata.getExtras();
@@ -300,7 +301,8 @@ public class MyFragment extends Fragment {
 			public void run() {
 				// TODO Auto-generated method stub
 				BasicHttpParams basicHttpParams = new BasicHttpParams();
-				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
+				HttpConnectionParams
+						.setConnectionTimeout(basicHttpParams, 8000);
 				HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
 
 				HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
@@ -308,7 +310,8 @@ public class MyFragment extends Fragment {
 				List<NameValuePair> pairs = new ArrayList<NameValuePair>();
 				pairs.add(new BasicNameValuePair("", ""));
 				try {
-					UrlEncodedFormEntity entity = new UrlEncodedFormEntity(pairs);
+					UrlEncodedFormEntity entity = new UrlEncodedFormEntity(
+							pairs);
 					httpPost.setEntity(entity);
 					httpClient.execute(httpPost);
 				} catch (UnsupportedEncodingException e) {

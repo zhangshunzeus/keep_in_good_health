@@ -33,6 +33,7 @@ public class AddFriendOrSocial extends Activity {
 	private EditText eText;
 	private TextView tView;
 	private boolean isFriend;
+	private TextView titleTextView;
 
 	private String ip = NetUrl.ip1;
 	private String addDate = "addDate";
@@ -41,7 +42,7 @@ public class AddFriendOrSocial extends Activity {
 	private String friend = "好友";
 	private String social = "群";
 	private String courrent;
-
+	private Bundle bundle=new Bundle();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -49,12 +50,13 @@ public class AddFriendOrSocial extends Activity {
 		setContentView(R.layout.jiangkaiquan_addfriend);
 		eText = (EditText) findViewById(R.id.addfriend_etx);
 		tView = (TextView) findViewById(R.id.addfriend_tx);
+		titleTextView = (TextView) findViewById(R.id.addfriend_title_tx);
 		intent = getIntent();
 		// 设置默认返回的intent；
 
 		isFriend = intent.getBooleanExtra("isFriend", true);
-		intent = new Intent();
-		intent.putExtra("isFriend", isFriend);
+		bundle.putBoolean("isFriend",isFriend);
+		intent.putExtras(bundle);
 		setResult(2, intent);
 
 		eText.setOnClickListener(listener);
@@ -66,6 +68,7 @@ public class AddFriendOrSocial extends Activity {
 			tView.setText("添加" + social);
 			courrent = social;
 		}
+		titleTextView.setText("添加" + courrent);
 	}
 
 	private OnClickListener listener = new OnClickListener() {
@@ -101,7 +104,7 @@ public class AddFriendOrSocial extends Activity {
 		Log.i("getEdit", username);
 		if (username != null && username != "") {
 			// 添加成功时的返回
-		//	setResult(2, intent);
+			// setResult(2, intent);
 			if (isFriend) {
 				getDateByHttpConnection(ip + NetUrl.friend + addDate + "?"
 						+ "key=" + username + "&" + "menber=defult");

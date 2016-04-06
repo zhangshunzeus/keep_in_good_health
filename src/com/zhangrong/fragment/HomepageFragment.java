@@ -77,9 +77,11 @@ public class HomepageFragment extends Fragment {
 			public void onClick(View v) {
 				if (!home_page_search.isFocusable()) {
 					Log.i("Editex", "获取焦点");
-					home_page_search.setFocusable(true);
+					home_page_search.setEnabled(true);
 					home_page_search.setFocusableInTouchMode(true);
+
 					home_page_search.requestFocus();
+					home_page_search.setFocusable(true);
 				}
 
 			}

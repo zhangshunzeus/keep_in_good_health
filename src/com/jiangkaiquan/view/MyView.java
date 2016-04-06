@@ -30,7 +30,7 @@ public class MyView extends android.view.View {
 		public void handleMessage(Message msg) {
 			// TODO Auto-generated method stub
 
-			Log.i("MyviewHander", heights + "");
+			//Log.i("MyviewHander", heights + "");
 			if (i == 70) {
 				matrix.setTranslate(0, 0);
 				i = 1;
@@ -67,7 +67,7 @@ public class MyView extends android.view.View {
 
 		for (int i = 0; i < 6;) {
 
-			Log.i("matrix", b[i] + "  " + b[i++] + "  " + b[i++]);
+			//Log.i("matrix", b[i] + "  " + b[i++] + "  " + b[i++]);
 
 		}
 		matrix.postTranslate(0, 4);
@@ -80,7 +80,7 @@ public class MyView extends android.view.View {
 		// TODO Auto-generated method stub
 
 		heights = MeasureSpec.getMode(heightMeasureSpec) / 5;
-		Log.i("ONMeasure", heights + "    " + heightMeasureSpec);
+		//Log.i("ONMeasure", heights + "    " + heightMeasureSpec);
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 	}
 }

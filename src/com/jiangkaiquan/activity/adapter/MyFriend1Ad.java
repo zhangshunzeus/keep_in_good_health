@@ -61,7 +61,7 @@ public class MyFriend1Ad extends BaseAdapter {
 	Bitmap defultBitmap;
 
 	public MyFriend1Ad() {
- 
+
 	}
 
 	public MyFriend1Ad(ArrayList<HashMap<String, String>> list,
@@ -186,17 +186,16 @@ public class MyFriend1Ad extends BaseAdapter {
 			for (int i = 0; i < list1.size(); i++) {
 				// 没有设置头像的情况
 				if (list1.get(i).get("img").equals(defult)) {
-					bit = defultBitmap;
-					list2.add(bit);
+
+					list2.add(defultBitmap);
 					continue;
 				}
 				// 设置了头像的情况
 				if (list1.get(i).get("img") != null
 						&& list1.get(i).get("img") != "") {
 					bit = getBit(list1.get(i).get("img"));
+					list2.add(bit);
 				}
-
-				list2.add(bit);
 
 			}
 		}
@@ -219,7 +218,7 @@ public class MyFriend1Ad extends BaseAdapter {
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
 			notifyss();
-			Log.i("lst2", list2.size() + "");
+			Log.i("lst2", list2.size() + "" + "  lst1.sise=" + list1.size());
 			super.onPostExecute(result);
 		}
 	}

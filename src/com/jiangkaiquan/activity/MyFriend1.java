@@ -60,7 +60,7 @@ public class MyFriend1 extends Activity {
 	private TextView friend;
 	private TextView social;
 	private PopupWindow pwind;
- 
+
 	private ListView listview;
 	private ListView listView2;
 	private MyFriend1Ad adpter;
@@ -485,34 +485,36 @@ public class MyFriend1 extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		// 返回2的时候有效
+
 		if (resultCode == 2) {
-			if (data.getBooleanExtra("isFriend", true)) {
+			boolean isfriend = data.getExtras().getBoolean("isFriend");
+			if (isfriend) {
+
+				list1.removeAll(list1);
 				String friendDate = getDateByHttpConnection(ip + NetUrl.friend
 						+ chekAll);
 				// Log.i("result==>Asy", friendDate);
+
 				Log.i("friendAsy", friendDate);
 
 				DealJson dJson = new DealJson(friendDate, true);
 				if (adpter != null) {
 					adpter.notiChange(list1);
-					listview.setAdapter(adpter);
+
 					Log.i("list1", "不为空");
 				}
-			}
-
-			else {
+			} else {
+				list2.removeAll(list2);
 				String friendDate = getDateByHttpConnection(ip + NetUrl.friend
 						+ chekAlls);
 				// Log.i("result==>Asy", friendDate);
-				Log.i("friendAsy", friendDate);
+				Log.i("socialAsy", friendDate);
 
-				DealJson dJson = new DealJson(friendDate, true);
+				DealJson dJson = new DealJson(friendDate,false);
 				if (adpter2 != null) {
 					adpter2.notiChange(list2);
-					listView2.setAdapter(adpter2);
 				}
 			}
-
 		}
 	}
 }
