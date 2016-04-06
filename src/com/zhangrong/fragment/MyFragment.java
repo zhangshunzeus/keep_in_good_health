@@ -41,7 +41,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
-import com.jiangkaiquan.activity.MyFriend;
 import com.jiangkaiquan.activity.MyFriend1;
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.ruanjiawei.activity.LoginActivity;
@@ -58,9 +57,9 @@ import com.zhangwenbin.activity.PersonalCenterLoginName;
 import com.zhangwenbin.activity.PersonalCenterNotLogin;
 
 /**
- * 这个fragment是，我的板块中的展示fragment， 它加载的是我的板块布局
+ * 杩欎釜fragment鏄紝鎴戠殑鏉垮潡涓殑灞曠ずfragment锛� 瀹冨姞杞界殑鏄垜鐨勬澘鍧楀竷灞�
  * 
- * @创建时间 2016-03-09
+ * @鍒涘缓鏃堕棿 2016-03-09
  */
 public class MyFragment extends Fragment {
 	
@@ -77,14 +76,14 @@ public class MyFragment extends Fragment {
 	TextView userName;
 	private ImageView head_intent_login;
 	
-	private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
-	private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
-	private static final int PHOTO_REQUEST_CUT = 3;// 结果
+	private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 鎷嶇収
+	private static final int PHOTO_REQUEST_GALLERY = 2;// 浠庣浉鍐屼腑閫夋嫨
+	private static final int PHOTO_REQUEST_CUT = 3;// 缁撴灉
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// 拿到本地application
+		// 鎷垮埌鏈湴application
 		app = (MyApplaication) getActivity().getApplication();
 		View view = inflater.inflate(R.layout.personal_center_login_name,
 				container, false);
@@ -123,44 +122,44 @@ public class MyFragment extends Fragment {
 				intent_login.setClass(getActivity(), LoginActivity.class);
 				startActivity(intent_login);
 				break;
-			/* 设置头像 */
+			/* 璁剧疆澶村儚 */
 			case R.id.loginname_touxiang_intent_login:
 				showDialog();
 
 				break;
-			/* 跳转设置 */
+			/* 璺宠浆璁剧疆 */
 			case R.id.loginname_intent_setup:
 				Intent intent_setup = new Intent(getActivity(),
 						SetUpTheActivity.class);
 				startActivity(intent_setup);
 				break;
-			/* 跳转我的收藏 */
+			/* 璺宠浆鎴戠殑鏀惰棌 */
 			case R.id.loginname_intent_mycollection:
 				Intent intent_mycollection = new Intent(
 						getActivity(),
 						MyCollectionActivity.class);
 				startActivity(intent_mycollection);
 				break;
-			/* 跳转我的朋友 */
+			/* 璺宠浆鎴戠殑鏈嬪弸 */
 			case R.id.loginname_intent_myfriend:
 				Intent intent = new Intent(getActivity(),
-						MyFriend.class);
+						MyFriend1.class);
 				startActivity(intent);
 				break;
-			/* 跳转我的记录 */
+			/* 璺宠浆鎴戠殑璁板綍 */
 			case R.id.loginname_intent_myrecords:
 				Intent intent_myrecords = new Intent(
 						getActivity(), MyRecords.class);
 				startActivity(intent_myrecords);
 				break;
-			/* 跳转购物车 */
+			/* 璺宠浆璐墿杞� */
 			case R.id.loginname_intent_shoppingcart:
 				Intent intent_shopingcart = new Intent(
 						getActivity(),
 						TheShopingCartActivityGG.class);
 				startActivity(intent_shopingcart);
 				break;
-			/* 跳转个人信息 */
+			/* 璺宠浆涓汉淇℃伅 */
 			case R.id.loginname_intent_vip:
 				Intent intent_vippage = new Intent(
 						getActivity(),
@@ -174,10 +173,10 @@ public class MyFragment extends Fragment {
 	private File tempFile;
 
 	/**
-	 * 设置跳转到个人中心时用户的头像和昵称显示
+	 * 璁剧疆璺宠浆鍒颁釜浜轰腑蹇冩椂鐢ㄦ埛鐨勫ご鍍忓拰鏄电О鏄剧ず
 	 */
 	private void SetLoginState() {
-		// 设置昵称
+		// 璁剧疆鏄电О
 		if (app.user.getUserName() != null && app.user.getUserName() != "") {
 
 			userName.setText(app.user.getUserName());
@@ -188,7 +187,7 @@ public class MyFragment extends Fragment {
 			userName.setText(app.user.getPhoneNum());
 		}
 
-		// 设置头像
+		// 璁剧疆澶村儚
 		if (app.user.getUserImg() != null) {
 			head_intent_login.setImageBitmap(app.user.getUserImg());
 		}
@@ -200,12 +199,12 @@ public class MyFragment extends Fragment {
 		super.onResume();
 	}
 
-	// 对话框
+	// 瀵硅瘽妗�
 	public void showDialog() {
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		builder.setTitle("头像设置");
-		builder.setPositiveButton("拍照", new DialogInterface.OnClickListener() {
+		builder.setTitle("澶村儚璁剧疆");
+		builder.setPositiveButton("鎷嶇収", new DialogInterface.OnClickListener() {
 
 			private File tempFile;
 
@@ -215,14 +214,14 @@ public class MyFragment extends Fragment {
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
 				dialog.dismiss();
-				// 调用系统的拍照功能
+				// 璋冪敤绯荤粺鐨勬媿鐓у姛鑳�
 				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-				// 指定调用相机拍照后照片的储存路径
+				// 鎸囧畾璋冪敤鐩告満鎷嶇収鍚庣収鐗囩殑鍌ㄥ瓨璺緞
 				intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(tempFile));
 				startActivityForResult(intent, PHOTO_REQUEST_TAKEPHOTO);
 			}
 		});
-		builder.setNegativeButton("相册", new DialogInterface.OnClickListener() {
+		builder.setNegativeButton("鐩稿唽", new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
@@ -260,12 +259,12 @@ public class MyFragment extends Fragment {
 	public void startPhotoZoom(Uri uri, int size) {
 		Intent intent = new Intent("com.android.camera.action.CROP");
 		intent.setDataAndType(uri, "image/*");
-		// crop为true是设置在开启的intent中设置显示的view可以剪裁
+		// crop涓簍rue鏄缃湪寮�鍚殑intent涓缃樉绀虹殑view鍙互鍓
 		intent.putExtra("crop", "true");
-		// aspectX aspectY 是宽高的比例
+		// aspectX aspectY 鏄楂樼殑姣斾緥
 		intent.putExtra("aspectX", 1);
 		intent.putExtra("aspectY", 1);
-		// outputX,outputY 是剪裁图片的宽高
+		// outputX,outputY 鏄壀瑁佸浘鐗囩殑瀹介珮
 		intent.putExtra("outputX", size);
 		intent.putExtra("outputY", size);
 		intent.putExtra("return-data", true);
@@ -274,7 +273,7 @@ public class MyFragment extends Fragment {
 
 	@SuppressLint("NewApi")
 
-	// 将进行剪裁后的图片显示到UI界面上
+	// 灏嗚繘琛屽壀瑁佸悗鐨勫浘鐗囨樉绀哄埌UI鐣岄潰涓�
 	public void setPicToView(Intent picdata) {
 		Bundle bundle = picdata.getExtras();
 		if (bundle != null) {
@@ -285,7 +284,7 @@ public class MyFragment extends Fragment {
 	}
 
 	@SuppressLint("SimpleDateFormat")
-	// 使用系统当前日期加以调整作为照片的名称
+	// 浣跨敤绯荤粺褰撳墠鏃ユ湡鍔犱互璋冩暣浣滀负鐓х墖鐨勫悕绉�
 	public String getPhotoFileName() {
 		Date date = new Date(System.currentTimeMillis());
 		SimpleDateFormat format = new SimpleDateFormat("'IMG'_yyyyMMdd_HHmmss");

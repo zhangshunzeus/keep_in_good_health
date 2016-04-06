@@ -246,7 +246,7 @@ public class PersonalCenterLoginName extends Activity {
 			}
 		});
 		builder.setNegativeButton("相册", new DialogInterface.OnClickListener() {
-
+			//使用相册功能
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
 				// TODO Auto-generated method stub
