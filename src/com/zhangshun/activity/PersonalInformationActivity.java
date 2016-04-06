@@ -6,12 +6,10 @@ import org.json.JSONObject;
 import java.io.File;
 
 import com.jiangkaiquan.aplication.MyApplaication;
-
 import com.jiangkaiquan.aplication.User;
 import com.ruanjiawei.demo.LogoutTools;
 import com.ruanjiawei.demo.SaveToken;
 import com.ruanjiawei.demo.LogoutTools.OnLogoutListener;
-
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.PersonalCenterNotLogin;
 
@@ -34,6 +32,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PersonalInformationActivity extends Activity {
 

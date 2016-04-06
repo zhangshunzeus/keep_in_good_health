@@ -41,7 +41,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
-import com.jiangkaiquan.activity.MyFriend;
+
 import com.jiangkaiquan.activity.MyFriend1;
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.ruanjiawei.activity.LoginActivity;
@@ -144,7 +144,7 @@ public class MyFragment extends Fragment {
 			/* 跳转我的朋友 */
 			case R.id.loginname_intent_myfriend:
 				Intent intent = new Intent(getActivity(),
-						MyFriend.class);
+						MyFriend1.class);
 				startActivity(intent);
 				break;
 			/* 跳转我的记录 */

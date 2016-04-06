@@ -102,15 +102,14 @@ public class PersonalCenterNotLogin extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-<<<<<<< HEAD
+
 			/* 跳转到登录 */
-=======
+
 
 			/*跳转到登录*/
 
 			/* 跳转到已登录 */
 
->>>>>>> develop
 			case R.id.personal_not_login_intent_login:
 				Intent intent_login = new Intent(PersonalCenterNotLogin.this,
 						LoginActivity.class);
