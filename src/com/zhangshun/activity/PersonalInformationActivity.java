@@ -3,22 +3,28 @@ package com.zhangshun.activity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+
 import com.jiangkaiquan.aplication.MyApplaication;
-<<<<<<< HEAD
+
 import com.jiangkaiquan.aplication.User;
 import com.ruanjiawei.demo.LogoutTools;
 import com.ruanjiawei.demo.SaveToken;
 import com.ruanjiawei.demo.LogoutTools.OnLogoutListener;
-=======
->>>>>>> develop
+
 import com.zhangshun.keep_in_good_health.R;
 import com.zhangwenbin.activity.PersonalCenterNotLogin;
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +37,8 @@ import android.widget.TextView;
 
 public class PersonalInformationActivity extends Activity {
 
+	protected static final int PHOTO_REQUEST_TAKEPHOTO = 0;
+	protected static final int PHOTO_REQUEST_GALLERY = 0;
 	MyApplaication app;
 	ImageView return_btn;// 返回按钮
 	LinearLayout dialog_head_portrait;// 头像
@@ -102,7 +110,7 @@ public class PersonalInformationActivity extends Activity {
 									PersonalCenterNotLogin.class);
 
 							startActivity(intent);
-						}else{
+						} else {
 							Toast.makeText(getApplication(),
 									js.getString("message"), Toast.LENGTH_LONG)
 									.show();
@@ -121,11 +129,7 @@ public class PersonalInformationActivity extends Activity {
 				finish();
 				break;
 			case R.id.dialog_head_portrait: // 头像
-				Intent intent_uploadToServer = new Intent();
-				intent_uploadToServer.setClass(
-						PersonalInformationActivity.this,
-						UploadToServerActivity.class);
-				startActivity(intent_uploadToServer);
+				showDialog();
 				break;
 			case R.id.dialog_username_text: // 昵称
 				dialog_username_text();
@@ -149,8 +153,9 @@ public class PersonalInformationActivity extends Activity {
 				dialog_binding_alipay();
 				break;
 			case R.id.btn_exit:
-				
-				Intent intent=new Intent(PersonalInformationActivity.this,PersonalCenterNotLogin.class);
+
+				Intent intent = new Intent(PersonalInformationActivity.this,
+						PersonalCenterNotLogin.class);
 				startActivity(intent);
 
 				break;
@@ -159,6 +164,45 @@ public class PersonalInformationActivity extends Activity {
 			}
 		}
 	};
+
+	/**
+	 * 点击修改头像
+	 * */
+	public void showDialog() {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("头像设置");
+		builder.setPositiveButton("拍照", new DialogInterface.OnClickListener() {
+
+			private File tempFile;
+
+			@TargetApi(Build.VERSION_CODES.CUPCAKE)
+			@SuppressLint("InlinedApi")
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				dialog.dismiss();
+				// 调用系统的拍照功能
+				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				// 指定调用相机拍照后照片的储存路径
+				intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(tempFile));
+				startActivityForResult(intent, PHOTO_REQUEST_TAKEPHOTO);
+			}
+		});
+		builder.setNegativeButton("相册", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface arg0, int arg1) {
+				// TODO Auto-generated method stub
+				arg0.dismiss();
+				Intent intent = new Intent(Intent.ACTION_PICK, null);
+				intent.setDataAndType(
+						MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+				startActivityForResult(intent, PHOTO_REQUEST_GALLERY);
+			}
+		}).show();
+
+	}
 
 	/**
 	 * 点击昵称 弹出Dialog 修改昵称

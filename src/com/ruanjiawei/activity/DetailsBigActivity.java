@@ -1,7 +1,7 @@
 package com.ruanjiawei.activity;
 
 import com.zhangshun.keep_in_good_health.R;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View.OnClickListener;
@@ -10,6 +10,7 @@ import android.view.Window;
 import android.widget.ImageButton;
 
 public class DetailsBigActivity extends Activity {
+	@SuppressLint("WrongViewCast")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 

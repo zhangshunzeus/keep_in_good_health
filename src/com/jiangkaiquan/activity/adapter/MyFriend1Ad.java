@@ -49,7 +49,7 @@ public class MyFriend1Ad extends BaseAdapter {
 	String friendDate = null;
 	// 群的json字符串
 	String socialDate = null;
-	String ip = NetUrl.ip2;
+	String ip = NetUrl.ip1;
 	// String ips="http:";
 	String addDate = "addDate";
 	String addDates = "addDstes";

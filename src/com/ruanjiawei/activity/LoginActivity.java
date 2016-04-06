@@ -101,15 +101,17 @@ public class LoginActivity extends Activity {
 						SaveToken.saveToken(getApplicationContext(),
 								jo.getString("token"));
 
-						Intent intent = new Intent(LoginActivity.this,
+						// Intent intent = new Intent(LoginActivity.this,
 
-						PersonalCenterLoginName.class);
+						// PersonalCenterLoginName.class);
 						// 保存token
-						//app.user.setToken(jo.getString("token"));
-						//intent = new Intent(LoginActivity.this,
-						//		PersonalCenterNotLogin.class);
 
-						startActivity(intent);
+						// app.user.setToken(jo.getString("token"));
+						// intent = new Intent(LoginActivity.this,
+						// PersonalCenterNotLogin.class);
+
+						// startActivity(intent);
+						finish();
 
 					} else {
 						Toast.makeText(getApplication(),
