@@ -7,7 +7,7 @@
     <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="敬请期待，猛戳刷新，无此数据。所有"
+        android:text=""
         android:textSize="15sp"
         android:layout_gravity="center"
         android:textColor="#ff0000"/>
