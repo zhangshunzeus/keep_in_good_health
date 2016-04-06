@@ -11,6 +11,7 @@ import android.net.wifi.WifiConfiguration;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ import android.widget.Toast;
 
 import com.jiangkaiquan.activity.adapter.MyFriend1Ad;
 import com.jiangkaiquan.activity.adapter.NetUrl;
+import com.tencent.a.b.i;
 import com.zhangshun.keep_in_good_health.R;
 
 import java.io.BufferedReader;
@@ -46,8 +48,10 @@ import org.json.JSONObject;
 /**
  * Created by jkqme on 2016/3/14.
  * <p/>
- * MyFriend 的更新 先在activity里获取好友列表，在adapter里或取头像列表 //// \n添加好友的跳转resultCode=1;
+ * 网络请求里不能用/tost MyFriend 的更新 先在activity里获取好友列表，在adapter里或取头像列表 ////
+ * \n添加好友的跳转resultCode=1;
  */
+@SuppressLint("ShowToast")
 @TargetApi(Build.VERSION_CODES.CUPCAKE)
 public class MyFriend1 extends Activity {
 
@@ -94,7 +98,12 @@ public class MyFriend1 extends Activity {
 			String friendDate = getDateByHttpConnection(ip + NetUrl.friend
 					+ chekAll);
 			// Log.i("result==>Asy", friendDate);
-			Log.i("friendAsy", friendDate);
+			Log.i("friendAsy", "" + friendDate);
+
+			if (friendDate == null) {
+
+				return null;
+			}
 			if (friendDate.equals("warn"))
 				return null;
 			DealJson dJson = new DealJson(friendDate, true);
@@ -111,8 +120,14 @@ public class MyFriend1 extends Activity {
 					adpter = new MyFriend1Ad(list1, result, false);
 					listview.setAdapter(adpter);
 				}
+			} else {
+				onProgressUpdate(null);
 			}
 		}
+
+		protected void onProgressUpdate(String[] values) {
+			displayTost();
+		};
 	};
 	// 初始化list2;
 	@SuppressLint("NewApi")
@@ -126,7 +141,12 @@ public class MyFriend1 extends Activity {
 			String friendDate = getDateByHttpConnection(ip + NetUrl.friend
 					+ chekAlls);
 			// Log.i("result==>Asy", friendDate);
-			Log.i("SocialAsy", friendDate);
+			Log.i("SocialAsy", "" + friendDate);
+
+			if (friendDate == null) {
+
+				return null;
+			}
 			if (friendDate.equals("warn"))
 				return null;
 			DealJson dJson = new DealJson(friendDate, false);
@@ -173,6 +193,10 @@ public class MyFriend1 extends Activity {
 
 		social.setOnClickListener(listener);
 
+	}
+
+	private void displayTost() {
+		Toast.makeText(this, "网络故障", Toast.LENGTH_LONG).show();
 	}
 
 	private View.OnClickListener listener = new View.OnClickListener() {
@@ -377,7 +401,7 @@ public class MyFriend1 extends Activity {
 			try {
 				connection.connect();
 			} catch (ConnectException e) {
-				Toast.makeText(this, "网络故障", 2000);
+
 				return null;
 			}
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
@@ -494,7 +518,9 @@ public class MyFriend1 extends Activity {
 				String friendDate = getDateByHttpConnection(ip + NetUrl.friend
 						+ chekAll);
 				// Log.i("result==>Asy", friendDate);
-
+				if (friendDate == null) {
+					return;
+				}
 				Log.i("friendAsy", friendDate);
 
 				DealJson dJson = new DealJson(friendDate, true);
@@ -508,9 +534,12 @@ public class MyFriend1 extends Activity {
 				String friendDate = getDateByHttpConnection(ip + NetUrl.friend
 						+ chekAlls);
 				// Log.i("result==>Asy", friendDate);
+				if (friendDate == null) {
+					return;
+				}
 				Log.i("socialAsy", friendDate);
 
-				DealJson dJson = new DealJson(friendDate,false);
+				DealJson dJson = new DealJson(friendDate, false);
 				if (adpter2 != null) {
 					adpter2.notiChange(list2);
 				}

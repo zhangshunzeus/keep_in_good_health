@@ -174,8 +174,16 @@ public class AddFriendOrSocial extends Activity {
 	}
 
 	private void disMessage(String a) {
-		Looper.prepare();
-		Toast.makeText(this, a, 1500);
+		final String bString=a;
+		this.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				Toast.makeText(AddFriendOrSocial.this,bString, 1500).show();
+			}
+		});
+		
 
 	}
 }
