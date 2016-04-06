@@ -99,7 +99,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		return inflater.inflate(R.layout.my_records_receive, container, false);
 
 	}
-	
+
 	public void getData() {
 		for (int i = 0; i < 3; i++) {
 			// myrecords的listview数据
