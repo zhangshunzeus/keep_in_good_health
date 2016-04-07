@@ -144,7 +144,7 @@ public class MyFragment extends Fragment {
 			/* 跳转我的朋友 */
 			case R.id.loginname_intent_myfriend:
 				Intent intent = new Intent(getActivity(),
-						MyFriend.class);
+						MyFriend1.class);
 				startActivity(intent);
 				break;
 			/* 跳转我的记录 */
