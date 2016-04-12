@@ -28,7 +28,7 @@ public class TheLaunchPageActivity extends Activity {
 		intent_main = (Button) findViewById(R.id.intent_main);
 		intent_main.setOnClickListener(click);
 
-		final Intent localIntent = new Intent(this, MainActivity.class);
+		/*final Intent localIntent = new Intent(this, MainActivity.class);
 		Timer timer = new Timer();
 		TimerTask tast = new TimerTask() {
 			@Override
@@ -36,7 +36,7 @@ public class TheLaunchPageActivity extends Activity {
 				startActivity(localIntent);
 			}
 		};
-		timer.schedule(tast, 5000);
+		timer.schedule(tast, 5000);*/
 	}
  
 	OnClickListener click = new OnClickListener() {

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
+import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ public class HomePageActivity extends Activity {
 
 	RadioButton home_page, classify, circle;
 	ImageView soup, fruit;
+	private AutoCompleteTextView autoCompleteTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
