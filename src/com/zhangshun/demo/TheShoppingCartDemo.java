@@ -26,7 +26,7 @@ public class TheShoppingCartDemo {
 
 	public void setThe_shopping_title(String the_shopping_title) {
 		this.the_shopping_title = the_shopping_title;
-	}
+	} 
 
 	public String getThe_shopping_content() {
 		return the_shopping_content;

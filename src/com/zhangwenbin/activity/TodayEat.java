@@ -33,7 +33,6 @@ public class TodayEat extends Activity {
 		linearLayout_dinner = (LinearLayout) findViewById(R.id.intent_dinner);
 		linearLayout_dinner.setOnClickListener(onClickListener);
 	}
-
 	OnClickListener onClickListener = new OnClickListener() {
 
 		@Override

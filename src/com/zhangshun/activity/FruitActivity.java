@@ -31,7 +31,6 @@ public class FruitActivity extends Activity {
 
 	}
 
-
 	OnClickListener click = new OnClickListener() {
 
 		@Override

@@ -41,7 +41,7 @@ public class PersonalInformationActivity extends Activity {
 	LinearLayout dialog_binding_alipay;// 绑定支付宝
 	Button btn_exit;// 退出
 
-	// 个人信息页面
+	// 个人信息页面 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -124,7 +124,6 @@ public class PersonalInformationActivity extends Activity {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("头像设置");
 		builder.setPositiveButton("拍照", new DialogInterface.OnClickListener() {
-
 			private File tempFile;
 
 			@TargetApi(Build.VERSION_CODES.CUPCAKE)
@@ -157,6 +156,7 @@ public class PersonalInformationActivity extends Activity {
 	/**
 	 * 点击昵称 弹出Dialog 修改昵称
 	 * */
+	@SuppressLint("InflateParams")
 	private void dialog_username_text() {
 
 		LayoutInflater factory = LayoutInflater
@@ -191,6 +191,7 @@ public class PersonalInformationActivity extends Activity {
 	/**
 	 * 修改登陆手机号
 	 * */
+	@SuppressLint("InflateParams")
 	private void dialog_log_in_the_phone() {
 		// 获取当前页
 		LayoutInflater factory = LayoutInflater
@@ -228,6 +229,7 @@ public class PersonalInformationActivity extends Activity {
 	/**
 	 * 修改密码
 	 * */
+	@SuppressLint("InflateParams")
 	private void dialog_the_login_password() {
 
 		LayoutInflater factory = LayoutInflater
@@ -262,6 +264,7 @@ public class PersonalInformationActivity extends Activity {
 	/**
 	 * 绑定微信号
 	 * */
+	@SuppressLint("InflateParams")
 	private void dialog_binding_wechat_id() {
 
 		LayoutInflater factory = LayoutInflater
@@ -297,6 +300,7 @@ public class PersonalInformationActivity extends Activity {
 	/**
 	 * 绑定QQ
 	 * */
+	@SuppressLint("InflateParams")
 	private void dialog_binding_qq_number() {
 
 		LayoutInflater factory = LayoutInflater
@@ -332,6 +336,7 @@ public class PersonalInformationActivity extends Activity {
 	/**
 	 * 绑定新浪微博
 	 * */
+	@SuppressLint("InflateParams")
 	private void dialog_the_binding_of_sina_weibo() {
 
 		LayoutInflater factory = LayoutInflater
@@ -368,6 +373,7 @@ public class PersonalInformationActivity extends Activity {
 	 * 绑定支付宝
 	 * */
 
+	@SuppressLint("InflateParams")
 	private void dialog_binding_alipay() {
 
 		LayoutInflater factory = LayoutInflater

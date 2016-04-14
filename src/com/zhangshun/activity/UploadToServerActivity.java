@@ -59,7 +59,7 @@ public class UploadToServerActivity extends Activity {
 	private String mCurrentPhotoPath = null;
 	private ImageView imageView;
 
-	@Override
+	@Override 
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);

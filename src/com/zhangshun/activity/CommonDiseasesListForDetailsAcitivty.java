@@ -13,5 +13,5 @@ public class CommonDiseasesListForDetailsAcitivty extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.common_diseases_list_for_details);
 	}
-	
+
 }

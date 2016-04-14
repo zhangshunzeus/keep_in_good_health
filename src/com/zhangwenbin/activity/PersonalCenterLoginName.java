@@ -66,7 +66,6 @@ public class PersonalCenterLoginName extends Activity {
 	ImageView head_intent_login;
 	TextView userName;
 	ImageView headImg;
-
 	MyApplaication app;
 
 	private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
@@ -246,7 +245,7 @@ public class PersonalCenterLoginName extends Activity {
 			}
 		});
 		builder.setNegativeButton("相册", new DialogInterface.OnClickListener() {
-
+			//使用相册功能
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
 				// TODO Auto-generated method stub

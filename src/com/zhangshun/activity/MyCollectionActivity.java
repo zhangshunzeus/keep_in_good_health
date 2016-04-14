@@ -34,7 +34,7 @@ public class MyCollectionActivity extends Activity {
 		return_btn = (ImageView) findViewById (R.id.return_btn);
 		return_btn.setOnClickListener(click);
 	}
-	
+
 	private void getData(){
 		
 		for(int i = 0; i < 5; i++){

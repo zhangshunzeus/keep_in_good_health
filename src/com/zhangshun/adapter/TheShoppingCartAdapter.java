@@ -31,7 +31,7 @@ public class TheShoppingCartAdapter extends BaseAdapter {
 	
 	public TheShoppingCartAdapter() {
 		// TODO Auto-generated constructor stub
-	}
+	} 
 	//构造器
 	public TheShoppingCartAdapter(Context context,ArrayList<TheShoppingCartDemo>list){
 		this.context = context;

@@ -15,5 +15,5 @@ public class MyRecordsFragmentPayMoney extends Fragment {
 		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.my_records_pay_money, container, false);
 	}
- 
+
 }

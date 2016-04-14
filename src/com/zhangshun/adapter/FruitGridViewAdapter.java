@@ -25,7 +25,7 @@ public class FruitGridViewAdapter extends BaseAdapter {
 
 		inflater = LayoutInflater.from(context);
 	}
-	@Override
+	@Override 
 	public int getCount() {
 		// TODO Auto-generated method stub
 		return data.length;

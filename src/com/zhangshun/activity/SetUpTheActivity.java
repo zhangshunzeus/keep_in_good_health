@@ -23,7 +23,7 @@ public class SetUpTheActivity extends Activity {
 		set_up_the_btn = (ImageView) findViewById (R.id.set_up_the_btn);
 		set_up_the_btn.setOnClickListener(click);
 	
-	}
+	} 
 	
 	OnClickListener click = new OnClickListener() {
 		

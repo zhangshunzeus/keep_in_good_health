@@ -34,7 +34,7 @@ public class TheLaunchPageActivity extends Activity {
 			@Override
 			public void run() {
 				startActivity(localIntent);
-			}
+			} 
 		};
 		timer.schedule(tast, 5000);
 	}

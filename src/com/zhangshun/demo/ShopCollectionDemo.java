@@ -27,7 +27,7 @@ public class ShopCollectionDemo {
 	}
 	public String getShopCollectionMoney() {
 		return shopCollectionMoney;
-	}
+	} 
 	public void setShopCollectionMoney(String shopCollectionMoney) {
 		this.shopCollectionMoney = shopCollectionMoney;
 	}

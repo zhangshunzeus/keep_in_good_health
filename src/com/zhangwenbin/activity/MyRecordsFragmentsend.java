@@ -15,5 +15,4 @@ public class MyRecordsFragmentsend extends Fragment {
 		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.my_records_send, container, false);
 	}
- 
 }

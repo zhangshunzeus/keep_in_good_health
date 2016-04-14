@@ -29,7 +29,7 @@ public class SortFragmentRight extends Fragment {
     private ListView lv;
     private ArrayList<SortFragmentRightInfo> data = new ArrayList<SortFragmentRightInfo>();
     private SortFragmentRightInfo info;
-
+ 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sortfragment_radio1_right, container, false);

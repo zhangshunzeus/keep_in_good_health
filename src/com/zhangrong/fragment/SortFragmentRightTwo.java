@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class SortFragmentRightTwo extends Fragment {
 
     private ArrayList<SortFragmentRightInfo> data = new ArrayList<SortFragmentRightInfo>();
-
+ 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sortfragment_radio2_right, container, false);

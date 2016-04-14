@@ -26,6 +26,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.ruanjiawei.demo.SaveToken;
 import com.zhangshun.adapter.MyRecordsAdapter;
 import com.zhangshun.demo.MyRecordsDemo;
 import com.zhangshun.keep_in_good_health.R;
@@ -37,13 +38,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 /*我的記錄中的fragment相對的待收貨頁面*/
 @SuppressLint("NewApi")
@@ -52,7 +52,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 	ArrayList<MyRecordsDemo> data = new ArrayList<MyRecordsDemo>();
 	MyRecordsAdapter adapter;
 	String url="http://192.168.11.241/index.php/home/api/records";
-	
+	String images[]={"http://192.168.11.241/public/image/upload/myrecords_picture_one.png","http://192.168.11.241/public/image/upload/myrecords_picture_two.png"};
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -60,8 +60,8 @@ public class MyRecordsFragmentReceive extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		listView = (ListView) getView().findViewById(R.id.my_records_listview);
 		// getData();
-		
-		mTask.execute("fdsa");
+		//CheckIsLogin();
+		mTask.execute("ds");
 
 	}
 
@@ -72,22 +72,34 @@ public class MyRecordsFragmentReceive extends Fragment {
 			// TODO Auto-generated method stub
 			Log.i("onActivity", "=========");
 			sendResultRecponse(url);
-			return getActivity();
+			return getActivity().getApplicationContext();
 		}
 
 		protected void onPostExecute(Context result) {
 
 		};
-
 	};
-
+	
+	private void CheckIsLogin() {
+		Log.i("CheckIsLogin", "CheckIsLogin");
+		// 获取本地的SaveToken存储的token值
+		String token = SaveToken.getData(getActivity().getApplicationContext());
+		Log.i("CheckIsLogin", "token=" + token);
+		if (token == null && token.equals("")) {// 判断获取的token值是否为空
+			Log.i("CheckIsLogin", "当前没有处于登录状态");
+			Toast.makeText(getActivity(), "请先登陆", Toast.LENGTH_SHORT).show();
+		} else {
+			// 不为空，则显示个人信息
+			
+		}
+	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.my_records_receive, container, false);
 
 	}
-	
+
 	public void getData() {
 		for (int i = 0; i < 3; i++) {
 			// myrecords的listview数据
@@ -142,14 +154,14 @@ public class MyRecordsFragmentReceive extends Fragment {
 					String money = jsonObject.getString("money");
 					String number = jsonObject.getString("number");
 					String type = jsonObject.getString("type");
-					String image=jsonObject.getString("image");
+					String imageurl=jsonObject.getString("image");
 					demo.setMy_records_shop_name(name);
 					demo.setMy_records_list_goodsstates(sendstates);
 					demo.setMy_records_content(content);
 					demo.setMy_records_shop_money(money);
 					demo.setMy_records_shop_number(number);
 					demo.setMy_records_shop_type(type);
-					demo.setImage(getPic(image));
+					demo.setImage(getPic(images[1]));
 					data.add(demo);
 					Log.i("name", name + "");
 					Log.i("sendstates", sendstates + "");
@@ -176,11 +188,12 @@ public class MyRecordsFragmentReceive extends Fragment {
 	}
 	
 	// 传输网络图片
-	public Bitmap getPic(String urlImage) {
+	public Bitmap getPic(String images2) {
 	    URL imageUrl = null;
 	    Bitmap bitmap = null;
 	    try {
-	        imageUrl = new URL(urlImage);
+	    		 imageUrl = new URL(images2);
+	       
 	    } catch (MalformedURLException e) {
 	        e.printStackTrace();
 	    }

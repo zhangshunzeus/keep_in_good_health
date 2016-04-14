@@ -15,5 +15,5 @@ public class MyRecordsFragmentComment extends Fragment {
 		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.my_records_comment, container, false);
 	}
- 
+
 }

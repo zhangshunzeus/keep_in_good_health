@@ -32,7 +32,6 @@ public class TheShoppingCartActivity extends Activity {
 		mAdapter = new TheShoppingCartAdapter(this, list);
 		// 绑定Adapter
 		mList.setAdapter(mAdapter);
-
 		the_shopping_cart_return_btn = (ImageView) findViewById(R.id.the_shopping_cart_return_btn);
 		the_shopping_cart_return_btn.setOnClickListener(click);
 

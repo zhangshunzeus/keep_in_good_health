@@ -16,5 +16,4 @@ public class FruitDemo {
 	public void setText(String text) {
 		this.text = text;
 	}
-
 }

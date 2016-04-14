@@ -34,7 +34,7 @@ public class MyRecordsAdapter extends BaseAdapter {
 		this.context = context;
 
 		inflater = LayoutInflater.from(context);
-	}
+	} 
 
 	public void setData(ArrayList<MyRecordsDemo> data) {
 		this.data = data;

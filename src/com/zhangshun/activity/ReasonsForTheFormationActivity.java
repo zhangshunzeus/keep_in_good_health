@@ -13,5 +13,4 @@ public class ReasonsForTheFormationActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.reasons_for_the_formation_activity);
 	}
-
 }

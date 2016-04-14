@@ -26,7 +26,7 @@ public class MyCollectionAdapter extends BaseAdapter {
 		this.context = context;
 		this.list = list;
 		mInflater = LayoutInflater.from(context);
-	}
+	} 
 
 	@Override
 	public int getCount() {
