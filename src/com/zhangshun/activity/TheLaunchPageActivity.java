@@ -36,7 +36,8 @@ public class TheLaunchPageActivity extends Activity {
 				startActivity(localIntent);
 			}
 		};
-		timer.schedule(tast, 5000);*/
+		timer.schedule(tast, 5000);
+		finish();*/
 	}
  
 	OnClickListener click = new OnClickListener() {
@@ -49,6 +50,7 @@ public class TheLaunchPageActivity extends Activity {
 				Intent intent_main = new Intent();
 				intent_main.setClass(TheLaunchPageActivity.this, MainActivity.class);
 				startActivity(intent_main);
+				finish();
 				break;
 
 			default:
