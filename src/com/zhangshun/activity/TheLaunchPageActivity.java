@@ -35,11 +35,15 @@ public class TheLaunchPageActivity extends Activity {
 			}
 		};
 		timer.schedule(tast, 5000);
+
 		
 		intent_main = (Button) findViewById(R.id.intent_main);
 		intent_main.setOnClickListener(click);
 
 		
+
+		finish();
+
 	}
 
 	OnClickListener click = new OnClickListener() {
@@ -52,7 +56,10 @@ public class TheLaunchPageActivity extends Activity {
 				Intent intent_main = new Intent();
 				intent_main.setClass(TheLaunchPageActivity.this,
 						MainActivity.class);
-				startActivity(intent_main);
+
+
+
+				finish();
 
 				break;
 
