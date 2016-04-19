@@ -8,7 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 
 public class RegisterTools {
@@ -25,7 +25,7 @@ public class RegisterTools {
 			String repassword) {
 
 		StringBuilder builder = new StringBuilder();
-		String httpHost = "http://192.168.11.241/index.php/home/api/register";
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/register";
 
 		String urltel = "tel=";
 		String verifykey = "verify=";
@@ -124,6 +124,7 @@ public class RegisterTools {
 		this.mListener = mListener;
 	}
 
+	@SuppressLint("NewApi")
 	class AnyTask extends AsyncTask<String, Void, String> {
 
 		@Override
