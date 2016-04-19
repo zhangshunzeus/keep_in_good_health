@@ -25,20 +25,27 @@ public class TheLaunchPageActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.the_launch_page_activity);
 
-		intent_main = (Button) findViewById(R.id.intent_main);
-		intent_main.setOnClickListener(click);
-
 		final Intent localIntent = new Intent(this, MainActivity.class);
 		Timer timer = new Timer();
 		TimerTask tast = new TimerTask() {
+
 			@Override
 			public void run() {
 				startActivity(localIntent);
 			}
 		};
 		timer.schedule(tast, 5000);
+
+		
+		intent_main = (Button) findViewById(R.id.intent_main);
+		intent_main.setOnClickListener(click);
+
+		
+
+		finish();
+
 	}
- 
+
 	OnClickListener click = new OnClickListener() {
 
 		@Override
@@ -47,8 +54,13 @@ public class TheLaunchPageActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.intent_main:
 				Intent intent_main = new Intent();
-				intent_main.setClass(TheLaunchPageActivity.this, MainActivity.class);
-				startActivity(intent_main);
+				intent_main.setClass(TheLaunchPageActivity.this,
+						MainActivity.class);
+
+
+
+				finish();
+
 				break;
 
 			default:
