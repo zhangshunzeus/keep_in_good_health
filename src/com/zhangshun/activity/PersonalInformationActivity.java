@@ -2,6 +2,10 @@ package com.zhangshun.activity;
 
 import java.io.File;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.zhangshun.keep_in_good_health.R;
 
@@ -41,10 +45,17 @@ public class PersonalInformationActivity extends Activity {
 	LinearLayout dialog_binding_alipay;// 绑定支付宝
 	Button btn_exit;// 退出
 	String URL="http://211.149.198.8:9803/index.php/home/api/demand?tel=123123&token=d900144f2541ec1c1f1e8614c98c78f4";
-	
-	
-
 	// 个人信息页面 
+	
+	private static final String BASE_URL = "http://211.149.198.8:9803/index.php/home/api/demand";
+	
+	private String tel ;
+	
+	TextView username_text,log_in_the_phone_text,the_login_password_text,binding_weChat_ID_text,
+	Binding_QQ_number_text,The_binding_of_sina_weibo_text,Binding_alipay_text;
+	
+	
+	// 个人信息页面
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -74,8 +85,31 @@ public class PersonalInformationActivity extends Activity {
 		dialog_the_binding_of_sina_weibo.setOnClickListener(click);
 		dialog_binding_alipay.setOnClickListener(click);
 		btn_exit.setOnClickListener(click);
+		
+		setupViews();
 
 	}
+	
+	 private void setupViews(){ 
+		 username_text = (TextView) findViewById(R.id.username_text);
+		 log_in_the_phone_text = (TextView) findViewById(R.id.log_in_the_phone_text);
+		 the_login_password_text = (TextView) findViewById(R.id.the_login_password_text);
+		 binding_weChat_ID_text = (TextView) findViewById(R.id.binding_weChat_ID_text);
+		 Binding_QQ_number_text = (TextView) findViewById(R.id.Binding_QQ_number_text);
+		 The_binding_of_sina_weibo_text = (TextView) findViewById(R.id.The_binding_of_sina_weibo_text);
+		 Binding_alipay_text = (TextView) findViewById(R.id.Binding_alipay_text);
+
+		 try{
+			 JSONObject mJsonObject = JSONUtil.getJSON(BASE_URL);
+			 JSONArray mJsonArray = mJsonObject.getJSONArray("");
+		 }catch(JSONException e){
+			 e.printStackTrace();
+		 } catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+	 }
 
 	OnClickListener click = new OnClickListener() {
 

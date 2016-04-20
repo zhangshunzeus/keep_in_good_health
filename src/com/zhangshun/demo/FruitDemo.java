@@ -2,7 +2,7 @@ package com.zhangshun.demo;
 
 public class FruitDemo {
 
-	int img;
+	int img; 
 	String text;
 	public int getImg() {
 		return img;

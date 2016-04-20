@@ -4,14 +4,4 @@
     android:layout_height="match_parent"
     android:background="@drawable/the_launch_page" >
 
-    <Button
-        android:id="@+id/intent_main"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="Intent"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
-        android:alpha="0" />
-
 </RelativeLayout>

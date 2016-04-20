@@ -22,7 +22,7 @@ public class MyRecordsDemo {
 
 	public void setMy_records_content(String my_records_content) {
 		this.my_records_content = my_records_content;
-	}
+	} 
  
 	public String getMy_records_shop_name() {
 		return my_records_shop_name;

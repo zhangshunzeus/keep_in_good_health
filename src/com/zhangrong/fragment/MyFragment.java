@@ -135,8 +135,8 @@ public class MyFragment extends Fragment {
 			/* 璺宠浆鎴戠殑鏈嬪弸 */
 			case R.id.loginname_intent_myfriend:
 
-				Intent intent = new Intent(getActivity(), MyFriend1.class);
-
+				Intent intent = new Intent(getActivity(),
+						MyFriend1.class);
 				startActivity(intent);
 				break;
 			/* 璺宠浆鎴戠殑璁板綍 */

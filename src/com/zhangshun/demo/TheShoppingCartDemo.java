@@ -22,7 +22,7 @@ public class TheShoppingCartDemo {
 
 	public String getThe_shopping_title() {
 		return the_shopping_title;
-	}
+	} 
 
 	public void setThe_shopping_title(String the_shopping_title) {
 		this.the_shopping_title = the_shopping_title;

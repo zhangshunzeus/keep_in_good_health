@@ -19,7 +19,7 @@ import android.util.Log;
 
 public class LoginTools {
 
-	public static String HTTP_HOST = "http://192.168.11.241/index.php/home/api/";
+	public static String HTTP_HOST = "http://211.149.198.8:9803/index.php/home/api/";
 	public static String LOGIN_URL = "login";
 	String login;
 	String message;

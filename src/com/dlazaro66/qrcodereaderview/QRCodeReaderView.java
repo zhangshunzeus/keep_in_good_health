@@ -34,7 +34,6 @@ import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.camera.open.CameraManager;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
-import com.zhangshun.keep_in_good_health.R;
 
 import java.io.IOException;
 
@@ -63,7 +62,7 @@ import java.io.IOException;
  */
 public class QRCodeReaderView extends SurfaceView implements
 		SurfaceHolder.Callback, Camera.PreviewCallback {
-
+ 
 	public interface OnQRCodeReadListener {
 
 		public void onQRCodeRead(String text, PointF[] points);

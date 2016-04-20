@@ -21,7 +21,7 @@ public class ShopCollectionDemo {
 	}
 	public int getShopCollectionMoneyImage() {
 		return shopCollectionMoneyImage;
-	}
+	} 
 	public void setShopCollectionMoneyImage(int shopCollectionMoneyImage) {
 		this.shopCollectionMoneyImage = shopCollectionMoneyImage;
 	}

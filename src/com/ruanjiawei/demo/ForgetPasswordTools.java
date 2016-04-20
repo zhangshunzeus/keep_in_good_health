@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 
 public class ForgetPasswordTools {
@@ -25,7 +25,7 @@ public class ForgetPasswordTools {
 	private String forgerpassword(String tel, String verify, String password,
 			String repassword) {
 		StringBuilder builder = new StringBuilder();
-		String httpHost = "http://192.168.11.241/index.php/home/api/forgetpassword";
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/forgetpassword";
 		String urltel = "tel=";
 		String verifykey = "verify=";
 		String passwordkey = "password=";
@@ -78,6 +78,7 @@ public class ForgetPasswordTools {
 		this.lisener=lisener;
 	}
 	
+	@SuppressLint("NewApi")
 	class AnyTask extends AsyncTask<String, Void, String>{
 
 		@Override

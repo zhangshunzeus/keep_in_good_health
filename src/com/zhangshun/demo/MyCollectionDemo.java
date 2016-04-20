@@ -19,7 +19,7 @@ public class MyCollectionDemo {
 
 	public void setContent_title(String content_title) {
 		this.content_title = content_title;
-	}
+	} 
  
 	public String getMy_collection_content() {
 		return my_collection_content;
