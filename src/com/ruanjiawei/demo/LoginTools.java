@@ -33,7 +33,7 @@ public class LoginTools {
 	private String postconn(String tel, String password) {
 
 		StringBuilder builder = new StringBuilder(); // 初始化一个Stringbuilder
-		String httpHost = "http://192.168.11.241/index.php/home/api/login";
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/login";
 		String urltel = "tel=";
 		String passwordkey = "password=";
 

@@ -51,8 +51,8 @@ public class MyRecordsFragmentReceive extends Fragment {
 	ListView listView;
 	ArrayList<MyRecordsDemo> data = new ArrayList<MyRecordsDemo>();
 	MyRecordsAdapter adapter;
-	String url="http://192.168.11.241/index.php/home/api/records";
-	String images[]={"http://192.168.11.241/public/image/upload/myrecords_picture_one.png","http://192.168.11.241/public/image/upload/myrecords_picture_two.png"};
+	String url="http://211.149.198.8:9803/index.php/home/api/records";
+	String images="http://211.149.198.8:9803/Public/image/56d6970635641.png";
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -61,7 +61,8 @@ public class MyRecordsFragmentReceive extends Fragment {
 		listView = (ListView) getView().findViewById(R.id.my_records_listview);
 		// getData();
 		//CheckIsLogin();
-		mTask.execute("ds");
+		sendResultRecponse(url);
+		//mTask.execute("ds");
 
 	}
 
@@ -71,7 +72,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 		protected Context doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
 			Log.i("onActivity", "=========");
-			sendResultRecponse(url);
+			//sendResultRecponse(url);
 			return getActivity().getApplicationContext();
 		}
 
@@ -161,7 +162,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 					demo.setMy_records_shop_money(money);
 					demo.setMy_records_shop_number(number);
 					demo.setMy_records_shop_type(type);
-					demo.setImage(getPic(images[1]));
+					demo.setImage(getPic(imageurl));
 					data.add(demo);
 					Log.i("name", name + "");
 					Log.i("sendstates", sendstates + "");
@@ -169,6 +170,7 @@ public class MyRecordsFragmentReceive extends Fragment {
 					Log.i("money", money + "");
 					Log.i("number", number + "");
 					Log.i("type", type + "");
+					Log.i("image", imageurl + "");
 				}
 				adapter = new MyRecordsAdapter(data, getActivity());
 				listView.setAdapter(adapter);
