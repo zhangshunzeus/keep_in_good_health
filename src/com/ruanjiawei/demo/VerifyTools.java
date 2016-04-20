@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 
 public class VerifyTools {
@@ -24,7 +24,7 @@ public class VerifyTools {
 	@SuppressWarnings("unused")
 	private String setverify(String tel) {
 		StringBuilder builder = new StringBuilder();
-		String verifycode = "http://192.168.11.241/index.php/home/api/verify";
+		String verifycode = "http://211.149.198.8:9803/index.php/home/api/verify";
 		String urltel = "tel=";
 
 		URL url;
@@ -71,6 +71,7 @@ public class VerifyTools {
 		this.listener = listener;
 	}
 
+	@SuppressLint("NewApi")
 	class AnyTask extends AsyncTask<String, Void, String> {
 
 		@Override

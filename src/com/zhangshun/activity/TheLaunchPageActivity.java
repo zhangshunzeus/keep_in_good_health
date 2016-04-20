@@ -25,15 +25,16 @@ public class TheLaunchPageActivity extends Activity {
 
 		
 		final Intent localIntent = new Intent(this, MainActivity.class);
-		
 		Timer timer = new Timer();
 		TimerTask tast = new TimerTask() {
+
 			@Override
 			public void run() {
 				startActivity(localIntent);
 			}
 		};
 		timer.schedule(tast, 5000);
+
 	}
 
 	@Override
