@@ -1,23 +1,6 @@
 package com.zhangshun.activity;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.zhangshun.keep_in_good_health.R;
@@ -28,13 +11,10 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -110,8 +90,7 @@ public class PersonalInformationActivity extends Activity {
 				showDialog();
 				break;
 			case R.id.dialog_username_text: // 昵称
-				//dialog_username_text();
-				getJsonHead(URL);
+				dialog_username_text();
 				break;
 			case R.id.dialog_log_in_the_phone: // 登陆手机
 				dialog_log_in_the_phone();
@@ -211,74 +190,7 @@ public class PersonalInformationActivity extends Activity {
 						}).create();
 		dlg.show();
 	}
-	public void getJsonHead(final String url){
-		new Thread(new Runnable() {
-			
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				BasicHttpParams basicHttpParams=new BasicHttpParams();
-				HttpConnectionParams.setSoTimeout(basicHttpParams, 1000);
-				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 1000);
-				
-				HttpClient client=new DefaultHttpClient(basicHttpParams);
-				HttpGet get=new HttpGet(url);
-				client.equals(get);
-				try {
-					HttpResponse response=client.execute(get);
-					if (response.getStatusLine().getStatusCode()==200) {
-						HttpEntity entity=response.getEntity();
-						String reString=EntityUtils.toString(entity,"utf-8");
-						JSONObject object=new JSONObject(reString);
-						String username=object.getString("username");
-						String tel=object.getString("tel");
-						String icon=object.getString("icon");
-						TextView tv = (TextView) findViewById(R.id.username_text);
-						tv.setText(username);
-						TextView tva = (TextView) findViewById(R.id.log_in_the_phone_text);
-						tva.setText(tel);
-						Log.i("uaername", username+"");
-						Log.i("tel", tel+"");
-						
-					}
-				} catch (ClientProtocolException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
-		
-	}
-	// 传输网络图片
-		public Bitmap getPic(String images2) {
-		    URL imageUrl = null;
-		    Bitmap bitmap = null;
-		    try {
-		    		 imageUrl = new URL(images2);
-		       
-		    } catch (MalformedURLException e) {
-		        e.printStackTrace();
-		    }
-		    try {
-		        HttpURLConnection conn = (HttpURLConnection) imageUrl
-		                .openConnection();
-		        conn.connect();
-		        InputStream is = conn.getInputStream();
-		        bitmap = BitmapFactory.decodeStream(is);
-		 
-		        is.close();
-		 
-		    } catch (IOException e) {
-		        e.printStackTrace();
-		    }
-		    return bitmap;
-		}
+	
 	
 
 	/**
