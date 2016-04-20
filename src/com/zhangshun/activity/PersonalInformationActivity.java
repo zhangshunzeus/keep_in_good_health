@@ -1,6 +1,15 @@
 package com.zhangshun.activity;
 
 import java.io.File;
+import java.io.IOException;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
 
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.zhangshun.keep_in_good_health.R;
@@ -187,6 +196,33 @@ public class PersonalInformationActivity extends Activity {
 						}).create();
 		dlg.show();
 	}
+	public void getJsonHead(){
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				BasicHttpParams basicHttpParams=new BasicHttpParams();
+				HttpConnectionParams.setSoTimeout(basicHttpParams, 1000);
+				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 1000);
+				
+				HttpClient client=new DefaultHttpClient(basicHttpParams);
+				HttpGet get=new HttpGet();
+				client.equals(get);
+				try {
+					HttpResponse response=client.execute(get);
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		
+	}
+	
 
 	/**
 	 * 修改登陆手机号
