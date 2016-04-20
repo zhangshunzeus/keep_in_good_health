@@ -16,8 +16,6 @@ import android.widget.Button;
 
 public class TheLaunchPageActivity extends Activity {
 
-	Button intent_main;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -25,10 +23,9 @@ public class TheLaunchPageActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.the_launch_page_activity);
 
-		intent_main = (Button) findViewById(R.id.intent_main);
-		intent_main.setOnClickListener(click);
-
-		/*final Intent localIntent = new Intent(this, MainActivity.class);
+		
+		final Intent localIntent = new Intent(this, MainActivity.class);
+		
 		Timer timer = new Timer();
 		TimerTask tast = new TimerTask() {
 			@Override
@@ -37,26 +34,12 @@ public class TheLaunchPageActivity extends Activity {
 			}
 		};
 		timer.schedule(tast, 5000);
-		finish();*/
 	}
- 
-	OnClickListener click = new OnClickListener() {
 
-		@Override
-		public void onClick(View v) {
-			// TODO Auto-generated method stub
-			switch (v.getId()) {
-			case R.id.intent_main:
-				Intent intent_main = new Intent();
-				intent_main.setClass(TheLaunchPageActivity.this, MainActivity.class);
-				startActivity(intent_main);
-				finish();
-				break;
-
-			default:
-				break;
-			}
-		}
-	};
-
+	@Override
+	public void finish() {
+		// TODO Auto-generated method stub
+		super.finish();
+	}
+	
 }
