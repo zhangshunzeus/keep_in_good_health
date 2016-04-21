@@ -40,9 +40,6 @@ public class TheLaunchPageActivity extends Activity {
 		intent_main = (Button) findViewById(R.id.intent_main);
 		intent_main.setOnClickListener(click);
 
-		
-
-		finish();
 
 	}
 
@@ -56,8 +53,6 @@ public class TheLaunchPageActivity extends Activity {
 				Intent intent_main = new Intent();
 				intent_main.setClass(TheLaunchPageActivity.this,
 						MainActivity.class);
-
-
 
 				finish();
 
