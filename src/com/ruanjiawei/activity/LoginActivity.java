@@ -35,6 +35,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,6 +54,7 @@ public class LoginActivity extends Activity {
 	private ImageView sinaLoginButton;
 	private ImageView qqLoginButton;
 	private ImageView wechatLoginButton;
+	ProgressBar progressBar1;
 
 	SaveToken saveToken = new SaveToken();
 
@@ -102,18 +104,24 @@ public class LoginActivity extends Activity {
 
 						SaveToken.saveToken(getApplicationContext(),
 								jo.getString("token"));
+						SaveToken.saveTel(getApplicationContext(), jo.getString("tel"));
 
-						// Intent intent = new Intent(LoginActivity.this,
+						progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
+						progressBar1.setVisibility(View.VISIBLE);
 
-						// PersonalCenterLoginName.class);
+						/*
+						 * Intent intent = new Intent(LoginActivity.this,
+						 * 
+						 * PersonalCenterLoginName.class);
+						 */
 						// 保存token
 
-						// app.user.setToken(jo.getString("token"));
-						// intent = new Intent(LoginActivity.this,
-						// PersonalCenterNotLogin.class);
+						/*app.user.setToken(jo.getString("token"));
+						Intent intent = new Intent(LoginActivity.this,
+								PersonalCenterNotLogin.class);
 
-						// startActivity(intent);
-						finish();
+						startActivity(intent);*/
+						 finish();
 
 					} else {
 						Toast.makeText(getApplication(),

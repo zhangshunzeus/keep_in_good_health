@@ -17,6 +17,17 @@ public class SaveToken {
 		editor.commit();
 		Log.i("saveToken", "token保存成功！");
 	}
+	
+	public static void saveTel(Context context, String tel) {
+		Log.i("saveTel", "tel！" + tel);
+
+		SharedPreferences sharedPreferences = context.getSharedPreferences(
+				"tel", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		editor.putString("tel", tel);
+		editor.commit();
+		Log.i("savetel", "tel保存成功！");
+	}
 
 	/**
 	 * 获取数据
@@ -28,6 +39,19 @@ public class SaveToken {
 				Context.MODE_PRIVATE);
 
 		String data = preferences.getString("token", null);
+
+		Log.i("getData", data);
+
+		return data;
+	}
+	
+	
+	
+	public static String getTels(Context context) {
+		SharedPreferences preferences = context.getSharedPreferences("tel",
+				Context.MODE_PRIVATE);
+
+		String data = preferences.getString("tel", null);
 
 		Log.i("getData", data);
 
@@ -61,11 +85,11 @@ public class SaveToken {
 	}
 	
 	/**
-	 * 获取存储在本地的username
+	 * 获取存储在本地的tel
 	 * @param context
 	 * @return
 	 */
-	public static String getUsername(Context context){
+	public static String getTel(Context context){
 		if(checkLogin(context)){
 			String tok = SaveToken.getData(context);
 			return tok.split(",")[1];

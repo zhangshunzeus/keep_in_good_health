@@ -1,5 +1,16 @@
 package com.zhangwenbin.activity;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.jiangkaiquan.activity.MyFriend1;
 import com.ruanjiawei.activity.LoginActivity;
 import com.zhangshun.activity.MyCollectionActivity;
@@ -45,24 +56,23 @@ public class PersonalCenterNotLogin extends Activity {
 	ImageView intentLoginName;
 	ImageView intentSetUp;
 
-	//TextView intentLogin;
-	/*String address = "http://192.168.11.247/index.php/home/api/myrecords";
-	String response = HttpUtil.sendHttpRequest(address, new HttpCallBackInterface() {
-
-		public void onFinish(String response) {
-			// TODO Auto-generated method stub
-			// 在这里根据返回内容执行具体的逻辑，处理响应数据
-		}
-		public void onError(Exception e) {
-			// TODO Auto-generated method stub
-			// 在这里对异常情况进行处理
-		}
-	});
-
-	@SuppressLint("NewApi")*/
+	// TextView intentLogin;
+	/*
+	 * String address = "http://192.168.11.247/index.php/home/api/myrecords";
+	 * String response = HttpUtil.sendHttpRequest(address, new
+	 * HttpCallBackInterface() {
+	 * 
+	 * public void onFinish(String response) { // TODO Auto-generated method
+	 * stub // 在这里根据返回内容执行具体的逻辑，处理响应数据 } public void onError(Exception e) { //
+	 * TODO Auto-generated method stub // 在这里对异常情况进行处理 } });
+	 * 
+	 * @SuppressLint("NewApi")
+	 */
 
 	TextView intentLogin, user_name;
-
+	String info;
+	String tel;
+	String token;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -87,12 +97,77 @@ public class PersonalCenterNotLogin extends Activity {
 		intentLogin = (TextView) findViewById(R.id.personal_not_login_intent_login);
 		intentLogin.setOnClickListener(onClickListener);
 
-		
-		/*MyRecordsFragmentReceive receive=new MyRecordsFragmentReceive();
-		receive.getJsonObject(response);*/
+		/*
+		 * MyRecordsFragmentReceive receive=new MyRecordsFragmentReceive();
+		 * receive.getJsonObject(response);
+		 */
 
-		user_name = (TextView) findViewById(R.id.user_name);
+		token = SaveToken.getData(getApplicationContext());
+		tel = SaveToken.getTels(getApplicationContext());
 
+		demand(tel, token);
+
+	}
+
+	@SuppressWarnings("unused")
+	private void demand(String tel, String token) {
+		StringBuilder builder = new StringBuilder();
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/demand";
+		String urltel = "tel=";
+		String urltoken = "token=";
+
+		URL url;
+
+		try {
+			String urllogout = httpHost + "?" + urltel + tel + "&" + urltoken
+					+ token;
+			url = new URL(urllogout);
+
+			HttpURLConnection connection = (HttpURLConnection) url
+					.openConnection();
+
+			connection.setRequestMethod("GET");
+			connection.setReadTimeout(5000);
+			connection.connect();
+
+			if (connection.getResponseCode() == 200) {
+				InputStream inputStream = connection.getInputStream();
+				BufferedReader buffered = new BufferedReader(
+						new InputStreamReader(inputStream));
+				String line = buffered.readLine();
+				while (line != null && line.length() > 0) {
+					builder.append(line);
+					line = buffered.readLine();
+
+				}
+				inputStream.close();
+				buffered.close();
+
+				// Log.i("sfsf", buffered.toString());
+				info = builder.toString();
+				Log.i("信息", info);
+				JSONObject js = new JSONObject(info);
+				String name = js.getString("message");
+				Log.i("message", name);
+
+				JSONObject json = new JSONObject(name);
+				json.getString("username");
+
+				user_name = (TextView) findViewById(R.id.username_text);
+				user_name.setText(json.getString("username"));
+				Log.i("name", json.getString("username"));
+
+			}
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
@@ -105,8 +180,7 @@ public class PersonalCenterNotLogin extends Activity {
 
 			/* 跳转到登录 */
 
-
-			/*跳转到登录*/
+			/* 跳转到登录 */
 
 			/* 跳转到已登录 */
 
@@ -132,7 +206,7 @@ public class PersonalCenterNotLogin extends Activity {
 				Intent intent_myrecords = new Intent(
 						PersonalCenterNotLogin.this, MyRecords.class);
 				startActivity(intent_myrecords);
-				
+
 				break;
 			/* 跳转到购物车 */
 			case R.id.notlogin_intent_shoppingcart:

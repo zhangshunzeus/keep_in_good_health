@@ -1,9 +1,17 @@
 package com.zhangshun.activity;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import com.jiangkaiquan.aplication.MyApplaication;
 import com.jiangkaiquan.aplication.User;
@@ -23,6 +31,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -50,6 +59,11 @@ public class PersonalInformationActivity extends Activity {
 	LinearLayout dialog_binding_alipay;// 绑定支付宝
 	Button btn_exit;// 退出
 	LogoutTools logout;
+	TextView username_text;
+	String tel;
+	String token;
+	String info;
+	String username;
 
 	// 个人信息页面
 	@Override
@@ -82,46 +96,110 @@ public class PersonalInformationActivity extends Activity {
 		dialog_binding_alipay.setOnClickListener(click);
 		btn_exit.setOnClickListener(click);
 
+		token = SaveToken.getData(getApplicationContext());
+		tel = SaveToken.getTels(getApplicationContext());
+
+		demand(tel, token);
 	}
+
+	@SuppressWarnings("unused")
+	private void demand(String tel, String token) {
+		StringBuilder builder = new StringBuilder();
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/demand";
+		String urltel = "tel=";
+		String urltoken = "token=";
+
+		URL url;
+
+		try {
+			String urllogout = httpHost + "?" + urltel + tel + "&" + urltoken
+					+ token;
+			url = new URL(urllogout);
+
+			HttpURLConnection connection = (HttpURLConnection) url
+					.openConnection();
+
+			connection.setRequestMethod("GET");
+			connection.setReadTimeout(5000);
+			connection.connect();
+
+			if (connection.getResponseCode() == 200) {
+				InputStream inputStream = connection.getInputStream();
+				BufferedReader buffered = new BufferedReader(
+						new InputStreamReader(inputStream));
+				String line = buffered.readLine();
+				while (line != null && line.length() > 0) {
+					builder.append(line);
+					line = buffered.readLine();
+
+				}
+				inputStream.close();
+				buffered.close();
+
+				// Log.i("sfsf", buffered.toString());
+				info = builder.toString();
+				Log.i("信息", info);
+				JSONObject js = new JSONObject(info);
+				String name = js.getString("message");
+				Log.i("message", name);
+
+				JSONObject json = new JSONObject(name);
+				json.getString("username");
+
+				username_text = (TextView) findViewById(R.id.username_text);
+				username_text.setText(json.getString("username"));
+				Log.i("name", json.getString("username"));
+
+			}
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	OnLogoutListener mlistener = new OnLogoutListener() {
+
+		@Override
+		public void start() {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void end(String result) {
+			try {
+				JSONObject js = new JSONObject(result);
+
+				if (js.getInt("status") == 1) {
+					// username_text = (TextView)
+					// findViewById(R.id.username_text);
+					// username_text.setText(js.getString("username"));
+					Log.i("nusrname", js.getString("username"));
+				} else {
+					Toast.makeText(getApplicationContext(),
+							js.getString("message"), Toast.LENGTH_LONG).show();
+				}
+
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	};
 
 	OnClickListener click = new OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-
-			OnLogoutListener mlistener = new OnLogoutListener() {
-
-				@Override
-				public void start() {
-					// TODO Auto-generated method stub
-
-				}
-
-				@Override
-				public void end(String result) {
-					try {
-						JSONObject js = new JSONObject(result);
-
-						if (js.getInt("status") == 1) {
-							Intent intent = new Intent(
-									PersonalInformationActivity.this,
-									PersonalCenterNotLogin.class);
-
-							startActivity(intent);
-						} else {
-							Toast.makeText(getApplication(),
-									js.getString("message"), Toast.LENGTH_LONG)
-									.show();
-						}
-
-					} catch (JSONException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
-				}
-			};
 
 			switch (v.getId()) {
 			case R.id.return_btn:

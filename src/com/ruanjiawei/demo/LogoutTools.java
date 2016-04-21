@@ -16,7 +16,7 @@ public class LogoutTools {
 
 	private String logout(String tel, String token) {
 		StringBuilder builder = new StringBuilder();
-		String httpHost = "http://192.168.11.241/index.php/home/api/logout";
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/demand";
 		String urltel = "tel=";
 		String urltoken = "token=";
 
@@ -43,6 +43,8 @@ public class LogoutTools {
 					builder.append(line);
 					line = buffered.toString();
 				}
+				inputStream.close();
+				buffered.close();
 				return builder.toString();
 			}
 		} catch (MalformedURLException e) {
