@@ -10,50 +10,42 @@ import java.net.URL;
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 
-public class ChangeNameTools {
+public class LogoutTools {
 	String message;
 	public int status = 0;
 
-	public void changenameAccount(String tel, String token, String username) {
-		new AnyTask().execute(tel, token, username);
-	}
-
-	private String changename(String tel, String token, String username) {
-
+	private String logout(String tel, String token) {
 		StringBuilder builder = new StringBuilder();
-		String httpHost = "http://211.149.198.8:9803/index.php/home/api/changename";
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/demand";
 		String urltel = "tel=";
 		String urltoken = "token=";
-		String urlname = "username=";
 
 		URL url;
-		String urlchangename = httpHost + "?" + urltel + tel + "&" + urltoken
-				+ token + "&" + urlname + username;
+
 		try {
-			url = new URL(urlchangename);
+			String urllogout = httpHost + "?" + urltel + tel + "&" + urltoken
+					+ token;
+			url = new URL(urllogout);
+
 			HttpURLConnection connection = (HttpURLConnection) url
 					.openConnection();
 
 			connection.setRequestMethod("GET");
-			connection.setConnectTimeout(5000);
+			connection.setReadTimeout(5000);
 			connection.connect();
 
 			if (connection.getResponseCode() == 200) {
 				InputStream inputStream = connection.getInputStream();
-				BufferedReader bufferedReader = new BufferedReader(
+				BufferedReader buffered = new BufferedReader(
 						new InputStreamReader(inputStream));
-				String line = bufferedReader.readLine();
+				String line = buffered.readLine();
 				while (line != null && line.length() > 0) {
-
 					builder.append(line);
-					line = bufferedReader.toString();
+					line = buffered.toString();
 				}
 				inputStream.close();
-				bufferedReader.close();
+				buffered.close();
 				return builder.toString();
-				
-				
-
 			}
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
@@ -63,21 +55,23 @@ public class ChangeNameTools {
 			e.printStackTrace();
 		}
 
-	    
 		return "error";
-
 	}
 
-	OnHttpChangename listener;
+	OnLogoutListener listener;
 
-	public void setOnHttpChangename(OnHttpChangename listener) {
+	public void setOnLogoutListener(OnLogoutListener listener) {
 		this.listener = listener;
 	}
 
-	public interface OnHttpChangename {
+	public interface OnLogoutListener {
 		void start();
 
 		void end(String result);
+	}
+
+	public String getMessage() {
+		return message;
 	}
 
 	@SuppressLint("NewApi")
@@ -86,19 +80,20 @@ public class ChangeNameTools {
 		@Override
 		protected String doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
-			return changename(arg0[0], arg0[1], arg0[2]);
+			return logout(arg0[0], arg0[1]);
 		}
 
+		@Override
 		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
 			if (listener != null) {
 				listener.end(result);
 			}
 		}
-
+		
 	}
-
-	public String getMessage() {
-		return message;
+	
+	public void logoutAccount(String tel,String token){
+		new AnyTask().execute(tel,token);
 	}
-
 }

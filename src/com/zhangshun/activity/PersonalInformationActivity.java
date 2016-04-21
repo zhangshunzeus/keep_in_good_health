@@ -1,13 +1,29 @@
 package com.zhangshun.activity;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.jiangkaiquan.aplication.MyApplaication;
+import com.jiangkaiquan.aplication.User;
+import com.ruanjiawei.demo.LogoutTools;
+import com.ruanjiawei.demo.SaveToken;
+import com.ruanjiawei.demo.LogoutTools.OnLogoutListener;
 import com.zhangshun.keep_in_good_health.R;
+import com.zhangwenbin.activity.PersonalCenterNotLogin;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -19,6 +35,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,6 +45,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PersonalInformationActivity extends Activity {
 
@@ -53,8 +71,11 @@ public class PersonalInformationActivity extends Activity {
 	
 	TextView username_text,log_in_the_phone_text,the_login_password_text,binding_weChat_ID_text,
 	Binding_QQ_number_text,The_binding_of_sina_weibo_text,Binding_alipay_text;
-	
-	
+	LogoutTools logout;
+	String token;
+	String info;
+	String username;
+
 	// 个人信息页面
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +109,72 @@ public class PersonalInformationActivity extends Activity {
 		
 		setupViews();
 
+		token = SaveToken.getData(getApplicationContext());
+		tel = SaveToken.getTels(getApplicationContext());
+
+		demand(tel, token);
+	}
+
+	@SuppressWarnings("unused")
+	private void demand(String tel, String token) {
+		StringBuilder builder = new StringBuilder();
+		String httpHost = "http://211.149.198.8:9803/index.php/home/api/demand";
+		String urltel = "tel=";
+		String urltoken = "token=";
+
+		URL url;
+
+		try {
+			String urllogout = httpHost + "?" + urltel + tel + "&" + urltoken
+					+ token;
+			url = new URL(urllogout);
+
+			HttpURLConnection connection = (HttpURLConnection) url
+					.openConnection();
+
+			connection.setRequestMethod("GET");
+			connection.setReadTimeout(5000);
+			connection.connect();
+
+			if (connection.getResponseCode() == 200) {
+				InputStream inputStream = connection.getInputStream();
+				BufferedReader buffered = new BufferedReader(
+						new InputStreamReader(inputStream));
+				String line = buffered.readLine();
+				while (line != null && line.length() > 0) {
+					builder.append(line);
+					line = buffered.readLine();
+
+				}
+				inputStream.close();
+				buffered.close();
+
+				// Log.i("sfsf", buffered.toString());
+				info = builder.toString();
+				Log.i("信息", info);
+				JSONObject js = new JSONObject(info);
+				String name = js.getString("message");
+				Log.i("message", name);
+
+				JSONObject json = new JSONObject(name);
+				json.getString("username");
+
+				username_text = (TextView) findViewById(R.id.username_text);
+				username_text.setText(json.getString("username"));
+				Log.i("name", json.getString("username"));
+
+			}
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 	
 	 private void setupViews(){ 
@@ -111,11 +198,43 @@ public class PersonalInformationActivity extends Activity {
 		 
 	 }
 
+	OnLogoutListener mlistener = new OnLogoutListener() {
+
+		@Override
+		public void start() {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void end(String result) {
+			try {
+				JSONObject js = new JSONObject(result);
+
+				if (js.getInt("status") == 1) {
+					// username_text = (TextView)
+					// findViewById(R.id.username_text);
+					// username_text.setText(js.getString("username"));
+					Log.i("nusrname", js.getString("username"));
+				} else {
+					Toast.makeText(getApplicationContext(),
+							js.getString("message"), Toast.LENGTH_LONG).show();
+				}
+
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	};
+
 	OnClickListener click = new OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
+
 			switch (v.getId()) {
 			case R.id.return_btn:
 				finish();
@@ -145,14 +264,18 @@ public class PersonalInformationActivity extends Activity {
 				dialog_binding_alipay();
 				break;
 			case R.id.btn_exit:
-				finish();
+
+				Intent intent = new Intent(PersonalInformationActivity.this,
+						PersonalCenterNotLogin.class);
+				startActivity(intent);
+
 				break;
 			default:
 				break;
 			}
 		}
 	};
-	
+
 	/**
 	 * 点击修改头像
 	 * */
@@ -183,13 +306,14 @@ public class PersonalInformationActivity extends Activity {
 				// TODO Auto-generated method stub
 				arg0.dismiss();
 				Intent intent = new Intent(Intent.ACTION_PICK, null);
-				intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+				intent.setDataAndType(
+						MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
 				startActivityForResult(intent, PHOTO_REQUEST_GALLERY);
 			}
 		}).show();
 
 	}
-	
+
 	/**
 	 * 点击昵称 弹出Dialog 修改昵称
 	 * */
@@ -322,7 +446,7 @@ public class PersonalInformationActivity extends Activity {
 						setTitle(inputPwd);
 						TextView tv = (TextView) findViewById(R.id.binding_weChat_ID_text);
 						tv.setText(inputPwd);
-						 app.user.setVchar(inputPwd);
+						app.user.setVchar(inputPwd);
 					}
 				})
 				.setNegativeButton("Cancel",
@@ -444,4 +568,5 @@ public class PersonalInformationActivity extends Activity {
 		dlg.show();
 
 	}
+
 }

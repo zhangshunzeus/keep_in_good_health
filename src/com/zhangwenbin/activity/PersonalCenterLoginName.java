@@ -48,8 +48,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
 /**
  * 修改个人信息后跳转回的页面
+ * 
  * @author jkqme
  *
  */
@@ -72,7 +74,8 @@ public class PersonalCenterLoginName extends Activity {
 	private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
 	private static final int PHOTO_REQUEST_CUT = 3;// 结果
 	// 创建一个以当前时间为名称的文件
-	File tempFile = new File(Environment.getExternalStorageDirectory(), getPhotoFileName());
+	File tempFile = new File(Environment.getExternalStorageDirectory(),
+			getPhotoFileName());
 
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -87,7 +90,6 @@ public class PersonalCenterLoginName extends Activity {
 		 * intentClassify.setOnCheckedChangeListener(listener);
 		 */
 		app = (MyApplaication) getApplication();
-
 
 		intentMyCollection = (LinearLayout) findViewById(R.id.loginname_intent_mycollection);
 		intentMyCollection.setOnClickListener(onClickListener);
@@ -140,11 +142,11 @@ public class PersonalCenterLoginName extends Activity {
 			switch (arg0.getId()) {
 
 			/* 跳转登陆 */
-			/*case R.id.loginname_touxiang_intent_login:
-				Intent intent_login = new Intent(PersonalCenterLoginName.this,
-						LoginActivity.class);
-				startActivity(intent_login);
-				break;*/
+			/*
+			 * case R.id.loginname_touxiang_intent_login: Intent intent_login =
+			 * new Intent(PersonalCenterLoginName.this, LoginActivity.class);
+			 * startActivity(intent_login); break;
+			 */
 			/* 设置头像 */
 			case R.id.loginname_touxiang_intent_login:
 				showDialog();
@@ -217,6 +219,7 @@ public class PersonalCenterLoginName extends Activity {
 			head_intent_login.setImageBitmap(app.user.getUserImg());
 		}
 	}
+
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
@@ -251,7 +254,8 @@ public class PersonalCenterLoginName extends Activity {
 				// TODO Auto-generated method stub
 				arg0.dismiss();
 				Intent intent = new Intent(Intent.ACTION_PICK, null);
-				intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+				intent.setDataAndType(
+						MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
 				startActivityForResult(intent, PHOTO_REQUEST_GALLERY);
 			}
 		}).show();
@@ -295,7 +299,6 @@ public class PersonalCenterLoginName extends Activity {
 	}
 
 	@SuppressLint("NewApi")
-
 	// 将进行剪裁后的图片显示到UI界面上
 	public void setPicToView(Intent picdata) {
 		Bundle bundle = picdata.getExtras();
@@ -322,7 +325,8 @@ public class PersonalCenterLoginName extends Activity {
 			public void run() {
 				// TODO Auto-generated method stub
 				BasicHttpParams basicHttpParams = new BasicHttpParams();
-				HttpConnectionParams.setConnectionTimeout(basicHttpParams, 8000);
+				HttpConnectionParams
+						.setConnectionTimeout(basicHttpParams, 8000);
 				HttpConnectionParams.setSoTimeout(basicHttpParams, 8000);
 
 				HttpClient httpClient = new DefaultHttpClient(basicHttpParams);
@@ -330,7 +334,8 @@ public class PersonalCenterLoginName extends Activity {
 				List<NameValuePair> pairs = new ArrayList<NameValuePair>();
 				pairs.add(new BasicNameValuePair("", ""));
 				try {
-					UrlEncodedFormEntity entity = new UrlEncodedFormEntity(pairs);
+					UrlEncodedFormEntity entity = new UrlEncodedFormEntity(
+							pairs);
 					httpPost.setEntity(entity);
 					httpClient.execute(httpPost);
 				} catch (UnsupportedEncodingException e) {

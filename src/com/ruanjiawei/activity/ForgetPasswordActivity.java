@@ -28,7 +28,7 @@ public class ForgetPasswordActivity extends Activity {
 	ForgetPasswordTools tools = new ForgetPasswordTools();
 	VerifyTools verfyTools = new VerifyTools();
 	String tel, verify, password, repassword;
- 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

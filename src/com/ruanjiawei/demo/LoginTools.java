@@ -63,7 +63,9 @@ public class LoginTools {
 				inputStream.close();
 				bufferedReader.close();
 
+				
 				login = builder.toString();
+				
 				Log.i("LoginTools====>用户信息", login);
 				return login;
 			}
